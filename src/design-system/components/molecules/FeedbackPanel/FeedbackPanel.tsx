@@ -1,5 +1,6 @@
 import { useAutoFocus } from '@studiolxd/tramoya'
-import { useId, useRef } from 'react'
+import { useEffect, useId, useRef } from 'react'
+import { playSound } from '../../../sounds'
 import { Button } from '../../atoms/Button/Button'
 import { Icon } from '../../atoms/Icon/Icon'
 import { Surface } from '../../atoms/Surface/Surface'
@@ -22,7 +23,7 @@ interface FeedbackPanelProps {
 
 // Surface + Icon + Text + Button: the result of an answer as a modal panel. Its
 // outline and shadow take the result's colour, so it shows before it is read.
-// The button takes the focus; Escape also closes it. The caller puts it over a
+// It sounds right or wrong as it appears. The button takes the focus; Escape also closes it. The caller puts it over a
 // backdrop and makes the rest inert.
 export function FeedbackPanel({ feedback, closeLabel, onClose }: FeedbackPanelProps) {
   const titleId = useId()
@@ -30,6 +31,14 @@ export function FeedbackPanel({ feedback, closeLabel, onClose }: FeedbackPanelPr
   const buttonRef = useRef<HTMLButtonElement>(null)
 
   useAutoFocus(buttonRef)
+
+  // The result sounds as the panel appears (once, also under React's development double effect).
+  const sounded = useRef(false)
+  useEffect(() => {
+    if (sounded.current) return
+    sounded.current = true
+    playSound(feedback.tone === 'positive' ? 'correct' : 'incorrect')
+  }, [feedback.tone])
 
   return (
     <Surface

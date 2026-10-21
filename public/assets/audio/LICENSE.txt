@@ -1,6 +1,10 @@
 click.mp3: "mouseclick1" from UI Audio by Kenney (www.kenney.nl), converted to MP3.
 https://kenney.nl/assets/ui-audio
 
+correct.mp3: "glass_004" and incorrect.mp3: "error_008" from Interface Sounds
+by Kenney (www.kenney.nl), converted to MP3.
+https://kenney.nl/assets/interface-sounds
+
 License: Creative Commons Zero (CC0)
 http://creativecommons.org/publicdomain/zero/1.0/
 Free for personal and commercial projects; credit is not required.

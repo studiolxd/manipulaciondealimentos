@@ -4,6 +4,8 @@
 
 const sounds = {
   click: 'assets/audio/click.mp3',
+  correct: 'assets/audio/correct.mp3',
+  incorrect: 'assets/audio/incorrect.mp3',
 } as const
 
 export type SoundName = keyof typeof sounds
