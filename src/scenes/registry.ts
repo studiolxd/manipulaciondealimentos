@@ -7,9 +7,11 @@ import { HandlerDefinitionScene } from './HandlerDefinitionScene'
 import { NameFormScene } from './NameFormScene'
 import type { SceneId } from './sceneIds'
 import { WhoIsFoodHandlerConclusionScene } from './WhoIsFoodHandlerConclusionScene'
+import { WelcomeScene } from './WelcomeScene'
 import { WhoIsFoodHandlerScene } from './WhoIsFoodHandlerScene'
 
 export const scenes: Record<SceneId, ComponentType> = {
+  welcome: WelcomeScene,
   'name-form': NameFormScene,
   'address-form': AddressFormScene,
   facade: FacadeScene,

@@ -7,6 +7,8 @@ export const { GameProvider, useGame, CurrentScene, isSceneId } = createGame<Sce
   progressWeight: sceneProgressWeight,
   // Inside an LMS the name comes from it; otherwise the player types it first.
   initialScene: ({ lmsName }) => (lmsName ? 'address-form' : 'name-form'),
+  // Shown on every load: from it the player begins or continues.
+  titleScene: 'welcome',
   // Each half of a scene change; the stage curtain animates with the same token.
   transitionMs: tokens['stage.fade-duration'],
   tracking,

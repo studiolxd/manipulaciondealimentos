@@ -10,6 +10,8 @@ interface SceneFrameProps {
   heading: string
   /** Shows the heading on screen at this distance from the top; otherwise only screen readers get it. */
   visibleHeadingTop?: number
+  /** `display` for title screens; scene headings otherwise. */
+  headingVariant?: 'heading' | 'display'
   background: ImageSource
   /** Empty for purely decorative backgrounds. */
   backgroundAlt: string
@@ -22,6 +24,7 @@ interface SceneFrameProps {
 export function SceneFrame({
   heading,
   visibleHeadingTop,
+  headingVariant = 'heading',
   background,
   backgroundAlt,
   focusHeading = false,
@@ -35,6 +38,7 @@ export function SceneFrame({
   const title = (
     <Heading
       level={1}
+      variant={headingVariant}
       id={headingId}
       ref={headingRef}
       focusable

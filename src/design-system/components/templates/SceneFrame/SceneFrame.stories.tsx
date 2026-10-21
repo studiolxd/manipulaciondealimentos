@@ -19,3 +19,6 @@ type Story = StoryObj<typeof meta>
 /** The heading exists for screen readers only. */
 export const HiddenHeading: Story = {}
 export const VisibleHeading: Story = { args: { heading: 'Elige tu personaje', visibleHeadingTop: 64 } }
+export const TitleScreen: Story = {
+  args: { heading: 'Manipulación de alimentos', visibleHeadingTop: 360, headingVariant: 'display' },
+}

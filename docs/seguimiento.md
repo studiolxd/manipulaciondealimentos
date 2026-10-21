@@ -19,6 +19,9 @@ El juego informa al LMS con **SCORM 1.2** y, opcionalmente, registra el detalle 
 - Una escena se da por completada al salir de ella.
 - Las escenas cuentan según el guion: las escenas 4 y 5 son una sola pantalla del juego, pero suman dos
   (`sceneProgressWeight` en `src/scenes/sceneIds.ts`). La elección de avatar y la pantalla final provisional no cuentan.
+- Cada vez que se abre, el juego empieza en la portada («Manipulación de alimentos»). Si el LMS tiene progreso de
+  otra sesión, el botón dice «Continuar» y lleva a la escena guardada; si no, «Comenzar». La portada no cuenta ni se
+  guarda como escena actual (`titleScene` en `src/game/game.ts`).
 - Al volver, el juego continúa al principio de la escena en la que estaba. El estado interno de una actividad a
   medias (por ejemplo, las tarjetas ya respondidas) no se guarda.
 - Mientras se añadan escenas, el total crece y el porcentaje de quien ya había avanzado baja.

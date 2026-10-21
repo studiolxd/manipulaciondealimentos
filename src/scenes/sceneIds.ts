@@ -1,5 +1,6 @@
 // Scenes in play order. The numbers refer to the "Guion" sheet.
 export type SceneId =
+  | 'welcome'
   | 'name-form'
   | 'address-form'
   | 'facade' // 1
@@ -15,6 +16,7 @@ export type SceneId =
  * script count 0.
  */
 export const sceneProgressWeight: Record<SceneId, number> = {
+  welcome: 0,
   'name-form': 0,
   'address-form': 0,
   facade: 1,

@@ -4,6 +4,13 @@ import type { Gender, GenderedText } from '@studiolxd/tramoya'
 // docs/Manipulador de alimentos.xlsx. Headings and image descriptions are only
 // read by screen readers.
 
+// Title screen, on every load.
+export const welcome = {
+  heading: 'Manipulación de alimentos',
+  start: 'Comenzar',
+  resume: 'Continuar',
+}
+
 // Before the script, only outside an LMS (inside one the name comes from it).
 export const nameForm = {
   heading: '¿Cómo te llamas?',
