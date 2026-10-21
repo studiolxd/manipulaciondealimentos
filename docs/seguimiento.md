@@ -31,7 +31,7 @@ Código: [Tramoya](https://github.com/studiolxd/tramoya) (`createTracking` y el 
 
 ### Paquete
 
-`pnpm package` compila y genera `release/manipulador-de-alimentos-scorm12-<versión>.zip`, con el `imsmanifest.xml`,
+`pnpm package` compila y genera `release/manipulacion-de-alimentos-scorm12-<versión>.zip`, con el `imsmanifest.xml`,
 listo para subir al LMS.
 
 ### Pruebas en desarrollo
@@ -51,7 +51,7 @@ puede editar sin recompilar:
   "endpoint": "https://lrs.cliente.com/xapi/",
   "auth": { "username": "clave", "password": "secreto" },
   "lmsHomePage": "https://campus.cliente.com",
-  "activityIriBase": "https://…/manipulador-de-alimentos"
+  "activityIriBase": "https://…/manipulacion-de-alimentos"
 }
 ```
 

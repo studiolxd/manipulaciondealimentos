@@ -1,7 +1,7 @@
-# Manipulador de alimentos
+# Manipulación de alimentos
 
 Aventura gráfica de formación de Studio LXD, publicada como paquete SCORM 1.2.
-Demo: https://studiolxd.github.io/manipuladordealimentos/
+Demo: https://studiolxd.github.io/manipulaciondealimentos/
 
 ## Cómo está hecho
 
