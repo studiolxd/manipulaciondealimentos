@@ -98,14 +98,13 @@
   --slxd-color-text-inverse: var(--slxd-primitive-color-cream-50); /** Text on ink panels and over the scene. */
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
-  --slxd-color-text-on-accent: var(--slxd-primitive-color-petrol-900); /** Text on the mint action colour: buttons and accent screens. */
   --slxd-color-text-accent: var(--slxd-primitive-color-mint-800); /** Dark mint, legible on light surfaces (e.g. accent icons). */
   --slxd-color-surface-default: var(--slxd-primitive-color-cream-50); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-paper: var(--slxd-primitive-color-sand-50); /** Printed-looking objects such as ID cards. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
   --slxd-color-surface-inverse: var(--slxd-primitive-color-petrol-900); /** Dark reference surface, e.g. in the documentation. */
-  --slxd-color-surface-accent: var(--slxd-primitive-color-mint-300); /** Full-screen system messages, in the colour of the buttons. */
+  --slxd-color-surface-system: var(--slxd-primitive-color-white); /** Full-screen system messages, e.g. rotate the device. */
   --slxd-color-surface-backdrop: var(--slxd-primitive-color-black); /** Letterbox around the stage and fade curtain. */
   --slxd-color-brand-logo: var(--slxd-primitive-color-prussian-900);
   --slxd-color-brand-background: var(--slxd-primitive-color-white); /** Behind the Studio LXD logo. */
@@ -296,8 +295,8 @@
   --slxd-label-size-lg: var(--slxd-font-size-label-lg);
   --slxd-label-inverse-text: var(--slxd-color-text-inverse);
   --slxd-option-buttons-gap: var(--slxd-space-xl);
-  --slxd-rotate-screen-background: var(--slxd-color-surface-accent);
-  --slxd-rotate-screen-text: var(--slxd-color-text-on-accent);
+  --slxd-rotate-screen-background: var(--slxd-color-surface-system);
+  --slxd-rotate-screen-text: var(--slxd-color-text-default);
   --slxd-rotate-screen-gap: var(--slxd-space-xs);
   --slxd-rotate-screen-padding: var(--slxd-space-sm);
   --slxd-speech-bubble-next-inset: var(--slxd-space-sm);

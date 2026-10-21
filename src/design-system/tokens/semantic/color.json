@@ -15,10 +15,6 @@
       "negative": {
         "$value": "{primitive.color.red.700}"
       },
-      "on-accent": {
-        "$value": "{primitive.color.petrol.900}",
-        "$description": "Text on the mint action colour: buttons and accent screens."
-      },
       "accent": {
         "$value": "{primitive.color.mint.800}",
         "$description": "Dark mint, legible on light surfaces (e.g. accent icons)."
@@ -45,9 +41,9 @@
         "$value": "{primitive.color.petrol.900}",
         "$description": "Dark reference surface, e.g. in the documentation."
       },
-      "accent": {
-        "$value": "{primitive.color.mint.300}",
-        "$description": "Full-screen system messages, in the colour of the buttons."
+      "system": {
+        "$value": "{primitive.color.white}",
+        "$description": "Full-screen system messages, e.g. rotate the device."
       },
       "backdrop": {
         "$value": "{primitive.color.black}",

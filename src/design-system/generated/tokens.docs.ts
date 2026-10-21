@@ -936,8 +936,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
-    "reference": "{color.surface.accent}",
+    "value": "#ffffff",
+    "reference": "{color.surface.system}",
     "description": null
   },
   {
@@ -947,7 +947,7 @@ export const tokenDocs = [
     "family": "color",
     "type": "color",
     "value": "#14262e",
-    "reference": "{color.text.on-accent}",
+    "reference": "{color.text.default}",
     "description": null
   },
   {
@@ -2631,16 +2631,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-color-text-on-accent",
-    "path": "color.text.on-accent",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#14262e",
-    "reference": "{primitive.color.petrol.900}",
-    "description": "Text on the mint action colour: buttons and accent screens."
-  },
-  {
     "name": "--slxd-color-text-accent",
     "path": "color.text.accent",
     "layer": "semantic",
@@ -2701,14 +2691,14 @@ export const tokenDocs = [
     "description": "Dark reference surface, e.g. in the documentation."
   },
   {
-    "name": "--slxd-color-surface-accent",
-    "path": "color.surface.accent",
+    "name": "--slxd-color-surface-system",
+    "path": "color.surface.system",
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
-    "reference": "{primitive.color.mint.300}",
-    "description": "Full-screen system messages, in the colour of the buttons."
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
+    "description": "Full-screen system messages, e.g. rotate the device."
   },
   {
     "name": "--slxd-color-surface-backdrop",
