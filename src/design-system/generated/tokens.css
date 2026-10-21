@@ -168,6 +168,9 @@
   --slxd-size-icon-lg: var(--slxd-primitive-size-160);
   --slxd-size-logo-splash: clamp(var(--slxd-primitive-screen-logo-min), 40vw, var(--slxd-primitive-screen-logo-max)); /** Studio LXD logo on the splash screen: 40% of the window, between the minimum and maximum. */
   --slxd-size-target-min: max(var(--slxd-primitive-size-112), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Minimum size of anything clickable: 112 stage px, never less than 44 real px. */
+  --slxd-size-switch-width: var(--slxd-primitive-size-160);
+  --slxd-size-switch-height: var(--slxd-primitive-size-96);
+  --slxd-size-switch-thumb: var(--slxd-primitive-size-64);
   --slxd-size-avatar: var(--slxd-primitive-size-200); /** Round portrait on ID cards. */
   --slxd-size-hud-height: var(--slxd-primitive-size-120);
   --slxd-size-choice-min-width: var(--slxd-primitive-size-400); /** Minimum width of a choice option, so options line up. */
@@ -360,6 +363,25 @@
   --slxd-swipe-sorter-stack-shrink: var(--slxd-scale-stack-step); /** How much smaller each waiting card is than the one in front. */
   --slxd-swipe-sorter-stack-duration: var(--slxd-motion-duration-exit);
   --slxd-swipe-sorter-stack-easing: var(--slxd-motion-easing-enter);
+  --slxd-switch-gap: var(--slxd-space-xl);
+  --slxd-switch-min-height: var(--slxd-size-target-min);
+  --slxd-switch-text: var(--slxd-color-text-default);
+  --slxd-switch-font-family: var(--slxd-font-family-display);
+  --slxd-switch-font-size: var(--slxd-font-size-body);
+  --slxd-switch-font-weight: var(--slxd-font-weight-control);
+  --slxd-switch-letter-spacing: var(--slxd-font-letter-spacing-caps);
+  --slxd-switch-track-width: var(--slxd-size-switch-width);
+  --slxd-switch-track-height: var(--slxd-size-switch-height);
+  --slxd-switch-thumb-size: var(--slxd-size-switch-thumb);
+  --slxd-switch-thumb-inset: var(--slxd-space-2xs);
+  --slxd-switch-radius: var(--slxd-radius-full);
+  --slxd-switch-outline-width: var(--slxd-border-width-outline);
+  --slxd-switch-outline-color: var(--slxd-color-border-ink);
+  --slxd-switch-shadow-offset: var(--slxd-space-3xs);
+  --slxd-switch-off-background: var(--slxd-color-surface-default);
+  --slxd-switch-on-background: var(--slxd-color-action-primary-background);
+  --slxd-switch-duration: var(--slxd-motion-duration-press);
+  --slxd-switch-easing: var(--slxd-motion-easing-standard);
   --slxd-text-field-gap: var(--slxd-space-xs);
   --slxd-text-input-min-height: var(--slxd-size-target-min);
   --slxd-text-input-padding-inline: var(--slxd-space-md);

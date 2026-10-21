@@ -13,6 +13,13 @@ export const ui = {
   rotateDevice: {
     title: 'Gira tu dispositivo',
   },
+  settings: {
+    open: 'Ajustes',
+    title: 'Ajustes',
+    close: 'Cerrar los ajustes',
+    voice: 'Locuciones',
+    effects: 'Sonidos FX',
+  },
   // Development only (Ctrl+Shift+M).
   devSceneMenu: {
     label: 'Ir a una escena',

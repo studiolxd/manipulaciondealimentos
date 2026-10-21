@@ -26,7 +26,15 @@ if (typeof Audio !== 'undefined') {
   }
 }
 
+let enabled = true
+
+/** Turns all interface sounds on or off (e.g. from the player's settings). */
+export function setSoundsEnabled(value: boolean): void {
+  enabled = value
+}
+
 export function playSound(name: SoundName): void {
+  if (!enabled) return
   const audio = loaded.get(name)
   if (!audio) return
   // A quick second press overlaps a copy instead of cutting the first one.

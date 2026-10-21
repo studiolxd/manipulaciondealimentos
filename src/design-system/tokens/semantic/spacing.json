@@ -64,6 +64,17 @@
         "$description": "Minimum size of anything clickable: 112 stage px, never less than 44 real px."
       }
     },
+    "switch": {
+      "width": {
+        "$value": "{primitive.size.160}"
+      },
+      "height": {
+        "$value": "{primitive.size.96}"
+      },
+      "thumb": {
+        "$value": "{primitive.size.64}"
+      }
+    },
     "avatar": {
       "$value": "{primitive.size.200}",
       "$description": "Round portrait on ID cards."

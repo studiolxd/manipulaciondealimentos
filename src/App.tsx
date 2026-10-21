@@ -4,6 +4,8 @@ import { designSystemStrings, ui } from './content/ui'
 import { DesignSystemProvider, RotateDeviceScreen, SplashScreen } from './design-system'
 import { GameProvider, isSceneId } from './game/game'
 import { SceneHost } from './game/SceneHost'
+import { SettingsProvider } from './game/SettingsProvider'
+import { useSettings } from './game/settings'
 import { tracking } from './game/tracking'
 import type { SceneId } from './scenes/sceneIds'
 
@@ -15,6 +17,15 @@ function startScene(): SceneId | undefined {
 }
 
 export default function App() {
+  return (
+    <SettingsProvider>
+      <Game />
+    </SettingsProvider>
+  )
+}
+
+function Game() {
+  const { settings } = useSettings()
   const portrait = usePortrait()
   const [initialScene] = useState(startScene)
   // Outside an LMS (e.g. the public demo) the game opens with the Studio LXD
@@ -22,7 +33,7 @@ export default function App() {
   const [splash, setSplash] = useState(!tracking.inLms && initialScene === undefined)
   const paused = portrait || splash
   return (
-    <DesignSystemProvider strings={designSystemStrings} paused={paused}>
+    <DesignSystemProvider strings={designSystemStrings} paused={paused} soundEffects={settings.effects}>
       <GameProvider startScene={initialScene} paused={paused}>
         <SceneHost />
         {portrait && <RotateDeviceScreen title={ui.rotateDevice.title} />}

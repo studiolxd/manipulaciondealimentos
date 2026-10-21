@@ -1,0 +1,62 @@
+.switch {
+  display: flex;
+  gap: var(--slxd-switch-gap);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: var(--slxd-switch-min-height);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--slxd-switch-text);
+  font-family: var(--slxd-switch-font-family);
+  font-size: var(--slxd-switch-font-size);
+  font-weight: var(--slxd-switch-font-weight);
+  letter-spacing: var(--slxd-switch-letter-spacing);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Track: outline and shadow of the buttons; mint when on. */
+.track {
+  --track-shadow: 0 var(--slxd-switch-shadow-offset) 0 var(--slxd-switch-outline-color);
+
+  position: relative;
+  flex: none;
+  width: var(--slxd-switch-track-width);
+  height: var(--slxd-switch-track-height);
+  border: var(--slxd-switch-outline-width) solid var(--slxd-switch-outline-color);
+  border-radius: var(--slxd-switch-radius);
+  background: var(--slxd-switch-off-background);
+  box-shadow: var(--track-shadow);
+  transition-property: background-color;
+  transition-duration: var(--slxd-switch-duration);
+}
+
+.thumb {
+  position: absolute;
+  top: var(--slxd-switch-thumb-inset);
+  left: var(--slxd-switch-thumb-inset);
+  width: var(--slxd-switch-thumb-size);
+  height: var(--slxd-switch-thumb-size);
+  border-radius: var(--slxd-switch-radius);
+  background: var(--slxd-switch-outline-color);
+  transition-property: translate;
+  transition-duration: var(--slxd-switch-duration);
+  transition-timing-function: var(--slxd-switch-easing);
+}
+
+.switch[aria-checked='true'] .track {
+  background: var(--slxd-switch-on-background);
+}
+
+.switch[aria-checked='true'] .thumb {
+  translate: calc(var(--slxd-switch-track-width) - var(--slxd-switch-thumb-size) - var(--slxd-switch-thumb-inset) * 2 - var(--slxd-switch-outline-width) * 2) 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .thumb {
+    transition: none;
+  }
+}

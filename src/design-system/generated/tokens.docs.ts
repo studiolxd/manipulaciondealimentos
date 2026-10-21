@@ -1691,6 +1691,196 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-switch-gap",
+    "path": "switch.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-min-height",
+    "path": "switch.min-height",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(112px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.min}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-text",
+    "path": "switch.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.text.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-font-family",
+    "path": "switch.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Gasoek One', system-ui, sans-serif",
+    "reference": "{font.family.display}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-font-size",
+    "path": "switch.font-size",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "{font.size.body}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-font-weight",
+    "path": "switch.font-weight",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontWeight",
+    "value": "400",
+    "reference": "{font.weight.control}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-letter-spacing",
+    "path": "switch.letter-spacing",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.04em",
+    "reference": "{font.letter-spacing.caps}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-track-width",
+    "path": "switch.track-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "160px",
+    "reference": "{size.switch.width}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-track-height",
+    "path": "switch.track-height",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "96px",
+    "reference": "{size.switch.height}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-thumb-size",
+    "path": "switch.thumb-size",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "64px",
+    "reference": "{size.switch.thumb}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-thumb-inset",
+    "path": "switch.thumb-inset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-radius",
+    "path": "switch.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "999px",
+    "reference": "{radius.full}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-outline-width",
+    "path": "switch.outline-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-outline-color",
+    "path": "switch.outline-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-shadow-offset",
+    "path": "switch.shadow-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "4px",
+    "reference": "{space.3xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-off-background",
+    "path": "switch.off-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.surface.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-on-background",
+    "path": "switch.on-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#a6f0d3",
+    "reference": "{color.action.primary.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-duration",
+    "path": "switch.duration",
+    "layer": "component",
+    "family": "motion",
+    "type": "duration",
+    "value": "120ms",
+    "reference": "{motion.duration.press}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-easing",
+    "path": "switch.easing",
+    "layer": "component",
+    "family": "motion",
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0.42, 0, 0.58, 1)",
+    "reference": "{motion.easing.standard}",
+    "description": null
+  },
+  {
     "name": "--slxd-text-field-gap",
     "path": "text-field.gap",
     "layer": "component",
@@ -3449,6 +3639,36 @@ export const tokenDocs = [
     "value": "max(112px, calc(44px / var(--slxd-stage-scale)))",
     "reference": "max({primitive.size.112}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
     "description": "Minimum size of anything clickable: 112 stage px, never less than 44 real px."
+  },
+  {
+    "name": "--slxd-size-switch-width",
+    "path": "size.switch.width",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "160px",
+    "reference": "{primitive.size.160}",
+    "description": null
+  },
+  {
+    "name": "--slxd-size-switch-height",
+    "path": "size.switch.height",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "96px",
+    "reference": "{primitive.size.96}",
+    "description": null
+  },
+  {
+    "name": "--slxd-size-switch-thumb",
+    "path": "size.switch.thumb",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "64px",
+    "reference": "{primitive.size.64}",
+    "description": null
   },
   {
     "name": "--slxd-size-avatar",
