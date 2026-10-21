@@ -2,18 +2,16 @@ import { tokenDocs } from '../generated/tokens.docs'
 import styles from './TokenTable.module.css'
 
 type Layer = 'primitive' | 'semantic' | 'component'
+type Family = 'color' | 'typography' | 'spacing' | 'shape' | 'motion' | 'layer'
 
 interface TokenTableProps {
   layer: Layer
-  /** Only tokens whose path starts with this prefix (e.g. "color" or "button"). */
-  prefix?: string
+  family: Family
 }
 
 // Documentation table generated from the token files.
-export function TokenTable({ layer, prefix }: TokenTableProps) {
-  const rows = tokenDocs.filter(
-    (token) => token.layer === layer && (!prefix || token.path === prefix || token.path.startsWith(`${prefix}.`)),
-  )
+export function TokenTable({ layer, family }: TokenTableProps) {
+  const rows = tokenDocs.filter((token) => token.layer === layer && token.family === family)
   return (
     <table className={styles.table}>
       <thead>

@@ -1,0 +1,11 @@
+.typewriter {
+  white-space: pre-line;
+}
+
+.pending {
+  visibility: hidden;
+}
+
+.accessible {
+  composes: hidden from '../../atoms/VisuallyHidden/VisuallyHidden.module.css';
+}

@@ -1,0 +1,38 @@
+{
+  "radius": {
+    "$type": "dimension",
+    "sm": {
+      "$value": "{primitive.radius.16}"
+    },
+    "md": {
+      "$value": "{primitive.radius.32}"
+    },
+    "lg": {
+      "$value": "{primitive.radius.40}"
+    },
+    "full": {
+      "$value": "{primitive.radius.full}"
+    }
+  },
+  "border-width": {
+    "$type": "dimension",
+    "default": {
+      "$value": "{primitive.border-width.4}"
+    },
+    "strong": {
+      "$value": "{primitive.border-width.8}"
+    }
+  },
+  "focus": {
+    "$type": "dimension",
+    "ring-width": {
+      "$value": "max({primitive.size.6}, calc({primitive.screen.focus-ring-min} / var(--slxd-stage-scale)))"
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "raised": {
+      "$value": "{primitive.shadow.lg}"
+    }
+  }
+}

@@ -21,6 +21,7 @@ import {
 } from '../design-system'
 import { useGame } from '../engine/gameContext'
 import { shuffle } from '../engine/shuffle'
+import { xapi } from '../engine/tracking/xapi'
 
 // Scenes 4 and 5 (activity 2): title, statement and the ID cards. The
 // statement bubble shrinks into an icon that can reopen it.
@@ -33,6 +34,7 @@ interface Answer {
 }
 
 const STATEMENT_TRANSITION = 'statement'
+const ACTIVITY_ID = 'who-is-food-handler'
 
 export function WhoIsFoodHandlerScene() {
   const { sceneReady, goTo } = useGame()
@@ -49,7 +51,25 @@ export function WhoIsFoodHandlerScene() {
   const finished = answers.length === deck.length
 
   function answer(card: PersonCard, direction: SwipeDirection) {
-    setAnswers((previous) => [...previous, { card, correct: (direction === 'right') === card.isFoodHandler }])
+    const response = direction === 'right'
+    const next = [...answers, { card, correct: response === card.isFoodHandler }]
+    setAnswers(next)
+    xapi.answered({
+      activityId: ACTIVITY_ID,
+      activityName: whoIsFoodHandler.title,
+      questionId: card.id,
+      question: whoIsFoodHandler.question(card),
+      response,
+      correctResponse: card.isFoodHandler,
+    })
+    if (next.length === deck.length) {
+      xapi.activityCompleted(ACTIVITY_ID, whoIsFoodHandler.title, next.filter((a) => a.correct).length, deck.length)
+    }
+  }
+
+  function startCards() {
+    xapi.activityAttempted(ACTIVITY_ID, whoIsFoodHandler.title)
+    withViewTransition(() => setPhase('cards'))
   }
 
   function closeStatement() {
@@ -78,7 +98,7 @@ export function WhoIsFoodHandlerScene() {
             speaker="David"
             blocks={whoIsFoodHandler.statement}
             viewTransitionName={STATEMENT_TRANSITION}
-            onDismiss={() => withViewTransition(() => setPhase('cards'))}
+            onDismiss={startCards}
           />
         </Positioned>
       )}

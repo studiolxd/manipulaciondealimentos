@@ -35,6 +35,8 @@ export const whoIsFoodHandler = {
   yesButton: 'SÍ, es manipulador de alimentos',
   noButton: 'NO, no es manipulador de alimentos',
   progress: (current: number, total: number) => `Tarjeta ${current} de ${total}`,
+  /** Question text recorded with each answer (xAPI). */
+  question: (card: PersonCard) => `¿${card.name} (${card.job}) es manipulador de alimentos?`,
   correct: '¡Correcto!',
   incorrect: '¡Incorrecto!',
   next: 'Continuar',

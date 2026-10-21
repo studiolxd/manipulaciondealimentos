@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../TokenTable'
+
+<Meta title="Fundamentos/Tokens/Espaciado y tamaños" />
+
+# Espaciado y tamaños
+
+Escala de tamaños en píxeles de escenario, mínimos en píxeles reales (zonas pulsables, texto) y espaciados de cada componente.
+
+Cada capa solo apunta a la anterior: los componentes usan tokens de componente o semánticos, nunca primitivos.
+
+## 1. Primitivos
+
+<TokenTable layer="primitive" family="spacing" />
+
+## 2. Semánticos
+
+<TokenTable layer="semantic" family="spacing" />
+
+## 3. Componente
+
+<TokenTable layer="component" family="spacing" />

@@ -40,7 +40,15 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Introducción', 'Tokens', 'Fundamentos', 'Escenario', 'Texto', 'Controles', 'Actividades', 'Sistema'],
+        method: 'alphabetical',
+        order: [
+          'Fundamentos',
+          ['Introducción', 'Tokens', ['Colores', 'Tipografía', 'Espaciado y tamaños', 'Forma', 'Movimiento', 'Capas']],
+          'Átomos',
+          'Moléculas',
+          'Organismos',
+          'Plantillas',
+        ],
       },
     },
   },

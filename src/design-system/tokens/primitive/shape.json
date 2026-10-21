@@ -1,0 +1,40 @@
+{
+  "primitive": {
+    "radius": {
+      "$type": "dimension",
+      "16": {
+        "$value": "16px"
+      },
+      "32": {
+        "$value": "32px"
+      },
+      "40": {
+        "$value": "40px"
+      },
+      "full": {
+        "$value": "999px"
+      }
+    },
+    "border-width": {
+      "$type": "dimension",
+      "4": {
+        "$value": "4px"
+      },
+      "8": {
+        "$value": "8px"
+      }
+    },
+    "shadow": {
+      "$type": "shadow",
+      "lg": {
+        "$value": {
+          "offsetX": "0px",
+          "offsetY": "16px",
+          "blur": "48px",
+          "spread": "0px",
+          "color": "{primitive.color.black-alpha.25}"
+        }
+      }
+    }
+  }
+}

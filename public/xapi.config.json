@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "endpoint": "",
+  "auth": { "username": "", "password": "" },
+  "lmsHomePage": "",
+  "activityIriBase": ""
+}

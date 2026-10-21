@@ -1,0 +1,42 @@
+.group {
+  display: flex;
+  gap: var(--slxd-choice-card-group-gap);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  composes: hidden from '../../atoms/VisuallyHidden/VisuallyHidden.module.css';
+}
+
+.input {
+  composes: hidden from '../../atoms/VisuallyHidden/VisuallyHidden.module.css';
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-choice-card-gap);
+  align-items: center;
+  padding: var(--slxd-choice-card-padding);
+  border: var(--slxd-choice-card-border-width) solid var(--slxd-choice-card-border-color);
+  border-radius: var(--slxd-choice-card-radius);
+  background: var(--slxd-choice-card-background);
+  color: var(--slxd-choice-card-text);
+  font-weight: var(--slxd-choice-card-font-weight);
+  cursor: pointer;
+}
+
+.card:has(input:checked) {
+  border-color: var(--slxd-choice-card-border-color-selected);
+}
+
+.card:has(input:focus-visible) {
+  outline: var(--slxd-stage-focus-ring-width) solid var(--slxd-stage-focus-ring-color);
+  outline-offset: var(--slxd-stage-focus-ring-width);
+}
+
+.image {
+  pointer-events: none;
+}

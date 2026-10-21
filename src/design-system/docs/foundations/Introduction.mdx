@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Fundamentos/Introducción" />
+
+# Sistema de diseño Studio LXD
+
+Librería de componentes del juego **Manipulador de alimentos**. Todo lo que se ve en el juego sale de aquí.
+
+## Normas
+
+1. **Solo componentes de la librería.** Las escenas (`src/scenes`), el motor (`src/engine`) y el contenido
+   (`src/content`) no pueden usar HTML directo (`<div>`, `<button>`, `<img>`…), ni `className` o `style`, ni
+   importar CSS. Lo impide oxlint (`pnpm lint`).
+2. **Un único punto de entrada.** Se importa desde `src/design-system`, nunca desde sus carpetas internas.
+3. **La librería no depende del juego.** No importa nada de `engine`, `scenes` ni `content`. Los textos de
+   interfaz que necesitan algunos componentes llegan por `DesignSystemProvider`.
+4. **Todo valor visual es un token.** El CSS de los componentes solo usa variables `--slxd-*`; nunca colores,
+   tamaños o duraciones en bruto. Lo impide Stylelint (`pnpm lint`).
+5. **Los componentes no usan primitivos.** Usan tokens de componente o semánticos.
+
+## Organización
+
+| Sección | Qué contiene | Carpeta |
+| --- | --- | --- |
+| **Fundamentos** | Esta introducción y los tokens por familia; aquí irá también la línea gráfica del juego. | `docs/foundations` |
+| **Átomos** | Piezas mínimas: texto, imagen, botones, alertas… | `components/atoms` |
+| **Moléculas** | Combinaciones de átomos con una función: bocadillo, carnet, panel de feedback, diálogo… | `components/molecules` |
+| **Organismos** | Bloques completos de interfaz: tarjeta deslizable, HUD, pantalla de girar… | `components/organisms` |
+| **Plantillas** | El armazón de las escenas: escenario, marco de escena, capas, posicionamiento, telón. | `components/templates` |
+
+Cada componente tiene su carpeta con el componente (`.tsx`), sus estilos (`.module.css`), sus historias
+(`.stories.tsx`) y sus tokens de componente en `tokens/component/<componente>.json`.
+
+## Tokens por capas y familias
+
+Los tokens están en `src/design-system/tokens` con el formato estándar del W3C (DTCG) y se generan con
+`pnpm tokens` (Style Dictionary). Las capas primitiva y semántica se dividen en familias, un archivo por familia:
+**color**, **tipografía** (`typography`), **espaciado y tamaños** (`spacing`), **forma** (`shape`: radios, bordes,
+sombras, foco), **movimiento** (`motion`) y **capas** (`layer`). Cada capa solo puede referenciar la anterior; el
+build falla si no:
+
+| Capa | Para qué | Ejemplo |
+| --- | --- | --- |
+| **Primitivos** | Valores en bruto, sin significado | `--slxd-primitive-color-orange-700` |
+| **Semánticos** | La intención | `--slxd-color-action-primary-background` |
+| **Componente** | El uso concreto | `--slxd-button-primary-background` |
+
+En el CSS generado cada variable apunta a la de la capa anterior, así que la cadena se ve en las herramientas del
+navegador.
+
+## Escenario
+
+El juego se maqueta sobre un lienzo fijo de **1920×1080 píxeles** que se escala para caber en la pantalla
+(`Stage`). Las escenas colocan los componentes con `Positioned`, en píxeles de escenario.
+
+Algunos tokens combinan el tamaño de escenario con un mínimo en píxeles reales (`--slxd-stage-scale`), para que en
+pantallas pequeñas el texto siga siendo legible y las zonas pulsables midan al menos 44 px.
+
+## Imágenes
+
+Los gráficos de interfaz (iconos, franja del HUD) son de la librería (`icons.manifest.ts`); los del juego
+(fondos, personajes) están en `src/content/assets.ts`. Todos son PNG en `public/assets` con nombre estable:
+para poner el arte definitivo basta con sustituir el archivo. `pnpm placeholders` genera los que falten.
+
+## Accesibilidad
+
+Cada historia pasa la revisión automática de accesibilidad (panel **Accessibility**). Los componentes interactivos
+se manejan con teclado y llevan nombres accesibles; el movimiento respeta `prefers-reduced-motion`.

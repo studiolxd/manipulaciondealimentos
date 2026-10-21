@@ -1,0 +1,24 @@
+{
+  "layer": {
+    "$type": "number",
+    "$description": "Stacking order. Each layer only competes with its siblings in the same stacking context.",
+    "base": {
+      "$value": "{primitive.z-index.0}"
+    },
+    "hud": {
+      "$value": "{primitive.z-index.1}"
+    },
+    "curtain": {
+      "$value": "{primitive.z-index.1}"
+    },
+    "over-hud": {
+      "$value": "{primitive.z-index.2}"
+    },
+    "dialog": {
+      "$value": "{primitive.z-index.3}"
+    },
+    "system": {
+      "$value": "{primitive.z-index.10}"
+    }
+  }
+}

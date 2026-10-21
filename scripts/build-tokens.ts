@@ -102,19 +102,47 @@ const typescriptFormat: Format = {
   },
 }
 
-// Every token with its layer, CSS variable, resolved value and the token it
-// points to, for the documentation pages in Storybook.
+// Token families, one documentation page each. Primitive and semantic files
+// are named after their family; component tokens are classified by type.
+type Family = 'color' | 'typography' | 'spacing' | 'shape' | 'motion' | 'layer'
+
+function familyOf(token: TransformedToken, layer: string, file: string): Family {
+  if (layer !== 'component') return file.replace(/\.json$/, '') as Family
+  const path = token.path.join('.')
+  switch (token.$type) {
+    case 'color':
+      return 'color'
+    case 'fontFamily':
+    case 'fontWeight':
+      return 'typography'
+    case 'duration':
+    case 'cubicBezier':
+      return 'motion'
+    case 'shadow':
+      return 'shape'
+    case 'number':
+      return path.includes('line-height') ? 'typography' : 'layer'
+    default:
+      if (path.includes('font')) return 'typography'
+      if (/radius|border-width/.test(path)) return 'shape'
+      return 'spacing'
+  }
+}
+
+// Every token with its layer, family, CSS variable, resolved value and the
+// token it points to, for the documentation pages in Storybook.
 const docsFormat: Format = {
   name: 'slxd/docs',
   format: ({ dictionary, platform }) => {
     const rows = dictionary.allTokens.map((token: TransformedToken) => {
-      const layer = token.filePath.split('/tokens/')[1]?.split('/')[0]
+      const [layer, file] = token.filePath.split('/tokens/')[1]?.split('/') ?? []
       const original = token.original.$value
       const reference = typeof original === 'string' && original.includes('{') ? original : null
       return {
         name: `--${platform.prefix}-${token.path.join('-')}`,
         path: token.path.join('.'),
         layer,
+        family: familyOf(token, layer, file),
         type: token.$type,
         value: typeof token.$value === 'string' ? token.$value : JSON.stringify(token.$value),
         reference,

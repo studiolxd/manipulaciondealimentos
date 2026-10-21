@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../TokenTable'
+
+<Meta title="Fundamentos/Tokens/Tipografía" />
+
+# Tipografía
+
+Familias, tamaños, pesos e interlineados. Los tamaños de texto tienen un mínimo en píxeles reales para que se lean en pantallas pequeñas.
+
+Cada capa solo apunta a la anterior: los componentes usan tokens de componente o semánticos, nunca primitivos.
+
+## 1. Primitivos
+
+<TokenTable layer="primitive" family="typography" />
+
+## 2. Semánticos
+
+<TokenTable layer="semantic" family="typography" />
+
+## 3. Componente
+
+<TokenTable layer="component" family="typography" />
