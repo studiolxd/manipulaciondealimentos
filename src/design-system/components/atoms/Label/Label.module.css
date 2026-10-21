@@ -1,6 +1,7 @@
 .label {
   font-family: var(--slxd-label-font-family);
   font-weight: var(--slxd-label-font-weight);
+  letter-spacing: var(--slxd-label-letter-spacing);
 }
 
 .label[data-size='md'] {

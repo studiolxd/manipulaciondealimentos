@@ -881,6 +881,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-label-letter-spacing",
+    "path": "label.letter-spacing",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.04em",
+    "reference": "{font.letter-spacing.caps}",
+    "description": null
+  },
+  {
     "name": "--slxd-label-size-md",
     "path": "label.size.md",
     "layer": "component",
@@ -1648,16 +1658,6 @@ export const tokenDocs = [
     "type": "color",
     "value": "#14262e",
     "reference": "{color.text.default}",
-    "description": null
-  },
-  {
-    "name": "--slxd-text-input-letter-spacing",
-    "path": "text-input.letter-spacing",
-    "layer": "component",
-    "family": "typography",
-    "type": "dimension",
-    "value": "0.04em",
-    "reference": "{font.letter-spacing.caps}",
     "description": null
   },
   {
@@ -3688,6 +3688,6 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "0.04em",
     "reference": "{primitive.font.letter-spacing.40}",
-    "description": "Tracking of titles, buttons and text inputs."
+    "description": "Tracking of the display family: titles, buttons and labels."
   }
 ] as const

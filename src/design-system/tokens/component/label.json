@@ -8,6 +8,10 @@
       "$type": "fontWeight",
       "$value": "{font.weight.display}"
     },
+    "letter-spacing": {
+      "$type": "dimension",
+      "$value": "{font.letter-spacing.caps}"
+    },
     "size": {
       "md": {
         "$type": "dimension",

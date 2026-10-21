@@ -84,7 +84,7 @@
       "$type": "dimension",
       "caps": {
         "$value": "{primitive.font.letter-spacing.40}",
-        "$description": "Tracking of titles, buttons and text inputs."
+        "$description": "Tracking of the display family: titles, buttons and labels."
       }
     }
   }

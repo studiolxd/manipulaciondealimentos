@@ -28,10 +28,6 @@
       "$type": "color",
       "$value": "{color.text.default}"
     },
-    "letter-spacing": {
-      "$type": "dimension",
-      "$value": "{font.letter-spacing.caps}"
-    },
     "font-size": {
       "$type": "dimension",
       "$value": "{font.size.body}"

@@ -45,6 +45,7 @@
   font-family: var(--slxd-label-font-family);
   font-size: var(--slxd-label-size-lg);
   font-weight: var(--slxd-button-choice-font-weight);
+  letter-spacing: var(--slxd-label-letter-spacing);
 }
 
 .figure .specimen[data-role='control'] {

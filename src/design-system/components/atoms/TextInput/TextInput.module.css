@@ -8,7 +8,6 @@
   color: var(--slxd-text-input-text);
   font-family: var(--slxd-font-family-body);
   font-size: var(--slxd-text-input-font-size);
-  letter-spacing: var(--slxd-text-input-letter-spacing);
 }
 
 .input[aria-invalid] {
