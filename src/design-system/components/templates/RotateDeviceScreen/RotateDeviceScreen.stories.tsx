@@ -4,10 +4,7 @@ import { RotateDeviceScreen } from './RotateDeviceScreen'
 const meta = {
   title: 'Plantillas/RotateDeviceScreen',
   component: RotateDeviceScreen,
-  args: {
-    title: 'Gira tu dispositivo',
-    message: 'Este juego se juega en horizontal. Gira tu dispositivo para continuar.',
-  },
+  args: { title: 'Gira tu dispositivo' },
 } satisfies Meta<typeof RotateDeviceScreen>
 
 export default meta

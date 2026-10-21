@@ -12,7 +12,5 @@ export const designSystemStrings: DesignSystemStrings = {
 export const ui = {
   rotateDevice: {
     title: 'Gira tu dispositivo',
-    touchMessage: 'Este juego se juega en horizontal. Gira tu dispositivo para continuar.',
-    desktopMessage: 'Este juego se juega en horizontal. Haz la ventana del navegador más ancha que alta para continuar.',
   },
 }

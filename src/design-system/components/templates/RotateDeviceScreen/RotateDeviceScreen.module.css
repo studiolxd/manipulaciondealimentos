@@ -18,7 +18,3 @@
   color: var(--slxd-rotate-screen-text);
   text-align: center;
 }
-
-.message {
-  max-width: 32ch;
-}

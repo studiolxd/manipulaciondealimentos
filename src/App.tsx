@@ -1,4 +1,4 @@
-import { useCoarsePointer, usePortrait } from '@studiolxd/tramoya'
+import { usePortrait } from '@studiolxd/tramoya'
 import { designSystemStrings, ui } from './content/ui'
 import { DesignSystemProvider, RotateDeviceScreen } from './design-system'
 import { GameProvider, isSceneId } from './game/game'
@@ -14,17 +14,11 @@ function startScene(): SceneId | undefined {
 
 export default function App() {
   const portrait = usePortrait()
-  const touch = useCoarsePointer()
   return (
     <DesignSystemProvider strings={designSystemStrings} paused={portrait}>
       <GameProvider startScene={startScene()} paused={portrait}>
         <SceneHost />
-        {portrait && (
-          <RotateDeviceScreen
-            title={ui.rotateDevice.title}
-            message={touch ? ui.rotateDevice.touchMessage : ui.rotateDevice.desktopMessage}
-          />
-        )}
+        {portrait && <RotateDeviceScreen title={ui.rotateDevice.title} />}
       </GameProvider>
     </DesignSystemProvider>
   )
