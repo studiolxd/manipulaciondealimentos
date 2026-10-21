@@ -1,5 +1,5 @@
-import { useTypewriter } from '@studiolxd/tramoya'
-import { useMemo, type ComponentProps } from 'react'
+import { useReducedMotion, useTypewriter } from '@studiolxd/tramoya'
+import { useEffect, useMemo, type ComponentProps } from 'react'
 import { tokens } from '../../../generated/tokens'
 import { useDesignSystem } from '../../../hooks/useDesignSystem'
 import { useVoice } from '../../../hooks/useVoice'
@@ -10,6 +10,8 @@ import styles from './Typewriter.module.css'
 
 const CHAR_DELAY_MS = tokens['motion.duration.typewriter-char']
 const SENTENCE_PAUSE_MS = tokens['motion.duration.typewriter-pause']
+// Text done this long before the voice is: the player skipped it.
+const SKIP_MARGIN_MS = 250
 
 type TextStyle = Pick<ComponentProps<typeof Text>, 'size' | 'weight' | 'tone'>
 
@@ -27,26 +29,27 @@ interface TypewriterProps extends TextStyle {
 }
 
 // Text + VisuallyHidden: types the text character by character, pausing
-// between sentences. With a voice-over each word is typed as it is said. Enter or Space shows it all at once, like a
+// between sentences. With a voice-over each word is typed as it is said, and
+// skipping the text also stops the voice. Enter or Space shows it all at once, like a
 // click on its container (the voice goes on). The animation is hidden from
 // screen readers, which get the full text at once.
 export function Typewriter({ text, complete = false, voice, onDone, size, weight, tone }: TypewriterProps) {
   const { paused, voiceSync } = useDesignSystem()
   // In step with the voice, measured against where the audio actually is.
-  const clock = useVoice(voice)
+  const playing = useVoice(voice)
   const pace = useMemo(
     () =>
-      clock && voice
+      playing && voice
         ? {
-            elapsedMs: clock,
+            elapsedMs: playing.elapsedMs,
             durationMs: lineDurationMs(voice),
             // Without word times the text follows the voice at an even pace.
             charTimesMs: voiceSync === 'words' ? voiceCharTimes(text, voice) : undefined,
           }
         : undefined,
-    [clock, voice, text, voiceSync],
+    [playing, voice, text, voiceSync],
   )
-  const { ref, visible } = useTypewriter<HTMLSpanElement>({
+  const { ref, visible, done } = useTypewriter<HTMLSpanElement>({
     text,
     complete,
     paused,
@@ -55,6 +58,15 @@ export function Typewriter({ text, complete = false, voice, onDone, size, weight
     pace,
     onDone,
   })
+
+  // Skipping the text (a click, Enter or Space) also cuts the voice short. With
+  // reduced motion the text is whole from the start and the voice plays on.
+  const reducedMotion = useReducedMotion()
+  useEffect(() => {
+    if (!done || !pace || reducedMotion) return
+    const voiceEndsMs = pace.charTimesMs?.at(-1) ?? pace.durationMs
+    if (pace.elapsedMs() < voiceEndsMs - SKIP_MARGIN_MS) playing?.stop()
+  }, [done, pace, playing, reducedMotion])
 
   return (
     <Text size={size} weight={weight} tone={tone}>
