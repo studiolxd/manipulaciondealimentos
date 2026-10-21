@@ -1,4 +1,4 @@
-click.mp3: "click1" from UI Audio by Kenney (www.kenney.nl), converted to MP3.
+click.mp3: "mouseclick1" from UI Audio by Kenney (www.kenney.nl), converted to MP3.
 https://kenney.nl/assets/ui-audio
 
 License: Creative Commons Zero (CC0)
