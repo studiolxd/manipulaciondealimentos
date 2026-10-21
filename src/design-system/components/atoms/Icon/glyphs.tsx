@@ -13,7 +13,7 @@ export const glyphs = {
     <>
       <path d="M5.28 7.28A9.5 9.5 0 0 1 18.72 7.28" />
       <polyline points="15.74 7.62 18.72 7.28 18.38 4.3" />
-      <rect className={styles.rotateDevicePhone} x="8" y="8" width="8" height="12" rx="2.5" />
+      <rect className={styles.rotateDevicePhone} x="8.25" y="9.25" width="7.5" height="11.5" rx="2.5" />
     </>
   ),
 } satisfies Record<string, ReactNode>
