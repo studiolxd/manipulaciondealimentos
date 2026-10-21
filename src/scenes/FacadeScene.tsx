@@ -1,9 +1,8 @@
 import { useState } from 'react'
+import { image } from '../content/images'
 import { facade } from '../content/scenes'
-import { ActionButton } from '../engine/ActionButton'
+import { Button, NarrationBox, Positioned, SceneFrame, Text, Typewriter } from '../design-system'
 import { useGame } from '../engine/gameContext'
-import { Scene } from '../engine/Scene'
-import { Typewriter } from '../engine/Typewriter'
 
 // Scene 1: the restaurant from the street.
 export function FacadeScene() {
@@ -12,19 +11,28 @@ export function FacadeScene() {
   const [typed, setTyped] = useState(false)
 
   return (
-    <Scene heading={facade.heading} background="facadeBackground" backgroundAlt={facade.backgroundAlt}>
+    <SceneFrame
+      heading={facade.heading}
+      background={image('facadeBackground')}
+      backgroundAlt={facade.backgroundAlt}
+      focusHeading={sceneReady}
+    >
       {sceneReady && (
-        <div className="narration-box facade__narration" onClick={() => setSkipRequested(true)}>
-          <p>
-            <Typewriter text={facade.narration} complete={skipRequested} onDone={() => setTyped(true)} />
-          </p>
-        </div>
+        <Positioned center="both" width={1200}>
+          <NarrationBox onClick={() => setSkipRequested(true)}>
+            <Text>
+              <Typewriter text={facade.narration} complete={skipRequested} onDone={() => setTyped(true)} />
+            </Text>
+          </NarrationBox>
+        </Positioned>
       )}
       {typed && (
-        <ActionButton className="facade__enter" onClick={() => goTo('dining-room')}>
-          {facade.enter}
-        </ActionButton>
+        <Positioned bottom={96} center="x">
+          <Button claimFocus onClick={() => goTo('dining-room')}>
+            {facade.enter}
+          </Button>
+        </Positioned>
       )}
-    </Scene>
+    </SceneFrame>
   )
 }

@@ -1,0 +1,33 @@
+{
+  "shadow": {
+    "$type": "shadow",
+    "raised": { "$value": "{primitive.shadow.lg}" }
+  },
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "scene-fade": { "$value": "{primitive.duration.600}", "$description": "Each half of a scene change." },
+      "morph": { "$value": "{primitive.duration.450}", "$description": "An element turning into another (View Transitions)." },
+      "exit": { "$value": "{primitive.duration.350}", "$description": "An element leaving the screen, e.g. a swiped card." },
+      "title-hold": { "$value": "{primitive.duration.2500}", "$description": "How long an activity title stays before fading out." },
+      "typewriter-char": { "$value": "{primitive.duration.28}" },
+      "typewriter-pause": { "$value": "{primitive.duration.450}", "$description": "Pause after each sentence." }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": "{primitive.easing.ease-in-out}" },
+      "enter": { "$value": "{primitive.easing.ease-out}" },
+      "exit": { "$value": "{primitive.easing.ease-in}" }
+    }
+  },
+  "layer": {
+    "$type": "number",
+    "$description": "Stacking order. Each layer only competes with its siblings in the same stacking context.",
+    "base": { "$value": "{primitive.z-index.0}" },
+    "hud": { "$value": "{primitive.z-index.1}" },
+    "curtain": { "$value": "{primitive.z-index.1}" },
+    "over-hud": { "$value": "{primitive.z-index.2}" },
+    "dialog": { "$value": "{primitive.z-index.3}" },
+    "system": { "$value": "{primitive.z-index.10}" }
+  }
+}

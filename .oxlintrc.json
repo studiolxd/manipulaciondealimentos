@@ -1,8 +1,106 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
+  "plugins": ["react", "typescript", "oxc", "jsx-a11y"],
+  "ignorePatterns": ["src/design-system/generated/**", "storybook-static/**"],
   "rules": {
     "react/rules-of-hooks": "error",
     "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/App.tsx", "src/main.tsx", "src/engine/**", "src/scenes/**", "src/content/**"],
+      "rules": {
+        "react/forbid-elements": [
+          "error",
+          {
+            "forbid": [
+              { "element": "a", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "article", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "aside", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "audio", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "b", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "br", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "button", "message": "Use Button or IconButton from the design system." },
+              { "element": "canvas", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "dialog", "message": "Use Dialog from the design system." },
+              { "element": "div", "message": "Use Positioned or Layer from the design system." },
+              { "element": "em", "message": "Use Text from the design system." },
+              { "element": "fieldset", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "figure", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "footer", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "form", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "h1", "message": "Use SceneFrame from the design system." },
+              { "element": "h2", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "h3", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "h4", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "h5", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "h6", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "header", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "hr", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "i", "message": "Use Text from the design system." },
+              { "element": "img", "message": "Use Image from the design system." },
+              { "element": "input", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "label", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "li", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "main", "message": "Use Stage from the design system." },
+              { "element": "nav", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "ol", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "p", "message": "Use Text from the design system." },
+              { "element": "picture", "message": "Use Image from the design system." },
+              { "element": "section", "message": "Use SceneFrame from the design system." },
+              { "element": "select", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "small", "message": "Use Text from the design system." },
+              { "element": "span", "message": "Use Text or VisuallyHidden from the design system." },
+              { "element": "strong", "message": "Use Text from the design system." },
+              { "element": "svg", "message": "Use Image from the design system." },
+              { "element": "table", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "textarea", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "ul", "message": "Use a component from the design system (src/design-system)." },
+              { "element": "video", "message": "Use a component from the design system (src/design-system)." }
+            ]
+          }
+        ],
+        "react/forbid-component-props": [
+          "error",
+          {
+            "forbid": [
+              { "propName": "className", "message": "Style belongs to the design system; compose with its components and props." },
+              { "propName": "style", "message": "Style belongs to the design system; use Positioned for layout." }
+            ]
+          }
+        ],
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": ["**/design-system/**"],
+                "message": "Import from the design system entry point ('../design-system'), not from its internals."
+              },
+              {
+                "group": ["*.css", "**/*.css"],
+                "message": "Styles belong to the design system."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["src/design-system/**"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": ["**/engine", "**/engine/**", "**/scenes", "**/scenes/**", "**/content", "**/content/**"],
+                "message": "The design system must not depend on the game."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

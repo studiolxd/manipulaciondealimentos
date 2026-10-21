@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  gap: var(--slxd-id-card-gap);
+  width: 100%;
+  height: 100%;
+  padding-block: var(--slxd-id-card-padding-block);
+  padding-inline: var(--slxd-id-card-padding-inline);
+  border: var(--slxd-id-card-border-width) solid var(--slxd-id-card-border-color);
+  border-radius: var(--slxd-id-card-radius);
+  background: var(--slxd-id-card-background);
+  color: var(--slxd-id-card-text);
+  box-shadow: var(--slxd-id-card-shadow);
+}
+
+.details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--slxd-id-card-text-gap);
+}
+
+.details p {
+  margin: 0;
+}
+
+.name {
+  font-size: var(--slxd-id-card-name-font-size);
+  font-weight: var(--slxd-id-card-name-font-weight);
+  line-height: var(--slxd-id-card-name-line-height);
+}
+
+.job {
+  font-weight: var(--slxd-id-card-job-font-weight);
+}
+
+.description {
+  font-size: var(--slxd-id-card-description-font-size);
+}
+
+.portrait {
+  flex: none;
+  pointer-events: none;
+}

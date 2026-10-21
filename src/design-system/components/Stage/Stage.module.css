@@ -1,0 +1,27 @@
+.viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--slxd-stage-backdrop);
+}
+
+.viewport[data-fit='container'] {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  transform: translate(-50%, -50%) scale(var(--slxd-stage-scale));
+  color: var(--slxd-stage-text);
+  font-family: var(--slxd-stage-font-family);
+  font-size: var(--slxd-stage-font-size);
+  line-height: var(--slxd-stage-line-height);
+}

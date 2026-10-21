@@ -1,0 +1,30 @@
+/* Documentation only: shown on Storybook's own (light) docs pages. */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--slxd-font-size-system-body);
+}
+
+.table th,
+.table td {
+  padding-block: var(--slxd-space-2xs);
+  padding-inline: var(--slxd-space-xs);
+  border-bottom: var(--slxd-border-width-default) solid var(--slxd-color-border-subtle);
+  text-align: start;
+  vertical-align: top;
+}
+
+.description {
+  margin: var(--slxd-space-3xs) 0 0;
+}
+
+.swatch {
+  display: inline-block;
+  width: var(--slxd-space-sm);
+  height: var(--slxd-space-sm);
+  margin-inline-end: var(--slxd-space-2xs);
+  border: var(--slxd-border-width-default) solid var(--slxd-color-border-subtle);
+  border-radius: var(--slxd-radius-sm);
+  vertical-align: middle;
+}

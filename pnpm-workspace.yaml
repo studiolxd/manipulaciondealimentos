@@ -1,0 +1,3 @@
+allowBuilds:
+  # Needed by Storybook: validates the platform binary on install.
+  esbuild: true

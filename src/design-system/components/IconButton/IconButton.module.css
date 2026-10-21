@@ -1,0 +1,18 @@
+.button {
+  width: var(--slxd-icon-button-size);
+  height: var(--slxd-icon-button-size);
+  padding: var(--slxd-icon-button-padding);
+  border: 0;
+  border-radius: var(--slxd-icon-button-radius);
+  background: none;
+  cursor: pointer;
+}
+
+.button[data-concealed] {
+  visibility: hidden;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}

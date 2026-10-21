@@ -1,0 +1,18 @@
+{
+  "swipe-card": {
+    "exit-duration": { "$type": "duration", "$value": "{motion.duration.exit}" },
+    "exit-easing": { "$type": "cubicBezier", "$value": "{motion.easing.enter}" },
+    "stamp": {
+      "inset": { "$type": "dimension", "$value": "{space.lg}" },
+      "padding-inline": { "$type": "dimension", "$value": "{space.md}" },
+      "padding-block": { "$type": "dimension", "$value": "{space.3xs}" },
+      "border-width": { "$type": "dimension", "$value": "{border-width.strong}" },
+      "radius": { "$type": "dimension", "$value": "{radius.sm}" },
+      "font-size": { "$type": "dimension", "$value": "{font.size.stamp}" },
+      "font-weight": { "$type": "fontWeight", "$value": "{font.weight.heavy}" },
+      "line-height": { "$type": "number", "$value": "{font.line-height.tight}" },
+      "positive": { "$type": "color", "$value": "{color.feedback.positive}" },
+      "negative": { "$type": "color", "$value": "{color.feedback.negative}" }
+    }
+  }
+}

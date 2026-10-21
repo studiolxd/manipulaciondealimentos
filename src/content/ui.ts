@@ -1,8 +1,15 @@
+import type { DesignSystemStrings } from '../design-system'
+
 // Interface strings that are not part of the script.
-export const ui = {
-  speakerSays: (speaker: string) => `${speaker} dice:`,
+
+/** Strings used inside design system components. */
+export const designSystemStrings: DesignSystemStrings = {
   continue: 'Continuar',
   showFullText: 'Mostrar el texto completo',
+  speakerSays: (speaker) => `${speaker} dice:`,
+}
+
+export const ui = {
   rotateDevice: {
     title: 'Gira tu dispositivo',
     touchMessage: 'Este juego se juega en horizontal. Gira tu dispositivo para continuar.',

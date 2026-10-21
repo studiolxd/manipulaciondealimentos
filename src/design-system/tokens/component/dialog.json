@@ -1,0 +1,13 @@
+{
+  "dialog": {
+    "background": { "$type": "color", "$value": "{color.surface.default}" },
+    "text": { "$type": "color", "$value": "{color.text.default}" },
+    "radius": { "$type": "dimension", "$value": "{radius.lg}" },
+    "padding-block-start": { "$type": "dimension", "$value": "{space.xl}" },
+    "padding-block-end": { "$type": "dimension", "$value": "{space.4xl}" },
+    "padding-inline": { "$type": "dimension", "$value": "{space.2xl}" },
+    "shadow": { "$type": "shadow", "$value": "{shadow.raised}" },
+    "paragraph-gap": { "$type": "dimension", "$value": "{space.sm}" },
+    "close-inset": { "$type": "dimension", "$value": "{space.sm}" }
+  }
+}

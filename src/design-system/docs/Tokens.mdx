@@ -1,0 +1,67 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from './TokenTable'
+
+<Meta title="Tokens" />
+
+# Tokens
+
+Generados desde `src/design-system/tokens`. Las tablas muestran el valor resuelto y, en las capas semántica y de
+componente, el token al que apunta cada uno.
+
+## 1. Primitivos
+
+Valores en bruto. Ningún componente los usa directamente.
+
+### Color
+
+<TokenTable layer="primitive" prefix="primitive.color" />
+
+### Tamaños, radios y bordes
+
+<TokenTable layer="primitive" prefix="primitive.size" />
+<TokenTable layer="primitive" prefix="primitive.screen" />
+<TokenTable layer="primitive" prefix="primitive.radius" />
+<TokenTable layer="primitive" prefix="primitive.border-width" />
+
+### Tipografía
+
+<TokenTable layer="primitive" prefix="primitive.font" />
+
+### Sombras, movimiento y capas
+
+<TokenTable layer="primitive" prefix="primitive.shadow" />
+<TokenTable layer="primitive" prefix="primitive.duration" />
+<TokenTable layer="primitive" prefix="primitive.easing" />
+<TokenTable layer="primitive" prefix="primitive.z-index" />
+
+## 2. Semánticos
+
+La intención de cada valor. Solo apuntan a primitivos.
+
+### Color
+
+<TokenTable layer="semantic" prefix="color" />
+
+### Espaciado y tamaños
+
+<TokenTable layer="semantic" prefix="space" />
+<TokenTable layer="semantic" prefix="size" />
+<TokenTable layer="semantic" prefix="radius" />
+<TokenTable layer="semantic" prefix="border-width" />
+<TokenTable layer="semantic" prefix="focus" />
+
+### Tipografía
+
+<TokenTable layer="semantic" prefix="font" />
+
+### Sombras, movimiento y capas
+
+<TokenTable layer="semantic" prefix="shadow" />
+<TokenTable layer="semantic" prefix="motion" />
+<TokenTable layer="semantic" prefix="layer" />
+
+## 3. Componente
+
+El uso concreto en cada componente. Solo apuntan a semánticos.
+
+<TokenTable layer="component" />

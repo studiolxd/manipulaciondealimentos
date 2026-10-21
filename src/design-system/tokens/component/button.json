@@ -1,0 +1,27 @@
+{
+  "button": {
+    "min-height": { "$type": "dimension", "$value": "{size.target.min}" },
+    "padding-block": { "$type": "dimension", "$value": "{space.xs}" },
+    "padding-inline": { "$type": "dimension", "$value": "{space.4xl}" },
+    "radius": { "$type": "dimension", "$value": "{radius.full}" },
+    "font-size": { "$type": "dimension", "$value": "{font.size.body}" },
+    "font-weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },
+    "shadow": { "$type": "shadow", "$value": "{shadow.raised}" },
+    "primary": {
+      "$type": "color",
+      "background": { "$value": "{color.action.primary.background}" },
+      "background-hover": { "$value": "{color.action.primary.background-hover}" },
+      "text": { "$value": "{color.action.primary.text}" }
+    },
+    "choice": {
+      "$description": "Large secondary answers placed over a scene, e.g. YES / NO.",
+      "background": { "$type": "color", "$value": "{color.surface.translucent}" },
+      "background-hover": { "$type": "color", "$value": "{color.surface.default}" },
+      "padding-inline": { "$type": "dimension", "$value": "{space.lg}" },
+      "font-size": { "$type": "dimension", "$value": "{font.size.label-lg}" },
+      "font-weight": { "$type": "fontWeight", "$value": "{font.weight.heavy}" },
+      "positive-text": { "$type": "color", "$value": "{color.text.positive}" },
+      "negative-text": { "$type": "color", "$value": "{color.text.negative}" }
+    }
+  }
+}

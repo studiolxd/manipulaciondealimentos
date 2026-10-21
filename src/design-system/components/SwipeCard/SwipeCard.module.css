@@ -1,0 +1,52 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+  transform: translateX(var(--swipe-x)) rotate(var(--swipe-rotate));
+  transition-property: transform;
+  transition-duration: var(--slxd-swipe-card-exit-duration);
+  transition-timing-function: var(--slxd-swipe-card-exit-easing);
+}
+
+.card[data-dragging] {
+  transition: none;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.stamp {
+  position: absolute;
+  top: var(--slxd-swipe-card-stamp-inset);
+  padding-block: var(--slxd-swipe-card-stamp-padding-block);
+  padding-inline: var(--slxd-swipe-card-stamp-padding-inline);
+  border: var(--slxd-swipe-card-stamp-border-width) solid currentcolor;
+  border-radius: var(--slxd-swipe-card-stamp-radius);
+  font-size: var(--slxd-swipe-card-stamp-font-size);
+  font-weight: var(--slxd-swipe-card-stamp-font-weight);
+  line-height: var(--slxd-swipe-card-stamp-line-height);
+  pointer-events: none;
+}
+
+.stamp[data-side='right'] {
+  left: var(--slxd-swipe-card-stamp-inset);
+  color: var(--slxd-swipe-card-stamp-positive);
+  opacity: var(--swipe-right);
+  rotate: -12deg;
+}
+
+.stamp[data-side='left'] {
+  right: var(--slxd-swipe-card-stamp-inset);
+  color: var(--slxd-swipe-card-stamp-negative);
+  opacity: var(--swipe-left);
+  rotate: 12deg;
+}

@@ -8,7 +8,8 @@ import { existsSync } from 'node:fs'
 import { mkdir } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import sharp from 'sharp'
-import { assets, type AssetId } from '../src/engine/assets.ts'
+import { assets, type AssetId } from '../src/content/assets.ts'
+import { icons, type IconName } from '../src/design-system/icons.manifest.ts'
 
 type Shape = 'rect' | 'rounded' | 'circle'
 
@@ -18,7 +19,7 @@ interface Placeholder {
   label: string
 }
 
-const placeholders: Record<AssetId, Placeholder> = {
+const placeholders: Record<AssetId | IconName, Placeholder> = {
   avatarSelectBackground: { shape: 'rect', color: '#d9d4c7', label: 'Fondo · Elección de personaje' },
   facadeBackground: { shape: 'rect', color: '#e8c9a0', label: 'Fondo · Fachada del restaurante' },
   diningRoomBackground: { shape: 'rect', color: '#c9d8c5', label: 'Fondo · Salón comedor' },
@@ -29,13 +30,6 @@ const placeholders: Record<AssetId, Placeholder> = {
   davidStanding: { shape: 'rounded', color: '#4f7a5a', label: 'David · De pie' },
   davidSeated: { shape: 'rounded', color: '#4f7a5a', label: 'David · Sentado' },
   davidPortrait: { shape: 'circle', color: '#4f7a5a', label: 'David' },
-  rotateDeviceIcon: { shape: 'circle', color: '#f2f2f2', label: 'Girar' },
-  nextIcon: { shape: 'circle', color: '#c2410c', label: '>' },
-  hudBar: { shape: 'rect', color: '#3a3a3c', label: 'HUD' },
-  statementIcon: { shape: 'circle', color: '#ffffff', label: 'Enunciado' },
-  closeIcon: { shape: 'circle', color: '#c2410c', label: 'X' },
-  correctIcon: { shape: 'circle', color: '#2f9e5b', label: 'OK' },
-  incorrectIcon: { shape: 'circle', color: '#d64545', label: 'NO' },
   cardOscar: { shape: 'rounded', color: '#8fa9c9', label: 'Óscar' },
   cardLaura: { shape: 'rounded', color: '#c98fb4', label: 'Laura' },
   cardPablo: { shape: 'rounded', color: '#8fc9b0', label: 'Pablo' },
@@ -47,7 +41,17 @@ const placeholders: Record<AssetId, Placeholder> = {
   cardCarmen: { shape: 'rounded', color: '#c98fa0', label: 'Carmen' },
   cardSergio: { shape: 'rounded', color: '#9aa3b5', label: 'Sergio' },
   cardElena: { shape: 'rounded', color: '#c9c28f', label: 'Elena' },
+  // Design system icons
+  rotateDevice: { shape: 'circle', color: '#f2f2f2', label: 'Girar' },
+  next: { shape: 'circle', color: '#c2410c', label: '>' },
+  hudBar: { shape: 'rect', color: '#3a3a3c', label: 'HUD' },
+  statement: { shape: 'circle', color: '#ffffff', label: 'Enunciado' },
+  close: { shape: 'circle', color: '#c2410c', label: 'X' },
+  correct: { shape: 'circle', color: '#2f9e5b', label: 'OK' },
+  incorrect: { shape: 'circle', color: '#d64545', label: 'NO' },
 }
+
+const manifest: Record<AssetId | IconName, { path: string; width: number; height: number }> = { ...assets, ...icons }
 
 const publicDir = join(import.meta.dirname, '..', 'public')
 const force = process.argv.includes('--force')
@@ -67,8 +71,8 @@ function shapeSvg(shape: Shape, width: number, height: number, color: string): s
   }
 }
 
-function placeholderSvg(id: AssetId): string {
-  const { width, height, path } = assets[id]
+function placeholderSvg(id: AssetId | IconName): string {
+  const { width, height, path } = manifest[id]
   const { shape, color, label } = placeholders[id]
   const size = Math.max(14, Math.round(Math.min(width, height) / 14))
   const fileName = path.split('/').pop() ?? path
@@ -99,12 +103,12 @@ function placeholderSvg(id: AssetId): string {
 }
 
 let created = 0
-for (const id of Object.keys(assets) as AssetId[]) {
-  const target = join(publicDir, assets[id].path)
+for (const id of Object.keys(manifest) as (AssetId | IconName)[]) {
+  const target = join(publicDir, manifest[id].path)
   if (existsSync(target) && !force) continue
   await mkdir(dirname(target), { recursive: true })
   await sharp(Buffer.from(placeholderSvg(id))).png().toFile(target)
-  console.log(`created ${assets[id].path}`)
+  console.log(`created ${manifest[id].path}`)
   created++
 }
 console.log(`${created} placeholder(s) created`)

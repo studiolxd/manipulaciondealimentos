@@ -1,0 +1,7 @@
+{
+  "icon-button": {
+    "size": { "$type": "dimension", "$value": "{size.target.min}" },
+    "padding": { "$type": "dimension", "$value": "{space.2xs}" },
+    "radius": { "$type": "dimension", "$value": "{radius.full}" }
+  }
+}

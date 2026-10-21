@@ -1,0 +1,10 @@
+{
+  "narration-box": {
+    "background": { "$type": "color", "$value": "{color.surface.translucent}" },
+    "text": { "$type": "color", "$value": "{color.text.default}" },
+    "radius": { "$type": "dimension", "$value": "{radius.lg}" },
+    "padding-block": { "$type": "dimension", "$value": "{space.2xl}" },
+    "padding-inline": { "$type": "dimension", "$value": "{space.4xl}" },
+    "shadow": { "$type": "shadow", "$value": "{shadow.raised}" }
+  }
+}

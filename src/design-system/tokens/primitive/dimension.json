@@ -1,0 +1,45 @@
+{
+  "primitive": {
+    "size": {
+      "$type": "dimension",
+      "$description": "Size scale in stage pixels (the game is laid out on a 1920×1080 stage).",
+      "0": { "$value": "0px" },
+      "4": { "$value": "4px" },
+      "6": { "$value": "6px" },
+      "8": { "$value": "8px" },
+      "16": { "$value": "16px" },
+      "24": { "$value": "24px" },
+      "32": { "$value": "32px" },
+      "40": { "$value": "40px" },
+      "48": { "$value": "48px" },
+      "56": { "$value": "56px" },
+      "64": { "$value": "64px" },
+      "72": { "$value": "72px" },
+      "96": { "$value": "96px" },
+      "112": { "$value": "112px" },
+      "120": { "$value": "120px" },
+      "160": { "$value": "160px" }
+    },
+    "screen": {
+      "$type": "dimension",
+      "$description": "Minimums in real screen pixels, whatever the stage scale. Combined with the stage scale they keep the game readable and touchable on small screens.",
+      "target-min": { "$value": "44px", "$description": "Comfortable touch target (WCAG 2.5.5)." },
+      "text-min": { "$value": "15px" },
+      "heading-min": { "$value": "22px" },
+      "title-min": { "$value": "28px" },
+      "focus-ring-min": { "$value": "3px" }
+    },
+    "radius": {
+      "$type": "dimension",
+      "16": { "$value": "16px" },
+      "32": { "$value": "32px" },
+      "40": { "$value": "40px" },
+      "full": { "$value": "999px" }
+    },
+    "border-width": {
+      "$type": "dimension",
+      "4": { "$value": "4px" },
+      "8": { "$value": "8px" }
+    }
+  }
+}

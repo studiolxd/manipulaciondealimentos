@@ -1,13 +1,26 @@
-import { useEffect, useId, useRef, useState, type Ref } from 'react'
-import { SwipeCard, type SwipeCardHandle, type SwipeDirection } from '../activities/SwipeCard'
+import { useRef, useState } from 'react'
+import { image } from '../content/images'
 import { whoIsFoodHandler, type PersonCard } from '../content/whoIsFoodHandler'
-import { ActionButton } from '../engine/ActionButton'
-import { assetUrl } from '../engine/assetUrl'
+import {
+  ActivityTitle,
+  Button,
+  Dialog,
+  FeedbackPanel,
+  HudLabel,
+  IconButton,
+  IdCard,
+  Layer,
+  Positioned,
+  SceneFrame,
+  SpeechBubble,
+  SwipeCard,
+  Text,
+  withViewTransition,
+  type SwipeCardHandle,
+  type SwipeDirection,
+} from '../design-system'
 import { useGame } from '../engine/gameContext'
-import { Scene } from '../engine/Scene'
 import { shuffle } from '../engine/shuffle'
-import { SpeechBubble } from '../engine/SpeechBubble'
-import { withViewTransition } from '../engine/viewTransition'
 
 // Scenes 4 and 5 (activity 2): title, statement and the ID cards. The
 // statement bubble shrinks into an icon that can reopen it.
@@ -47,179 +60,131 @@ export function WhoIsFoodHandlerScene() {
   }
 
   return (
-    <Scene
+    <SceneFrame
       heading={whoIsFoodHandler.heading}
-      background="diningTableTopBackground"
+      background={image('diningTableTopBackground')}
       backgroundAlt={whoIsFoodHandler.backgroundAlt}
-      className="who-is"
+      focusHeading={sceneReady}
     >
       {sceneReady && phase === 'title' && (
-        <p className="activity-title" aria-hidden="true" onAnimationEnd={() => setPhase('statement')}>
-          {whoIsFoodHandler.title}
-        </p>
+        <Positioned center="both" layer="over-hud">
+          <ActivityTitle title={whoIsFoodHandler.title} onFinished={() => setPhase('statement')} />
+        </Positioned>
       )}
 
       {phase === 'statement' && (
-        <SpeechBubble
-          className="who-is__statement"
-          speaker="David"
-          blocks={whoIsFoodHandler.statement}
-          viewTransitionName={STATEMENT_TRANSITION}
-          onDismiss={() => withViewTransition(() => setPhase('cards'))}
-        />
+        <Positioned top={160} left={210} width={1500} layer="over-hud">
+          <SpeechBubble
+            speaker="David"
+            blocks={whoIsFoodHandler.statement}
+            viewTransitionName={STATEMENT_TRANSITION}
+            onDismiss={() => withViewTransition(() => setPhase('cards'))}
+          />
+        </Positioned>
       )}
 
       {phase === 'cards' && (
         <>
-          <div className="who-is__board" inert={statementOpen}>
-            <button
-              ref={statementButtonRef}
-              type="button"
-              className="statement-button"
-              // While open, the icon has become the dialog: it hides and hands over the transition name.
-              style={
-                statementOpen ? { visibility: 'hidden' } : { viewTransitionName: STATEMENT_TRANSITION }
-              }
-              aria-label={whoIsFoodHandler.openStatement}
-              aria-haspopup="dialog"
-              onClick={() => withViewTransition(() => setStatementOpen(true))}
-            >
-              <img className="statement-button__icon" src={assetUrl('statementIcon')} alt="" />
-            </button>
-            <p className="who-is__progress">
-              {whoIsFoodHandler.progress(Math.min(answers.length + 1, deck.length), deck.length)}
-            </p>
+          <Layer layer="over-hud" inert={statementOpen}>
+            <Positioned top={4} left={24}>
+              <IconButton
+                ref={statementButtonRef}
+                icon="statement"
+                label={whoIsFoodHandler.openStatement}
+                opensDialog
+                // While open, the icon has become the dialog.
+                concealed={statementOpen}
+                viewTransitionName={STATEMENT_TRANSITION}
+                onClick={() => withViewTransition(() => setStatementOpen(true))}
+              />
+            </Positioned>
+            <Positioned top={0} right={0}>
+              <HudLabel>{whoIsFoodHandler.progress(Math.min(answers.length + 1, deck.length), deck.length)}</HudLabel>
+            </Positioned>
+          </Layer>
+
+          <Layer inert={statementOpen}>
             {current && (
               <>
-                <PersonSwipeCard
-                  key={current.id}
-                  card={current}
-                  handleRef={cardRef}
-                  onSwipe={(direction) => answer(current, direction)}
-                />
+                <Positioned top={160} left={400} width={1120} height={520}>
+                  <SwipeCard
+                    key={current.id}
+                    ref={cardRef}
+                    label={current.name}
+                    description={`${current.job}. ${current.description}`}
+                    roleDescription={whoIsFoodHandler.cardRoleDescription}
+                    keyboardHint={whoIsFoodHandler.keyboardHint}
+                    leftStamp={whoIsFoodHandler.no}
+                    rightStamp={whoIsFoodHandler.yes}
+                    onSwipe={(direction) => answer(current, direction)}
+                  >
+                    <IdCard
+                      name={current.name}
+                      job={current.job}
+                      description={current.description}
+                      portrait={image(current.portrait)}
+                    />
+                  </SwipeCard>
+                </Positioned>
                 {/* Single-tap alternative to dragging (WCAG 2.5.7). */}
-                <button
-                  type="button"
-                  className="who-is__side who-is__side--no"
-                  aria-label={whoIsFoodHandler.noButton}
-                  onClick={() => cardRef.current?.swipe('left')}
-                >
-                  ← {whoIsFoodHandler.no}
-                </button>
-                <button
-                  type="button"
-                  className="who-is__side who-is__side--yes"
-                  aria-label={whoIsFoodHandler.yesButton}
-                  onClick={() => cardRef.current?.swipe('right')}
-                >
-                  {whoIsFoodHandler.yes} →
-                </button>
+                <Positioned top={370} left={64}>
+                  <Button
+                    variant="choice-negative"
+                    aria-label={whoIsFoodHandler.noButton}
+                    onClick={() => cardRef.current?.swipe('left')}
+                  >
+                    ← {whoIsFoodHandler.no}
+                  </Button>
+                </Positioned>
+                <Positioned top={370} right={64}>
+                  <Button
+                    variant="choice-positive"
+                    aria-label={whoIsFoodHandler.yesButton}
+                    onClick={() => cardRef.current?.swipe('right')}
+                  >
+                    {whoIsFoodHandler.yes} →
+                  </Button>
+                </Positioned>
               </>
             )}
-            <div className="who-is__feedback" aria-live="polite">
-              {lastAnswer && <Feedback answer={lastAnswer} />}
-            </div>
+            <Positioned top={720} left={210} width={1500}>
+              <FeedbackPanel
+                feedback={
+                  lastAnswer
+                    ? {
+                        tone: lastAnswer.correct ? 'positive' : 'negative',
+                        title: lastAnswer.correct ? whoIsFoodHandler.correct : whoIsFoodHandler.incorrect,
+                        message: lastAnswer.card.explanation,
+                      }
+                    : null
+                }
+              />
+            </Positioned>
             {finished && (
-              <ActionButton className="who-is__continue" onClick={() => goTo('who-is-food-handler-conclusion')}>
-                {whoIsFoodHandler.next}
-              </ActionButton>
+              <Positioned top={380} center="x">
+                <Button claimFocus onClick={() => goTo('who-is-food-handler-conclusion')}>
+                  {whoIsFoodHandler.next}
+                </Button>
+              </Positioned>
             )}
-          </div>
-          {statementOpen && <StatementDialog onClose={closeStatement} />}
+          </Layer>
+
+          {statementOpen && (
+            <Positioned top={160} left={210} width={1500} layer="dialog">
+              <Dialog
+                label={whoIsFoodHandler.statementLabel}
+                closeLabel={whoIsFoodHandler.closeStatement}
+                viewTransitionName={STATEMENT_TRANSITION}
+                onClose={closeStatement}
+              >
+                {whoIsFoodHandler.statement.map((paragraph) => (
+                  <Text key={paragraph}>{paragraph}</Text>
+                ))}
+              </Dialog>
+            </Positioned>
+          )}
         </>
       )}
-    </Scene>
-  )
-}
-
-interface PersonSwipeCardProps {
-  card: PersonCard
-  handleRef: Ref<SwipeCardHandle>
-  onSwipe: (direction: SwipeDirection) => void
-}
-
-function PersonSwipeCard({ card, handleRef, onSwipe }: PersonSwipeCardProps) {
-  const nameId = useId()
-  const jobId = useId()
-  const descriptionId = useId()
-  return (
-    <SwipeCard
-      className="person-card"
-      roleDescription={whoIsFoodHandler.cardRoleDescription}
-      labelledBy={nameId}
-      describedBy={`${jobId} ${descriptionId}`}
-      keyboardHint={whoIsFoodHandler.keyboardHint}
-      leftStamp={whoIsFoodHandler.no}
-      rightStamp={whoIsFoodHandler.yes}
-      handleRef={handleRef}
-      onSwipe={onSwipe}
-    >
-      <div className="person-card__text">
-        <p id={nameId} className="person-card__name">
-          {card.name}
-        </p>
-        <div>
-          <p id={jobId} className="person-card__job">
-            {card.job}
-          </p>
-          <p id={descriptionId} className="person-card__description">
-            {card.description}
-          </p>
-        </div>
-      </div>
-      <img className="person-card__portrait" src={assetUrl(card.portrait)} alt="" draggable={false} />
-    </SwipeCard>
-  )
-}
-
-function Feedback({ answer }: { answer: Answer }) {
-  return (
-    <>
-      <img
-        className="who-is__feedback-icon"
-        src={assetUrl(answer.correct ? 'correctIcon' : 'incorrectIcon')}
-        alt=""
-      />
-      <p className="who-is__feedback-text">
-        <strong>{answer.correct ? whoIsFoodHandler.correct : whoIsFoodHandler.incorrect}</strong>{' '}
-        {answer.card.explanation}
-      </p>
-    </>
-  )
-}
-
-function StatementDialog({ onClose }: { onClose: () => void }) {
-  const closeRef = useRef<HTMLButtonElement>(null)
-
-  useEffect(() => {
-    closeRef.current?.focus()
-  }, [])
-
-  return (
-    <div
-      className="statement-dialog"
-      role="dialog"
-      aria-modal="true"
-      aria-label={whoIsFoodHandler.statementLabel}
-      style={{ viewTransitionName: STATEMENT_TRANSITION }}
-      onKeyDown={(event) => {
-        if (event.key === 'Escape') onClose()
-      }}
-    >
-      <div className="statement-dialog__body">
-        {whoIsFoodHandler.statement.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-      <button
-        ref={closeRef}
-        type="button"
-        className="statement-dialog__close"
-        aria-label={whoIsFoodHandler.closeStatement}
-        onClick={onClose}
-      >
-        <img className="statement-dialog__close-icon" src={assetUrl('closeIcon')} alt="" />
-      </button>
-    </div>
+    </SceneFrame>
   )
 }

@@ -1,0 +1,37 @@
+{
+  "rotate-screen": {
+    "$description": "Shown outside the stage, so its sizes are real screen pixels from the primitive screen minimums.",
+    "background": {
+      "$type": "color",
+      "$value": "{color.surface.inverse}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{color.text.inverse}"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.xs}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "icon-size": {
+      "$type": "dimension",
+      "$value": "{size.hud.height}"
+    },
+    "title-font-size": {
+      "$type": "dimension",
+      "$value": "{font.size.system-heading}"
+    },
+    "message-font-size": {
+      "$type": "dimension",
+      "$value": "{font.size.system-body}"
+    },
+    "line-height": {
+      "$type": "number",
+      "$value": "{font.line-height.relaxed}"
+    }
+  }
+}

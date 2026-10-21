@@ -1,0 +1,12 @@
+.box {
+  padding-block: var(--slxd-narration-box-padding-block);
+  padding-inline: var(--slxd-narration-box-padding-inline);
+  border-radius: var(--slxd-narration-box-radius);
+  background: var(--slxd-narration-box-background);
+  color: var(--slxd-narration-box-text);
+  box-shadow: var(--slxd-narration-box-shadow);
+}
+
+.box[data-clickable] {
+  cursor: pointer;
+}

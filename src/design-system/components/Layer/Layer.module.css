@@ -1,0 +1,23 @@
+/* A layer covers the whole stage but is transparent to the pointer: only its
+   content receives clicks, so layers below stay usable. */
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.layer > * {
+  pointer-events: auto;
+}
+
+.layer[data-isolate] {
+  z-index: var(--slxd-layer-base);
+}
+
+.layer[data-layer='over-hud'] {
+  z-index: var(--slxd-layer-over-hud);
+}
+
+.layer[data-layer='dialog'] {
+  z-index: var(--slxd-layer-dialog);
+}

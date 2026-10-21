@@ -1,0 +1,19 @@
+{
+  "stage": {
+    "backdrop": { "$type": "color", "$value": "{color.surface.backdrop}" },
+    "text": { "$type": "color", "$value": "{color.text.default}" },
+    "font-family": { "$type": "fontFamily", "$value": "{font.family.body}" },
+    "font-size": { "$type": "dimension", "$value": "{font.size.body}" },
+    "line-height": { "$type": "number", "$value": "{font.line-height.normal}" },
+    "focus-ring-color": { "$type": "color", "$value": "{color.focus.ring}" },
+    "focus-ring-width": { "$type": "dimension", "$value": "{focus.ring-width}" },
+    "curtain": { "$type": "color", "$value": "{color.surface.backdrop}" },
+    "fade-duration": { "$type": "duration", "$value": "{motion.duration.scene-fade}" },
+    "fade-easing": { "$type": "cubicBezier", "$value": "{motion.easing.standard}" },
+    "morph-duration": { "$type": "duration", "$value": "{motion.duration.morph}" },
+    "morph-easing": { "$type": "cubicBezier", "$value": "{motion.easing.standard}" },
+    "heading-font-size": { "$type": "dimension", "$value": "{font.size.heading}" },
+    "heading-font-weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },
+    "error-text": { "$type": "color", "$value": "{color.text.negative}" }
+  }
+}

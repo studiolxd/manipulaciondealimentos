@@ -1,7 +1,6 @@
+import { Curtain, Hud, Layer } from '../design-system'
 import { scenes } from '../scenes/registry'
 import { useGame } from './gameContext'
-import { FADE_MS } from './GameProvider'
-import { Hud } from './Hud'
 
 // Renders the current scene under a black curtain used for fades.
 export function SceneHost() {
@@ -10,15 +9,11 @@ export function SceneHost() {
 
   return (
     <>
-      <div className="scene-host" inert={curtainClosed}>
+      <Layer isolate inert={curtainClosed}>
         <CurrentScene key={sceneId} />
         {hud && <Hud />}
-      </div>
-      <div
-        className={`curtain ${curtainClosed ? 'curtain--closed' : ''}`}
-        style={{ transitionDuration: `${FADE_MS}ms` }}
-        aria-hidden="true"
-      />
+      </Layer>
+      <Curtain closed={curtainClosed} />
     </>
   )
 }

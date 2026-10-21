@@ -1,17 +1,24 @@
+import { image } from '../content/images'
 import { comingSoon } from '../content/scenes'
-import { Scene } from '../engine/Scene'
+import { NarrationBox, Positioned, SceneFrame, Text } from '../design-system'
+import { useGame } from '../engine/gameContext'
 
-// Temporary end of the game until activity 2 is built.
+// Temporary end of the game until activity 3 is built.
 export function ComingSoonScene() {
+  const { sceneReady } = useGame()
   return (
-    <Scene
+    <SceneFrame
       heading={comingSoon.heading}
-      headingClassName="coming-soon__heading"
-      background="diningTableBackground"
+      visibleHeadingTop={240}
+      background={image('diningTableBackground')}
       backgroundAlt=""
-      className="coming-soon"
+      focusHeading={sceneReady}
     >
-      <p className="narration-box">{comingSoon.message}</p>
-    </Scene>
+      <Positioned center="both" width={1200}>
+        <NarrationBox>
+          <Text>{comingSoon.message}</Text>
+        </NarrationBox>
+      </Positioned>
+    </SceneFrame>
   )
 }

@@ -1,0 +1,58 @@
+/* Global foundations of the design system. Component styles live in each
+   component's CSS module. */
+
+:root {
+  /* Scale of the 1920×1080 stage on screen. Stage updates it; outside the
+     stage it stays at 1, so tokens that depend on it still resolve. */
+  --slxd-stage-scale: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* The game's Stage covers the window with its own backdrop; documentation
+   pages keep their normal scrolling. */
+body {
+  margin: 0;
+  font-family: var(--slxd-stage-font-family);
+}
+
+img {
+  display: block;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+:focus-visible {
+  outline: var(--slxd-stage-focus-ring-width) solid var(--slxd-stage-focus-ring-color);
+  outline-offset: var(--slxd-stage-focus-ring-width);
+}
+
+/* Headings and dialogs receive focus programmatically. */
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+/* View Transitions: only elements with a view-transition-name animate; the
+   rest of the page changes at once. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-group(*) {
+  animation-duration: var(--slxd-stage-morph-duration);
+  animation-timing-function: var(--slxd-stage-morph-easing);
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+  height: 100%;
+  overflow: clip;
+}

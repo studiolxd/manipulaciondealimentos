@@ -1,0 +1,13 @@
+{
+  "feedback-panel": {
+    "background": { "$type": "color", "$value": "{color.surface.default}" },
+    "text": { "$type": "color", "$value": "{color.text.default}" },
+    "radius": { "$type": "dimension", "$value": "{radius.lg}" },
+    "padding-block": { "$type": "dimension", "$value": "{space.md}" },
+    "padding-inline": { "$type": "dimension", "$value": "{space.xl}" },
+    "gap": { "$type": "dimension", "$value": "{space.md}" },
+    "shadow": { "$type": "shadow", "$value": "{shadow.raised}" },
+    "font-size": { "$type": "dimension", "$value": "{font.size.body-sm}" },
+    "icon-size": { "$type": "dimension", "$value": "{size.icon.md}" }
+  }
+}

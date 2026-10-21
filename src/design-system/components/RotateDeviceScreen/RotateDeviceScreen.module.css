@@ -1,0 +1,37 @@
+.screen {
+  position: fixed;
+  inset: 0;
+  width: auto;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  z-index: var(--slxd-layer-system);
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-rotate-screen-gap);
+  align-items: center;
+  justify-content: center;
+  padding: var(--slxd-rotate-screen-padding);
+  background: var(--slxd-rotate-screen-background);
+  color: var(--slxd-rotate-screen-text);
+  text-align: center;
+}
+
+.icon {
+  width: var(--slxd-rotate-screen-icon-size);
+  height: var(--slxd-rotate-screen-icon-size);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--slxd-rotate-screen-title-font-size);
+}
+
+.message {
+  max-width: 32ch;
+  margin: 0;
+  font-size: var(--slxd-rotate-screen-message-font-size);
+  line-height: var(--slxd-rotate-screen-line-height);
+}

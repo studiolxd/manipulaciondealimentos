@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { resolveText, type Gender, type GenderedText } from '../content/gendered'
 import type { SceneId } from '../scenes/sceneIds'
+import { tokens, usePortrait } from '../design-system'
 import { GameContext, type GameContextValue } from './gameContext'
-import { usePortrait } from './useMediaQuery'
 
-// Duration of each half of a scene change (fade out, then fade in).
-export const FADE_MS = 600
+// Duration of each half of a scene change (fade out, then fade in); the
+// curtain animates with the same token.
+const FADE_MS = tokens['stage.fade-duration']
 
 interface GameProviderProps {
   initialScene: SceneId

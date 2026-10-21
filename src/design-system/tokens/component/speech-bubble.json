@@ -1,0 +1,16 @@
+{
+  "speech-bubble": {
+    "background": { "$type": "color", "$value": "{color.surface.default}" },
+    "text": { "$type": "color", "$value": "{color.text.default}" },
+    "radius": { "$type": "dimension", "$value": "{radius.lg}" },
+    "padding-block-start": { "$type": "dimension", "$value": "{space.xl}" },
+    "padding-block-end": { "$type": "dimension", "$value": "{space.4xl}" },
+    "padding-inline": { "$type": "dimension", "$value": "{space.2xl}" },
+    "gap": { "$type": "dimension", "$value": "{space.lg}" },
+    "shadow": { "$type": "shadow", "$value": "{shadow.raised}" },
+    "portrait-size": { "$type": "dimension", "$value": "{size.icon.lg}" },
+    "tail-base": { "$type": "dimension", "$value": "{space.3xl}" },
+    "tail-length": { "$type": "dimension", "$value": "{space.xl}" },
+    "next-inset": { "$type": "dimension", "$value": "{space.sm}" }
+  }
+}

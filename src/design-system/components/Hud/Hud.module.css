@@ -1,0 +1,9 @@
+.hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--slxd-layer-hud);
+  width: 100%;
+  height: var(--slxd-hud-height);
+  pointer-events: none;
+}

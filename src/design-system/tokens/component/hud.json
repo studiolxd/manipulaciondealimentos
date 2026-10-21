@@ -1,0 +1,8 @@
+{
+  "hud": {
+    "height": { "$type": "dimension", "$value": "{size.hud.height}" },
+    "text": { "$type": "color", "$value": "{color.text.inverse}" },
+    "font-weight": { "$type": "fontWeight", "$value": "{font.weight.bold}" },
+    "padding-inline": { "$type": "dimension", "$value": "{space.xl}" }
+  }
+}

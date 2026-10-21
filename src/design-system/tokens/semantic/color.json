@@ -1,0 +1,83 @@
+{
+  "color": {
+    "$type": "color",
+    "text": {
+      "default": {
+        "$value": "{primitive.color.neutral.900}"
+      },
+      "inverse": {
+        "$value": "{primitive.color.white}"
+      },
+      "positive": {
+        "$value": "{primitive.color.green.700}"
+      },
+      "negative": {
+        "$value": "{primitive.color.red.700}"
+      }
+    },
+    "surface": {
+      "default": {
+        "$value": "{primitive.color.white}",
+        "$description": "Opaque panels: bubbles, dialogs, feedback."
+      },
+      "translucent": {
+        "$value": "{primitive.color.white-alpha.94}",
+        "$description": "Panels laid over a scene background."
+      },
+      "paper": {
+        "$value": "{primitive.color.sand.50}",
+        "$description": "Printed-looking objects such as ID cards."
+      },
+      "inverse": {
+        "$value": "{primitive.color.neutral.950}",
+        "$description": "Full-screen system messages."
+      },
+      "backdrop": {
+        "$value": "{primitive.color.black}",
+        "$description": "Letterbox around the stage and fade curtain."
+      }
+    },
+    "border": {
+      "none": {
+        "$value": "{primitive.color.transparent}"
+      },
+      "subtle": {
+        "$value": "{primitive.color.sand.300}"
+      },
+      "selected": {
+        "$value": "{primitive.color.orange.700}"
+      }
+    },
+    "action": {
+      "primary": {
+        "background": {
+          "$value": "{primitive.color.orange.700}"
+        },
+        "background-hover": {
+          "$value": "{primitive.color.orange.800}"
+        },
+        "text": {
+          "$value": "{primitive.color.white}"
+        }
+      }
+    },
+    "feedback": {
+      "positive": {
+        "$value": "{primitive.color.green.700}"
+      },
+      "negative": {
+        "$value": "{primitive.color.red.700}"
+      }
+    },
+    "focus": {
+      "ring": {
+        "$value": "{primitive.color.blue.700}"
+      }
+    },
+    "shadow": {
+      "default": {
+        "$value": "{primitive.color.black-alpha.25}"
+      }
+    }
+  }
+}

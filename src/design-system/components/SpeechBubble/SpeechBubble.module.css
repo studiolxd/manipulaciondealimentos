@@ -1,0 +1,46 @@
+.bubble {
+  position: relative;
+  display: flex;
+  gap: var(--slxd-speech-bubble-gap);
+  align-items: flex-start;
+  padding-block: var(--slxd-speech-bubble-padding-block-start) var(--slxd-speech-bubble-padding-block-end);
+  padding-inline: var(--slxd-speech-bubble-padding-inline);
+  border-radius: var(--slxd-speech-bubble-radius);
+  background: var(--slxd-speech-bubble-background);
+  color: var(--slxd-speech-bubble-text);
+  box-shadow: var(--slxd-speech-bubble-shadow);
+  cursor: pointer;
+}
+
+.bubble[data-tail='left']::before {
+  content: '';
+  position: absolute;
+  top: var(--slxd-speech-bubble-tail-base);
+  right: 100%;
+  border-block: calc(var(--slxd-speech-bubble-tail-base) / 2) solid var(--slxd-color-border-none);
+  border-inline-end: var(--slxd-speech-bubble-tail-length) solid var(--slxd-speech-bubble-background);
+}
+
+.portrait {
+  flex: none;
+  width: var(--slxd-speech-bubble-portrait-size);
+  height: var(--slxd-speech-bubble-portrait-size);
+}
+
+.body {
+  flex: 1;
+}
+
+.speaker {
+  composes: hidden from '../VisuallyHidden/VisuallyHidden.module.css';
+}
+
+.text {
+  margin: 0;
+}
+
+.next {
+  position: absolute;
+  right: var(--slxd-speech-bubble-next-inset);
+  bottom: var(--slxd-speech-bubble-next-inset);
+}

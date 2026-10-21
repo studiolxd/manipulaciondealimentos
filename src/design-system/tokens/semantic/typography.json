@@ -1,0 +1,70 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "body": {
+        "$value": "{primitive.font.family.system}"
+      }
+    },
+    "size": {
+      "$type": "dimension",
+      "$description": "Text sizes in stage pixels, with a floor in real pixels so text stays readable on small screens.",
+      "body": {
+        "$value": "max({primitive.font.size.44}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))"
+      },
+      "body-sm": {
+        "$value": "max({primitive.font.size.40}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))"
+      },
+      "subheading": {
+        "$value": "{primitive.font.size.60}"
+      },
+      "heading": {
+        "$value": "max({primitive.font.size.72}, calc({primitive.screen.heading-min} / var(--slxd-stage-scale)))"
+      },
+      "display": {
+        "$value": "max({primitive.font.size.104}, calc({primitive.screen.title-min} / var(--slxd-stage-scale)))"
+      },
+      "label-lg": {
+        "$value": "{primitive.font.size.64}"
+      },
+      "stamp": {
+        "$value": "{primitive.font.size.88}"
+      },
+      "system-heading": {
+        "$value": "{primitive.font.size.24}",
+        "$description": "Messages outside the stage, in real pixels."
+      },
+      "system-body": {
+        "$value": "{primitive.font.size.18}",
+        "$description": "Messages outside the stage, in real pixels."
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": {
+        "$value": "{primitive.font.weight.400}"
+      },
+      "bold": {
+        "$value": "{primitive.font.weight.700}"
+      },
+      "heavy": {
+        "$value": "{primitive.font.weight.800}"
+      }
+    },
+    "line-height": {
+      "$type": "number",
+      "tight": {
+        "$value": "{primitive.font.line-height.110}"
+      },
+      "snug": {
+        "$value": "{primitive.font.line-height.115}"
+      },
+      "normal": {
+        "$value": "{primitive.font.line-height.140}"
+      },
+      "relaxed": {
+        "$value": "{primitive.font.line-height.150}"
+      }
+    }
+  }
+}

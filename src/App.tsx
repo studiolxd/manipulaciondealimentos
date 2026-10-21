@@ -1,9 +1,8 @@
 import { ScormProvider, useScormAutoTerminate } from '@studiolxd/scorm/react'
+import { designSystemStrings, ui } from './content/ui'
+import { DesignSystemProvider, RotateDeviceScreen, Stage, useCoarsePointer, usePortrait } from './design-system'
 import { GameProvider } from './engine/GameProvider'
-import { RotateDeviceOverlay } from './engine/RotateDeviceOverlay'
 import { SceneHost } from './engine/SceneHost'
-import { Stage } from './engine/Stage'
-import { usePortrait } from './engine/useMediaQuery'
 import { scenes } from './scenes/registry'
 import type { SceneId } from './scenes/sceneIds'
 
@@ -22,13 +21,21 @@ function initialScene(): SceneId {
 
 function Game() {
   const portrait = usePortrait()
+  const touch = useCoarsePointer()
   return (
-    <GameProvider initialScene={initialScene()}>
-      <Stage inert={portrait}>
-        <SceneHost />
-      </Stage>
-      {portrait && <RotateDeviceOverlay />}
-    </GameProvider>
+    <DesignSystemProvider strings={designSystemStrings} paused={portrait}>
+      <GameProvider initialScene={initialScene()}>
+        <Stage inert={portrait}>
+          <SceneHost />
+        </Stage>
+        {portrait && (
+          <RotateDeviceScreen
+            title={ui.rotateDevice.title}
+            message={touch ? ui.rotateDevice.touchMessage : ui.rotateDevice.desktopMessage}
+          />
+        )}
+      </GameProvider>
+    </DesignSystemProvider>
   )
 }
 

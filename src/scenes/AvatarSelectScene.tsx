@@ -1,15 +1,15 @@
 import { useState } from 'react'
-import { avatarSelect } from '../content/scenes'
 import type { Gender } from '../content/gendered'
-import { ActionButton } from '../engine/ActionButton'
-import { assetUrl } from '../engine/assetUrl'
+import { image } from '../content/images'
+import { avatarSelect } from '../content/scenes'
+import { Button, ChoiceCardGroup, InlineAlert, Positioned, SceneFrame } from '../design-system'
 import { useGame } from '../engine/gameContext'
-import { Scene } from '../engine/Scene'
 
 const portraits = { male: 'playerMale', female: 'playerFemale' } as const
+const ERROR_ID = 'avatar-error'
 
 export function AvatarSelectScene() {
-  const { setGender, goTo } = useGame()
+  const { sceneReady, setGender, goTo } = useGame()
   const [choice, setChoice] = useState<Gender | null>(null)
   const [showError, setShowError] = useState(false)
 
@@ -23,39 +23,33 @@ export function AvatarSelectScene() {
   }
 
   return (
-    <Scene
+    <SceneFrame
       heading={avatarSelect.heading}
-      headingClassName="avatar-select__heading"
-      background="avatarSelectBackground"
+      visibleHeadingTop={64}
+      background={image('avatarSelectBackground')}
       backgroundAlt=""
-      className="avatar-select"
+      focusHeading={sceneReady}
     >
-      <fieldset className="avatar-select__options" aria-describedby={showError ? 'avatar-error' : undefined}>
-        <legend className="visually-hidden">{avatarSelect.legend}</legend>
-        {avatarSelect.options.map((option) => (
-          <label key={option.gender} className="avatar-option">
-            <input
-              type="radio"
-              name="avatar"
-              className="visually-hidden"
-              value={option.gender}
-              checked={choice === option.gender}
-              onChange={() => {
-                setChoice(option.gender)
-                setShowError(false)
-              }}
-            />
-            <img className="avatar-option__image" src={assetUrl(portraits[option.gender])} alt="" />
-            <span className="avatar-option__label">{option.label}</span>
-          </label>
-        ))}
-      </fieldset>
-      <p id="avatar-error" className="avatar-select__error" role="alert">
-        {showError ? avatarSelect.missingChoice : ''}
-      </p>
-      <ActionButton className="avatar-select__start" onClick={start}>
-        {avatarSelect.start}
-      </ActionButton>
-    </Scene>
+      <Positioned top={200} center="x">
+        <ChoiceCardGroup
+          legend={avatarSelect.legend}
+          name="avatar"
+          options={avatarSelect.options.map((option) => ({ ...option, value: option.gender, image: image(portraits[option.gender]) }))}
+          value={choice}
+          imageWidth={336}
+          describedBy={showError ? ERROR_ID : undefined}
+          onChange={(value) => {
+            setChoice(value)
+            setShowError(false)
+          }}
+        />
+      </Positioned>
+      <Positioned top={830} left={0} width={1920}>
+        <InlineAlert id={ERROR_ID} message={showError ? avatarSelect.missingChoice : null} />
+      </Positioned>
+      <Positioned bottom={48} center="x">
+        <Button onClick={start}>{avatarSelect.start}</Button>
+      </Positioned>
+    </SceneFrame>
   )
 }

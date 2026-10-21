@@ -1,4 +1,4 @@
-import type { AssetId } from '../engine/assets'
+import type { AssetId } from './assets'
 
 // Activity 2 "¿Quién es manipulador de alimentos?" (scenes 4, 5 and 6 of the
 // "Guion" sheet). Cards and feedback come from the "Actividades de

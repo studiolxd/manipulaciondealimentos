@@ -1,0 +1,66 @@
+{
+  "primitive": {
+    "color": {
+      "$type": "color",
+      "$description": "Raw palette. Never used directly by components: semantic tokens give each colour a purpose.",
+      "white": {
+        "$value": "#ffffff"
+      },
+      "black": {
+        "$value": "#000000"
+      },
+      "neutral": {
+        "900": {
+          "$value": "#1d1d1f"
+        },
+        "950": {
+          "$value": "#111111"
+        }
+      },
+      "sand": {
+        "50": {
+          "$value": "#fffdf7"
+        },
+        "300": {
+          "$value": "#d6cdb8"
+        }
+      },
+      "orange": {
+        "700": {
+          "$value": "#c2410c"
+        },
+        "800": {
+          "$value": "#9a3412"
+        }
+      },
+      "blue": {
+        "700": {
+          "$value": "#1d4ed8"
+        }
+      },
+      "red": {
+        "700": {
+          "$value": "#b91c1c"
+        }
+      },
+      "green": {
+        "700": {
+          "$value": "#15803d"
+        }
+      },
+      "white-alpha": {
+        "94": {
+          "$value": "rgba(255, 255, 255, 0.94)"
+        }
+      },
+      "black-alpha": {
+        "25": {
+          "$value": "rgba(0, 0, 0, 0.25)"
+        }
+      },
+      "transparent": {
+        "$value": "rgba(0, 0, 0, 0)"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.positioned {
+  position: absolute;
+}
+
+.positioned[data-layer='over-hud'] {
+  z-index: var(--slxd-layer-over-hud);
+}
+
+.positioned[data-layer='dialog'] {
+  z-index: var(--slxd-layer-dialog);
+}
