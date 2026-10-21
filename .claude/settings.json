@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "studiolxd": {
+      "source": {
+        "source": "github",
+        "repo": "studiolxd/skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "scorm-skills@studiolxd": true
+  }
+}

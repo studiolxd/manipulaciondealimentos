@@ -1,0 +1,121 @@
+/* Avatar selection */
+
+.avatar-select__heading {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  margin: 0;
+  font-size: var(--heading-size);
+  text-align: center;
+}
+
+.avatar-select__options {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  display: flex;
+  gap: 96px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transform: translateX(-50%);
+}
+
+.avatar-option {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  padding: 32px;
+  border: 8px solid transparent;
+  border-radius: var(--radius-box);
+  background: var(--color-surface-translucent);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.avatar-option:has(input:checked) {
+  border-color: var(--color-accent);
+}
+
+.avatar-option:has(input:focus-visible) {
+  outline: var(--focus-ring) solid var(--color-focus);
+  outline-offset: var(--focus-ring);
+}
+
+.avatar-option__image {
+  width: 336px;
+  height: 448px;
+}
+
+.avatar-select__error {
+  position: absolute;
+  top: 830px;
+  width: 100%;
+  margin: 0;
+  color: var(--color-error);
+  font-weight: 700;
+  text-align: center;
+}
+
+.avatar-select__start {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Scene 1: facade */
+
+.facade__narration {
+  cursor: pointer;
+}
+
+.facade__enter {
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Scene 2: dining room */
+
+.dining-room__david {
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  height: 900px;
+}
+
+.dining-room__bubble {
+  top: 140px;
+  left: 820px;
+  width: 980px;
+}
+
+/* Scene 3: table with David */
+
+.table__david {
+  position: absolute;
+  bottom: 220px;
+  left: 160px;
+  height: 640px;
+}
+
+.table__bubble {
+  top: 120px;
+  left: 940px;
+  width: 900px;
+}
+
+/* Temporary end */
+
+.coming-soon__heading {
+  position: absolute;
+  top: 240px;
+  width: 100%;
+  margin: 0;
+  color: var(--color-ink);
+  font-size: var(--heading-size);
+  text-align: center;
+}

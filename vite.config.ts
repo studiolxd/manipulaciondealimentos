@@ -3,5 +3,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Relative base so the build works from any folder inside a SCORM package.
+  base: './',
   plugins: [react()],
 })
