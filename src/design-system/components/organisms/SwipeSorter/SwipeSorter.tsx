@@ -1,9 +1,10 @@
-import { useImperativeHandle, useRef, useState, type ReactNode, type Ref } from 'react'
+import { useImperativeHandle, useRef, useState, type CSSProperties, type ReactNode, type Ref } from 'react'
 import { Button } from '../../atoms/Button/Button'
 import { Layer } from '../../layout/Layer/Layer'
 import { Positioned } from '../../layout/Positioned/Positioned'
 import { FeedbackPanel, type Feedback } from '../../molecules/FeedbackPanel/FeedbackPanel'
 import { SwipeCard, type SwipeCardHandle, type SwipeDirection } from '../SwipeCard/SwipeCard'
+import styles from './SwipeSorter.module.css'
 
 export interface SwipeSorterItem {
   id: string
@@ -36,6 +37,8 @@ export interface SwipeSorterHandle {
 interface SwipeSorterProps {
   /** Card to answer; null when there are none left. */
   item: SwipeSorterItem | null
+  /** Next cards, nearest first: they peek out of the stack behind the current one. */
+  upcoming?: SwipeSorterItem[]
   /** Result of the last answer, shown as a modal panel after each answer. */
   feedback: Feedback | null
   labels: SwipeSorterLabels
@@ -45,11 +48,11 @@ interface SwipeSorterProps {
   onAnswer: (direction: SwipeDirection) => void
 }
 
-// SwipeCard + YES / NO Buttons + FeedbackPanel: binary sorting activity that
+// SwipeCard stack + YES / NO Buttons + FeedbackPanel: binary sorting activity that
 // fills the stage below the HUD. Answers by dragging, with the arrow keys or
 // with a single tap on the side buttons (WCAG 2.5.7). After each answer the
 // feedback opens over a backdrop and the next card waits until it is closed.
-export function SwipeSorter({ item, feedback, labels, done, ref, onAnswer }: SwipeSorterProps) {
+export function SwipeSorter({ item, upcoming = [], feedback, labels, done, ref, onAnswer }: SwipeSorterProps) {
   const cardRef = useRef<SwipeCardHandle>(null)
   const [feedbackOpen, setFeedbackOpen] = useState(false)
   useImperativeHandle(ref, () => ({ focus: () => cardRef.current?.focus() }))
@@ -65,6 +68,20 @@ export function SwipeSorter({ item, feedback, labels, done, ref, onAnswer }: Swi
       {item && (
         <Layer inert={feedbackOpen}>
           <Positioned top={160} left={400} width={1120} height={520}>
+            {/* The stack: the next cards behind, deepest first, each a little higher and smaller. */}
+            {upcoming
+              .map((next, index) => (
+                <div
+                  key={next.id}
+                  className={styles.behind}
+                  style={{ '--stack-depth': index + 1 } as CSSProperties}
+                  aria-hidden="true"
+                  inert
+                >
+                  {next.content}
+                </div>
+              ))
+              .reverse()}
             <SwipeCard
               key={item.id}
               ref={cardRef}

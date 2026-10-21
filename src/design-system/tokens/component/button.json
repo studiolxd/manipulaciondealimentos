@@ -136,11 +136,7 @@
       }
     },
     "icon": {
-      "$description": "Round icon-only button (IconButton).",
-      "radius": {
-        "$type": "dimension",
-        "$value": "{radius.full}"
-      },
+      "$description": "Square icon-only button (IconButton), with the radius of every button.",
       "size": {
         "$type": "dimension",
         "$value": "{size.target.min}"

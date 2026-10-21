@@ -43,6 +43,13 @@
         "$value": "16px"
       }
     },
+    "scale": {
+      "$type": "number",
+      "4": {
+        "$value": 0.04,
+        "$description": "4 %."
+      }
+    },
     "stroke-width": {
       "$type": "number",
       "$description": "In units of the 24-unit icon grid.",

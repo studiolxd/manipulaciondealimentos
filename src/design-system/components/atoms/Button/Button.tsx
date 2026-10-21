@@ -6,7 +6,7 @@ interface ButtonProps {
   /**
    * `primary`: main call to action. `secondary`: light options that act straight
    * away (use OptionButtons). `choice-positive` / `choice-negative`: large
-   * YES / NO answers. `icon`: round icon-only button (use IconButton).
+   * YES / NO answers. `icon`: square icon-only button (use IconButton).
    */
   variant?: 'primary' | 'secondary' | 'choice-positive' | 'choice-negative' | 'icon'
   /**

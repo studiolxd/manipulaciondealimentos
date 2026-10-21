@@ -1,0 +1,12 @@
+/* Cards waiting in the stack: they peek out above the current one, each step
+   higher and smaller. When one moves forward, it slides into its new place. */
+.behind {
+  position: absolute;
+  inset: 0;
+  transform: translateY(calc(var(--slxd-swipe-sorter-stack-step) * var(--stack-depth) * -1))
+    scale(calc(1 - var(--slxd-swipe-sorter-stack-shrink) * var(--stack-depth)));
+  transform-origin: top center;
+  transition-property: transform;
+  transition-duration: var(--slxd-swipe-sorter-stack-duration);
+  transition-timing-function: var(--slxd-swipe-sorter-stack-easing);
+}

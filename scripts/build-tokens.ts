@@ -121,7 +121,7 @@ function familyOf(token: TransformedToken, layer: string, file: string): Family 
     case 'shadow':
       return 'shape'
     case 'number':
-      if (path.includes('stroke-width')) return 'shape'
+      if (/stroke-width|scale|shrink/.test(path)) return 'shape'
       return path.includes('line-height') ? 'typography' : 'layer'
     default:
       if (path.includes('font') || path.includes('letter-spacing')) return 'typography'

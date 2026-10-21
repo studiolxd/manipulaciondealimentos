@@ -46,6 +46,13 @@
       "$description": "Background blur behind glass panels."
     }
   },
+  "scale": {
+    "$type": "number",
+    "stack-step": {
+      "$value": "{primitive.scale.4}",
+      "$description": "Each card further back in a stack is this much smaller."
+    }
+  },
   "stroke-width": {
     "$type": "number",
     "icon": {

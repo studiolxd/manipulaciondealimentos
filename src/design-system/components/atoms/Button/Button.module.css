@@ -113,6 +113,5 @@
   width: var(--slxd-button-icon-size);
   min-height: 0;
   height: var(--slxd-button-icon-size);
-  border-radius: var(--slxd-button-icon-radius);
   padding: var(--slxd-button-icon-padding);
 }

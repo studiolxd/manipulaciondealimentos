@@ -41,6 +41,7 @@
   --slxd-primitive-border-width-4: 4px;
   --slxd-primitive-border-width-8: 8px;
   --slxd-primitive-blur-16: 16px;
+  --slxd-primitive-scale-4: 0.04; /** 4 %. */
   --slxd-primitive-stroke-width-2: 2;
   --slxd-primitive-size-0: 0px;
   --slxd-primitive-size-4: 4px;
@@ -147,6 +148,7 @@
   --slxd-border-width-outline: calc(var(--slxd-primitive-screen-outline) / var(--slxd-stage-scale)); /** Ink outline: 3 real pixels at any stage scale. */
   --slxd-focus-ring-width: max(var(--slxd-primitive-size-6), calc(var(--slxd-primitive-screen-focus-ring-min) / var(--slxd-stage-scale)));
   --slxd-blur-glass: var(--slxd-primitive-blur-16); /** Background blur behind glass panels. */
+  --slxd-scale-stack-step: var(--slxd-primitive-scale-4); /** Each card further back in a stack is this much smaller. */
   --slxd-stroke-width-icon: var(--slxd-primitive-stroke-width-2); /** Icon stroke in grid units: it grows with the icon, rounded to whole real pixels. */
   --slxd-space-none: var(--slxd-primitive-size-0);
   --slxd-space-3xs: var(--slxd-primitive-size-4);
@@ -220,7 +222,6 @@
   --slxd-button-secondary-min-width: var(--slxd-size-choice-min-width);
   --slxd-button-secondary-background: var(--slxd-color-action-secondary-background);
   --slxd-button-secondary-text: var(--slxd-color-action-secondary-text);
-  --slxd-button-icon-radius: var(--slxd-radius-full);
   --slxd-button-icon-size: var(--slxd-size-target-min);
   --slxd-button-icon-padding: var(--slxd-space-2xs);
   --slxd-button-icon-background: var(--slxd-color-action-primary-background);
@@ -349,6 +350,10 @@
   --slxd-swipe-card-focus-shadow-offset: var(--slxd-space-2xs);
   --slxd-swipe-card-frame-positive: var(--slxd-color-feedback-positive);
   --slxd-swipe-card-frame-negative: var(--slxd-color-feedback-negative);
+  --slxd-swipe-sorter-stack-step: var(--slxd-space-xs); /** How much each waiting card peeks out above the one in front, kept below the HUD. */
+  --slxd-swipe-sorter-stack-shrink: var(--slxd-scale-stack-step); /** How much smaller each waiting card is than the one in front. */
+  --slxd-swipe-sorter-stack-duration: var(--slxd-motion-duration-exit);
+  --slxd-swipe-sorter-stack-easing: var(--slxd-motion-easing-enter);
   --slxd-text-field-gap: var(--slxd-space-xs);
   --slxd-text-input-min-height: var(--slxd-size-target-min);
   --slxd-text-input-padding-inline: var(--slxd-space-md);

@@ -10,6 +10,7 @@ import {
   SwipeSorter,
   type SwipeDirection,
   type SwipeSorterHandle,
+  type SwipeSorterItem,
 } from '../design-system'
 import { useGame } from '../game/game'
 import { xapi } from '../game/tracking'
@@ -22,6 +23,17 @@ interface Answer {
 }
 
 const ACTIVITY_ID = 'who-is-food-handler'
+// Cards peeking out of the stack behind the current one.
+const STACK_PEEK = 2
+
+function toItem(card: PersonCard): SwipeSorterItem {
+  return {
+    id: card.id,
+    label: card.name,
+    description: `${card.job}. ${card.description}`,
+    content: <IdCard name={card.name} job={card.job} description={card.description} portrait={image(card.portrait)} />,
+  }
+}
 
 export function WhoIsFoodHandlerScene() {
   const { sceneReady, goTo } = useGame()
@@ -75,23 +87,8 @@ export function WhoIsFoodHandlerScene() {
     >
       <SwipeSorter
         ref={sorterRef}
-        item={
-          current
-            ? {
-                id: current.id,
-                label: current.name,
-                description: `${current.job}. ${current.description}`,
-                content: (
-                  <IdCard
-                    name={current.name}
-                    job={current.job}
-                    description={current.description}
-                    portrait={image(current.portrait)}
-                  />
-                ),
-              }
-            : null
-        }
+        item={current ? toItem(current) : null}
+        upcoming={deck.slice(answers.length + 1, answers.length + 1 + STACK_PEEK).map(toItem)}
         feedback={
           last
             ? {

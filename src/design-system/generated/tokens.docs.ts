@@ -321,16 +321,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-button-icon-radius",
-    "path": "button.icon.radius",
-    "layer": "component",
-    "family": "shape",
-    "type": "dimension",
-    "value": "999px",
-    "reference": "{radius.full}",
-    "description": null
-  },
-  {
     "name": "--slxd-button-icon-size",
     "path": "button.icon.size",
     "layer": "component",
@@ -1621,6 +1611,46 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-swipe-sorter-stack-step",
+    "path": "swipe-sorter.stack-step",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": "How much each waiting card peeks out above the one in front, kept below the HUD."
+  },
+  {
+    "name": "--slxd-swipe-sorter-stack-shrink",
+    "path": "swipe-sorter.stack-shrink",
+    "layer": "component",
+    "family": "shape",
+    "type": "number",
+    "value": "0.04",
+    "reference": "{scale.stack-step}",
+    "description": "How much smaller each waiting card is than the one in front."
+  },
+  {
+    "name": "--slxd-swipe-sorter-stack-duration",
+    "path": "swipe-sorter.stack-duration",
+    "layer": "component",
+    "family": "motion",
+    "type": "duration",
+    "value": "350ms",
+    "reference": "{motion.duration.exit}",
+    "description": null
+  },
+  {
+    "name": "--slxd-swipe-sorter-stack-easing",
+    "path": "swipe-sorter.stack-easing",
+    "layer": "component",
+    "family": "motion",
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0, 0, 0.58, 1)",
+    "reference": "{motion.easing.enter}",
+    "description": null
+  },
+  {
     "name": "--slxd-text-field-gap",
     "path": "text-field.gap",
     "layer": "component",
@@ -2109,6 +2139,16 @@ export const tokenDocs = [
     "value": "16px",
     "reference": null,
     "description": null
+  },
+  {
+    "name": "--slxd-primitive-scale-4",
+    "path": "primitive.scale.4",
+    "layer": "primitive",
+    "family": "shape",
+    "type": "number",
+    "value": "0.04",
+    "reference": null,
+    "description": "4 %."
   },
   {
     "name": "--slxd-primitive-stroke-width-2",
@@ -3169,6 +3209,16 @@ export const tokenDocs = [
     "value": "16px",
     "reference": "{primitive.blur.16}",
     "description": "Background blur behind glass panels."
+  },
+  {
+    "name": "--slxd-scale-stack-step",
+    "path": "scale.stack-step",
+    "layer": "semantic",
+    "family": "shape",
+    "type": "number",
+    "value": "0.04",
+    "reference": "{primitive.scale.4}",
+    "description": "Each card further back in a stack is this much smaller."
   },
   {
     "name": "--slxd-stroke-width-icon",

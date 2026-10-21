@@ -1,0 +1,22 @@
+{
+  "swipe-sorter": {
+    "stack-step": {
+      "$type": "dimension",
+      "$value": "{space.xs}",
+      "$description": "How much each waiting card peeks out above the one in front, kept below the HUD."
+    },
+    "stack-shrink": {
+      "$type": "number",
+      "$value": "{scale.stack-step}",
+      "$description": "How much smaller each waiting card is than the one in front."
+    },
+    "stack-duration": {
+      "$type": "duration",
+      "$value": "{motion.duration.exit}"
+    },
+    "stack-easing": {
+      "$type": "cubicBezier",
+      "$value": "{motion.easing.enter}"
+    }
+  }
+}
