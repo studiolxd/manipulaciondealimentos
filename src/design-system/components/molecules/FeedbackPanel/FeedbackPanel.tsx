@@ -1,3 +1,6 @@
+import { useAutoFocus } from '@studiolxd/tramoya'
+import { useId, useRef } from 'react'
+import { Button } from '../../atoms/Button/Button'
 import { Icon } from '../../atoms/Icon/Icon'
 import { Surface } from '../../atoms/Surface/Surface'
 import { Text } from '../../atoms/Text/Text'
@@ -11,25 +14,51 @@ export interface Feedback {
 }
 
 interface FeedbackPanelProps {
-  /** Nothing is shown while null; the live region stays in place so updates are announced. */
-  feedback: Feedback | null
+  feedback: Feedback
+  /** Text of the button that closes the panel, e.g. "Continuar". */
+  closeLabel: string
+  onClose: () => void
 }
 
-// Surface with a coloured side band + Icon + Text: the result shows before it is read.
-export function FeedbackPanel({ feedback }: FeedbackPanelProps) {
+// Surface + Icon + Text + Button: the result of an answer as a modal panel. Its
+// outline and shadow take the result's colour, so it shows before it is read.
+// The button takes the focus; Escape also closes it. The caller puts it over a
+// backdrop and makes the rest inert.
+export function FeedbackPanel({ feedback, closeLabel, onClose }: FeedbackPanelProps) {
+  const titleId = useId()
+  const messageId = useId()
+  const buttonRef = useRef<HTMLButtonElement>(null)
+
+  useAutoFocus(buttonRef)
+
   return (
-    <div aria-live="polite">
-      {feedback && (
-        <Surface tone="opaque" padding="sm" accent={feedback.tone} className={styles.panel}>
-          <Icon name={feedback.tone === 'positive' ? 'correct' : 'incorrect'} size="md" />
-          <Text size="body-sm">
-            <Text as="strong" size="body-sm" weight="bold">
-              {feedback.title}
-            </Text>{' '}
+    <Surface
+      as="dialog"
+      tone="opaque"
+      padding="md"
+      accent={feedback.tone}
+      className={styles.panel}
+      aria-modal="true"
+      aria-labelledby={titleId}
+      aria-describedby={messageId}
+      onKeyDown={(event) => {
+        if (event.key === 'Escape') onClose()
+      }}
+    >
+      <div className={styles.result}>
+        <Icon name={feedback.tone === 'positive' ? 'correct' : 'incorrect'} size="md" />
+        <div>
+          <Text as="strong" weight="bold" id={titleId}>
+            {feedback.title}
+          </Text>
+          <Text size="body-sm" id={messageId}>
             {feedback.message}
           </Text>
-        </Surface>
-      )}
-    </div>
+        </div>
+      </div>
+      <Button ref={buttonRef} onClick={onClose}>
+        {closeLabel}
+      </Button>
+    </Surface>
   )
 }

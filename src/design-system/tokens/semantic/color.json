@@ -33,6 +33,10 @@
         "$value": "{primitive.color.petrol-alpha.72}",
         "$description": "HUD band over the scene, with background blur."
       },
+      "scrim": {
+        "$value": "{primitive.color.petrol-alpha.72}",
+        "$description": "Translucent ink over the whole stage behind a modal panel."
+      },
       "inverse": {
         "$value": "{primitive.color.petrol.900}",
         "$description": "Dark reference surface, e.g. in the documentation."

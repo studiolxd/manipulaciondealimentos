@@ -108,6 +108,7 @@ export function WhoIsFoodHandlerScene() {
           no: activity.no,
           yesButton: activity.yesButton,
           noButton: activity.noButton,
+          continue: activity.feedbackContinue,
         }}
         done={
           <Button claimFocus advance onClick={() => goTo('who-is-food-handler-conclusion')}>

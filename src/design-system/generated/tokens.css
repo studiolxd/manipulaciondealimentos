@@ -96,6 +96,7 @@
   --slxd-color-surface-default: var(--slxd-primitive-color-white); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
+  --slxd-color-surface-scrim: var(--slxd-primitive-color-petrol-alpha-72); /** Translucent ink over the whole stage behind a modal panel. */
   --slxd-color-surface-inverse: var(--slxd-primitive-color-petrol-900); /** Dark reference surface, e.g. in the documentation. */
   --slxd-color-surface-system: var(--slxd-primitive-color-white); /** Full-screen system messages, e.g. rotate the device. */
   --slxd-color-surface-backdrop: var(--slxd-primitive-color-black); /** Letterbox around the stage and fade curtain. */
@@ -188,6 +189,7 @@
   --slxd-font-letter-spacing-caps: var(--slxd-primitive-font-letter-spacing-40); /** Tracking of the display family: titles, buttons and labels. */
   --slxd-activity-title-hold-duration: var(--slxd-motion-duration-title-hold);
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
+  --slxd-backdrop-color: var(--slxd-color-surface-scrim);
   --slxd-button-min-height: var(--slxd-size-target-min);
   --slxd-button-padding-block: var(--slxd-space-xs);
   --slxd-button-padding-inline: var(--slxd-space-4xl);
@@ -229,6 +231,7 @@
   --slxd-dialog-close-inset: var(--slxd-space-sm);
   --slxd-dialog-action-space: var(--slxd-space-4xl); /** Room at the bottom for the close button. */
   --slxd-feedback-panel-gap: var(--slxd-space-md);
+  --slxd-feedback-panel-action-gap: var(--slxd-space-lg); /** Between the message and the button that closes the panel. */
   --slxd-heading-font-family: var(--slxd-font-family-display);
   --slxd-heading-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-heading-letter-spacing: var(--slxd-font-letter-spacing-caps);

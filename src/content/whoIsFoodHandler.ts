@@ -39,6 +39,7 @@ export const whoIsFoodHandler = {
   question: (card: PersonCard) => `¿${card.name} (${card.job}) es manipulador de alimentos?`,
   correct: '¡Correcto!',
   incorrect: '¡Incorrecto!',
+  feedbackContinue: 'Continuar',
   next: 'Continuar',
   cards: [
     {

@@ -10,6 +10,11 @@
   pointer-events: auto;
 }
 
+.layer[data-backdrop] {
+  background: var(--slxd-backdrop-color);
+  pointer-events: auto;
+}
+
 .layer[data-isolate] {
   z-index: var(--slxd-layer-base);
 }

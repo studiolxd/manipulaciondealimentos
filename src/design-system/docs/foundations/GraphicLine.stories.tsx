@@ -97,6 +97,7 @@ export const Activity: Story = {
           no: 'NO',
           yesButton: 'SÍ, es manipulador de alimentos',
           noButton: 'NO, no es manipulador de alimentos',
+          continue: 'Continuar',
         }}
         onAnswer={fn()}
       />
@@ -153,6 +154,8 @@ export const Elements: Story = {
       <Positioned top={640} left={120} width={1680}>
         <FeedbackPanel
           feedback={{ tone: 'positive', title: '¡Correcto!', message: 'Óscar es manipulador de alimentos porque, como cocinero, está en contacto directo con los alimentos.' }}
+          closeLabel="Continuar"
+          onClose={fn()}
         />
       </Positioned>
       <Positioned top={840} left={120} width={1680}>

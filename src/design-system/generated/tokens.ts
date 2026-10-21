@@ -3,6 +3,7 @@
 export const tokens = {
   'activity-title.hold-duration': 2500,
   'activity-title.easing': "cubic-bezier(0.42, 0, 1, 1)",
+  'backdrop.color': "rgba(20, 38, 46, 0.72)",
   'button.min-height': "max(112px, calc(44px / var(--slxd-stage-scale)))",
   'button.padding-block': "16px",
   'button.padding-inline': "72px",
@@ -44,6 +45,7 @@ export const tokens = {
   'dialog.close-inset': "24px",
   'dialog.action-space': "72px",
   'feedback-panel.gap': "32px",
+  'feedback-panel.action-gap': "40px",
   'heading.font-family': "'Gasoek One', system-ui, sans-serif",
   'heading.font-weight': 400,
   'heading.letter-spacing': "0.04em",
@@ -179,6 +181,7 @@ export const tokens = {
   'color.surface.default': "#ffffff",
   'color.surface.ink': "rgba(20, 38, 46, 0.94)",
   'color.surface.glass': "rgba(20, 38, 46, 0.72)",
+  'color.surface.scrim': "rgba(20, 38, 46, 0.72)",
   'color.surface.inverse': "#14262e",
   'color.surface.system': "#ffffff",
   'color.surface.backdrop': "#000000",

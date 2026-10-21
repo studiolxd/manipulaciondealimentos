@@ -1,0 +1,8 @@
+{
+  "backdrop": {
+    "color": {
+      "$type": "color",
+      "$value": "{color.surface.scrim}"
+    }
+  }
+}

@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
+import { Layer } from '../../layout/Layer/Layer'
 import { Positioned } from '../../layout/Positioned/Positioned'
 import { FeedbackPanel } from './FeedbackPanel'
 
@@ -6,11 +8,14 @@ const meta = {
   title: 'Moléculas/FeedbackPanel',
   component: FeedbackPanel,
   parameters: { stage: true },
+  args: { closeLabel: 'Continuar', onClose: fn() },
   decorators: [
     (Story) => (
-      <Positioned top={720} left={210} width={1500}>
-        <Story />
-      </Positioned>
+      <Layer layer="dialog" backdrop>
+        <Positioned center="both" width={1300}>
+          <Story />
+        </Positioned>
+      </Layer>
     ),
   ],
 } satisfies Meta<typeof FeedbackPanel>
@@ -36,5 +41,3 @@ export const Negative: Story = {
     },
   },
 }
-/** Hidden, but the live region is already in place to announce the first answer. */
-export const Empty: Story = { args: { feedback: null } }

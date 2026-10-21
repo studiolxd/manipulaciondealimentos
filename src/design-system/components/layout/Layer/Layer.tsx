@@ -9,13 +9,21 @@ interface LayerProps {
   isolate?: boolean
   /** Makes the content unreachable (e.g. behind a dialog or during a fade). */
   inert?: boolean
+  /** Covers the stage with translucent ink that blocks the pointer, behind a modal panel. */
+  backdrop?: boolean
   children: ReactNode
 }
 
 // Full-stage container that groups content.
-export function Layer({ layer = 'base', isolate = false, inert, children }: LayerProps) {
+export function Layer({ layer = 'base', isolate = false, inert, backdrop = false, children }: LayerProps) {
   return (
-    <div className={styles.layer} data-layer={layer} data-isolate={isolate || undefined} inert={inert}>
+    <div
+      className={styles.layer}
+      data-layer={layer}
+      data-isolate={isolate || undefined}
+      data-backdrop={backdrop || undefined}
+      inert={inert}
+    >
       {children}
     </div>
   )

@@ -1,5 +1,12 @@
 .panel {
   display: flex;
+  flex-direction: column;
+  gap: var(--slxd-feedback-panel-action-gap);
+  align-items: center;
+}
+
+.result {
+  display: flex;
   gap: var(--slxd-feedback-panel-gap);
   align-items: center;
 }

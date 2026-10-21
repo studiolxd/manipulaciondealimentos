@@ -19,6 +19,7 @@ const labels = {
   no: 'NO',
   yesButton: 'SÍ, es manipulador de alimentos',
   noButton: 'NO, no es manipulador de alimentos',
+  continue: 'Continuar',
 }
 
 const meta = {

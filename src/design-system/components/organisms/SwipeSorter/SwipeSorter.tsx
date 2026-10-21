@@ -1,5 +1,6 @@
-import { useImperativeHandle, useRef, type ReactNode, type Ref } from 'react'
+import { useImperativeHandle, useRef, useState, type ReactNode, type Ref } from 'react'
 import { Button } from '../../atoms/Button/Button'
+import { Layer } from '../../layout/Layer/Layer'
 import { Positioned } from '../../layout/Positioned/Positioned'
 import { FeedbackPanel, type Feedback } from '../../molecules/FeedbackPanel/FeedbackPanel'
 import { SwipeCard, type SwipeCardHandle, type SwipeDirection } from '../SwipeCard/SwipeCard'
@@ -23,6 +24,8 @@ export interface SwipeSorterLabels {
   /** Accessible names of the side buttons; they must start with `yes` / `no`. */
   yesButton: string
   noButton: string
+  /** Button that closes the feedback, e.g. "Continuar". */
+  continue: string
 }
 
 export interface SwipeSorterHandle {
@@ -33,6 +36,7 @@ export interface SwipeSorterHandle {
 interface SwipeSorterProps {
   /** Card to answer; null when there are none left. */
   item: SwipeSorterItem | null
+  /** Result of the last answer, shown as a modal panel after each answer. */
   feedback: Feedback | null
   labels: SwipeSorterLabels
   /** Shown once there are no cards left, e.g. a "Continue" button. */
@@ -43,15 +47,23 @@ interface SwipeSorterProps {
 
 // SwipeCard + YES / NO Buttons + FeedbackPanel: binary sorting activity that
 // fills the stage below the HUD. Answers by dragging, with the arrow keys or
-// with a single tap on the side buttons (WCAG 2.5.7).
+// with a single tap on the side buttons (WCAG 2.5.7). After each answer the
+// feedback opens over a backdrop and the next card waits until it is closed.
 export function SwipeSorter({ item, feedback, labels, done, ref, onAnswer }: SwipeSorterProps) {
   const cardRef = useRef<SwipeCardHandle>(null)
+  const [feedbackOpen, setFeedbackOpen] = useState(false)
   useImperativeHandle(ref, () => ({ focus: () => cardRef.current?.focus() }))
+
+  function closeFeedback() {
+    setFeedbackOpen(false)
+    // Once the card is usable again; with no cards left, the done content claims the focus.
+    requestAnimationFrame(() => cardRef.current?.focus())
+  }
 
   return (
     <>
       {item && (
-        <>
+        <Layer inert={feedbackOpen}>
           <Positioned top={160} left={400} width={1120} height={520}>
             <SwipeCard
               key={item.id}
@@ -60,7 +72,10 @@ export function SwipeSorter({ item, feedback, labels, done, ref, onAnswer }: Swi
               description={item.description}
               roleDescription={labels.roleDescription}
               keyboardHint={labels.keyboardHint}
-              onSwipe={onAnswer}
+              onSwipe={(direction) => {
+                onAnswer(direction)
+                setFeedbackOpen(true)
+              }}
             >
               {item.content}
             </SwipeCard>
@@ -75,12 +90,16 @@ export function SwipeSorter({ item, feedback, labels, done, ref, onAnswer }: Swi
               {labels.yes}
             </Button>
           </Positioned>
-        </>
+        </Layer>
       )}
-      <Positioned top={720} left={210} width={1500}>
-        <FeedbackPanel feedback={feedback} />
-      </Positioned>
-      {!item && done && (
+      {feedbackOpen && feedback && (
+        <Layer layer="dialog" backdrop>
+          <Positioned center="both" width={1300}>
+            <FeedbackPanel feedback={feedback} closeLabel={labels.continue} onClose={closeFeedback} />
+          </Positioned>
+        </Layer>
+      )}
+      {!item && done && !feedbackOpen && (
         <Positioned top={380} center="x">
           {done}
         </Positioned>

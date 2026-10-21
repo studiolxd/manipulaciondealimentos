@@ -3,6 +3,11 @@
     "gap": {
       "$type": "dimension",
       "$value": "{space.md}"
+    },
+    "action-gap": {
+      "$type": "dimension",
+      "$value": "{space.lg}",
+      "$description": "Between the message and the button that closes the panel."
     }
   }
 }

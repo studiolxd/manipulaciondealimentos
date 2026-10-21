@@ -21,6 +21,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-backdrop-color",
+    "path": "backdrop.color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.72)",
+    "reference": "{color.surface.scrim}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-min-height",
     "path": "button.min-height",
     "layer": "component",
@@ -429,6 +439,16 @@ export const tokenDocs = [
     "value": "32px",
     "reference": "{space.md}",
     "description": null
+  },
+  {
+    "name": "--slxd-feedback-panel-action-gap",
+    "path": "feedback-panel.action-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "40px",
+    "reference": "{space.lg}",
+    "description": "Between the message and the button that closes the panel."
   },
   {
     "name": "--slxd-heading-font-family",
@@ -2629,6 +2649,16 @@ export const tokenDocs = [
     "value": "rgba(20, 38, 46, 0.72)",
     "reference": "{primitive.color.petrol-alpha.72}",
     "description": "HUD band over the scene, with background blur."
+  },
+  {
+    "name": "--slxd-color-surface-scrim",
+    "path": "color.surface.scrim",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.72)",
+    "reference": "{primitive.color.petrol-alpha.72}",
+    "description": "Translucent ink over the whole stage behind a modal panel."
   },
   {
     "name": "--slxd-color-surface-inverse",
