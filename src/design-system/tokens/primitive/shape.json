@@ -32,9 +32,9 @@
           "offsetY": "8px",
           "blur": "0px",
           "spread": "0px",
-          "color": "{primitive.color.petrol-alpha.35}"
+          "color": "{primitive.color.petrol.900}"
         },
-        "$description": "Short, hard shadow: the interface looks stuck on top of the scene."
+        "$description": "Short, hard shadow in the ink of the outlines: the interface looks stuck on top of the scene."
       }
     },
     "blur": {
