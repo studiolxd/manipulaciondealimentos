@@ -1,8 +1,9 @@
 import { useTypewriter } from '@studiolxd/tramoya'
-import type { ComponentProps } from 'react'
+import { useMemo, type ComponentProps } from 'react'
 import { tokens } from '../../../generated/tokens'
 import { useDesignSystem } from '../../../hooks/useDesignSystem'
 import { useVoice } from '../../../hooks/useVoice'
+import { lineDurationMs, voiceCharTimes, type VoiceClip } from '../../../voice'
 import { Text } from '../../atoms/Text/Text'
 import { VisuallyHidden } from '../../utilities/VisuallyHidden/VisuallyHidden'
 import styles from './Typewriter.module.css'
@@ -17,22 +18,29 @@ interface TypewriterProps extends TextStyle {
   /** Shows the whole text at once (e.g. the player asked to skip). */
   complete?: boolean
   /**
-   * Voice-over of the text: the URLs of its clips, played in order. While it
-   * plays, the text is typed at an even pace that lasts as long as the voice.
+   * Voice-over of the text: its clips, played in order. While it plays, each
+   * word is typed as it is said (or, without word timings, at an even pace
+   * that lasts as long as the voice).
    */
-  voice?: readonly string[]
+  voice?: readonly VoiceClip[]
   onDone?: () => void
 }
 
 // Text + VisuallyHidden: types the text character by character, pausing
-// between sentences. With a voice-over it is typed in step with the voice,
-// ending when the voice ends. Enter or Space shows it all at once, like a
+// between sentences. With a voice-over each word is typed as it is said. Enter or Space shows it all at once, like a
 // click on its container (the voice goes on). The animation is hidden from
 // screen readers, which get the full text at once.
 export function Typewriter({ text, complete = false, voice, onDone, size, weight, tone }: TypewriterProps) {
   const { paused } = useDesignSystem()
   // In step with the voice, measured against where the audio actually is.
-  const pace = useVoice(voice)
+  const clock = useVoice(voice)
+  const pace = useMemo(
+    () =>
+      clock && voice
+        ? { elapsedMs: clock, durationMs: lineDurationMs(voice), charTimesMs: voiceCharTimes(text, voice) }
+        : undefined,
+    [clock, voice, text],
+  )
   const { ref, visible } = useTypewriter<HTMLSpanElement>({
     text,
     complete,

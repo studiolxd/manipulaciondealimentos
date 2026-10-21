@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { ImageSource } from '../../../types'
+import type { VoiceClip } from '../../../voice'
 import { Button } from '../../atoms/Button/Button'
 import { Image } from '../../atoms/Image/Image'
 import { Positioned } from '../../layout/Positioned/Positioned'
@@ -27,7 +28,7 @@ interface DialogueSceneProps {
     speaker: string
     blocks: string[]
     /** Voice-over of each block (see SpeechBubble). */
-    voice?: (readonly string[] | undefined)[]
+    voice?: (readonly VoiceClip[] | undefined)[]
     tail?: 'left' | 'right' | 'bottom'
   }
   /** Button shown when the speech ends; it takes the player to another scene. */

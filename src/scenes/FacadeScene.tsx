@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { image } from '../content/images'
 import { facade } from '../content/scenes'
-import { voiceUrls } from '../content/voices'
+import { voiceLine } from '../content/voices'
 import { Button, NarrationBox, Positioned, SceneFrame, Typewriter } from '../design-system'
 import { useGame } from '../game/game'
 
@@ -23,7 +23,7 @@ export function FacadeScene() {
           <NarrationBox onClick={() => setSkipRequested(true)}>
             <Typewriter
               text={facade.narration}
-              voice={voiceUrls(facade.narrationVoice, gender)}
+              voice={voiceLine(facade.narrationVoice, gender)}
               complete={skipRequested}
               onDone={() => setTyped(true)}
             />

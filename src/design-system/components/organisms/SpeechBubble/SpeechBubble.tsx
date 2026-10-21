@@ -4,14 +4,15 @@ import { Surface } from '../../atoms/Surface/Surface'
 import { IconButton } from '../../molecules/IconButton/IconButton'
 import { Typewriter } from '../../molecules/Typewriter/Typewriter'
 import { VisuallyHidden } from '../../utilities/VisuallyHidden/VisuallyHidden'
+import type { VoiceClip } from '../../../voice'
 import styles from './SpeechBubble.module.css'
 
 interface SpeechBubbleProps {
   speaker: string
   /** Each block is typed out and the player advances to the next with a click. */
   blocks: string[]
-  /** Voice-over of each block: the URLs of its clips, played in order. Blocks without one are silent. */
-  voice?: (readonly string[] | undefined)[]
+  /** Voice-over of each block (see Typewriter). Blocks without one are silent. */
+  voice?: (readonly VoiceClip[] | undefined)[]
   /**
    * Side of the tail, pointing to the speaker. Every bubble has one: it tells
    * speech apart from plain text panels.

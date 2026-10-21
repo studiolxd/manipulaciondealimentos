@@ -1,26 +1,24 @@
-import type { TypewriterPace } from '@studiolxd/tramoya'
-import { useEffect, useRef, useState } from 'react'
-import { playVoice, type VoicePlayback } from '../voice'
+import { useCallback, useEffect, useEffectEvent, useRef, useState } from 'react'
+import { isVoiceEnabled, playVoice, type VoiceClip, type VoicePlayback } from '../voice'
 import { useDesignSystem } from './useDesignSystem'
 
 /**
  * Plays a voice-over line while the component shows it, and stops it when the
  * line changes or the component goes away. It waits while the game is paused.
- * Returns its pace (length and position, following the audio) once the length
- * is known; undefined while it is not, or when nothing is playing.
+ * Returns the line's clock (ms elapsed, following the audio); undefined when
+ * nothing plays (no line, voice-overs off or refused by the browser).
  */
-export function useVoice(urls: readonly string[] | undefined): TypewriterPace | undefined {
+export function useVoice(clips: readonly VoiceClip[] | undefined): (() => number) | undefined {
   const { paused } = useDesignSystem()
   const playback = useRef<VoicePlayback | null>(null)
-  const line = urls?.join('|') ?? ''
-  const [pace, setPace] = useState<{ line: string; pace: TypewriterPace | null } | null>(null)
+  const line = clips?.map((clip) => clip.url).join('|') ?? ''
+  const [refusedLine, setRefusedLine] = useState<string | null>(null)
+
+  const start = useEffectEvent(() => (clips ? playVoice(clips, () => setRefusedLine(line)) : null))
 
   useEffect(() => {
     if (!line) return
-    let started: VoicePlayback | null = null
-    started = playVoice(line.split('|'), (ms) =>
-      setPace({ line, pace: ms === null ? null : { durationMs: ms, elapsedMs: () => started?.elapsedMs() ?? 0 } }),
-    )
+    const started = start()
     playback.current = started
     return () => {
       started?.stop()
@@ -33,5 +31,8 @@ export function useVoice(urls: readonly string[] | undefined): TypewriterPace | 
     else playback.current?.resume()
   }, [paused])
 
-  return pace?.line === line ? (pace.pace ?? undefined) : undefined
+  // Read when the typewriter schedules its next character, never while rendering.
+  const clock = useCallback(() => playback.current?.elapsedMs() ?? 0, [])
+  const playing = line !== '' && isVoiceEnabled() && refusedLine !== line
+  return playing ? clock : undefined
 }

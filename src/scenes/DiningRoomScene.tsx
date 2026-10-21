@@ -1,6 +1,6 @@
 import { image } from '../content/images'
 import { diningRoom } from '../content/scenes'
-import { voiceUrls } from '../content/voices'
+import { voiceLine } from '../content/voices'
 import { DialogueScene } from '../design-system'
 import { useGame } from '../game/game'
 
@@ -17,7 +17,7 @@ export function DiningRoomScene() {
       speech={{
         speaker: 'David',
         blocks: diningRoom.speech(playerName).map(text),
-        voice: diningRoom.speechVoice.map((line) => voiceUrls(line, gender)),
+        voice: diningRoom.speechVoice.map((line) => voiceLine(line, gender)),
         tail: 'left',
         top: 140,
         left: 820,
