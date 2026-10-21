@@ -15,7 +15,7 @@ import './styles/base.css'
 export { tokens, type TokenName } from './generated/tokens'
 export type { ImageSource, StageLayer } from './types'
 export type { VoiceClip, VoiceWord } from './voice'
-export type { DesignSystemStrings } from './hooks/useDesignSystem'
+export type { DesignSystemStrings, VoiceSync } from './hooks/useDesignSystem'
 export { DesignSystemProvider } from './providers/DesignSystemProvider'
 
 // Utilities

@@ -14,11 +14,16 @@ export interface DesignSystemContextValue {
   strings: DesignSystemStrings
   /** Timed effects (typewriter…) stop while true, e.g. behind the rotate screen. */
   paused: boolean
+  /** How text follows a voice-over: word by word (default) or at an even pace over its length. */
+  voiceSync: VoiceSync
 }
+
+export type VoiceSync = 'words' | 'even'
 
 export const DesignSystemContext = createContext<DesignSystemContextValue>({
   strings: { continue: 'Continue', showFullText: 'Show full text', speakerSays: (speaker) => `${speaker} says:` },
   paused: false,
+  voiceSync: 'words',
 })
 
 export function useDesignSystem(): DesignSystemContextValue {

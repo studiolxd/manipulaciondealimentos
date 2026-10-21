@@ -1,13 +1,18 @@
 import { usePortrait } from '@studiolxd/tramoya'
 import { useState } from 'react'
 import { designSystemStrings, ui } from './content/ui'
-import { DesignSystemProvider, RotateDeviceScreen, SplashScreen } from './design-system'
+import { DesignSystemProvider, RotateDeviceScreen, SplashScreen, type VoiceSync } from './design-system'
 import { GameProvider, isSceneId } from './game/game'
 import { SceneHost } from './game/SceneHost'
 import { SettingsProvider } from './game/SettingsProvider'
 import { useSettings } from './game/settings'
 import { tracking } from './game/tracking'
 import type { SceneId } from './scenes/sceneIds'
+
+// During development, ?voiceSync=even types voiced text at an even pace instead
+// of word by word, to compare both.
+const voiceSync: VoiceSync =
+  import.meta.env.DEV && new URLSearchParams(window.location.search).get('voiceSync') === 'even' ? 'even' : 'words'
 
 // During development, ?scene=<id> starts the game at that scene instead of
 // resuming from the LMS.
@@ -33,7 +38,13 @@ function Game() {
   const [splash, setSplash] = useState(!tracking.inLms && initialScene === undefined)
   const paused = portrait || splash
   return (
-    <DesignSystemProvider strings={designSystemStrings} paused={paused} soundEffects={settings.effects} voiceOvers={settings.voice}>
+    <DesignSystemProvider
+      strings={designSystemStrings}
+      paused={paused}
+      soundEffects={settings.effects}
+      voiceOvers={settings.voice}
+      voiceSync={voiceSync}
+    >
       <GameProvider startScene={initialScene} paused={paused}>
         <SceneHost />
         {portrait && <RotateDeviceScreen title={ui.rotateDevice.title} />}

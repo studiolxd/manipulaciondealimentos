@@ -31,15 +31,20 @@ interface TypewriterProps extends TextStyle {
 // click on its container (the voice goes on). The animation is hidden from
 // screen readers, which get the full text at once.
 export function Typewriter({ text, complete = false, voice, onDone, size, weight, tone }: TypewriterProps) {
-  const { paused } = useDesignSystem()
+  const { paused, voiceSync } = useDesignSystem()
   // In step with the voice, measured against where the audio actually is.
   const clock = useVoice(voice)
   const pace = useMemo(
     () =>
       clock && voice
-        ? { elapsedMs: clock, durationMs: lineDurationMs(voice), charTimesMs: voiceCharTimes(text, voice) }
+        ? {
+            elapsedMs: clock,
+            durationMs: lineDurationMs(voice),
+            // Without word times the text follows the voice at an even pace.
+            charTimesMs: voiceSync === 'words' ? voiceCharTimes(text, voice) : undefined,
+          }
         : undefined,
-    [clock, voice, text],
+    [clock, voice, text, voiceSync],
   )
   const { ref, visible } = useTypewriter<HTMLSpanElement>({
     text,
