@@ -5,16 +5,18 @@ import type { VoiceClip } from '../design-system'
 // - Natural, Neutral and Clear"; David: "Juan Garcia Jimenez". Files live in
 // public/ with silences trimmed and loudness normalised (-16 LUFS).
 //
-// Each clip keeps its length and when each word is said (from ElevenLabs
-// Scribe, matched to the words of the voiced text), so the text is typed in
-// step with the voice. Regenerating a clip means updating these numbers.
+// Each clip keeps its length (ffprobe) and, once transcribed with ElevenLabs
+// Scribe, when each word is said (matched to the words of the voiced text), so
+// the text is typed word by word with the voice. A clip without words is typed
+// at an even pace over its length instead. Regenerating a clip means updating
+// these numbers.
 
 type WordTiming = readonly [text: string, startMs: number, endMs: number]
 
 interface ClipSpec {
   path: string
   durationMs: number
-  words: readonly WordTiming[]
+  words?: readonly WordTiming[]
 }
 
 export const voiceClips = {
@@ -112,11 +114,11 @@ export function voiceLine(line: VoiceLine | undefined, gender: Gender): VoiceCli
   if (!line) return undefined
   const ids = typeof line === 'function' ? line(gender) : line
   return ids.map((id) => {
-    const { path, durationMs, words } = voiceClips[id]
+    const { path, durationMs, words }: ClipSpec = voiceClips[id]
     return {
       url: import.meta.env.BASE_URL + path,
       durationMs,
-      words: words.map(([text, startMs, endMs]) => ({ text, startMs, endMs })),
+      words: words?.map(([text, startMs, endMs]) => ({ text, startMs, endMs })),
     }
   })
 }

@@ -40,8 +40,8 @@ sin generar la frase entera tres veces.
 - **Cada palabra se escribe cuando se dice.** Cada fragmento (`VoiceClip`) lleva su duración y el inicio y el final
   de cada palabra. El typewriter casa en orden las palabras del texto con las de la voz y escribe cada una mientras
   suena, siguiendo el reloj del propio audio (`pace` de `useTypewriter`), así que no se acumula desfase. Una palabra
-  que no se locuta (el nombre del jugador) aparece con la siguiente. Sin tiempos de palabra, reparte la duración de
-  forma uniforme; sin locución (apagada o bloqueada por el navegador), vuelve a su velocidad normal.
+  que no se locuta (el nombre del jugador) aparece con la siguiente. Sin tiempos de palabra (basta con que falten en un
+  fragmento de la frase), reparte la duración de forma uniforme, también siguiendo el reloj del audio; sin locución (apagada o bloqueada por el navegador), vuelve a su velocidad normal.
 - Cada texto suena al aparecer. Avanzar al siguiente bloque, salir de la escena o abrir otra locución la corta.
 - Se detiene mientras el juego está en pausa (por ejemplo, con la pantalla de girar el dispositivo).
 - El jugador puede apagarlas desde «Ajustes» en la portada (`voiceOvers` de `DesignSystemProvider`).
@@ -56,6 +56,7 @@ Los archivos son del juego (`src/content/voices.ts`, en `public/assets/voice`), 
 2. Genera cada fragmento con ElevenLabs con la voz del personaje y elige la toma.
 3. Recorta los silencios del principio y del final y normaliza a −16 LUFS (ffmpeg, `silenceremove` y `loudnorm`), en
    MP3 mono.
-4. Transcribe cada archivo ya recortado con ElevenLabs Scribe para obtener el inicio y el final de cada palabra.
-5. Añádelo a `src/content/voices.ts` con su duración y sus palabras, escritas como en el texto locutado (con su
+4. Transcribe cada archivo ya recortado con ElevenLabs Scribe para obtener el inicio y el final de cada palabra. Es
+   opcional: sin ese paso el texto sigue a la voz a ritmo uniforme.
+5. Añádelo a `src/content/voices.ts` con su duración (ffprobe) y, si lo has transcrito, sus palabras, escritas como en el texto locutado (con su
    puntuación), y asígnalo al texto en `src/content/scenes.ts`.
