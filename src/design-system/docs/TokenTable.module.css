@@ -37,7 +37,7 @@
   width: var(--slxd-space-5xl);
   height: var(--slxd-space-5xl);
   border: 0 solid var(--slxd-color-text-default);
-  background: var(--slxd-color-surface-paper);
+  background: var(--slxd-color-surface-default);
   zoom: 0.5;
 }
 
