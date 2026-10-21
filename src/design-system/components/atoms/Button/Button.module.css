@@ -33,13 +33,17 @@
   --button-lift: var(--slxd-button-lift-hover);
 }
 
-.button:active {
-  --button-lift: 0px;
-}
-
+/* Keyboard focus: the button lifts as on hover, inside the double ring (light
+   gap, ink line) that follows its radius like an echo of the outline. */
 .button:focus-visible {
+  --button-lift: var(--slxd-button-lift-hover);
   --button-shadow:
     0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner), 0 var(--button-lift) 0 var(--slxd-button-outline-color);
+}
+
+/* After the focus, so pressing a focused button still sinks it. */
+.button:active {
+  --button-lift: 0px;
 }
 
 /* Buttons that take the player to another scene slide up as they appear. It
@@ -59,6 +63,11 @@
 @media (prefers-reduced-motion: reduce) {
   .button[data-advance] {
     animation-name: button-fade-in;
+  }
+
+  /* With reduced motion the focus does not lift the button: only the rings. */
+  .button:focus-visible:not(:hover, :active) {
+    --button-lift: var(--slxd-button-lift-rest);
   }
 }
 
