@@ -41,15 +41,6 @@
       "$type": "color",
       "$value": "{color.border.ink}"
     },
-    "edge-height": {
-      "$type": "dimension",
-      "$value": "{space.3xs}",
-      "$description": "Lower edge that makes buttons look pressable; it sinks when pressed."
-    },
-    "shadow-color": {
-      "$type": "color",
-      "$value": "{color.shadow.default}"
-    },
     "enter": {
       "$description": "Entrance of the buttons that take the player to another scene (advance): they slide up and fade in.",
       "distance": {
@@ -66,7 +57,7 @@
       }
     },
     "lift": {
-      "$description": "Primary, secondary and icon buttons: a hard shadow in the outline colour that grows on hover and disappears when pressed.",
+      "$description": "Every button: a hard shadow in the outline colour that grows on hover and disappears when pressed.",
       "rest": {
         "$type": "dimension",
         "$value": "{space.3xs}"
@@ -88,14 +79,6 @@
       "background": {
         "$type": "color",
         "$value": "{color.action.primary.background}"
-      },
-      "background-hover": {
-        "$type": "color",
-        "$value": "{color.action.primary.background-hover}"
-      },
-      "edge": {
-        "$type": "color",
-        "$value": "{color.action.primary.edge}"
       },
       "text": {
         "$type": "color",
@@ -121,14 +104,6 @@
           "$type": "color",
           "$value": "{color.action.positive.background}"
         },
-        "background-hover": {
-          "$type": "color",
-          "$value": "{color.action.positive.background-hover}"
-        },
-        "edge": {
-          "$type": "color",
-          "$value": "{color.action.positive.edge}"
-        },
         "text": {
           "$type": "color",
           "$value": "{color.action.positive.text}"
@@ -138,14 +113,6 @@
         "background": {
           "$type": "color",
           "$value": "{color.action.negative.background}"
-        },
-        "background-hover": {
-          "$type": "color",
-          "$value": "{color.action.negative.background-hover}"
-        },
-        "edge": {
-          "$type": "color",
-          "$value": "{color.action.negative.edge}"
         },
         "text": {
           "$type": "color",
@@ -162,14 +129,6 @@
       "background": {
         "$type": "color",
         "$value": "{color.action.secondary.background}"
-      },
-      "background-hover": {
-        "$type": "color",
-        "$value": "{color.action.secondary.background-hover}"
-      },
-      "edge": {
-        "$type": "color",
-        "$value": "{color.action.secondary.edge}"
       },
       "text": {
         "$type": "color",
@@ -193,14 +152,6 @@
       "background": {
         "$type": "color",
         "$value": "{color.action.primary.background}"
-      },
-      "background-hover": {
-        "$type": "color",
-        "$value": "{color.action.primary.background-hover}"
-      },
-      "edge": {
-        "$type": "color",
-        "$value": "{color.action.primary.edge}"
       },
       "text": {
         "$type": "color",

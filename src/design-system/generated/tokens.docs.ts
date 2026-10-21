@@ -121,26 +121,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-button-edge-height",
-    "path": "button.edge-height",
-    "layer": "component",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "4px",
-    "reference": "{space.3xs}",
-    "description": "Lower edge that makes buttons look pressable; it sinks when pressed."
-  },
-  {
-    "name": "--slxd-button-shadow-color",
-    "path": "button.shadow-color",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "rgba(20, 38, 46, 0.35)",
-    "reference": "{color.shadow.default}",
-    "description": null
-  },
-  {
     "name": "--slxd-button-enter-distance",
     "path": "button.enter.distance",
     "layer": "component",
@@ -221,26 +201,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-button-primary-background-hover",
-    "path": "button.primary.background-hover",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#a6f0d3",
-    "reference": "{color.action.primary.background-hover}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-primary-edge",
-    "path": "button.primary.edge",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#14262e",
-    "reference": "{color.action.primary.edge}",
-    "description": null
-  },
-  {
     "name": "--slxd-button-primary-text",
     "path": "button.primary.text",
     "layer": "component",
@@ -291,26 +251,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-button-choice-positive-background-hover",
-    "path": "button.choice.positive.background-hover",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#166534",
-    "reference": "{color.action.positive.background-hover}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-choice-positive-edge",
-    "path": "button.choice.positive.edge",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#14532d",
-    "reference": "{color.action.positive.edge}",
-    "description": null
-  },
-  {
     "name": "--slxd-button-choice-positive-text",
     "path": "button.choice.positive.text",
     "layer": "component",
@@ -328,26 +268,6 @@ export const tokenDocs = [
     "type": "color",
     "value": "#b91c1c",
     "reference": "{color.action.negative.background}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-choice-negative-background-hover",
-    "path": "button.choice.negative.background-hover",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#991b1b",
-    "reference": "{color.action.negative.background-hover}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-choice-negative-edge",
-    "path": "button.choice.negative.edge",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#7f1d1d",
-    "reference": "{color.action.negative.edge}",
     "description": null
   },
   {
@@ -378,26 +298,6 @@ export const tokenDocs = [
     "type": "color",
     "value": "#ffffff",
     "reference": "{color.action.secondary.background}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-secondary-background-hover",
-    "path": "button.secondary.background-hover",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#ffffff",
-    "reference": "{color.action.secondary.background-hover}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-secondary-edge",
-    "path": "button.secondary.edge",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#14262e",
-    "reference": "{color.action.secondary.edge}",
     "description": null
   },
   {
@@ -448,26 +348,6 @@ export const tokenDocs = [
     "type": "color",
     "value": "#a6f0d3",
     "reference": "{color.action.primary.background}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-icon-background-hover",
-    "path": "button.icon.background-hover",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#a6f0d3",
-    "reference": "{color.action.primary.background-hover}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-icon-edge",
-    "path": "button.icon.edge",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#14262e",
-    "reference": "{color.action.primary.edge}",
     "description": null
   },
   {
@@ -1861,52 +1741,12 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-green-800",
-    "path": "primitive.color.green.800",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "#166534",
-    "reference": null,
-    "description": null
-  },
-  {
-    "name": "--slxd-primitive-color-green-900",
-    "path": "primitive.color.green.900",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "#14532d",
-    "reference": null,
-    "description": null
-  },
-  {
     "name": "--slxd-primitive-color-red-700",
     "path": "primitive.color.red.700",
     "layer": "primitive",
     "family": "color",
     "type": "color",
     "value": "#b91c1c",
-    "reference": null,
-    "description": null
-  },
-  {
-    "name": "--slxd-primitive-color-red-800",
-    "path": "primitive.color.red.800",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "#991b1b",
-    "reference": null,
-    "description": null
-  },
-  {
-    "name": "--slxd-primitive-color-red-900",
-    "path": "primitive.color.red.900",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "#7f1d1d",
     "reference": null,
     "description": null
   },
@@ -2821,26 +2661,6 @@ export const tokenDocs = [
     "description": "White button: options that act straight away."
   },
   {
-    "name": "--slxd-color-action-secondary-background-hover",
-    "path": "color.action.secondary.background-hover",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#ffffff",
-    "reference": "{primitive.color.white}",
-    "description": "Unchanged: on hover the button lifts instead."
-  },
-  {
-    "name": "--slxd-color-action-secondary-edge",
-    "path": "color.action.secondary.edge",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#14262e",
-    "reference": "{primitive.color.petrol.900}",
-    "description": "Lift shadow, the colour of the outline."
-  },
-  {
     "name": "--slxd-color-action-secondary-text",
     "path": "color.action.secondary.text",
     "layer": "semantic",
@@ -2859,26 +2679,6 @@ export const tokenDocs = [
     "value": "#a6f0d3",
     "reference": "{primitive.color.mint.300}",
     "description": "Mint: a cool accent that never blends with the warm scenes."
-  },
-  {
-    "name": "--slxd-color-action-primary-background-hover",
-    "path": "color.action.primary.background-hover",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#a6f0d3",
-    "reference": "{primitive.color.mint.300}",
-    "description": "Unchanged: on hover the button lifts instead."
-  },
-  {
-    "name": "--slxd-color-action-primary-edge",
-    "path": "color.action.primary.edge",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#14262e",
-    "reference": "{primitive.color.petrol.900}",
-    "description": "Lift shadow, the colour of the outline."
   },
   {
     "name": "--slxd-color-action-primary-text",
@@ -2901,26 +2701,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-color-action-positive-background-hover",
-    "path": "color.action.positive.background-hover",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#166534",
-    "reference": "{primitive.color.green.800}",
-    "description": null
-  },
-  {
-    "name": "--slxd-color-action-positive-edge",
-    "path": "color.action.positive.edge",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#14532d",
-    "reference": "{primitive.color.green.900}",
-    "description": null
-  },
-  {
     "name": "--slxd-color-action-positive-text",
     "path": "color.action.positive.text",
     "layer": "semantic",
@@ -2938,26 +2718,6 @@ export const tokenDocs = [
     "type": "color",
     "value": "#b91c1c",
     "reference": "{primitive.color.red.700}",
-    "description": null
-  },
-  {
-    "name": "--slxd-color-action-negative-background-hover",
-    "path": "color.action.negative.background-hover",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#991b1b",
-    "reference": "{primitive.color.red.800}",
-    "description": null
-  },
-  {
-    "name": "--slxd-color-action-negative-edge",
-    "path": "color.action.negative.edge",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#7f1d1d",
-    "reference": "{primitive.color.red.900}",
     "description": null
   },
   {

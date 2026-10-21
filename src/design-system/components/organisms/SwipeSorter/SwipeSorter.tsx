@@ -69,12 +69,12 @@ export function SwipeSorter({ item, feedback, labels, done, ref, onAnswer }: Swi
           </Positioned>
           <Positioned top={370} left={64}>
             <Button variant="choice-negative" aria-label={labels.noButton} onClick={() => cardRef.current?.swipe('left')}>
-              ← {labels.no}
+              {labels.no}
             </Button>
           </Positioned>
           <Positioned top={370} right={64}>
             <Button variant="choice-positive" aria-label={labels.yesButton} onClick={() => cardRef.current?.swipe('right')}>
-              {labels.yes} →
+              {labels.yes}
             </Button>
           </Positioned>
         </>

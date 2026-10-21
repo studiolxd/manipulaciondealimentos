@@ -1,14 +1,12 @@
-/* Solid button with an ink outline and a darker lower edge that sinks when
-   pressed (YES / NO), or a lifting button (the rest, below). Each variant sets
-   its colours through the local --button-* props. */
+/* Solid button with an ink outline and a hard shadow of the same colour below.
+   On hover it rises and the shadow grows; when pressed it sinks onto the
+   shadow, which disappears. Its bottom edge never moves. Each variant sets its
+   colours through the local --button-* props. */
 .button {
   --button-background: var(--slxd-button-primary-background);
-  --button-background-hover: var(--slxd-button-primary-background-hover);
-  --button-edge: var(--slxd-button-primary-edge);
   --button-text: var(--slxd-button-primary-text);
-  --button-shadow:
-    0 var(--slxd-button-edge-height) 0 var(--button-edge),
-    0 calc(var(--slxd-button-edge-height) * 2) 0 var(--slxd-button-shadow-color);
+  --button-lift: var(--slxd-button-lift-rest);
+  --button-shadow: 0 var(--button-lift) 0 var(--slxd-button-outline-color);
 
   min-height: var(--slxd-button-min-height);
   padding-block: var(--slxd-button-padding-block);
@@ -24,53 +22,24 @@
   text-transform: uppercase;
   white-space: nowrap;
   box-shadow: var(--button-shadow);
-  cursor: pointer;
-}
-
-.button:hover {
-  background: var(--button-background-hover);
-}
-
-.button:active {
-  translate: 0 var(--slxd-button-edge-height);
-  box-shadow: none;
-}
-
-.button:focus-visible {
-  --button-shadow:
-    0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner),
-    0 var(--slxd-button-edge-height) 0 var(--button-edge);
-}
-
-/* Lift: solid with an ink outline and a hard shadow of the same colour below.
-   On hover the button rises and the shadow grows; when pressed it sinks onto
-   the shadow, which disappears. Its bottom edge never moves. */
-.button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']) {
-  --button-lift: var(--slxd-button-lift-rest);
-  --button-shadow: 0 var(--button-lift) 0 var(--button-edge);
-
   translate: 0 calc(var(--slxd-button-lift-rest) - var(--button-lift));
+  cursor: pointer;
   transition-property: translate, box-shadow;
   transition-duration: var(--slxd-button-lift-duration);
   transition-timing-function: var(--slxd-button-lift-easing);
 }
 
-.button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']):hover {
+.button:hover {
   --button-lift: var(--slxd-button-lift-hover);
-
-  background: var(--button-background);
 }
 
-.button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']):active {
+.button:active {
   --button-lift: 0px;
-
-  translate: 0 var(--slxd-button-lift-rest);
-  box-shadow: var(--button-shadow);
 }
 
-.button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']):focus-visible {
+.button:focus-visible {
   --button-shadow:
-    0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner), 0 var(--button-lift) 0 var(--button-edge);
+    0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner), 0 var(--button-lift) 0 var(--slxd-button-outline-color);
 }
 
 /* Buttons that take the player to another scene slide up as they appear. It
@@ -105,8 +74,6 @@
 
 .button[data-variant='secondary'] {
   --button-background: var(--slxd-button-secondary-background);
-  --button-background-hover: var(--slxd-button-secondary-background-hover);
-  --button-edge: var(--slxd-button-secondary-edge);
   --button-text: var(--slxd-button-secondary-text);
 
   min-width: var(--slxd-button-secondary-min-width);
@@ -120,22 +87,16 @@
 
 .button[data-variant='choice-positive'] {
   --button-background: var(--slxd-button-choice-positive-background);
-  --button-background-hover: var(--slxd-button-choice-positive-background-hover);
-  --button-edge: var(--slxd-button-choice-positive-edge);
   --button-text: var(--slxd-button-choice-positive-text);
 }
 
 .button[data-variant='choice-negative'] {
   --button-background: var(--slxd-button-choice-negative-background);
-  --button-background-hover: var(--slxd-button-choice-negative-background-hover);
-  --button-edge: var(--slxd-button-choice-negative-edge);
   --button-text: var(--slxd-button-choice-negative-text);
 }
 
 .button[data-variant='icon'] {
   --button-background: var(--slxd-button-icon-background);
-  --button-background-hover: var(--slxd-button-icon-background-hover);
-  --button-edge: var(--slxd-button-icon-edge);
   --button-text: var(--slxd-button-icon-text);
 
   width: var(--slxd-button-icon-size);

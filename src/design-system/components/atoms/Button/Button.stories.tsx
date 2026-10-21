@@ -25,8 +25,8 @@ export const Secondary: Story = { args: { variant: 'secondary', children: 'Neutr
 /** Takes the player to another scene: it always enters sliding up. */
 export const Advance: Story = { args: { advance: true, children: 'Entrar al restaurante' } }
 export const ChoicePositive: Story = {
-  args: { variant: 'choice-positive', children: 'SÍ →', 'aria-label': 'SÍ, es manipulador de alimentos' },
+  args: { variant: 'choice-positive', children: 'SÍ', 'aria-label': 'SÍ, es manipulador de alimentos' },
 }
 export const ChoiceNegative: Story = {
-  args: { variant: 'choice-negative', children: '← NO', 'aria-label': 'NO, no es manipulador de alimentos' },
+  args: { variant: 'choice-negative', children: 'NO', 'aria-label': 'NO, no es manipulador de alimentos' },
 }

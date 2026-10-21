@@ -80,14 +80,6 @@
           "$value": "{primitive.color.white}",
           "$description": "White button: options that act straight away."
         },
-        "background-hover": {
-          "$value": "{primitive.color.white}",
-          "$description": "Unchanged: on hover the button lifts instead."
-        },
-        "edge": {
-          "$value": "{primitive.color.petrol.900}",
-          "$description": "Lift shadow, the colour of the outline."
-        },
         "text": {
           "$value": "{primitive.color.petrol.900}"
         }
@@ -97,14 +89,6 @@
           "$value": "{primitive.color.mint.300}",
           "$description": "Mint: a cool accent that never blends with the warm scenes."
         },
-        "background-hover": {
-          "$value": "{primitive.color.mint.300}",
-          "$description": "Unchanged: on hover the button lifts instead."
-        },
-        "edge": {
-          "$value": "{primitive.color.petrol.900}",
-          "$description": "Lift shadow, the colour of the outline."
-        },
         "text": {
           "$value": "{primitive.color.petrol.900}"
         }
@@ -113,12 +97,6 @@
         "background": {
           "$value": "{primitive.color.green.700}"
         },
-        "background-hover": {
-          "$value": "{primitive.color.green.800}"
-        },
-        "edge": {
-          "$value": "{primitive.color.green.900}"
-        },
         "text": {
           "$value": "{primitive.color.white}"
         }
@@ -126,12 +104,6 @@
       "negative": {
         "background": {
           "$value": "{primitive.color.red.700}"
-        },
-        "background-hover": {
-          "$value": "{primitive.color.red.800}"
-        },
-        "edge": {
-          "$value": "{primitive.color.red.900}"
         },
         "text": {
           "$value": "{primitive.color.white}"

@@ -130,12 +130,12 @@ export const Elements: Story = {
       </Positioned>
       <Positioned top={200} left={760}>
         <Button variant="choice-negative" aria-label="NO" onClick={fn()}>
-          ← NO
+          NO
         </Button>
       </Positioned>
       <Positioned top={200} left={1120}>
         <Button variant="choice-positive" aria-label="SÍ" onClick={fn()}>
-          SÍ →
+          SÍ
         </Button>
       </Positioned>
       <Positioned top={200} left={1500}>
