@@ -24,7 +24,7 @@ El juego informa al LMS con **SCORM 1.2** y, opcionalmente, registra el detalle 
 - Mientras se añadan escenas, el total crece y el porcentaje de quien ya había avanzado baja.
 - SCORM 1.2 limita `suspend_data` a 4.096 caracteres. Con el formato actual caben unas 150 escenas.
 
-Código: `src/engine/tracking/scorm.ts` (sesión) y `src/engine/tracking/progress.ts` (progreso).
+Código: [Tramoya](https://github.com/studiolxd/tramoya) (`createTracking` y el progreso de `createGame`); el juego lo configura en `src/game/tracking.ts` y `src/game/game.ts`.
 
 ### Paquete
 
@@ -62,7 +62,7 @@ puede editar sin recompilar:
 
 En desarrollo, `?xapi=mock` activa xAPI contra un LRS simulado en memoria y muestra cada registro en la consola.
 
-Código: `src/engine/tracking/xapi.ts`.
+Código: Tramoya (`src/tracking/xapi.ts`), configurado en `src/game/tracking.ts`.
 
 ### Eventos propuestos (a matizar)
 

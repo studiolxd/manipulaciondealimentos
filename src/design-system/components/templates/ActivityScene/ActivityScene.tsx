@@ -1,6 +1,6 @@
+import { withViewTransition } from '@studiolxd/tramoya'
 import { useRef, useState, type ReactNode } from 'react'
 import type { ImageSource } from '../../../types'
-import { withViewTransition } from '../../../viewTransition'
 import { Text } from '../../atoms/Text/Text'
 import { Layer } from '../../layout/Layer/Layer'
 import { Positioned } from '../../layout/Positioned/Positioned'

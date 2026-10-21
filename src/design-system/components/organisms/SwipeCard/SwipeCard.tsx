@@ -1,10 +1,10 @@
-import { useEffect, useEffectEvent, useId, useImperativeHandle, useRef, useState, type CSSProperties, type ReactNode, type Ref } from 'react'
+import { useSwipe, type SwipeDirection } from '@studiolxd/tramoya'
+import { useId, useImperativeHandle, type CSSProperties, type ReactNode, type Ref } from 'react'
 import { tokens } from '../../../generated/tokens'
-import { useReducedMotion } from '../../../hooks/useMediaQuery'
 import { Stamp } from '../../atoms/Stamp/Stamp'
 import styles from './SwipeCard.module.css'
 
-export type SwipeDirection = 'left' | 'right'
+export type { SwipeDirection }
 
 export interface SwipeCardHandle {
   /** Answers with the same exit animation as a drag (e.g. from YES / NO buttons). */
@@ -53,55 +53,18 @@ export function SwipeCard({
   onSwipe,
   children,
 }: SwipeCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null)
-  const drag = useRef<{ pointerId: number; startX: number; scale: number } | null>(null)
-  const [offset, setOffset] = useState(0)
-  const [dragging, setDragging] = useState(false)
-  const [leaving, setLeaving] = useState<SwipeDirection | null>(null)
-  const reducedMotion = useReducedMotion()
+  const { ref: cardRef, x, progress, dragging, reducedMotion, swipe, handlers } = useSwipe({
+    commitDistance: COMMIT_DISTANCE,
+    exitDistance: EXIT_DISTANCE,
+    exitMs: EXIT_MS,
+    scale: stageScale,
+    onSwipe,
+  })
   const descriptionId = useId()
   const hintId = useId()
 
-  // A new card takes the focus when the previous one (which had it) is gone.
-  useEffect(() => {
-    if (!document.activeElement || document.activeElement === document.body) cardRef.current?.focus()
-  }, [])
+  useImperativeHandle(ref, () => ({ swipe, focus: () => cardRef.current?.focus() }))
 
-  const notifySwipe = useEffectEvent((direction: SwipeDirection) => onSwipe(direction))
-  useEffect(() => {
-    if (!leaving) return
-    const timer = setTimeout(() => notifySwipe(leaving), reducedMotion ? 0 : EXIT_MS)
-    return () => clearTimeout(timer)
-  }, [leaving, reducedMotion])
-
-  function release(direction: SwipeDirection) {
-    if (!leaving) setLeaving(direction)
-  }
-
-  useImperativeHandle(ref, () => ({ swipe: release, focus: () => cardRef.current?.focus() }))
-
-  const handleKey = useEffectEvent((event: KeyboardEvent) => {
-    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return
-    if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
-    // Leave the arrows alone where they have their own job, and while the card cannot be used.
-    const target = event.target instanceof Element ? event.target : null
-    if (target?.closest('input, textarea, select, [contenteditable="true"], dialog, [role="dialog"]')) return
-    if (cardRef.current?.closest('[inert]')) return
-    event.preventDefault()
-    release(event.key === 'ArrowRight' ? 'right' : 'left')
-  })
-  useEffect(() => {
-    document.addEventListener('keydown', handleKey)
-    return () => document.removeEventListener('keydown', handleKey)
-  }, [])
-
-  function endDrag() {
-    drag.current = null
-    setDragging(false)
-  }
-
-  const progress = leaving ? (leaving === 'right' ? 1 : -1) : Math.max(-1, Math.min(1, offset / COMMIT_DISTANCE))
-  const x = leaving ? (leaving === 'right' ? EXIT_DISTANCE : -EXIT_DISTANCE) : offset
   const style = {
     '--swipe-x': `${x}px`,
     '--swipe-rotate': `${x * 0.02}deg`,
@@ -123,30 +86,7 @@ export function SwipeCard({
       className={styles.card}
       data-dragging={dragging || reducedMotion || undefined}
       style={style}
-      onPointerDown={(event) => {
-        if (leaving || drag.current) return
-        event.currentTarget.setPointerCapture(event.pointerId)
-        drag.current = { pointerId: event.pointerId, startX: event.clientX, scale: stageScale(event.currentTarget) }
-        setDragging(true)
-      }}
-      onPointerMove={(event) => {
-        const current = drag.current
-        if (current?.pointerId !== event.pointerId) return
-        setOffset((event.clientX - current.startX) / current.scale)
-      }}
-      onPointerUp={(event) => {
-        const current = drag.current
-        if (current?.pointerId !== event.pointerId) return
-        // Measured from the event: a quick flick ends before `offset` re-renders.
-        const distance = (event.clientX - current.startX) / current.scale
-        endDrag()
-        if (Math.abs(distance) >= COMMIT_DISTANCE) release(distance > 0 ? 'right' : 'left')
-        else setOffset(0)
-      }}
-      onPointerCancel={() => {
-        endDrag()
-        setOffset(0)
-      }}
+      {...handlers}
     >
       <div className={styles.content} aria-hidden="true">
         {children}

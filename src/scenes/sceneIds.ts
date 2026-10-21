@@ -24,7 +24,3 @@ export const sceneProgressWeight: Record<SceneId, number> = {
   'who-is-food-handler-conclusion': 1,
   'coming-soon': 0,
 }
-
-export function isSceneId(value: unknown): value is SceneId {
-  return typeof value === 'string' && value in sceneProgressWeight
-}

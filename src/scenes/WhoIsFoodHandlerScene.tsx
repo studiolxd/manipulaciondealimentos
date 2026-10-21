@@ -1,3 +1,4 @@
+import { shuffle } from '@studiolxd/tramoya'
 import { useRef, useState } from 'react'
 import { image } from '../content/images'
 import { whoIsFoodHandler as activity, type PersonCard } from '../content/whoIsFoodHandler'
@@ -10,9 +11,8 @@ import {
   type SwipeDirection,
   type SwipeSorterHandle,
 } from '../design-system'
-import { useGame } from '../engine/gameContext'
-import { shuffle } from '../engine/shuffle'
-import { xapi } from '../engine/tracking/xapi'
+import { useGame } from '../game/game'
+import { xapi } from '../game/tracking'
 
 // Scenes 4 and 5 (activity 2): sort the ID cards into food handlers or not.
 

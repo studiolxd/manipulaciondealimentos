@@ -1,4 +1,5 @@
-import { useEffect, useId, useRef } from 'react'
+import { useAutoFocus } from '@studiolxd/tramoya'
+import { useId, useRef } from 'react'
 import { Heading } from '../../atoms/Heading/Heading'
 import { Icon } from '../../atoms/Icon/Icon'
 import { Text } from '../../atoms/Text/Text'
@@ -16,9 +17,7 @@ export function RotateDeviceScreen({ title, message }: RotateDeviceScreenProps) 
   const titleId = useId()
   const messageId = useId()
 
-  useEffect(() => {
-    headingRef.current?.focus()
-  }, [])
+  useAutoFocus(headingRef)
 
   return (
     <dialog open className={styles.screen} aria-modal="true" aria-labelledby={titleId} aria-describedby={messageId}>

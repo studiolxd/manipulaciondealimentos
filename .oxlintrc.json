@@ -24,7 +24,7 @@
       "files": [
         "src/App.tsx",
         "src/main.tsx",
-        "src/engine/**",
+        "src/game/**",
         "src/scenes/**",
         "src/content/**"
       ],
@@ -256,8 +256,8 @@
             "patterns": [
               {
                 "group": [
-                  "**/engine",
-                  "**/engine/**",
+                  "**/game",
+                  "**/game/**",
                   "**/scenes",
                   "**/scenes/**",
                   "**/content",

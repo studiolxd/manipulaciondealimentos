@@ -1,7 +1,7 @@
 import { image } from '../content/images'
 import { handlerDefinition } from '../content/scenes'
 import { DialogueScene } from '../design-system'
-import { useGame } from '../engine/gameContext'
+import { useGame } from '../game/game'
 
 // Scene 3 (activity 1): David explains what a food handler is.
 export function HandlerDefinitionScene() {

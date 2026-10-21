@@ -1,4 +1,5 @@
-import { useEffect, useId, useRef, type ReactNode } from 'react'
+import { useAutoFocus } from '@studiolxd/tramoya'
+import { useId, useRef, type ReactNode } from 'react'
 import type { ImageSource } from '../../../types'
 import { Heading } from '../../atoms/Heading/Heading'
 import { Image } from '../../atoms/Image/Image'
@@ -29,9 +30,7 @@ export function SceneFrame({
   const headingId = useId()
   const headingRef = useRef<HTMLHeadingElement>(null)
 
-  useEffect(() => {
-    if (focusHeading) headingRef.current?.focus()
-  }, [focusHeading])
+  useAutoFocus(headingRef, { when: focusHeading })
 
   const title = (
     <Heading

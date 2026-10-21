@@ -1,4 +1,5 @@
-import { useEffect, useRef, type MouseEvent, type ReactNode, type Ref } from 'react'
+import { useAutoFocus } from '@studiolxd/tramoya'
+import { useRef, type MouseEvent, type ReactNode, type Ref } from 'react'
 import styles from './Button.module.css'
 
 interface ButtonProps {
@@ -37,9 +38,7 @@ export function Button({
 }: ButtonProps) {
   const ownRef = useRef<HTMLButtonElement>(null)
 
-  useEffect(() => {
-    if (claimFocus && (!document.activeElement || document.activeElement === document.body)) ownRef.current?.focus()
-  }, [claimFocus])
+  useAutoFocus(ownRef, { when: claimFocus, onlyIfNothingFocused: true })
 
   return (
     <button

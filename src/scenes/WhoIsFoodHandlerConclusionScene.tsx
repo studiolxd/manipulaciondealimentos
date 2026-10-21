@@ -1,7 +1,7 @@
 import { image } from '../content/images'
 import { whoIsFoodHandlerConclusion as conclusion } from '../content/whoIsFoodHandler'
 import { DialogueScene } from '../design-system'
-import { useGame } from '../engine/gameContext'
+import { useGame } from '../game/game'
 
 // Scene 6: David sums up activity 2 and introduces the security cameras.
 export function WhoIsFoodHandlerConclusionScene() {

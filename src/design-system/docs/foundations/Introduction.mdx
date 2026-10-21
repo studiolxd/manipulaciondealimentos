@@ -5,14 +5,16 @@ import { Meta } from '@storybook/addon-docs/blocks'
 # Sistema de diseño Studio LXD
 
 Librería de componentes del juego **Manipulador de alimentos**. Todo lo que se ve en el juego sale de aquí.
+El comportamiento (escalado del escenario, máquina de escribir, diálogos, swipe, foco, transiciones) viene de
+[Tramoya](https://github.com/studiolxd/tramoya), el motor sin estilos de Studio LXD; esta librería lo viste.
 
 ## Normas
 
-1. **Solo componentes de la librería.** Las escenas (`src/scenes`), el motor (`src/engine`) y el contenido
+1. **Solo componentes de la librería.** Las escenas (`src/scenes`), la configuración del motor (`src/game`) y el contenido
    (`src/content`) no pueden usar HTML directo (`<div>`, `<button>`, `<img>`…), ni `className` o `style`, ni
    importar CSS. Lo impide oxlint (`pnpm lint`).
 2. **Un único punto de entrada.** Se importa desde `src/design-system`, nunca desde sus carpetas internas.
-3. **La librería no depende del juego.** No importa nada de `engine`, `scenes` ni `content`. Los textos de
+3. **La librería no depende del juego.** No importa nada de `game`, `scenes` ni `content`; sí usa los hooks de Tramoya. Los textos de
    interfaz que necesitan algunos componentes llegan por `DesignSystemProvider`.
 4. **Todo valor visual es un token.** El CSS de los componentes solo usa variables `--slxd-*`; nunca colores,
    tamaños o duraciones en bruto. Lo impide Stylelint, y `pnpm lint` también comprueba que cada token usado exista.
@@ -31,7 +33,7 @@ HTML de contenido (`p`, `h1`–`h6`, `img`, `button`, `input`…); oxlint lo imp
 | **Moléculas** | Combinaciones de átomos con una función. | `IconButton` (Button + Icon), `Typewriter` (Text), `FeedbackPanel` (Surface + Icon + Text), `IdCard`, `ChoiceCard`… |
 | **Organismos** | Bloques completos hechos de moléculas y átomos. | `SpeechBubble`, `Dialog`, `ChoiceCardGroup`, `SwipeCard`, `SwipeSorter`, `Hud` |
 | **Plantillas** | Escenas completas a partir de organismos. | `Stage`, `SceneFrame`, `DialogueScene`, `ActivityScene`, `RotateDeviceScreen` |
-| **Utilidades** | Piezas sin parte visual. | `VisuallyHidden`, `DesignSystemProvider`, hooks, `withViewTransition` |
+| **Utilidades** | Piezas sin parte visual. | `VisuallyHidden`, `DesignSystemProvider` |
 
 Cada componente tiene su carpeta en `components/<nivel>/<Componente>/` con el componente (`.tsx`), sus estilos
 (`.module.css`), sus historias (`.stories.tsx`) y, si los necesita, sus tokens en `tokens/component/<componente>.json`.

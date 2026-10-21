@@ -1,4 +1,5 @@
-import { useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import { useStageScale } from '@studiolxd/tramoya'
+import { useRef, type CSSProperties, type ReactNode } from 'react'
 import styles from './Stage.module.css'
 
 export const STAGE_WIDTH = 1920
@@ -20,18 +21,7 @@ interface StageProps {
 // lets tokens turn real screen minimums into stage pixels.
 export function Stage({ fit = 'viewport', landmark = true, inert, curtainClosed = false, children }: StageProps) {
   const viewportRef = useRef<HTMLDivElement>(null)
-  const [scale, setScale] = useState(1)
-
-  useLayoutEffect(() => {
-    const viewport = viewportRef.current
-    if (!viewport) return
-    const observer = new ResizeObserver(([entry]) => {
-      const { width, height } = entry.contentRect
-      setScale(Math.min(width / STAGE_WIDTH, height / STAGE_HEIGHT))
-    })
-    observer.observe(viewport)
-    return () => observer.disconnect()
-  }, [])
+  const scale = useStageScale(viewportRef, STAGE_WIDTH, STAGE_HEIGHT)
 
   const Canvas = landmark ? 'main' : 'div'
   return (

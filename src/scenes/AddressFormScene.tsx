@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import type { Gender } from '../content/gendered'
+import type { Gender } from '@studiolxd/tramoya'
 import { image } from '../content/images'
 import { addressForm } from '../content/scenes'
 import { Button, ChoiceCardGroup, Positioned, SceneFrame } from '../design-system'
-import { useGame } from '../engine/gameContext'
+import { useGame } from '../game/game'
 
 // Before the script: the player chooses how to be addressed, and texts adapt.
 export function AddressFormScene() {

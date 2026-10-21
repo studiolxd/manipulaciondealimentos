@@ -13,13 +13,12 @@
     "build-storybook": "pnpm tokens && storybook build",
     "tokens": "node scripts/build-tokens.ts",
     "lint:css": "stylelint \"src/**/*.css\"",
-    "package": "pnpm build && node scripts/package-scorm.ts"
+    "package": "pnpm build && tramoya scorm --title 'Manipulador de alimentos'"
   },
   "dependencies": {
     "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
     "@fontsource-variable/rubik": "^5.3.0",
-    "@studiolxd/scorm": "^2.0.1",
-    "@studiolxd/xapi": "^1.0.0",
+    "@studiolxd/tramoya": "https://github.com/studiolxd/tramoya/releases/download/v0.1.0/studiolxd-tramoya-0.1.0.tgz",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
@@ -31,7 +30,6 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "fflate": "^0.8.3",
     "oxlint": "^1.88.0",
     "remark-gfm": "^4.0.1",
     "sharp": "^0.35.5",

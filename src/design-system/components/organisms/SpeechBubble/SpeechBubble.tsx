@@ -1,4 +1,4 @@
-import { useEffect, useEffectEvent, useState } from 'react'
+import { useDialogue } from '@studiolxd/tramoya'
 import { useDesignSystem } from '../../../hooks/useDesignSystem'
 import { Surface } from '../../atoms/Surface/Surface'
 import { IconButton } from '../../molecules/IconButton/IconButton'
@@ -26,30 +26,7 @@ interface SpeechBubbleProps {
 // Surface with tail + Typewriter + IconButton (hidden until it has the focus).
 export function SpeechBubble({ speaker, blocks, tail = 'left', viewTransitionName, onFinished, onDismiss }: SpeechBubbleProps) {
   const { strings } = useDesignSystem()
-  const [index, setIndex] = useState(0)
-  const [skipRequested, setSkipRequested] = useState(false)
-  const [typed, setTyped] = useState(false)
-  // A skipped block counts as fully shown right away, so quick presses are not lost.
-  const shown = typed || skipRequested
-  const isLast = index === blocks.length - 1
-  const finished = shown && isLast
-
-  function advance() {
-    if (!shown) {
-      setSkipRequested(true)
-    } else if (!isLast) {
-      setIndex(index + 1)
-      setSkipRequested(false)
-      setTyped(false)
-    } else {
-      onDismiss?.()
-    }
-  }
-
-  const notifyFinished = useEffectEvent(() => onFinished?.())
-  useEffect(() => {
-    if (finished) notifyFinished()
-  }, [finished])
+  const { index, shown, skipRequested, finished, advance, markTyped } = useDialogue(blocks.length, { onFinished, onDismiss })
 
   return (
     // Pointer users click the bubble; the hidden button inside is the keyboard and screen reader control.
@@ -57,7 +34,7 @@ export function SpeechBubble({ speaker, blocks, tail = 'left', viewTransitionNam
       <VisuallyHidden as="p">{strings.speakerSays(speaker)}</VisuallyHidden>
       {/* Announces each new block as the player advances. */}
       <div aria-live="polite">
-        <Typewriter key={index} text={blocks[index]} complete={skipRequested} onDone={() => setTyped(true)} />
+        <Typewriter key={index} text={blocks[index]} complete={skipRequested} onDone={markTyped} />
       </div>
       {(!finished || onDismiss) && (
         <div className={styles.next}>

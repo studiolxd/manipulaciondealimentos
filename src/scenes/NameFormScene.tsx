@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { image } from '../content/images'
 import { nameForm } from '../content/scenes'
 import { Button, InlineAlert, Positioned, SceneFrame, Surface, TextField } from '../design-system'
-import { useGame } from '../engine/gameContext'
+import { useGame } from '../game/game'
 
 const ERROR_ID = 'name-error'
 const MAX_LENGTH = 40

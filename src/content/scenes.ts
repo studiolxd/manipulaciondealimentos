@@ -1,4 +1,4 @@
-import type { Gender, GenderedText } from './gendered'
+import type { Gender, GenderedText } from '@studiolxd/tramoya'
 
 // Texts for each scene, taken from the "Guion" sheet of
 // docs/Manipulador de alimentos.xlsx. Headings and image descriptions are only

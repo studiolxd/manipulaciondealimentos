@@ -1,7 +1,7 @@
 import { image } from '../content/images'
 import { diningRoom } from '../content/scenes'
 import { DialogueScene } from '../design-system'
-import { useGame } from '../engine/gameContext'
+import { useGame } from '../game/game'
 
 // Scene 2: David welcomes the player in the empty dining room.
 export function DiningRoomScene() {

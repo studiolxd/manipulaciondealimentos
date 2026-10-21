@@ -1,32 +1,29 @@
-# React + TypeScript + Vite
+# Manipulador de alimentos
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aventura gráfica de formación de Studio LXD, publicada como paquete SCORM 1.2.
+Demo: https://studiolxd.github.io/manipuladordealimentos/
 
-Currently, two official plugins are available:
+## Cómo está hecho
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **[Tramoya](https://github.com/studiolxd/tramoya)** (`@studiolxd/tramoya`): el motor, sin estilos. Flujo de
+  escenas, progreso en el LMS, xAPI, textos según la forma de tratamiento y el comportamiento de las
+  interacciones.
+- **`src/design-system`**: el sistema de diseño del juego, que viste a Tramoya. Todo lo que se ve sale de aquí
+  (`pnpm storybook`).
+- **`src/game`**: configuración del motor para este juego (escenas, seguimiento).
+- **`src/scenes`** y **`src/content`**: las escenas y sus textos, según el guion de `docs/`.
 
-## React Compiler
+## Comandos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Comando | Qué hace |
+| --- | --- |
+| `pnpm dev` | Servidor de desarrollo. `?scene=<id>` empieza en una escena; `?lms=local` simula un LMS. |
+| `pnpm build` | Build de producción en `dist/`. |
+| `pnpm package` | Build y paquete SCORM 1.2 en `release/`. |
+| `pnpm lint` | oxlint, Stylelint y comprobación de tokens. |
+| `pnpm storybook` | Documentación del sistema de diseño. |
+| `pnpm placeholders` | Crea las imágenes provisionales que falten en `public/`. |
 
-## Expanding the Oxlint configuration
+Cada push a `main` publica la demo en GitHub Pages.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Para cambiar Tramoya a la vez que el juego, ver «Instalación» en su README.

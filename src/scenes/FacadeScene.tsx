@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { image } from '../content/images'
 import { facade } from '../content/scenes'
 import { Button, NarrationBox, Positioned, SceneFrame, Typewriter } from '../design-system'
-import { useGame } from '../engine/gameContext'
+import { useGame } from '../game/game'
 
 // Scene 1: the restaurant from the street.
 export function FacadeScene() {

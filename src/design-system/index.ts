@@ -13,9 +13,7 @@ import './styles/base.css'
 export { tokens, type TokenName } from './generated/tokens'
 export type { ImageSource, StageLayer } from './types'
 export type { IconName } from './icons.manifest'
-export { useCoarsePointer, useMediaQuery, usePortrait, useReducedMotion } from './hooks/useMediaQuery'
 export type { DesignSystemStrings } from './hooks/useDesignSystem'
-export { withViewTransition } from './viewTransition'
 export { DesignSystemProvider } from './providers/DesignSystemProvider'
 
 // Utilities

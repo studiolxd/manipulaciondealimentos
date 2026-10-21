@@ -1,4 +1,5 @@
-import { useEffect, useRef, type ReactNode } from 'react'
+import { useAutoFocus } from '@studiolxd/tramoya'
+import { useRef, type ReactNode } from 'react'
 import { Surface } from '../../atoms/Surface/Surface'
 import { IconButton } from '../../molecules/IconButton/IconButton'
 import styles from './Dialog.module.css'
@@ -17,9 +18,7 @@ interface DialogProps {
 export function Dialog({ label, closeLabel, viewTransitionName, onClose, children }: DialogProps) {
   const closeRef = useRef<HTMLButtonElement>(null)
 
-  useEffect(() => {
-    closeRef.current?.focus()
-  }, [])
+  useAutoFocus(closeRef)
 
   return (
     <Surface
