@@ -90,6 +90,7 @@ export const tokens = {
   'splash-screen.logo-width': "clamp(280px, 40vw, 640px)",
   'splash-screen.padding': "24px",
   'splash-screen.hold-duration': 1000,
+  'splash-screen.logo-fade-duration': 600,
   'splash-screen.fade-duration': 600,
   'splash-screen.fade-easing': "cubic-bezier(0.42, 0, 1, 1)",
   'stage.backdrop': "#000000",

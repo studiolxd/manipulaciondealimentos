@@ -280,7 +280,8 @@
   --slxd-splash-screen-logo-width: var(--slxd-size-logo-splash);
   --slxd-splash-screen-padding: var(--slxd-space-sm);
   --slxd-splash-screen-hold-duration: var(--slxd-motion-duration-splash-hold);
-  --slxd-splash-screen-fade-duration: var(--slxd-motion-duration-scene-fade);
+  --slxd-splash-screen-logo-fade-duration: var(--slxd-motion-duration-scene-fade); /** The logo fades out over the white background first. */
+  --slxd-splash-screen-fade-duration: var(--slxd-motion-duration-scene-fade); /** Then the white background fades out and uncovers the game. */
   --slxd-splash-screen-fade-easing: var(--slxd-motion-easing-exit);
   --slxd-stage-backdrop: var(--slxd-color-surface-backdrop);
   --slxd-stage-text: var(--slxd-color-text-default);

@@ -891,6 +891,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-splash-screen-logo-fade-duration",
+    "path": "splash-screen.logo-fade-duration",
+    "layer": "component",
+    "family": "motion",
+    "type": "duration",
+    "value": "600ms",
+    "reference": "{motion.duration.scene-fade}",
+    "description": "The logo fades out over the white background first."
+  },
+  {
     "name": "--slxd-splash-screen-fade-duration",
     "path": "splash-screen.fade-duration",
     "layer": "component",
@@ -898,7 +908,7 @@ export const tokenDocs = [
     "type": "duration",
     "value": "600ms",
     "reference": "{motion.duration.scene-fade}",
-    "description": null
+    "description": "Then the white background fades out and uncovers the game."
   },
   {
     "name": "--slxd-splash-screen-fade-easing",

@@ -21,9 +21,15 @@
       "$type": "duration",
       "$value": "{motion.duration.splash-hold}"
     },
+    "logo-fade-duration": {
+      "$type": "duration",
+      "$value": "{motion.duration.scene-fade}",
+      "$description": "The logo fades out over the white background first."
+    },
     "fade-duration": {
       "$type": "duration",
-      "$value": "{motion.duration.scene-fade}"
+      "$value": "{motion.duration.scene-fade}",
+      "$description": "Then the white background fades out and uncovers the game."
     },
     "fade-easing": {
       "$type": "cubicBezier",

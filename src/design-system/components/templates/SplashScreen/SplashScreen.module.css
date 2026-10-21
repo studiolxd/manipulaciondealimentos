@@ -13,7 +13,7 @@
   transition-timing-function: var(--slxd-splash-screen-fade-easing);
 }
 
-.screen[data-leaving] {
+.screen[data-phase='screen-out'] {
   opacity: 0;
   pointer-events: none;
 }
@@ -21,4 +21,11 @@
 .logo {
   width: var(--slxd-splash-screen-logo-width);
   max-width: 100%;
+  transition-property: opacity;
+  transition-duration: var(--slxd-splash-screen-logo-fade-duration);
+  transition-timing-function: var(--slxd-splash-screen-fade-easing);
+}
+
+.screen:not([data-phase='hold']) .logo {
+  opacity: 0;
 }
