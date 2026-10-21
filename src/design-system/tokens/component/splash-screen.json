@@ -1,0 +1,33 @@
+{
+  "splash-screen": {
+    "$description": "Shown outside the stage, so its sizes are real screen pixels.",
+    "background": {
+      "$type": "color",
+      "$value": "{color.brand.background}"
+    },
+    "logo-color": {
+      "$type": "color",
+      "$value": "{color.brand.logo}"
+    },
+    "logo-width": {
+      "$type": "dimension",
+      "$value": "{size.logo.splash}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "hold-duration": {
+      "$type": "duration",
+      "$value": "{motion.duration.splash-hold}"
+    },
+    "fade-duration": {
+      "$type": "duration",
+      "$value": "{motion.duration.scene-fade}"
+    },
+    "fade-easing": {
+      "$type": "cubicBezier",
+      "$value": "{motion.easing.exit}"
+    }
+  }
+}

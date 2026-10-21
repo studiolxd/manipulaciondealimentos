@@ -14,6 +14,10 @@
         "$value": "{primitive.duration.350}",
         "$description": "An element leaving the screen, e.g. a swiped card."
       },
+      "splash-hold": {
+        "$value": "{primitive.duration.1000}",
+        "$description": "How long the Studio LXD logo stays before fading out."
+      },
       "title-hold": {
         "$value": "{primitive.duration.2500}",
         "$description": "How long an activity title stays before fading out."

@@ -9,6 +9,12 @@
       "black": {
         "$value": "#000000"
       },
+      "prussian": {
+        "900": {
+          "$value": "#111e30",
+          "$description": "Studio LXD brand colour (@studiolxd/brand), only for its logo."
+        }
+      },
       "petrol": {
         "900": {
           "$value": "#14262e",

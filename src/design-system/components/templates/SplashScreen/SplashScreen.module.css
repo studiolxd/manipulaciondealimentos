@@ -1,0 +1,24 @@
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: var(--slxd-layer-system);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--slxd-splash-screen-padding);
+  background: var(--slxd-splash-screen-background);
+  color: var(--slxd-splash-screen-logo-color);
+  transition-property: opacity;
+  transition-duration: var(--slxd-splash-screen-fade-duration);
+  transition-timing-function: var(--slxd-splash-screen-fade-easing);
+}
+
+.screen[data-leaving] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo {
+  width: var(--slxd-splash-screen-logo-width);
+  max-width: 100%;
+}

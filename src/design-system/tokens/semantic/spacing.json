@@ -52,6 +52,12 @@
         "$value": "{primitive.size.160}"
       }
     },
+    "logo": {
+      "splash": {
+        "$value": "clamp({primitive.screen.logo-min}, 40vw, {primitive.screen.logo-max})",
+        "$description": "Studio LXD logo on the splash screen: 40% of the window, between the minimum and maximum."
+      }
+    },
     "target": {
       "min": {
         "$value": "max({primitive.size.112}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",

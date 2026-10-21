@@ -77,6 +77,13 @@
       "outline": {
         "$value": "3px",
         "$description": "Ink outline of the interface, always 3 real pixels."
+      },
+      "logo-min": {
+        "$value": "280px",
+        "$description": "Smallest width of the Studio LXD logo on the splash screen, also on phones."
+      },
+      "logo-max": {
+        "$value": "640px"
       }
     }
   }

@@ -42,6 +42,15 @@
         "$description": "Letterbox around the stage and fade curtain."
       }
     },
+    "brand": {
+      "logo": {
+        "$value": "{primitive.color.prussian.900}"
+      },
+      "background": {
+        "$value": "{primitive.color.white}",
+        "$description": "Behind the Studio LXD logo."
+      }
+    },
     "border": {
       "none": {
         "$value": "{primitive.color.transparent}"

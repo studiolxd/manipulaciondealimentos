@@ -841,6 +841,76 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-splash-screen-background",
+    "path": "splash-screen.background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.brand.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-splash-screen-logo-color",
+    "path": "splash-screen.logo-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#111e30",
+    "reference": "{color.brand.logo}",
+    "description": null
+  },
+  {
+    "name": "--slxd-splash-screen-logo-width",
+    "path": "splash-screen.logo-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "clamp(280px, 40vw, 640px)",
+    "reference": "{size.logo.splash}",
+    "description": null
+  },
+  {
+    "name": "--slxd-splash-screen-padding",
+    "path": "splash-screen.padding",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-splash-screen-hold-duration",
+    "path": "splash-screen.hold-duration",
+    "layer": "component",
+    "family": "motion",
+    "type": "duration",
+    "value": "1000ms",
+    "reference": "{motion.duration.splash-hold}",
+    "description": null
+  },
+  {
+    "name": "--slxd-splash-screen-fade-duration",
+    "path": "splash-screen.fade-duration",
+    "layer": "component",
+    "family": "motion",
+    "type": "duration",
+    "value": "600ms",
+    "reference": "{motion.duration.scene-fade}",
+    "description": null
+  },
+  {
+    "name": "--slxd-splash-screen-fade-easing",
+    "path": "splash-screen.fade-easing",
+    "layer": "component",
+    "family": "motion",
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0.42, 0, 1, 1)",
+    "reference": "{motion.easing.exit}",
+    "description": null
+  },
+  {
     "name": "--slxd-stage-backdrop",
     "path": "stage.backdrop",
     "layer": "component",
@@ -1481,6 +1551,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-color-prussian-900",
+    "path": "primitive.color.prussian.900",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#111e30",
+    "reference": null,
+    "description": "Studio LXD brand colour (@studiolxd/brand), only for its logo."
+  },
+  {
     "name": "--slxd-primitive-color-petrol-900",
     "path": "primitive.color.petrol.900",
     "layer": "primitive",
@@ -1737,6 +1817,16 @@ export const tokenDocs = [
     "family": "motion",
     "type": "duration",
     "value": "600ms",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-duration-1000",
+    "path": "primitive.duration.1000",
+    "layer": "primitive",
+    "family": "motion",
+    "type": "duration",
+    "value": "1000ms",
     "reference": null,
     "description": null
   },
@@ -2111,6 +2201,26 @@ export const tokenDocs = [
     "description": "Ink outline of the interface, always 3 real pixels."
   },
   {
+    "name": "--slxd-primitive-screen-logo-min",
+    "path": "primitive.screen.logo-min",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "280px",
+    "reference": null,
+    "description": "Smallest width of the Studio LXD logo on the splash screen, also on phones."
+  },
+  {
+    "name": "--slxd-primitive-screen-logo-max",
+    "path": "primitive.screen.logo-max",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "640px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-font-family-rubik",
     "path": "primitive.font.family.rubik",
     "layer": "primitive",
@@ -2411,6 +2521,26 @@ export const tokenDocs = [
     "description": "Letterbox around the stage and fade curtain."
   },
   {
+    "name": "--slxd-color-brand-logo",
+    "path": "color.brand.logo",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#111e30",
+    "reference": "{primitive.color.prussian.900}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-brand-background",
+    "path": "color.brand.background",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
+    "description": "Behind the Studio LXD logo."
+  },
+  {
     "name": "--slxd-color-border-none",
     "path": "color.border.none",
     "layer": "semantic",
@@ -2709,6 +2839,16 @@ export const tokenDocs = [
     "value": "350ms",
     "reference": "{primitive.duration.350}",
     "description": "An element leaving the screen, e.g. a swiped card."
+  },
+  {
+    "name": "--slxd-motion-duration-splash-hold",
+    "path": "motion.duration.splash-hold",
+    "layer": "semantic",
+    "family": "motion",
+    "type": "duration",
+    "value": "1000ms",
+    "reference": "{primitive.duration.1000}",
+    "description": "How long the Studio LXD logo stays before fading out."
   },
   {
     "name": "--slxd-motion-duration-title-hold",
@@ -3049,6 +3189,16 @@ export const tokenDocs = [
     "value": "160px",
     "reference": "{primitive.size.160}",
     "description": null
+  },
+  {
+    "name": "--slxd-size-logo-splash",
+    "path": "size.logo.splash",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "clamp(280px, 40vw, 640px)",
+    "reference": "clamp({primitive.screen.logo-min}, 40vw, {primitive.screen.logo-max})",
+    "description": "Studio LXD logo on the splash screen: 40% of the window, between the minimum and maximum."
   },
   {
     "name": "--slxd-size-target-min",
