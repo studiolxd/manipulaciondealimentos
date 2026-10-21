@@ -25,6 +25,8 @@
   font-family: var(--slxd-heading-font-family);
   font-weight: var(--slxd-heading-font-weight);
   line-height: var(--slxd-heading-line-height);
+  letter-spacing: var(--slxd-heading-letter-spacing);
+  text-transform: uppercase;
 }
 
 .figure .specimen[data-role='display'] {

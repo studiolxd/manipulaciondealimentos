@@ -46,34 +46,16 @@
           "$value": "#d6cdb8"
         }
       },
-      "neon": {
-        "400": {
-          "$value": "#39ff88",
-          "$description": "Neon green: the tint of glass buttons and accent screens."
-        }
-      },
-      "neon-alpha": {
-        "70": {
-          "$value": "rgba(57, 255, 136, 0.7)"
-        },
-        "85": {
-          "$value": "rgba(57, 255, 136, 0.85)"
-        }
-      },
       "mint": {
+        "300": {
+          "$value": "#a6f0d3",
+          "$description": "Mint: buttons and accent screens."
+        },
         "600": {
           "$value": "#1f9e74"
         },
         "800": {
           "$value": "#0f5c45"
-        }
-      },
-      "white-alpha": {
-        "55": {
-          "$value": "rgba(255, 255, 255, 0.55)"
-        },
-        "75": {
-          "$value": "rgba(255, 255, 255, 0.75)"
         }
       },
       "green": {

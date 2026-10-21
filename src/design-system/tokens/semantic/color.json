@@ -17,7 +17,7 @@
       },
       "on-accent": {
         "$value": "{primitive.color.black}",
-        "$description": "Text on the neon action colour: buttons and accent screens."
+        "$description": "Text on the mint action colour: buttons and accent screens."
       },
       "accent": {
         "$value": "{primitive.color.mint.800}",
@@ -46,7 +46,7 @@
         "$description": "Dark reference surface, e.g. in the documentation."
       },
       "accent": {
-        "$value": "{primitive.color.neon.400}",
+        "$value": "{primitive.color.mint.300}",
         "$description": "Full-screen system messages, in the colour of the buttons."
       },
       "backdrop": {
@@ -81,14 +81,16 @@
     "action": {
       "secondary": {
         "background": {
-          "$value": "{primitive.color.white-alpha.55}",
-          "$description": "Clear glass: options that act straight away."
+          "$value": "{primitive.color.white}",
+          "$description": "White button: options that act straight away."
         },
         "background-hover": {
-          "$value": "{primitive.color.white-alpha.75}"
+          "$value": "{primitive.color.white}",
+          "$description": "Unchanged: on hover the button lifts instead."
         },
         "edge": {
-          "$value": "{primitive.color.white-alpha.75}"
+          "$value": "{primitive.color.petrol.900}",
+          "$description": "Lift shadow, the colour of the outline."
         },
         "text": {
           "$value": "{primitive.color.black}"
@@ -96,15 +98,16 @@
       },
       "primary": {
         "background": {
-          "$value": "{primitive.color.neon-alpha.70}",
-          "$description": "Neon green glass: a cool accent that never blends with the warm scenes."
+          "$value": "{primitive.color.mint.300}",
+          "$description": "Mint: a cool accent that never blends with the warm scenes."
         },
         "background-hover": {
-          "$value": "{primitive.color.neon-alpha.85}"
+          "$value": "{primitive.color.mint.300}",
+          "$description": "Unchanged: on hover the button lifts instead."
         },
         "edge": {
-          "$value": "{primitive.color.white-alpha.75}",
-          "$description": "Edge colour; glass buttons do not show it."
+          "$value": "{primitive.color.petrol.900}",
+          "$description": "Lift shadow, the colour of the outline."
         },
         "text": {
           "$value": "{primitive.color.black}"

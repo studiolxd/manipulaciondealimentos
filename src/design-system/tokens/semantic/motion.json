@@ -22,6 +22,10 @@
         "$value": "{primitive.duration.2500}",
         "$description": "How long an activity title stays before fading out."
       },
+      "press": {
+        "$value": "{primitive.duration.120}",
+        "$description": "A control lifting on hover or sinking when pressed."
+      },
       "typewriter-char": {
         "$value": "{primitive.duration.28}"
       },

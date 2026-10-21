@@ -48,10 +48,6 @@
     "glass": {
       "$value": "{primitive.blur.16}",
       "$description": "Background blur behind glass panels."
-    },
-    "subtle": {
-      "$value": "{primitive.blur.2}",
-      "$description": "Light blur behind glass buttons: the scene stays recognisable."
     }
   },
   "stroke-width": {

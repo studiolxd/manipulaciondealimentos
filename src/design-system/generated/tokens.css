@@ -13,13 +13,9 @@
   --slxd-primitive-color-cream-50: #fff8ec; /** Light interface panels and text on ink. */
   --slxd-primitive-color-sand-50: #fffdf7;
   --slxd-primitive-color-sand-300: #d6cdb8;
-  --slxd-primitive-color-neon-400: #39ff88; /** Neon green: the tint of glass buttons and accent screens. */
-  --slxd-primitive-color-neon-alpha-70: rgba(57, 255, 136, 0.7);
-  --slxd-primitive-color-neon-alpha-85: rgba(57, 255, 136, 0.85);
+  --slxd-primitive-color-mint-300: #a6f0d3; /** Mint: buttons and accent screens. */
   --slxd-primitive-color-mint-600: #1f9e74;
   --slxd-primitive-color-mint-800: #0f5c45;
-  --slxd-primitive-color-white-alpha-55: rgba(255, 255, 255, 0.55);
-  --slxd-primitive-color-white-alpha-75: rgba(255, 255, 255, 0.75);
   --slxd-primitive-color-green-700: #15803d;
   --slxd-primitive-color-green-800: #166534;
   --slxd-primitive-color-green-900: #14532d;
@@ -33,6 +29,7 @@
   --slxd-primitive-z-index-3: 3;
   --slxd-primitive-z-index-10: 10;
   --slxd-primitive-duration-28: 28ms;
+  --slxd-primitive-duration-120: 120ms;
   --slxd-primitive-duration-350: 350ms;
   --slxd-primitive-duration-450: 450ms;
   --slxd-primitive-duration-600: 600ms;
@@ -48,7 +45,6 @@
   --slxd-primitive-radius-full: 999px;
   --slxd-primitive-border-width-4: 4px;
   --slxd-primitive-border-width-8: 8px;
-  --slxd-primitive-blur-2: 2px;
   --slxd-primitive-blur-16: 16px;
   --slxd-primitive-stroke-width-1: 1;
   --slxd-primitive-size-0: 0px;
@@ -102,14 +98,14 @@
   --slxd-color-text-inverse: var(--slxd-primitive-color-cream-50); /** Text on ink panels and over the scene. */
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
-  --slxd-color-text-on-accent: var(--slxd-primitive-color-black); /** Text on the neon action colour: buttons and accent screens. */
+  --slxd-color-text-on-accent: var(--slxd-primitive-color-black); /** Text on the mint action colour: buttons and accent screens. */
   --slxd-color-text-accent: var(--slxd-primitive-color-mint-800); /** Dark mint, legible on light surfaces (e.g. accent icons). */
   --slxd-color-surface-default: var(--slxd-primitive-color-cream-50); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-paper: var(--slxd-primitive-color-sand-50); /** Printed-looking objects such as ID cards. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
   --slxd-color-surface-inverse: var(--slxd-primitive-color-petrol-900); /** Dark reference surface, e.g. in the documentation. */
-  --slxd-color-surface-accent: var(--slxd-primitive-color-neon-400); /** Full-screen system messages, in the colour of the buttons. */
+  --slxd-color-surface-accent: var(--slxd-primitive-color-mint-300); /** Full-screen system messages, in the colour of the buttons. */
   --slxd-color-surface-backdrop: var(--slxd-primitive-color-black); /** Letterbox around the stage and fade curtain. */
   --slxd-color-brand-logo: var(--slxd-primitive-color-prussian-900);
   --slxd-color-brand-background: var(--slxd-primitive-color-white); /** Behind the Studio LXD logo. */
@@ -117,13 +113,13 @@
   --slxd-color-border-subtle: var(--slxd-primitive-color-sand-300);
   --slxd-color-border-ink: var(--slxd-primitive-color-petrol-900); /** Outline that separates the interface from the scene. */
   --slxd-color-border-selected: var(--slxd-primitive-color-mint-600);
-  --slxd-color-action-secondary-background: var(--slxd-primitive-color-white-alpha-55); /** Clear glass: options that act straight away. */
-  --slxd-color-action-secondary-background-hover: var(--slxd-primitive-color-white-alpha-75);
-  --slxd-color-action-secondary-edge: var(--slxd-primitive-color-white-alpha-75);
+  --slxd-color-action-secondary-background: var(--slxd-primitive-color-white); /** White button: options that act straight away. */
+  --slxd-color-action-secondary-background-hover: var(--slxd-primitive-color-white); /** Unchanged: on hover the button lifts instead. */
+  --slxd-color-action-secondary-edge: var(--slxd-primitive-color-petrol-900); /** Lift shadow, the colour of the outline. */
   --slxd-color-action-secondary-text: var(--slxd-primitive-color-black);
-  --slxd-color-action-primary-background: var(--slxd-primitive-color-neon-alpha-70); /** Neon green glass: a cool accent that never blends with the warm scenes. */
-  --slxd-color-action-primary-background-hover: var(--slxd-primitive-color-neon-alpha-85);
-  --slxd-color-action-primary-edge: var(--slxd-primitive-color-white-alpha-75); /** Edge colour; glass buttons do not show it. */
+  --slxd-color-action-primary-background: var(--slxd-primitive-color-mint-300); /** Mint: a cool accent that never blends with the warm scenes. */
+  --slxd-color-action-primary-background-hover: var(--slxd-primitive-color-mint-300); /** Unchanged: on hover the button lifts instead. */
+  --slxd-color-action-primary-edge: var(--slxd-primitive-color-petrol-900); /** Lift shadow, the colour of the outline. */
   --slxd-color-action-primary-text: var(--slxd-primitive-color-black);
   --slxd-color-action-positive-background: var(--slxd-primitive-color-green-700);
   --slxd-color-action-positive-background-hover: var(--slxd-primitive-color-green-800);
@@ -149,6 +145,7 @@
   --slxd-motion-duration-exit: var(--slxd-primitive-duration-350); /** An element leaving the screen, e.g. a swiped card. */
   --slxd-motion-duration-splash-hold: var(--slxd-primitive-duration-1000); /** How long the Studio LXD logo stays before fading out. */
   --slxd-motion-duration-title-hold: var(--slxd-primitive-duration-2500); /** How long an activity title stays before fading out. */
+  --slxd-motion-duration-press: var(--slxd-primitive-duration-120); /** A control lifting on hover or sinking when pressed. */
   --slxd-motion-duration-typewriter-char: var(--slxd-primitive-duration-28);
   --slxd-motion-duration-typewriter-pause: var(--slxd-primitive-duration-450); /** Pause after each sentence. */
   --slxd-motion-duration-icon-loop: var(--slxd-primitive-duration-3200); /** One cycle of an animated icon, e.g. the device turning. */
@@ -165,7 +162,6 @@
   --slxd-border-width-band: var(--slxd-primitive-size-16); /** Coloured side band (e.g. feedback). */
   --slxd-focus-ring-width: max(var(--slxd-primitive-size-6), calc(var(--slxd-primitive-screen-focus-ring-min) / var(--slxd-stage-scale)));
   --slxd-blur-glass: var(--slxd-primitive-blur-16); /** Background blur behind glass panels. */
-  --slxd-blur-subtle: var(--slxd-primitive-blur-2); /** Light blur behind glass buttons: the scene stays recognisable. */
   --slxd-stroke-width-icon: var(--slxd-primitive-stroke-width-1); /** Icon stroke in grid units: it grows with the icon, rounded to whole real pixels. */
   --slxd-space-none: var(--slxd-primitive-size-0);
   --slxd-space-3xs: var(--slxd-primitive-size-4);
@@ -206,22 +202,25 @@
   --slxd-font-line-height-snug: var(--slxd-primitive-font-line-height-115);
   --slxd-font-line-height-normal: var(--slxd-primitive-font-line-height-140);
   --slxd-font-line-height-relaxed: var(--slxd-primitive-font-line-height-150);
-  --slxd-font-letter-spacing-control: var(--slxd-primitive-font-letter-spacing-40); /** Tracking of uppercase button text. */
+  --slxd-font-letter-spacing-caps: var(--slxd-primitive-font-letter-spacing-40); /** Tracking of uppercase display text: titles and buttons. */
   --slxd-activity-title-hold-duration: var(--slxd-motion-duration-title-hold);
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
   --slxd-button-min-height: var(--slxd-size-target-min);
   --slxd-button-padding-block: var(--slxd-space-xs);
   --slxd-button-padding-inline: var(--slxd-space-4xl);
-  --slxd-button-radius: var(--slxd-radius-full);
+  --slxd-button-radius: var(--slxd-radius-md); /** The same as text inputs. */
   --slxd-button-font-family: var(--slxd-font-family-display);
   --slxd-button-font-size: var(--slxd-font-size-body);
   --slxd-button-font-weight: var(--slxd-font-weight-control);
-  --slxd-button-letter-spacing: var(--slxd-font-letter-spacing-control);
+  --slxd-button-letter-spacing: var(--slxd-font-letter-spacing-caps);
   --slxd-button-outline-width: var(--slxd-border-width-outline);
   --slxd-button-outline-color: var(--slxd-color-border-ink);
   --slxd-button-edge-height: var(--slxd-space-3xs); /** Lower edge that makes buttons look pressable; it sinks when pressed. */
   --slxd-button-shadow-color: var(--slxd-color-shadow-default);
-  --slxd-button-glass-blur: var(--slxd-blur-subtle);
+  --slxd-button-lift-rest: var(--slxd-space-3xs);
+  --slxd-button-lift-hover: var(--slxd-space-2xs);
+  --slxd-button-lift-duration: var(--slxd-motion-duration-press);
+  --slxd-button-lift-easing: var(--slxd-motion-easing-standard);
   --slxd-button-primary-background: var(--slxd-color-action-primary-background);
   --slxd-button-primary-background-hover: var(--slxd-color-action-primary-background-hover);
   --slxd-button-primary-edge: var(--slxd-color-action-primary-edge);
@@ -242,6 +241,7 @@
   --slxd-button-secondary-background-hover: var(--slxd-color-action-secondary-background-hover);
   --slxd-button-secondary-edge: var(--slxd-color-action-secondary-edge);
   --slxd-button-secondary-text: var(--slxd-color-action-secondary-text);
+  --slxd-button-icon-radius: var(--slxd-radius-full);
   --slxd-button-icon-size: var(--slxd-size-target-min);
   --slxd-button-icon-padding: var(--slxd-space-2xs);
   --slxd-button-icon-background: var(--slxd-color-action-primary-background);
@@ -257,6 +257,7 @@
   --slxd-feedback-panel-gap: var(--slxd-space-md);
   --slxd-heading-font-family: var(--slxd-font-family-display);
   --slxd-heading-font-weight: var(--slxd-font-weight-display-strong);
+  --slxd-heading-letter-spacing: var(--slxd-font-letter-spacing-caps);
   --slxd-heading-line-height: var(--slxd-font-line-height-snug);
   --slxd-heading-size-display: var(--slxd-font-size-display);
   --slxd-heading-size-heading: var(--slxd-font-size-heading);

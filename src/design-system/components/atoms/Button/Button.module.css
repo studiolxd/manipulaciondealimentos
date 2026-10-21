@@ -1,6 +1,6 @@
 /* Solid button with an ink outline and a darker lower edge that sinks when
-   pressed (YES / NO), or glass (the rest, below). Each variant sets its colours
-   through the local --button-* props. */
+   pressed (YES / NO), or a lifting button (the rest, below). Each variant sets
+   its colours through the local --button-* props. */
 .button {
   --button-background: var(--slxd-button-primary-background);
   --button-background-hover: var(--slxd-button-primary-background-hover);
@@ -42,23 +42,35 @@
     0 var(--slxd-button-edge-height) 0 var(--button-edge);
 }
 
-/* Glass: translucent tint that slightly blurs the scene behind, without border
-   or shadow. It shrinks a little when pressed. */
+/* Lift: solid with an ink outline and a hard shadow of the same colour below.
+   On hover the button rises and the shadow grows; when pressed it sinks onto
+   the shadow, which disappears. Its bottom edge never moves. */
 .button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']) {
-  --button-shadow: none;
+  --button-lift: var(--slxd-button-lift-rest);
+  --button-shadow: 0 var(--button-lift) 0 var(--button-edge);
 
-  border-color: transparent;
-  backdrop-filter: blur(var(--slxd-button-glass-blur));
+  translate: 0 calc(var(--slxd-button-lift-rest) - var(--button-lift));
+  transition-property: translate, box-shadow;
+  transition-duration: var(--slxd-button-lift-duration);
+  transition-timing-function: var(--slxd-button-lift-easing);
+}
+
+.button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']):hover {
+  --button-lift: var(--slxd-button-lift-hover);
+
+  background: var(--button-background);
 }
 
 .button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']):active {
-  translate: none;
-  scale: 0.97;
+  --button-lift: 0px;
+
+  translate: 0 var(--slxd-button-lift-rest);
   box-shadow: var(--button-shadow);
 }
 
 .button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']):focus-visible {
-  --button-shadow: 0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner);
+  --button-shadow:
+    0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner), 0 var(--button-lift) 0 var(--button-edge);
 }
 
 .button[data-concealed] {
@@ -103,5 +115,6 @@
   width: var(--slxd-button-icon-size);
   min-height: 0;
   height: var(--slxd-button-icon-size);
+  border-radius: var(--slxd-button-icon-radius);
   padding: var(--slxd-button-icon-padding);
 }

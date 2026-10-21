@@ -14,7 +14,8 @@
     },
     "radius": {
       "$type": "dimension",
-      "$value": "{radius.full}"
+      "$value": "{radius.md}",
+      "$description": "The same as text inputs."
     },
     "font-family": {
       "$type": "fontFamily",
@@ -30,7 +31,7 @@
     },
     "letter-spacing": {
       "$type": "dimension",
-      "$value": "{font.letter-spacing.control}"
+      "$value": "{font.letter-spacing.caps}"
     },
     "outline-width": {
       "$type": "dimension",
@@ -49,11 +50,23 @@
       "$type": "color",
       "$value": "{color.shadow.default}"
     },
-    "glass": {
-      "$description": "Primary, secondary and icon buttons: translucent and slightly blurring the scene behind, without border or shadow.",
-      "blur": {
+    "lift": {
+      "$description": "Primary, secondary and icon buttons: a hard shadow in the outline colour that grows on hover and disappears when pressed.",
+      "rest": {
         "$type": "dimension",
-        "$value": "{blur.subtle}"
+        "$value": "{space.3xs}"
+      },
+      "hover": {
+        "$type": "dimension",
+        "$value": "{space.2xs}"
+      },
+      "duration": {
+        "$type": "duration",
+        "$value": "{motion.duration.press}"
+      },
+      "easing": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.standard}"
       }
     },
     "primary": {
@@ -150,6 +163,10 @@
     },
     "icon": {
       "$description": "Round icon-only button (IconButton).",
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
       "size": {
         "$type": "dimension",
         "$value": "{size.target.min}"

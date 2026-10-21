@@ -39,9 +39,6 @@
     },
     "blur": {
       "$type": "dimension",
-      "2": {
-        "$value": "2px"
-      },
       "16": {
         "$value": "16px"
       }

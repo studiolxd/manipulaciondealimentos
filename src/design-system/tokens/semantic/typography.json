@@ -82,9 +82,9 @@
     },
     "letter-spacing": {
       "$type": "dimension",
-      "control": {
+      "caps": {
         "$value": "{primitive.font.letter-spacing.40}",
-        "$description": "Tracking of uppercase button text."
+        "$description": "Tracking of uppercase display text: titles and buttons."
       }
     }
   }

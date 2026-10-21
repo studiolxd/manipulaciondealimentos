@@ -33,8 +33,8 @@ narración, descripciones y feedback. Token: `--slxd-font-family-body`.
 - **Pesos.** Gasoek One solo tiene peso 400, así que botones, etiquetas y títulos van todos a 400 (los tokens
   `--slxd-font-weight-control`, `-display` y `-display-strong` siguen separados por si cambia la familia). En la
   prosa, 400 para el texto y 700 para destacar.
-- **Botones en mayúsculas**, con espaciado de 0,04 em (`--slxd-font-letter-spacing-control`). El texto se escribe
-  normal en el contenido; las mayúsculas las pone el estilo, así los lectores de pantalla no lo deletrean.
+- **Títulos y botones en mayúsculas**, con espaciado de 0,04 em (`--slxd-font-letter-spacing-caps`). El texto se
+  escribe normal en el contenido; las mayúsculas las pone el estilo, así los lectores de pantalla no lo deletrean.
 - **Tamaño mínimo.** Los tamaños de texto en prosa nunca bajan de 15 px reales en pantalla, ni los encabezados de
   22 px ni los títulos de 28 px, aunque el escenario se reduzca (ver tokens).
 - **Interlineado.** 1,4 en la prosa, más ajustado (1,1–1,15) en títulos.
@@ -45,9 +45,9 @@ Muestras a la **mitad** de su tamaño en el escenario de 1920×1080.
 
 | Rol | Familia | Tamaño | Peso | Dónde |
 | --- | --- | --- | --- | --- |
-| Título de actividad | Gasoek One | 104 px | 400 | `Heading` display (`ActivityTitle`) |
-| Encabezado | Gasoek One | 72 px | 400 | `Heading` heading (`SceneFrame`) |
-| Subtítulo | Gasoek One | 60 px | 400 | `Heading` subheading (nombre en `IdCard`) |
+| Título de actividad | Gasoek One | 104 px | 400, mayúsculas, espaciado 0,04 em | `Heading` display (`ActivityTitle`) |
+| Encabezado | Gasoek One | 72 px | 400, mayúsculas, espaciado 0,04 em | `Heading` heading (`SceneFrame`) |
+| Subtítulo | Gasoek One | 60 px | 400, mayúsculas, espaciado 0,04 em | `Heading` subheading (nombre en `IdCard`) |
 | Etiqueta grande | Gasoek One | 64 px | 400 | `Label` lg, botones SÍ / NO |
 | Control | Gasoek One | 44 px | 400, mayúsculas, espaciado 0,04 em | `Button` |
 | Sello | Gasoek One | 88 px | 400 | `Stamp` |
