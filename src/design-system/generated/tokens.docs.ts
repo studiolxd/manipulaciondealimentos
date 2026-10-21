@@ -471,6 +471,26 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-heading-subheading-font-family",
+    "path": "heading.subheading.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+    "reference": "{font.family.body}",
+    "description": null
+  },
+  {
+    "name": "--slxd-heading-subheading-font-weight",
+    "path": "heading.subheading.font-weight",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontWeight",
+    "value": "700",
+    "reference": "{font.weight.bold}",
+    "description": null
+  },
+  {
     "name": "--slxd-heading-size-display",
     "path": "heading.size.display",
     "layer": "component",

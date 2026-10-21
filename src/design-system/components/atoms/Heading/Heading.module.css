@@ -19,8 +19,13 @@
   font-size: var(--slxd-heading-size-heading);
 }
 
+/* Names are read as written: prose family, no uppercase or tracking. */
 .heading[data-variant='subheading'] {
+  font-family: var(--slxd-heading-subheading-font-family);
   font-size: var(--slxd-heading-size-subheading);
+  font-weight: var(--slxd-heading-subheading-font-weight);
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .heading[data-variant='system'] {

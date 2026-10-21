@@ -38,7 +38,11 @@
 }
 
 .figure .specimen[data-role='subheading'] {
+  font-family: var(--slxd-heading-subheading-font-family);
   font-size: var(--slxd-heading-size-subheading);
+  font-weight: var(--slxd-heading-subheading-font-weight);
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .figure .specimen[data-role='label'] {

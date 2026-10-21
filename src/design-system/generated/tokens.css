@@ -233,6 +233,8 @@
   --slxd-heading-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-heading-letter-spacing: var(--slxd-font-letter-spacing-caps);
   --slxd-heading-line-height: var(--slxd-font-line-height-snug);
+  --slxd-heading-subheading-font-family: var(--slxd-font-family-body);
+  --slxd-heading-subheading-font-weight: var(--slxd-font-weight-bold);
   --slxd-heading-size-display: var(--slxd-font-size-display);
   --slxd-heading-size-heading: var(--slxd-font-size-heading);
   --slxd-heading-size-subheading: var(--slxd-font-size-subheading);

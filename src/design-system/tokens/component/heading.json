@@ -16,6 +16,17 @@
       "$type": "number",
       "$value": "{font.line-height.snug}"
     },
+    "subheading": {
+      "$description": "Names (e.g. on ID cards): in the prose family, bold, as written.",
+      "font-family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.body}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.bold}"
+      }
+    },
     "size": {
       "display": {
         "$type": "dimension",

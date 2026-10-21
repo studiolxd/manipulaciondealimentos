@@ -48,6 +48,8 @@ export const tokens = {
   'heading.font-weight': 400,
   'heading.letter-spacing': "0.04em",
   'heading.line-height': 1.15,
+  'heading.subheading.font-family': "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+  'heading.subheading.font-weight': 700,
   'heading.size.display': "max(104px, calc(28px / var(--slxd-stage-scale)))",
   'heading.size.heading': "max(72px, calc(22px / var(--slxd-stage-scale)))",
   'heading.size.subheading': "60px",
