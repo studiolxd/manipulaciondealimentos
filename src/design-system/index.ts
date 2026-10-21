@@ -5,7 +5,7 @@
 // built only from the levels below it; only atoms render semantic HTML.
 
 // Self-hosted Google Fonts (see tokens/primitive/typography.json).
-import '@fontsource-variable/rubik'
+import '@fontsource-variable/roboto'
 import '@fontsource-variable/atkinson-hyperlegible-next'
 import './generated/tokens.css'
 import './styles/base.css'

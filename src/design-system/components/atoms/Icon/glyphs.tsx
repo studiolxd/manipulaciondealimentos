@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react'
 import styles from './Icon.module.css'
 
-// Vector icons, drawn on a 24-unit grid inspired by Rubik: one colour, a
-// 1-unit stroke rounded to whole pixels, round joins and caps, rounded corners,
+// Vector icons, drawn on a 24-unit grid: one colour, a 1-unit stroke rounded
+// to whole pixels, round joins and caps, rounded corners,
 // right-angled arrowheads whose tips sit at the same distance from a curved
 // shaft, and a 2-unit margin.
 // Icon paints them with currentColor, so they take the colour of their tone.

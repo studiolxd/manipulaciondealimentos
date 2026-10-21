@@ -17,7 +17,7 @@ interface HeadingProps {
   children: ReactNode
 }
 
-// Titles, in the display family (Rubik).
+// Titles, in the display family (Roboto).
 export function Heading({
   level,
   variant = 'heading',

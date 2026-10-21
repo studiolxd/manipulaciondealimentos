@@ -66,7 +66,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
+    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -466,7 +466,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
+    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -796,7 +796,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
+    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -1206,7 +1206,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
+    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -2301,14 +2301,14 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-font-family-rubik",
-    "path": "primitive.font.family.rubik",
+    "name": "--slxd-primitive-font-family-roboto",
+    "path": "primitive.font.family.roboto",
     "layer": "primitive",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
+    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
     "reference": null,
-    "description": "Sans with slightly rounded corners, solid and compact: game interface feel. Variable weight 300–900."
+    "description": "Neo-grotesque sans, clear and neutral. Variable weight 100–900."
   },
   {
     "name": "--slxd-primitive-font-family-atkinson-hyperlegible-next",
@@ -3376,8 +3376,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
-    "reference": "{primitive.font.family.rubik}",
+    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
+    "reference": "{primitive.font.family.roboto}",
     "description": "Titles, headings and controls (buttons, labels, stamps)."
   },
   {

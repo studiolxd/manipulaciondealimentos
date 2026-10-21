@@ -4,14 +4,14 @@
       "family": {
         "$type": "fontFamily",
         "$description": "Google Fonts, self-hosted with Fontsource (bundled in the SCORM package, no request to Google).",
-        "rubik": {
+        "roboto": {
           "$value": [
-            "Rubik Variable",
-            "Rubik",
+            "Roboto Variable",
+            "Roboto",
             "system-ui",
             "sans-serif"
           ],
-          "$description": "Sans with slightly rounded corners, solid and compact: game interface feel. Variable weight 300–900."
+          "$description": "Neo-grotesque sans, clear and neutral. Variable weight 100–900."
         },
         "atkinson-hyperlegible-next": {
           "$value": [
