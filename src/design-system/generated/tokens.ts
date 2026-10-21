@@ -16,7 +16,6 @@ export const tokens = {
   'button.enter.distance': "48px",
   'button.enter.duration': 450,
   'button.enter.easing': "cubic-bezier(0, 0, 0.58, 1)",
-  'button.focus-gap': "calc(max(6px, calc(3px / var(--slxd-stage-scale))) + 8px)",
   'button.lift.rest': "4px",
   'button.lift.hover': "8px",
   'button.lift.duration': 120,
