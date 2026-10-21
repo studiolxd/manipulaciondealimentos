@@ -31,6 +31,9 @@ export const whoIsFoodHandler = {
     'Pulsa la flecha derecha si crees que SÍ es manipulador de alimentos, o la flecha izquierda si crees que NO lo es.',
   yes: 'SÍ',
   no: 'NO',
+  // Accessible names of the side buttons; they start with the visible word.
+  yesButton: 'SÍ, es manipulador de alimentos',
+  noButton: 'NO, no es manipulador de alimentos',
   progress: (current: number, total: number) => `Tarjeta ${current} de ${total}`,
   correct: '¡Correcto!',
   incorrect: '¡Incorrecto!',

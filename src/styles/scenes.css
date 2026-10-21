@@ -162,12 +162,20 @@
 
 .who-is__side {
   position: absolute;
-  top: 380px;
-  padding: 8px 32px;
+  top: 370px;
+  min-height: var(--min-target);
+  padding: 8px 40px;
+  border: 0;
   border-radius: var(--radius-pill);
   background: var(--color-surface-translucent);
+  box-shadow: var(--shadow-box);
   font-size: 64px;
   font-weight: 800;
+  cursor: pointer;
+}
+
+.who-is__side:hover {
+  background: var(--color-surface);
 }
 
 .who-is__side--no {

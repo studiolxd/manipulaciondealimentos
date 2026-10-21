@@ -1,5 +1,5 @@
-import { useEffect, useId, useRef, useState } from 'react'
-import { SwipeCard, type SwipeDirection } from '../activities/SwipeCard'
+import { useEffect, useId, useRef, useState, type Ref } from 'react'
+import { SwipeCard, type SwipeCardHandle, type SwipeDirection } from '../activities/SwipeCard'
 import { whoIsFoodHandler, type PersonCard } from '../content/whoIsFoodHandler'
 import { ActionButton } from '../engine/ActionButton'
 import { assetUrl } from '../engine/assetUrl'
@@ -29,6 +29,7 @@ export function WhoIsFoodHandlerScene() {
   const [deck] = useState(() => shuffle(whoIsFoodHandler.cards))
   const [answers, setAnswers] = useState<Answer[]>([])
   const statementButtonRef = useRef<HTMLButtonElement>(null)
+  const cardRef = useRef<SwipeCardHandle>(null)
 
   const current: PersonCard | undefined = deck[answers.length]
   const lastAnswer = answers.at(-1)
@@ -90,13 +91,29 @@ export function WhoIsFoodHandlerScene() {
             </p>
             {current && (
               <>
-                <span className="who-is__side who-is__side--no" aria-hidden="true">
+                <PersonSwipeCard
+                  key={current.id}
+                  card={current}
+                  handleRef={cardRef}
+                  onSwipe={(direction) => answer(current, direction)}
+                />
+                {/* Single-tap alternative to dragging (WCAG 2.5.7). */}
+                <button
+                  type="button"
+                  className="who-is__side who-is__side--no"
+                  aria-label={whoIsFoodHandler.noButton}
+                  onClick={() => cardRef.current?.swipe('left')}
+                >
                   ← {whoIsFoodHandler.no}
-                </span>
-                <span className="who-is__side who-is__side--yes" aria-hidden="true">
+                </button>
+                <button
+                  type="button"
+                  className="who-is__side who-is__side--yes"
+                  aria-label={whoIsFoodHandler.yesButton}
+                  onClick={() => cardRef.current?.swipe('right')}
+                >
                   {whoIsFoodHandler.yes} →
-                </span>
-                <PersonSwipeCard key={current.id} card={current} onSwipe={(direction) => answer(current, direction)} />
+                </button>
               </>
             )}
             <div className="who-is__feedback" aria-live="polite">
@@ -115,7 +132,13 @@ export function WhoIsFoodHandlerScene() {
   )
 }
 
-function PersonSwipeCard({ card, onSwipe }: { card: PersonCard; onSwipe: (direction: SwipeDirection) => void }) {
+interface PersonSwipeCardProps {
+  card: PersonCard
+  handleRef: Ref<SwipeCardHandle>
+  onSwipe: (direction: SwipeDirection) => void
+}
+
+function PersonSwipeCard({ card, handleRef, onSwipe }: PersonSwipeCardProps) {
   const nameId = useId()
   const jobId = useId()
   const descriptionId = useId()
@@ -128,6 +151,7 @@ function PersonSwipeCard({ card, onSwipe }: { card: PersonCard; onSwipe: (direct
       keyboardHint={whoIsFoodHandler.keyboardHint}
       leftStamp={whoIsFoodHandler.no}
       rightStamp={whoIsFoodHandler.yes}
+      handleRef={handleRef}
       onSwipe={onSwipe}
     >
       <div className="person-card__text">

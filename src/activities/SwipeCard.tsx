@@ -1,7 +1,22 @@
-import { useEffect, useEffectEvent, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import {
+  useEffect,
+  useEffectEvent,
+  useId,
+  useImperativeHandle,
+  useRef,
+  useState,
+  type CSSProperties,
+  type ReactNode,
+  type Ref,
+} from 'react'
 import { useReducedMotion } from '../engine/useMediaQuery'
 
 export type SwipeDirection = 'left' | 'right'
+
+/** Lets other controls answer with the same exit animation as a drag. */
+export interface SwipeCardHandle {
+  swipe: (direction: SwipeDirection) => void
+}
 
 // Distance in stage pixels a card must travel to count as an answer.
 const COMMIT_DISTANCE = 260
@@ -19,6 +34,7 @@ interface SwipeCardProps {
   rightStamp: string
   className?: string
   onSwipe: (direction: SwipeDirection) => void
+  handleRef?: Ref<SwipeCardHandle>
   children: ReactNode
 }
 
@@ -37,6 +53,7 @@ export function SwipeCard({
   rightStamp,
   className,
   onSwipe,
+  handleRef,
   children,
 }: SwipeCardProps) {
   const ref = useRef<HTMLDivElement>(null)
@@ -62,6 +79,8 @@ export function SwipeCard({
   function release(direction: SwipeDirection) {
     if (!leaving) setLeaving(direction)
   }
+
+  useImperativeHandle(handleRef, () => ({ swipe: release }))
 
   function endDrag() {
     drag.current = null

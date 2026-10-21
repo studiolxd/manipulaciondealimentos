@@ -1,4 +1,8 @@
 {
+  "enabledPlugins": {
+    "scorm-skills@studiolxd": true,
+    "xapi-skills@studiolxd": true
+  },
   "extraKnownMarketplaces": {
     "studiolxd": {
       "source": {
@@ -6,8 +10,5 @@
         "repo": "studiolxd/skills"
       }
     }
-  },
-  "enabledPlugins": {
-    "scorm-skills@studiolxd": true
   }
 }
