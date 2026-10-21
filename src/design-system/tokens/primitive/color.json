@@ -6,6 +6,11 @@
       "white": {
         "$value": "#ffffff"
       },
+      "white-alpha": {
+        "80": {
+          "$value": "rgba(255, 255, 255, 0.8)"
+        }
+      },
       "black": {
         "$value": "#000000"
       },

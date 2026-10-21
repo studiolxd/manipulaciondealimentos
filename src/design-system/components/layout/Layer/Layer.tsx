@@ -9,7 +9,7 @@ interface LayerProps {
   isolate?: boolean
   /** Makes the content unreachable (e.g. behind a dialog or during a fade). */
   inert?: boolean
-  /** Covers the stage with translucent ink that blocks the pointer, behind a modal panel. */
+  /** Covers the stage with translucent white that blocks the pointer, behind a modal panel. */
   backdrop?: boolean
   children: ReactNode
 }

@@ -26,7 +26,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "rgba(20, 38, 46, 0.72)",
+    "value": "rgba(255, 255, 255, 0.8)",
     "reference": "{color.surface.scrim}",
     "description": null
   },
@@ -1731,6 +1731,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-color-white-alpha-80",
+    "path": "primitive.color.white-alpha.80",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(255, 255, 255, 0.8)",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-color-black",
     "path": "primitive.color.black",
     "layer": "primitive",
@@ -2656,9 +2666,9 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "rgba(20, 38, 46, 0.72)",
-    "reference": "{primitive.color.petrol-alpha.72}",
-    "description": "Translucent ink over the whole stage behind a modal panel."
+    "value": "rgba(255, 255, 255, 0.8)",
+    "reference": "{primitive.color.white-alpha.80}",
+    "description": "Translucent white over the whole stage behind a modal panel."
   },
   {
     "name": "--slxd-color-surface-inverse",

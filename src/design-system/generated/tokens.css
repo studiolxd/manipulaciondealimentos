@@ -4,6 +4,7 @@
 
 :root {
   --slxd-primitive-color-white: #ffffff;
+  --slxd-primitive-color-white-alpha-80: rgba(255, 255, 255, 0.8);
   --slxd-primitive-color-black: #000000;
   --slxd-primitive-color-prussian-900: #111e30; /** Studio LXD brand colour (@studiolxd/brand), only for its logo. */
   --slxd-primitive-color-petrol-900: #14262e; /** Ink: outlines, text and dark interface panels. */
@@ -96,7 +97,7 @@
   --slxd-color-surface-default: var(--slxd-primitive-color-white); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
-  --slxd-color-surface-scrim: var(--slxd-primitive-color-petrol-alpha-72); /** Translucent ink over the whole stage behind a modal panel. */
+  --slxd-color-surface-scrim: var(--slxd-primitive-color-white-alpha-80); /** Translucent white over the whole stage behind a modal panel. */
   --slxd-color-surface-inverse: var(--slxd-primitive-color-petrol-900); /** Dark reference surface, e.g. in the documentation. */
   --slxd-color-surface-system: var(--slxd-primitive-color-white); /** Full-screen system messages, e.g. rotate the device. */
   --slxd-color-surface-backdrop: var(--slxd-primitive-color-black); /** Letterbox around the stage and fade curtain. */
