@@ -686,7 +686,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "shape",
     "type": "number",
-    "value": "1",
+    "value": "2",
     "reference": "{stroke-width.icon}",
     "description": null
   },
@@ -2081,12 +2081,12 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-stroke-width-1",
-    "path": "primitive.stroke-width.1",
+    "name": "--slxd-primitive-stroke-width-2",
+    "path": "primitive.stroke-width.2",
     "layer": "primitive",
     "family": "shape",
     "type": "number",
-    "value": "1",
+    "value": "2",
     "reference": null,
     "description": null
   },
@@ -3136,8 +3136,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "shape",
     "type": "number",
-    "value": "1",
-    "reference": "{primitive.stroke-width.1}",
+    "value": "2",
+    "reference": "{primitive.stroke-width.2}",
     "description": "Icon stroke in grid units: it grows with the icon, rounded to whole real pixels."
   },
   {

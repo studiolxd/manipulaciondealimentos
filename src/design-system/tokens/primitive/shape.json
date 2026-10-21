@@ -46,8 +46,8 @@
     "stroke-width": {
       "$type": "number",
       "$description": "In units of the 24-unit icon grid.",
-      "1": {
-        "$value": 1
+      "2": {
+        "$value": 2
       }
     }
   }

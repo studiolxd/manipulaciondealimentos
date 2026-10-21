@@ -37,8 +37,8 @@ svg.icon {
     max(1px, round(var(--icon-size) * var(--slxd-stage-scale) * var(--slxd-icon-stroke-width) / 24, 1px)) /
       var(--slxd-stage-scale)
   );
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
 }
 
 svg.icon[data-size='sm'] {
@@ -51,6 +51,12 @@ svg.icon[data-size='lg'] {
 
 svg.icon * {
   vector-effect: non-scaling-stroke;
+}
+
+/* Solid shapes, such as arrowheads. */
+svg.icon .fill {
+  fill: currentcolor;
+  stroke: none;
 }
 
 .icon[data-tone='default'] {

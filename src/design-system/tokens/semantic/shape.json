@@ -49,7 +49,7 @@
   "stroke-width": {
     "$type": "number",
     "icon": {
-      "$value": "{primitive.stroke-width.1}",
+      "$value": "{primitive.stroke-width.2}",
       "$description": "Icon stroke in grid units: it grows with the icon, rounded to whole real pixels."
     }
   }

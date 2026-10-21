@@ -18,16 +18,17 @@ Cada icono sobre una superficie clara y sobre una oscura. Los marcados como «PN
 
 ## Estilo
 
-Formas geométricas, esquinas suaves y trazo uniforme.
+Con los cortes rectos de Gasoek One, la tipografía de los títulos.
 
 | Regla | Valor |
 | --- | --- |
 | Rejilla | 24 × 24 unidades, con 2 de margen (zona útil de 20 × 20) |
-| Trazo | 1 unidad de la rejilla (`--slxd-icon-stroke-width`): crece con el icono, redondeado a píxeles reales enteros para que se vea nítido también en pantallas que no son retina. A 160 px, 7 px |
-| Esquinas | Redondeadas, radio de 2 unidades; nunca esquinas vivas |
-| Remates y uniones | Redondos |
-| Flechas | Punta en ángulo recto. En las flechas curvas, los dos extremos de la punta quedan a la misma distancia del arco, aunque los brazos no queden a 45° |
-| Color | Uno solo, sin rellenos ni degradados |
+| Trazo | 2 unidades de la rejilla (`--slxd-icon-stroke-width`): crece con el icono, redondeado a píxeles reales enteros para que se vea nítido también en pantallas que no son retina. A 160 px, 13 px |
+| Esquinas | Rectas |
+| Remates y uniones | Remates cortados en recto y uniones en ángulo |
+| Curvas | Permitidas, pero terminan cortadas en recto |
+| Flechas | Punta triangular maciza (clase `fill`), alineada con la dirección del trazo |
+| Color | Uno solo, sin degradados |
 
 ## Color
 
@@ -50,7 +51,7 @@ activado se queda quieto.
 
 ## Añadir un icono
 
-1. Dibújalo en la rejilla de 24 con las reglas de arriba, solo con trazos (`fill="none"`).
+1. Dibújalo en la rejilla de 24 con las reglas de arriba: trazos, y formas macizas solo con la clase `fill`.
 2. Añádelo a `glyphs` con un nombre en inglés y camelCase. Sin colores ni grosores en el SVG: los pone `Icon`.
 3. Si sustituye a un PNG provisional, quítalo de `icons.manifest.ts`, de `scripts/generate-placeholders.ts` y de
    `public/assets/ui/`.
