@@ -176,7 +176,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
+    "value": "#000000",
     "reference": "{color.action.primary.text}",
     "description": null
   },
@@ -336,7 +336,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
+    "value": "#000000",
     "reference": "{color.action.secondary.text}",
     "description": null
   },
@@ -396,7 +396,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
+    "value": "#000000",
     "reference": "{color.action.primary.text}",
     "description": null
   },
@@ -706,7 +706,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
+    "value": "#000000",
     "reference": "{color.text.default}",
     "description": "Ink, on light surfaces."
   },
@@ -876,7 +876,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
+    "value": "#000000",
     "reference": "{color.text.on-accent}",
     "description": null
   },
@@ -1006,7 +1006,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
+    "value": "#000000",
     "reference": "{color.text.default}",
     "description": null
   },
@@ -1226,7 +1226,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
+    "value": "#000000",
     "reference": "{color.text.default}",
     "description": null
   },
@@ -1586,7 +1586,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
+    "value": "#000000",
     "reference": "{color.text.default}",
     "description": null
   },
@@ -2556,8 +2556,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
-    "reference": "{primitive.color.petrol.900}",
+    "value": "#000000",
+    "reference": "{primitive.color.black}",
     "description": null
   },
   {
@@ -2596,8 +2596,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
-    "reference": "{primitive.color.petrol.900}",
+    "value": "#000000",
+    "reference": "{primitive.color.black}",
     "description": "Text on the neon action colour: buttons and accent screens."
   },
   {
@@ -2776,8 +2776,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
-    "reference": "{primitive.color.petrol.900}",
+    "value": "#000000",
+    "reference": "{primitive.color.black}",
     "description": null
   },
   {
@@ -2816,8 +2816,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
-    "reference": "{primitive.color.petrol.900}",
+    "value": "#000000",
+    "reference": "{primitive.color.black}",
     "description": null
   },
   {

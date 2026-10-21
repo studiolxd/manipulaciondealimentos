@@ -3,7 +3,7 @@
     "$type": "color",
     "text": {
       "default": {
-        "$value": "{primitive.color.petrol.900}"
+        "$value": "{primitive.color.black}"
       },
       "inverse": {
         "$value": "{primitive.color.cream.50}",
@@ -16,7 +16,7 @@
         "$value": "{primitive.color.red.700}"
       },
       "on-accent": {
-        "$value": "{primitive.color.petrol.900}",
+        "$value": "{primitive.color.black}",
         "$description": "Text on the neon action colour: buttons and accent screens."
       },
       "accent": {
@@ -91,7 +91,7 @@
           "$value": "{primitive.color.white-alpha.75}"
         },
         "text": {
-          "$value": "{primitive.color.petrol.900}"
+          "$value": "{primitive.color.black}"
         }
       },
       "primary": {
@@ -107,7 +107,7 @@
           "$description": "Edge colour; glass buttons do not show it."
         },
         "text": {
-          "$value": "{primitive.color.petrol.900}"
+          "$value": "{primitive.color.black}"
         }
       },
       "positive": {
