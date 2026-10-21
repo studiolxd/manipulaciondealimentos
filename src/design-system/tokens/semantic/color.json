@@ -14,6 +14,10 @@
       },
       "negative": {
         "$value": "{primitive.color.red.700}"
+      },
+      "on-accent": {
+        "$value": "{primitive.color.white}",
+        "$description": "Text on the action colour: buttons and accent screens."
       }
     },
     "surface": {
@@ -35,7 +39,11 @@
       },
       "inverse": {
         "$value": "{primitive.color.petrol.900}",
-        "$description": "Full-screen system messages."
+        "$description": "Dark reference surface, e.g. in the documentation."
+      },
+      "accent": {
+        "$value": "{primitive.color.teal.700}",
+        "$description": "Full-screen system messages, in the colour of the buttons."
       },
       "backdrop": {
         "$value": "{primitive.color.black}",
@@ -80,7 +88,7 @@
           "$description": "Lower edge that makes the button look pressable."
         },
         "text": {
-          "$value": "{primitive.color.cream.50}"
+          "$value": "{primitive.color.white}"
         }
       },
       "positive": {
@@ -94,7 +102,7 @@
           "$value": "{primitive.color.green.900}"
         },
         "text": {
-          "$value": "{primitive.color.cream.50}"
+          "$value": "{primitive.color.white}"
         }
       },
       "negative": {
@@ -108,7 +116,7 @@
           "$value": "{primitive.color.red.900}"
         },
         "text": {
-          "$value": "{primitive.color.cream.50}"
+          "$value": "{primitive.color.white}"
         }
       }
     },

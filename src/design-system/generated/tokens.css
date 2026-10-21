@@ -96,11 +96,13 @@
   --slxd-color-text-inverse: var(--slxd-primitive-color-cream-50); /** Text on ink panels and over the scene. */
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
+  --slxd-color-text-on-accent: var(--slxd-primitive-color-white); /** Text on the action colour: buttons and accent screens. */
   --slxd-color-surface-default: var(--slxd-primitive-color-cream-50); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-paper: var(--slxd-primitive-color-sand-50); /** Printed-looking objects such as ID cards. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
-  --slxd-color-surface-inverse: var(--slxd-primitive-color-petrol-900); /** Full-screen system messages. */
+  --slxd-color-surface-inverse: var(--slxd-primitive-color-petrol-900); /** Dark reference surface, e.g. in the documentation. */
+  --slxd-color-surface-accent: var(--slxd-primitive-color-teal-700); /** Full-screen system messages, in the colour of the buttons. */
   --slxd-color-surface-backdrop: var(--slxd-primitive-color-black); /** Letterbox around the stage and fade curtain. */
   --slxd-color-brand-logo: var(--slxd-primitive-color-prussian-900);
   --slxd-color-brand-background: var(--slxd-primitive-color-white); /** Behind the Studio LXD logo. */
@@ -111,15 +113,15 @@
   --slxd-color-action-primary-background: var(--slxd-primitive-color-teal-700); /** Cool accent: it never blends with the warm scenes. */
   --slxd-color-action-primary-background-hover: var(--slxd-primitive-color-teal-800);
   --slxd-color-action-primary-edge: var(--slxd-primitive-color-teal-900); /** Lower edge that makes the button look pressable. */
-  --slxd-color-action-primary-text: var(--slxd-primitive-color-cream-50);
+  --slxd-color-action-primary-text: var(--slxd-primitive-color-white);
   --slxd-color-action-positive-background: var(--slxd-primitive-color-green-700);
   --slxd-color-action-positive-background-hover: var(--slxd-primitive-color-green-800);
   --slxd-color-action-positive-edge: var(--slxd-primitive-color-green-900);
-  --slxd-color-action-positive-text: var(--slxd-primitive-color-cream-50);
+  --slxd-color-action-positive-text: var(--slxd-primitive-color-white);
   --slxd-color-action-negative-background: var(--slxd-primitive-color-red-700);
   --slxd-color-action-negative-background-hover: var(--slxd-primitive-color-red-800);
   --slxd-color-action-negative-edge: var(--slxd-primitive-color-red-900);
-  --slxd-color-action-negative-text: var(--slxd-primitive-color-cream-50);
+  --slxd-color-action-negative-text: var(--slxd-primitive-color-white);
   --slxd-color-feedback-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-feedback-negative: var(--slxd-primitive-color-red-700);
   --slxd-color-focus-inner: var(--slxd-primitive-color-cream-50); /** Inner ring of the keyboard focus. */
@@ -270,8 +272,8 @@
   --slxd-label-size-md: var(--slxd-font-size-body);
   --slxd-label-size-lg: var(--slxd-font-size-label-lg);
   --slxd-label-inverse-text: var(--slxd-color-text-inverse);
-  --slxd-rotate-screen-background: var(--slxd-color-surface-inverse);
-  --slxd-rotate-screen-text: var(--slxd-color-text-inverse);
+  --slxd-rotate-screen-background: var(--slxd-color-surface-accent);
+  --slxd-rotate-screen-text: var(--slxd-color-text-on-accent);
   --slxd-rotate-screen-gap: var(--slxd-space-xs);
   --slxd-rotate-screen-padding: var(--slxd-space-sm);
   --slxd-speech-bubble-next-inset: var(--slxd-space-sm);

@@ -166,7 +166,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.action.primary.text}",
     "description": null
   },
@@ -236,7 +236,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.action.positive.text}",
     "description": null
   },
@@ -276,7 +276,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.action.negative.text}",
     "description": null
   },
@@ -336,7 +336,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.action.primary.text}",
     "description": null
   },
@@ -796,8 +796,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#14262e",
-    "reference": "{color.surface.inverse}",
+    "value": "#0b7676",
+    "reference": "{color.surface.accent}",
     "description": null
   },
   {
@@ -806,8 +806,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
-    "reference": "{color.text.inverse}",
+    "value": "#ffffff",
+    "reference": "{color.text.on-accent}",
     "description": null
   },
   {
@@ -2471,6 +2471,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-color-text-on-accent",
+    "path": "color.text.on-accent",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
+    "description": "Text on the action colour: buttons and accent screens."
+  },
+  {
     "name": "--slxd-color-surface-default",
     "path": "color.surface.default",
     "layer": "semantic",
@@ -2518,7 +2528,17 @@ export const tokenDocs = [
     "type": "color",
     "value": "#14262e",
     "reference": "{primitive.color.petrol.900}",
-    "description": "Full-screen system messages."
+    "description": "Dark reference surface, e.g. in the documentation."
+  },
+  {
+    "name": "--slxd-color-surface-accent",
+    "path": "color.surface.accent",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#0b7676",
+    "reference": "{primitive.color.teal.700}",
+    "description": "Full-screen system messages, in the colour of the buttons."
   },
   {
     "name": "--slxd-color-surface-backdrop",
@@ -2626,8 +2646,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
-    "reference": "{primitive.color.cream.50}",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
     "description": null
   },
   {
@@ -2666,8 +2686,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
-    "reference": "{primitive.color.cream.50}",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
     "description": null
   },
   {
@@ -2706,8 +2726,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
-    "reference": "{primitive.color.cream.50}",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
     "description": null
   },
   {

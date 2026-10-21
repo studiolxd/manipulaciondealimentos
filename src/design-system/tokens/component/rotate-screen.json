@@ -3,11 +3,11 @@
     "$description": "Shown outside the stage, so its sizes are real screen pixels from the primitive screen minimums.",
     "background": {
       "$type": "color",
-      "$value": "{color.surface.inverse}"
+      "$value": "{color.surface.accent}"
     },
     "text": {
       "$type": "color",
-      "$value": "{color.text.inverse}"
+      "$value": "{color.text.on-accent}"
     },
     "gap": {
       "$type": "dimension",
