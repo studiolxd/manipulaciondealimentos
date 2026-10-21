@@ -1,6 +1,5 @@
 import { useDialogue } from '@studiolxd/tramoya'
 import { useDesignSystem } from '../../../hooks/useDesignSystem'
-import { useVoice } from '../../../hooks/useVoice'
 import { Surface } from '../../atoms/Surface/Surface'
 import { IconButton } from '../../molecules/IconButton/IconButton'
 import { Typewriter } from '../../molecules/Typewriter/Typewriter'
@@ -27,7 +26,8 @@ interface SpeechBubbleProps {
 }
 
 // Surface with tail + Typewriter + IconButton (hidden until it has the focus).
-// Each block can have a voice-over.
+// Each block can have a voice-over: it plays as the block appears, and the
+// text is typed in step with it.
 export function SpeechBubble({
   speaker,
   blocks,
@@ -39,8 +39,6 @@ export function SpeechBubble({
 }: SpeechBubbleProps) {
   const { strings } = useDesignSystem()
   const { index, shown, skipRequested, finished, advance, markTyped } = useDialogue(blocks.length, { onFinished, onDismiss })
-  // Each block speaks as it appears; advancing stops it and starts the next one.
-  useVoice(voice?.[index])
 
   return (
     // Pointer users click the bubble; the hidden button inside is the keyboard and screen reader control.
@@ -48,7 +46,13 @@ export function SpeechBubble({
       <VisuallyHidden as="p">{strings.speakerSays(speaker)}</VisuallyHidden>
       {/* Announces each new block as the player advances. */}
       <div aria-live="polite">
-        <Typewriter key={index} text={blocks[index]} complete={skipRequested} onDone={markTyped} />
+        <Typewriter
+          key={index}
+          text={blocks[index]}
+          voice={voice?.[index]}
+          complete={skipRequested}
+          onDone={markTyped}
+        />
       </div>
       {(!finished || onDismiss) && (
         <div className={styles.next}>

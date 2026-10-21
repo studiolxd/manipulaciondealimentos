@@ -20,8 +20,13 @@ export function FacadeScene() {
     >
       {sceneReady && (
         <Positioned center="both" width={1200}>
-          <NarrationBox voice={voiceUrls(facade.narrationVoice, gender)} onClick={() => setSkipRequested(true)}>
-            <Typewriter text={facade.narration} complete={skipRequested} onDone={() => setTyped(true)} />
+          <NarrationBox onClick={() => setSkipRequested(true)}>
+            <Typewriter
+              text={facade.narration}
+              voice={voiceUrls(facade.narrationVoice, gender)}
+              complete={skipRequested}
+              onDone={() => setTyped(true)}
+            />
           </NarrationBox>
         </Positioned>
       )}

@@ -32,11 +32,14 @@ basta con sustituir el archivo.
 
 ## Locuciones
 
-Los bocadillos (`SpeechBubble`, también dentro de `DialogueScene`) y la narración (`NarrationBox`) pueden locutarse
-con la propiedad `voice`: las URL de los fragmentos de cada texto, que suenan en orden con una pausa de 0,3 s entre
+Los textos que se escriben con `Typewriter` (en los bocadillos, `SpeechBubble` y `DialogueScene`, y en la narración)
+pueden locutarse con la propiedad `voice`: las URL de los fragmentos de cada texto, que suenan en orden con una pausa de 0,3 s entre
 ellos. Así una frase se puede dividir en un punto: una parte común y un final distinto según la forma de tratamiento,
 sin generar la frase entera tres veces.
 
+- **El texto se escribe al ritmo de la voz:** mientras suena, el typewriter reparte la duración de la locución de
+  forma uniforme por todo el texto, así que ambos terminan a la vez. Sin locución (apagada o bloqueada por el
+  navegador) vuelve a su velocidad normal.
 - Cada texto suena al aparecer. Avanzar al siguiente bloque, salir de la escena o abrir otra locución la corta.
 - Se detiene mientras el juego está en pausa (por ejemplo, con la pantalla de girar el dispositivo).
 - El jugador puede apagarlas desde «Ajustes» en la portada (`voiceOvers` de `DesignSystemProvider`).

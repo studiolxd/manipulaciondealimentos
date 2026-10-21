@@ -25,26 +25,49 @@ export function stopVoice(): void {
   current = null
 }
 
-/** Plays a line, stopping any other one. Returns null when voice-overs are off. */
-export function playVoice(urls: readonly string[]): VoicePlayback | null {
+/**
+ * Plays a line, stopping any other one. Returns null when voice-overs are off.
+ * `onDuration` gets the length of the whole line in ms (clips and pauses) once
+ * it is known, or null if the browser refuses to play it.
+ */
+export function playVoice(urls: readonly string[], onDuration?: (ms: number | null) => void): VoicePlayback | null {
   stopVoice()
   if (!enabled || urls.length === 0 || typeof Audio === 'undefined') return null
 
+  // Every clip is loaded up front, so the line's length is known before it ends.
+  const clips = urls.map((url) => {
+    const clip = new Audio(url)
+    clip.preload = 'auto'
+    return clip
+  })
   let index = 0
   let audio: HTMLAudioElement | null = null
   let gap: ReturnType<typeof setTimeout> | undefined
   let stopped = false
   let paused = false
 
+  let loaded = 0
+  for (const clip of clips) {
+    clip.addEventListener('loadedmetadata', () => {
+      loaded += 1
+      if (loaded < clips.length || stopped) return
+      const seconds = clips.reduce((sum, each) => sum + each.duration, 0)
+      onDuration?.(seconds * 1000 + GAP_MS * (clips.length - 1))
+    })
+  }
+
   function playClip() {
-    if (stopped || index >= urls.length) return
-    audio = new Audio(urls[index])
+    if (stopped || index >= clips.length) return
+    audio = clips[index]
     audio.addEventListener('ended', () => {
       index += 1
       gap = setTimeout(playClip, GAP_MS)
     })
     // Browsers may refuse to play (e.g. before any user gesture): the text is still there.
-    if (!paused) audio.play().catch(() => {})
+    if (!paused)
+      audio.play().catch(() => {
+        if (!stopped) onDuration?.(null)
+      })
   }
 
   const playback: VoicePlayback = {
