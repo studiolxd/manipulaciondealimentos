@@ -338,6 +338,9 @@
   --slxd-swipe-card-frame-width: var(--slxd-border-width-outline); /** The coloured frame covers the card's outline exactly. */
   --slxd-swipe-card-frame-radius: var(--slxd-radius-md); /** The radius of the paper surface (IdCard). */
   --slxd-swipe-card-frame-shadow-offset: var(--slxd-space-3xs); /** The offset of the surface shadow, which the frame covers. */
+  --slxd-swipe-card-focus-width: calc(var(--slxd-border-width-outline) * 2); /** Keyboard focus, as on buttons: the outline doubles. */
+  --slxd-swipe-card-focus-lift: var(--slxd-space-3xs); /** Keyboard focus: the card rises this much and its shadow grows by it. */
+  --slxd-swipe-card-focus-shadow-offset: var(--slxd-space-2xs);
   --slxd-swipe-card-frame-positive: var(--slxd-color-feedback-positive);
   --slxd-swipe-card-frame-negative: var(--slxd-color-feedback-negative);
   --slxd-text-field-gap: var(--slxd-space-xs);

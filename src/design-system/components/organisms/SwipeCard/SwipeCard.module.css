@@ -19,6 +19,36 @@
   cursor: grabbing;
 }
 
+/* Keyboard focus, as on buttons: no ring; the card rises, its outline doubles
+   and its shadow grows. `translate` composes with the swipe `transform`. */
+.card:focus-visible {
+  outline: none;
+  box-shadow: none;
+  translate: 0 calc(var(--slxd-swipe-card-focus-lift) * -1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:focus-visible {
+    translate: none;
+  }
+}
+
+.focus {
+  --focus-shadow: 0 var(--slxd-swipe-card-focus-shadow-offset) 0 var(--slxd-color-border-ink);
+
+  position: absolute;
+  inset: 0;
+  display: none;
+  border: var(--slxd-swipe-card-focus-width) solid var(--slxd-color-border-ink);
+  border-radius: var(--slxd-swipe-card-frame-radius);
+  box-shadow: var(--focus-shadow);
+  pointer-events: none;
+}
+
+.card:focus-visible .focus {
+  display: block;
+}
+
 .content {
   width: 100%;
   height: 100%;

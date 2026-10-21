@@ -86,6 +86,7 @@ export function SwipeCard({
       <div className={styles.content} aria-hidden="true">
         {children}
       </div>
+      <div className={styles.focus} />
       <div className={styles.frame} data-side="right" />
       <div className={styles.frame} data-side="left" />
       <span id={descriptionId} hidden>

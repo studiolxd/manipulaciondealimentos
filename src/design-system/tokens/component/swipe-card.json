@@ -23,6 +23,20 @@
       "$value": "{space.3xs}",
       "$description": "The offset of the surface shadow, which the frame covers."
     },
+    "focus-width": {
+      "$type": "dimension",
+      "$value": "calc({border-width.outline} * 2)",
+      "$description": "Keyboard focus, as on buttons: the outline doubles."
+    },
+    "focus-lift": {
+      "$type": "dimension",
+      "$value": "{space.3xs}",
+      "$description": "Keyboard focus: the card rises this much and its shadow grows by it."
+    },
+    "focus-shadow-offset": {
+      "$type": "dimension",
+      "$value": "{space.2xs}"
+    },
     "frame-positive": {
       "$type": "color",
       "$value": "{color.feedback.positive}"

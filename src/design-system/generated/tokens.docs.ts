@@ -1531,6 +1531,36 @@ export const tokenDocs = [
     "description": "The offset of the surface shadow, which the frame covers."
   },
   {
+    "name": "--slxd-swipe-card-focus-width",
+    "path": "swipe-card.focus-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "calc(calc(3px / var(--slxd-stage-scale)) * 2)",
+    "reference": "calc({border-width.outline} * 2)",
+    "description": "Keyboard focus, as on buttons: the outline doubles."
+  },
+  {
+    "name": "--slxd-swipe-card-focus-lift",
+    "path": "swipe-card.focus-lift",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "4px",
+    "reference": "{space.3xs}",
+    "description": "Keyboard focus: the card rises this much and its shadow grows by it."
+  },
+  {
+    "name": "--slxd-swipe-card-focus-shadow-offset",
+    "path": "swipe-card.focus-shadow-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
     "name": "--slxd-swipe-card-frame-positive",
     "path": "swipe-card.frame-positive",
     "layer": "component",
