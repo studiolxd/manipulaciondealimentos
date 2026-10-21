@@ -13,8 +13,17 @@ interface DevSceneMenuProps {
 
 // Development only: Ctrl+Shift+M lists every scene and jumps to the chosen
 // one. Jumping goes through goTo, so it also saves progress (e.g. with ?lms=local).
+// The URL follows the current scene (?scene=<id>, see App), so reloading the
+// page comes back to it; on the title scene the parameter is removed.
 export function DevSceneMenu({ open, onOpenChange }: DevSceneMenuProps) {
-  const { goTo } = useGame()
+  const { goTo, sceneId } = useGame()
+
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    if (sceneId === 'welcome') url.searchParams.delete('scene')
+    else url.searchParams.set('scene', sceneId)
+    window.history.replaceState(window.history.state, '', url)
+  }, [sceneId])
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {

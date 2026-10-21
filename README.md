@@ -17,7 +17,7 @@ Demo: https://studiolxd.github.io/manipulaciondealimentos/
 
 | Comando | Qué hace |
 | --- | --- |
-| `pnpm dev` | Servidor de desarrollo. `?scene=<id>` empieza en una escena; `?lms=local` simula un LMS. |
+| `pnpm dev` | Servidor de desarrollo. `?scene=<id>` empieza en una escena, y la URL sigue a la escena actual para volver a ella al recargar; <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> abre el menú de escenas; `?lms=local` simula un LMS. |
 | `pnpm build` | Build de producción en `dist/`. |
 | `pnpm package` | Build y paquete SCORM 1.2 en `release/`. |
 | `pnpm lint` | oxlint, Stylelint y comprobación de tokens. |
