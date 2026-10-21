@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../TokenTable'
+
+<Meta title="Fundamentos/Color" />
+
+# Color
+
+La paleta es **provisional**: se ajustará cuando llegue la línea gráfica del juego. Lo que no cambiará es cómo se
+usa: los componentes nunca eligen un color de la paleta, sino un **rol** (texto, superficie, acción, feedback…).
+
+## Paleta
+
+| Familia | Tonos | Para qué |
+| --- | --- | --- |
+| Blanco y negro | `white`, `black` | Superficies, texto sobre color, fondo del escenario y del telón |
+| Neutros | `900`, `950` | Texto principal y pantallas de sistema |
+| Arena | `50`, `300` | Objetos impresos (carnés) y sus bordes |
+| Naranja | `700`, `800` | Acción principal y su estado al pasar el ratón |
+| Verde | `700`, `800` | Acción secundaria (botones de icono) y aciertos |
+| Rojo | `700` | Errores |
+| Azul | `700` | Anillo de foco del teclado |
+| Transparencias | blanco 94 %, negro 25 %, transparente | Paneles sobre una escena, sombras, bordes invisibles |
+
+## Roles
+
+| Rol | Uso |
+| --- | --- |
+| `color.text.*` | Texto normal, inverso (sobre fondos oscuros), positivo y negativo |
+| `color.surface.*` | Paneles opacos, translúcidos sobre la escena, papel, pantallas de sistema y fondo del escenario |
+| `color.border.*` | Sin borde, borde suave y elemento seleccionado |
+| `color.action.primary.*` | Botón principal (naranja) |
+| `color.action.secondary.*` | Botones de icono (verde) |
+| `color.feedback.*` | Acierto (verde) y error (rojo) |
+| `color.focus.ring` | Anillo de foco (azul) |
+
+## Normas
+
+- **El color nunca va solo.** Un acierto o un error se comunican también con icono y texto («¡Correcto!»,
+  «¡Incorrecto!»), para quien no distingue los colores.
+- **Contraste mínimo WCAG AA:** 4,5:1 para texto y 3:1 para controles y el foco.
+- **Fondos transparentes:** el texto va siempre sobre una superficie, nunca directamente sobre la ilustración.
+
+## Contrastes actuales
+
+| Par | Contraste | Cumple |
+| --- | --- | --- |
+| Texto `#1d1d1f` sobre blanco | 16,8:1 | AA y AAA |
+| Texto `#1d1d1f` sobre papel | 16,5:1 | AA y AAA |
+| Blanco sobre naranja 700 (botón principal) | 5,2:1 | AA |
+| Blanco sobre naranja 800 (al pasar el ratón) | 7,3:1 | AA y AAA |
+| Verde 700 sobre blanco (acierto, botón de icono) | 5,0:1 | AA |
+| Rojo 700 sobre blanco (error) | 6,5:1 | AA |
+| Azul 700 sobre blanco (foco) | 6,7:1 | AA |
+| Blanco sobre neutro 950 (pantalla de girar) | 18,9:1 | AA y AAA |
+| Borde arena 300 sobre papel | 1,6:1 | Decorativo: el carnet se distingue por la sombra y el fondo |
+
+## Tokens
+
+Cada capa solo apunta a la anterior: los componentes usan tokens de componente o semánticos, nunca primitivos.
+
+### Primitivos
+
+<TokenTable layer="primitive" family="color" />
+
+### Semánticos
+
+<TokenTable layer="semantic" family="color" />
+
+### De componente
+
+<TokenTable layer="component" family="color" />

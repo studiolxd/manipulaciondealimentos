@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { image } from '../content/images'
 import { facade } from '../content/scenes'
-import { Button, NarrationBox, Positioned, SceneFrame, Text, Typewriter } from '../design-system'
+import { Button, NarrationBox, Positioned, SceneFrame, Typewriter } from '../design-system'
 import { useGame } from '../engine/gameContext'
 
 // Scene 1: the restaurant from the street.
@@ -20,9 +20,7 @@ export function FacadeScene() {
       {sceneReady && (
         <Positioned center="both" width={1200}>
           <NarrationBox onClick={() => setSkipRequested(true)}>
-            <Text>
-              <Typewriter text={facade.narration} complete={skipRequested} onDone={() => setTyped(true)} />
-            </Text>
+            <Typewriter text={facade.narration} complete={skipRequested} onDone={() => setTyped(true)} />
           </NarrationBox>
         </Positioned>
       )}

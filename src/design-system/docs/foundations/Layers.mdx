@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../TokenTable'
+
+<Meta title="Fundamentos/Capas" />
+
+# Capas
+
+## Orden de apilamiento
+
+Qué queda por encima de qué. Cada capa solo compite con las de su mismo contexto:
+
+| Capa | Valor | Qué contiene |
+| --- | --- | --- |
+| `layer.base` | 0 | La escena: fondo, personajes, actividad |
+| `layer.hud` | 1 | Franja superior del juego |
+| `layer.over-hud` | 2 | Lo que va sobre el HUD: título de actividad, enunciado, controles del HUD |
+| `layer.dialog` | 3 | Diálogos, como el enunciado reabierto |
+| `layer.curtain` | 1 | Telón de fundido, por encima de toda la escena (en el contexto del escenario) |
+| `layer.system` | 10 | Pantalla de girar el dispositivo, por encima de todo el juego |
+
+## Contextos
+
+- **La escena** tiene su propio contexto dentro del escenario: nada de la escena (ni un diálogo) puede quedar por
+  encima del telón de fundido.
+- **El telón** está en el contexto del escenario, por encima de la escena.
+- **La pantalla de girar** está fuera del escenario, por encima de todo.
+
+Para colocar algo en una capa se usan `Positioned` o `Layer` con su propiedad `layer`; nunca un `z-index` suelto.
+
+## Tokens
+
+Cada capa solo apunta a la anterior: los componentes usan tokens de componente o semánticos, nunca primitivos.
+
+### Primitivos
+
+<TokenTable layer="primitive" family="layer" />
+
+### Semánticos
+
+<TokenTable layer="semantic" family="layer" />
+
+### De componente
+
+<TokenTable layer="component" family="layer" />

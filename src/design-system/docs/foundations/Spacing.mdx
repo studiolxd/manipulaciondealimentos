@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../TokenTable'
+
+<Meta title="Fundamentos/Espaciado y tamaños" />
+
+# Espaciado y tamaños
+
+## Píxeles de escenario
+
+El juego se maqueta sobre un lienzo fijo de **1920×1080** que se escala para caber en la pantalla. Todos los
+tamaños están en píxeles de ese lienzo: en un móvil se verán más pequeños, en un monitor grande más grandes.
+
+## Escala de espaciado
+
+Rellenos, márgenes y separaciones usan una sola escala, de `space.3xs` (4 px) a `space.5xl` (96 px). Usar siempre un
+paso de la escala, nunca un valor suelto, mantiene el ritmo visual entre componentes.
+
+| Paso | Valor | Uso habitual |
+| --- | --- | --- |
+| `3xs` – `2xs` | 4 – 8 px | Ajustes finos, relleno de botones de icono |
+| `xs` – `sm` | 16 – 24 px | Separación entre textos, relleno vertical de botones |
+| `md` – `xl` | 32 – 48 px | Relleno de paneles, separación entre elementos |
+| `2xl` – `5xl` | 56 – 96 px | Relleno de paneles grandes, separación entre opciones |
+
+## Mínimos en píxeles reales
+
+Algunos tamaños tienen un **mínimo en píxeles reales de pantalla**, para que el juego siga siendo usable cuando el
+escenario se reduce (por ejemplo, en un móvil en horizontal):
+
+| Qué | Mínimo real | Por qué |
+| --- | --- | --- |
+| Zonas pulsables | 44 px | Pulsar con el dedo con comodidad (WCAG 2.5.5) |
+| Texto de prosa | 15 px | Legibilidad |
+| Encabezados | 22 px | Jerarquía legible |
+| Títulos | 28 px | Jerarquía legible |
+| Anillo de foco | 3 px | Ver dónde está el foco del teclado |
+
+Se calculan con `--slxd-stage-scale`, la escala actual del escenario: por ejemplo,
+`max(112px, calc(44px / var(--slxd-stage-scale)))` da 112 px de escenario o lo que haga falta para llegar a 44 px reales.
+
+## Tamaños de elementos
+
+Iconos (48, 96 y 160 px), alto del HUD (120 px) y ancho mínimo de las opciones de elección (400 px).
+
+## Tokens
+
+Cada capa solo apunta a la anterior: los componentes usan tokens de componente o semánticos, nunca primitivos.
+
+### Primitivos
+
+<TokenTable layer="primitive" family="spacing" />
+
+### Semánticos
+
+<TokenTable layer="semantic" family="spacing" />
+
+### De componente
+
+<TokenTable layer="component" family="spacing" />

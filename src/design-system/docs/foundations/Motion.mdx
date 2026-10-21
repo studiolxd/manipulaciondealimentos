@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../TokenTable'
+
+<Meta title="Fundamentos/Movimiento" />
+
+# Movimiento
+
+## Para qué se anima
+
+Las animaciones explican qué ocurre, no decoran: un fundido marca el cambio de escena, el enunciado que se encoge
+enseña dónde volver a encontrarlo y la tarjeta que sale indica hacia qué lado se ha respondido.
+
+## Duraciones
+
+| Token | Duración | Uso |
+| --- | --- | --- |
+| `motion.duration.scene-fade` | 600 ms | Cada mitad del cambio de escena (fundido a negro y vuelta) |
+| `motion.duration.morph` | 450 ms | Un elemento que se convierte en otro (enunciado ↔ icono del HUD) |
+| `motion.duration.exit` | 350 ms | Un elemento que sale de la pantalla (tarjeta deslizada) |
+| `motion.duration.title-hold` | 2500 ms | Tiempo que el título de actividad está a la vista antes de desvanecerse |
+| `motion.duration.typewriter-char` | 28 ms | Cada letra del texto que se escribe |
+| `motion.duration.typewriter-pause` | 450 ms | Pausa tras cada frase del texto que se escribe |
+
+El código del juego lee estas duraciones de los mismos tokens (`tokens.ts`), así que la animación CSS y los
+temporizadores nunca se desincronizan.
+
+## Curvas
+
+`standard` (entrada y salida suaves) para transiciones de estado, `enter` para lo que aparece y `exit` para lo que
+desaparece.
+
+## Movimiento reducido
+
+Con «reducir movimiento» activado en el sistema (`prefers-reduced-motion`):
+
+- El texto aparece entero, sin escribirse.
+- El enunciado no se encoge animado: cambia directamente.
+- La tarjeta deslizada no sale volando: se responde al instante.
+- Los fundidos entre escenas se mantienen, porque son cambios de opacidad sin desplazamiento.
+
+## Tokens
+
+Cada capa solo apunta a la anterior: los componentes usan tokens de componente o semánticos, nunca primitivos.
+
+### Primitivos
+
+<TokenTable layer="primitive" family="motion" />
+
+### Semánticos
+
+<TokenTable layer="semantic" family="motion" />
+
+### De componente
+
+<TokenTable layer="component" family="motion" />

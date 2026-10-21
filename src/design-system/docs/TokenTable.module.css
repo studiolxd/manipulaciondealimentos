@@ -1,4 +1,5 @@
-/* Documentation only: shown on Storybook's own (light) docs pages. */
+/* Documentation only: shown on Storybook's own (light) docs pages. Stage-sized
+   previews are drawn at half size. */
 
 .table {
   width: 100%;
@@ -12,19 +13,44 @@
   padding-inline: var(--slxd-space-xs);
   border-bottom: var(--slxd-border-width-default) solid var(--slxd-color-border-subtle);
   text-align: start;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
-.description {
+.table .description {
   margin: var(--slxd-space-3xs) 0 0;
+}
+
+.preview {
+  width: 20%;
 }
 
 .swatch {
   display: inline-block;
-  width: var(--slxd-space-sm);
-  height: var(--slxd-space-sm);
-  margin-inline-end: var(--slxd-space-2xs);
+  width: var(--slxd-space-xl);
+  height: var(--slxd-space-xl);
   border: var(--slxd-border-width-default) solid var(--slxd-color-border-subtle);
   border-radius: var(--slxd-radius-sm);
-  vertical-align: middle;
+}
+
+.box {
+  display: inline-block;
+  width: var(--slxd-space-5xl);
+  height: var(--slxd-space-5xl);
+  border: 0 solid var(--slxd-color-text-default);
+  background: var(--slxd-color-surface-paper);
+  zoom: 0.5;
+}
+
+.bar {
+  display: inline-block;
+  max-width: 100%;
+  height: var(--slxd-space-xs);
+  background: var(--slxd-color-action-primary-background);
+  zoom: 0.5;
+}
+
+.text {
+  font-family: var(--slxd-font-family-display);
+  line-height: var(--slxd-font-line-height-tight);
+  zoom: 0.5;
 }

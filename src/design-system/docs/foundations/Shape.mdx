@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../TokenTable'
+
+<Meta title="Fundamentos/Forma" />
+
+# Forma
+
+## Radios
+
+Todas las esquinas redondeadas, en línea con la tipografía redondeada de los títulos:
+
+| Radio | Valor | Uso |
+| --- | --- | --- |
+| `radius.sm` | 16 px | Sellos, muestras pequeñas |
+| `radius.md` | 32 px | Carnés (superficie de papel) |
+| `radius.lg` | 40 px | Paneles: bocadillos, diálogos, feedback, opciones |
+| `radius.full` | Píldora | Botones |
+
+## Bordes
+
+- **4 px** (`border-width.default`): borde del papel.
+- **8 px** (`border-width.strong`): borde de los paneles (transparente salvo cuando el elemento está seleccionado) y
+  de los sellos. Al reservar siempre el borde, seleccionar una opción no mueve el diseño.
+
+## Sombra
+
+Una sola elevación (`shadow.raised`) para todo lo que flota sobre la escena: paneles, botones y carnés. Separa la
+interfaz de la ilustración sin depender del color.
+
+## Foco
+
+El anillo de foco del teclado es azul (`color.focus.ring`), de al menos 3 px reales, separado del elemento por su
+mismo grosor. Nunca se oculta: solo se omite en elementos que reciben el foco por programa (títulos de escena).
+
+## Tokens
+
+Cada capa solo apunta a la anterior: los componentes usan tokens de componente o semánticos, nunca primitivos.
+
+### Primitivos
+
+<TokenTable layer="primitive" family="shape" />
+
+### Semánticos
+
+<TokenTable layer="semantic" family="shape" />
+
+### De componente
+
+<TokenTable layer="component" family="shape" />

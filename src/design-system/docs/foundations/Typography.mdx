@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks'
+import { TokenTable } from '../TokenTable'
 import { FontFamilySample, TypeSpecimen } from '../TypeSpecimen'
 
 <Meta title="Fundamentos/Tipografía" />
@@ -61,4 +62,18 @@ Muestras a la **mitad** de su tamaño en el escenario de 1920×1080.
 <TypeSpecimen role="body-strong" label="Prosa destacada · Atkinson 44 / 700" sample="¡Correcto!" />
 <TypeSpecimen role="body-sm" label="Prosa pequeña · Atkinson 40 / 400" sample="Me encargo de preparar los platos de la carta para que los clientes queden satisfechos." />
 
-Los tokens de cada rol están en [Tokens › Tipografía](?path=/docs/fundamentos-tokens-tipografía--docs).
+## Tokens
+
+Cada capa solo apunta a la anterior: los componentes usan tokens de componente o semánticos, nunca primitivos.
+
+### Primitivos
+
+<TokenTable layer="primitive" family="typography" />
+
+### Semánticos
+
+<TokenTable layer="semantic" family="typography" />
+
+### De componente
+
+<TokenTable layer="component" family="typography" />

@@ -1,9 +1,8 @@
 import { useEffect, useEffectEvent, useState } from 'react'
 import { useDesignSystem } from '../../../hooks/useDesignSystem'
 import { Surface } from '../../atoms/Surface/Surface'
-import { Text } from '../../atoms/Text/Text'
-import { Typewriter } from '../../atoms/Typewriter/Typewriter'
 import { IconButton } from '../../molecules/IconButton/IconButton'
+import { Typewriter } from '../../molecules/Typewriter/Typewriter'
 import { VisuallyHidden } from '../../utilities/VisuallyHidden/VisuallyHidden'
 import styles from './SpeechBubble.module.css'
 
@@ -58,9 +57,7 @@ export function SpeechBubble({ speaker, blocks, tail = 'left', viewTransitionNam
       <VisuallyHidden as="p">{strings.speakerSays(speaker)}</VisuallyHidden>
       {/* Announces each new block as the player advances. */}
       <div aria-live="polite">
-        <Text>
-          <Typewriter key={index} text={blocks[index]} complete={skipRequested} onDone={() => setTyped(true)} />
-        </Text>
+        <Typewriter key={index} text={blocks[index]} complete={skipRequested} onDone={() => setTyped(true)} />
       </div>
       {(!finished || onDismiss) && (
         <div className={styles.next}>
