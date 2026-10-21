@@ -36,6 +36,9 @@
         "50": {
           "$value": "#fff8ec",
           "$description": "Light interface panels and text on ink."
+        },
+        "200": {
+          "$value": "#f3e6cf"
         }
       },
       "sand": {

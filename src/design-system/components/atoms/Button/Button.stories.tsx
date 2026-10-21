@@ -21,6 +21,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {}
+export const Secondary: Story = { args: { variant: 'secondary', children: 'Neutro' } }
 export const ChoicePositive: Story = {
   args: { variant: 'choice-positive', children: 'SÍ →', 'aria-label': 'SÍ, es manipulador de alimentos' },
 }

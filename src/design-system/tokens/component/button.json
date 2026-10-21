@@ -114,6 +114,29 @@
         }
       }
     },
+    "secondary": {
+      "$description": "Light button for options that act as soon as they are pressed (OptionButtons).",
+      "min-width": {
+        "$type": "dimension",
+        "$value": "{size.choice.min-width}"
+      },
+      "background": {
+        "$type": "color",
+        "$value": "{color.action.secondary.background}"
+      },
+      "background-hover": {
+        "$type": "color",
+        "$value": "{color.action.secondary.background-hover}"
+      },
+      "edge": {
+        "$type": "color",
+        "$value": "{color.action.secondary.edge}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.action.secondary.text}"
+      }
+    },
     "icon": {
       "$description": "Round icon-only button (IconButton).",
       "size": {

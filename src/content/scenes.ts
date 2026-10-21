@@ -29,8 +29,6 @@ export const addressForm = {
     { gender: 'female', label: 'Femenino' },
     { gender: 'neutral', label: 'Neutro' },
   ] satisfies { gender: Gender; label: string }[],
-  missingChoice: 'Elige una opción para continuar.',
-  start: 'Empezar',
 }
 
 // Scene 1

@@ -4,10 +4,11 @@ import styles from './Button.module.css'
 
 interface ButtonProps {
   /**
-   * `primary`: main call to action. `choice-positive` / `choice-negative`: large
+   * `primary`: main call to action. `secondary`: light options that act straight
+   * away (use OptionButtons). `choice-positive` / `choice-negative`: large
    * YES / NO answers. `icon`: round icon-only button (use IconButton).
    */
-  variant?: 'primary' | 'choice-positive' | 'choice-negative' | 'icon'
+  variant?: 'primary' | 'secondary' | 'choice-positive' | 'choice-negative' | 'icon'
   /**
    * Takes the focus when it appears if nothing else has it (e.g. the control
    * that had it just disappeared), so keyboard and screen reader users do not

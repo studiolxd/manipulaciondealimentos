@@ -281,6 +281,56 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-secondary-min-width",
+    "path": "button.secondary.min-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "400px",
+    "reference": "{size.choice.min-width}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-secondary-background",
+    "path": "button.secondary.background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{color.action.secondary.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-secondary-background-hover",
+    "path": "button.secondary.background-hover",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#f3e6cf",
+    "reference": "{color.action.secondary.background-hover}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-secondary-edge",
+    "path": "button.secondary.edge",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#d6cdb8",
+    "reference": "{color.action.secondary.edge}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-secondary-text",
+    "path": "button.secondary.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.action.secondary.text}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-icon-size",
     "path": "button.icon.size",
     "layer": "component",
@@ -788,6 +838,16 @@ export const tokenDocs = [
     "type": "color",
     "value": "#fff8ec",
     "reference": "{color.text.inverse}",
+    "description": null
+  },
+  {
+    "name": "--slxd-option-buttons-gap",
+    "path": "option-buttons.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
     "description": null
   },
   {
@@ -1619,6 +1679,16 @@ export const tokenDocs = [
     "value": "#fff8ec",
     "reference": null,
     "description": "Light interface panels and text on ink."
+  },
+  {
+    "name": "--slxd-primitive-color-cream-200",
+    "path": "primitive.color.cream.200",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#f3e6cf",
+    "reference": null,
+    "description": null
   },
   {
     "name": "--slxd-primitive-color-sand-50",
@@ -2608,6 +2678,46 @@ export const tokenDocs = [
     "type": "color",
     "value": "#0b7676",
     "reference": "{primitive.color.teal.700}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-secondary-background",
+    "path": "color.action.secondary.background",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{primitive.color.cream.50}",
+    "description": "Light button, like the panels: options that act straight away."
+  },
+  {
+    "name": "--slxd-color-action-secondary-background-hover",
+    "path": "color.action.secondary.background-hover",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#f3e6cf",
+    "reference": "{primitive.color.cream.200}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-secondary-edge",
+    "path": "color.action.secondary.edge",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#d6cdb8",
+    "reference": "{primitive.color.sand.300}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-secondary-text",
+    "path": "color.action.secondary.text",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
     "description": null
   },
   {

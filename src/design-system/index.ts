@@ -43,6 +43,7 @@ export { IconButton } from './components/molecules/IconButton/IconButton'
 export { IdCard } from './components/molecules/IdCard/IdCard'
 export { InlineAlert } from './components/molecules/InlineAlert/InlineAlert'
 export { NarrationBox } from './components/molecules/NarrationBox/NarrationBox'
+export { OptionButtons, type OptionButton } from './components/molecules/OptionButtons/OptionButtons'
 export { TextField } from './components/molecules/TextField/TextField'
 export { Typewriter } from './components/molecules/Typewriter/Typewriter'
 

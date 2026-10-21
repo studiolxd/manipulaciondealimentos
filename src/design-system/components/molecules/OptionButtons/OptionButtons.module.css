@@ -1,0 +1,12 @@
+.group {
+  display: flex;
+  gap: var(--slxd-option-buttons-gap);
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  composes: hidden from '../../utilities/VisuallyHidden/VisuallyHidden.module.css';
+}

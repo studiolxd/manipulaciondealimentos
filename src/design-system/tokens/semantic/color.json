@@ -75,6 +75,21 @@
       }
     },
     "action": {
+      "secondary": {
+        "background": {
+          "$value": "{primitive.color.cream.50}",
+          "$description": "Light button, like the panels: options that act straight away."
+        },
+        "background-hover": {
+          "$value": "{primitive.color.cream.200}"
+        },
+        "edge": {
+          "$value": "{primitive.color.sand.300}"
+        },
+        "text": {
+          "$value": "{primitive.color.petrol.900}"
+        }
+      },
       "primary": {
         "background": {
           "$value": "{primitive.color.teal.700}",

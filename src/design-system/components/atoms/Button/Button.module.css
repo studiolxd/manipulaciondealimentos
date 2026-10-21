@@ -43,6 +43,15 @@
   visibility: hidden;
 }
 
+.button[data-variant='secondary'] {
+  --button-background: var(--slxd-button-secondary-background);
+  --button-background-hover: var(--slxd-button-secondary-background-hover);
+  --button-edge: var(--slxd-button-secondary-edge);
+  --button-text: var(--slxd-button-secondary-text);
+
+  min-width: var(--slxd-button-secondary-min-width);
+}
+
 .button[data-variant^='choice'] {
   padding-inline: var(--slxd-button-choice-padding-inline);
   font-size: var(--slxd-button-choice-font-size);

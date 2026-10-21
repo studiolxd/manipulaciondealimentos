@@ -1,0 +1,8 @@
+{
+  "option-buttons": {
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.xl}"
+    }
+  }
+}
