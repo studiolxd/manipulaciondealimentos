@@ -22,7 +22,7 @@
     },
     "surface": {
       "default": {
-        "$value": "{primitive.color.cream.50}",
+        "$value": "{primitive.color.white}",
         "$description": "Light panels: bubbles, dialogs, feedback, options."
       },
       "paper": {

@@ -1276,7 +1276,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.surface.default}",
     "description": null
   },
@@ -2566,8 +2566,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
-    "reference": "{primitive.color.cream.50}",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
     "description": "Light panels: bubbles, dialogs, feedback, options."
   },
   {

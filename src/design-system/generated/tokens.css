@@ -95,7 +95,7 @@
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
   --slxd-color-text-accent: var(--slxd-primitive-color-mint-800); /** Dark mint, legible on light surfaces (e.g. accent icons). */
-  --slxd-color-surface-default: var(--slxd-primitive-color-cream-50); /** Light panels: bubbles, dialogs, feedback, options. */
+  --slxd-color-surface-default: var(--slxd-primitive-color-white); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-paper: var(--slxd-primitive-color-sand-50); /** Printed-looking objects such as ID cards. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
