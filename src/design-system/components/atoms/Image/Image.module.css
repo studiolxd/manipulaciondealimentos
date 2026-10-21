@@ -3,10 +3,16 @@
   object-fit: contain;
 }
 
-.image:not([width]) {
+.image[data-fit='intrinsic']:not([width]) {
   width: auto;
 }
 
-.image:not([height]) {
+.image[data-fit='intrinsic']:not([height]) {
   height: auto;
+}
+
+.image[data-fit='cover'] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

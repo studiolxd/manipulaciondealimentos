@@ -1,4 +1,8 @@
 import type { ImageSource } from '../../../types'
+import { Heading } from '../../atoms/Heading/Heading'
+import { Image } from '../../atoms/Image/Image'
+import { Surface } from '../../atoms/Surface/Surface'
+import { Text } from '../../atoms/Text/Text'
 import styles from './IdCard.module.css'
 
 interface IdCardProps {
@@ -8,17 +12,19 @@ interface IdCardProps {
   portrait: ImageSource
 }
 
-// ID-card layout: details on the left, head-to-chest portrait on the right.
-// It fills its parent.
+// Surface (paper) + Heading + Text + Image: ID-card layout with the details
+// on the left and a head-to-chest portrait on the right. It fills its parent.
 export function IdCard({ name, job, description, portrait }: IdCardProps) {
   return (
-    <div className={styles.card}>
+    <Surface tone="paper" padding="md" className={styles.card}>
       <div className={styles.details}>
-        <p className={styles.name}>{name}</p>
-        <p className={styles.job}>{job}</p>
-        <p className={styles.description}>{description}</p>
+        <Heading level={2} variant="subheading">
+          {name}
+        </Heading>
+        <Text weight="bold">{job}</Text>
+        <Text size="body-sm">{description}</Text>
       </div>
-      <img className={styles.portrait} src={portrait.src} width={portrait.width} height={portrait.height} alt="" draggable={false} />
-    </div>
+      <Image source={portrait} alt="" />
+    </Surface>
   )
 }

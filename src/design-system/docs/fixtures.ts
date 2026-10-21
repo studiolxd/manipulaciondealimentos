@@ -12,6 +12,4 @@ export const fixtures = {
   tableBackground: sample('assets/backgrounds/dining-table-top.png', 1920, 1080),
   character: sample('assets/characters/david-standing.png', 640, 960),
   idPortrait: sample('assets/cards/oscar.png', 360, 440),
-  avatarMale: sample('assets/avatars/player-male.png', 480, 640),
-  avatarFemale: sample('assets/avatars/player-female.png', 480, 640),
 }

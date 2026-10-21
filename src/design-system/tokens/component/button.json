@@ -74,6 +74,25 @@
     "font-family": {
       "$type": "fontFamily",
       "$value": "{font.family.display}"
+    },
+    "icon": {
+      "$description": "Round icon-only button (IconButton).",
+      "size": {
+        "$type": "dimension",
+        "$value": "{size.target.min}"
+      },
+      "padding": {
+        "$type": "dimension",
+        "$value": "{space.2xs}"
+      },
+      "background": {
+        "$type": "color",
+        "$value": "{color.action.secondary.background}"
+      },
+      "background-hover": {
+        "$type": "color",
+        "$value": "{color.action.secondary.background-hover}"
+      }
     }
   }
 }

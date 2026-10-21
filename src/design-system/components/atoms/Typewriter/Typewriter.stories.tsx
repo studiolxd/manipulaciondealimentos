@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
-import { NarrationBox } from '../../molecules/NarrationBox/NarrationBox'
-import { Positioned } from '../../templates/Positioned/Positioned'
-import { Text } from '../../atoms/Text/Text'
+import { Positioned } from '../../layout/Positioned/Positioned'
+import { Surface } from '../Surface/Surface'
+import { Text } from '../Text/Text'
 import { Typewriter } from './Typewriter'
 
 const meta = {
@@ -16,11 +16,11 @@ const meta = {
   decorators: [
     (Story) => (
       <Positioned center="both" width={1200}>
-        <NarrationBox>
+        <Surface tone="opaque" padding="lg">
           <Text>
             <Story />
           </Text>
-        </NarrationBox>
+        </Surface>
       </Positioned>
     ),
   ],

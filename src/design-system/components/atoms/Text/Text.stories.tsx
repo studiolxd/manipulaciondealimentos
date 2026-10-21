@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { NarrationBox } from '../../molecules/NarrationBox/NarrationBox'
-import { Positioned } from '../../templates/Positioned/Positioned'
+import { Surface } from '../Surface/Surface'
+import { Positioned } from '../../layout/Positioned/Positioned'
 import { Text } from './Text'
 
 const meta = {
@@ -11,9 +11,9 @@ const meta = {
   decorators: [
     (Story) => (
       <Positioned center="both" width={1200}>
-        <NarrationBox>
+        <Surface tone="opaque" padding="lg">
           <Story />
-        </NarrationBox>
+        </Surface>
       </Positioned>
     ),
   ],
@@ -25,3 +25,5 @@ type Story = StoryObj<typeof meta>
 export const Body: Story = {}
 export const BodySmall: Story = { args: { size: 'body-sm' } }
 export const Bold: Story = { args: { weight: 'bold' } }
+export const Positive: Story = { args: { tone: 'positive', weight: 'bold', children: '¡Correcto!' } }
+export const Negative: Story = { args: { tone: 'negative', weight: 'bold', children: '¡Incorrecto!' } }

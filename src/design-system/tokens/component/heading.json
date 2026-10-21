@@ -1,0 +1,34 @@
+{
+  "heading": {
+    "font-family": {
+      "$type": "fontFamily",
+      "$value": "{font.family.display}"
+    },
+    "font-weight": {
+      "$type": "fontWeight",
+      "$value": "{font.weight.display-strong}"
+    },
+    "line-height": {
+      "$type": "number",
+      "$value": "{font.line-height.snug}"
+    },
+    "size": {
+      "display": {
+        "$type": "dimension",
+        "$value": "{font.size.display}"
+      },
+      "heading": {
+        "$type": "dimension",
+        "$value": "{font.size.heading}"
+      },
+      "subheading": {
+        "$type": "dimension",
+        "$value": "{font.size.subheading}"
+      },
+      "system": {
+        "$type": "dimension",
+        "$value": "{font.size.system-heading}"
+      }
+    }
+  }
+}

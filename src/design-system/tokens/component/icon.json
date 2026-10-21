@@ -1,0 +1,18 @@
+{
+  "icon": {
+    "size": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "{size.icon.sm}"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{size.icon.md}"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{size.icon.lg}"
+      }
+    }
+  }
+}

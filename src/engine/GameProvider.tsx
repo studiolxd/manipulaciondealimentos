@@ -19,8 +19,8 @@ interface GameProviderProps {
 export function GameProvider({ startScene, children }: GameProviderProps) {
   // Progress saved in the LMS from a previous session, read once.
   const [saved] = useState(loadProgress)
-  const [sceneId, setSceneId] = useState<SceneId>(startScene ?? saved?.at ?? 'avatar-select')
-  const [gender, setGenderState] = useState<Gender>(saved?.gender ?? 'male')
+  const [sceneId, setSceneId] = useState<SceneId>(startScene ?? saved?.at ?? 'address-form')
+  const [gender, setGenderState] = useState<Gender>(saved?.gender ?? 'neutral')
   const [curtainClosed, setCurtainClosed] = useState(true)
   const [sceneReady, setSceneReady] = useState(false)
   const transitioning = useRef(false)

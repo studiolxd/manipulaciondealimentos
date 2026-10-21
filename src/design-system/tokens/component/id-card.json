@@ -1,68 +1,12 @@
 {
   "id-card": {
-    "background": {
-      "$type": "color",
-      "$value": "{color.surface.paper}"
-    },
-    "text": {
-      "$type": "color",
-      "$value": "{color.text.default}"
-    },
-    "border-color": {
-      "$type": "color",
-      "$value": "{color.border.subtle}"
-    },
-    "border-width": {
-      "$type": "dimension",
-      "$value": "{border-width.default}"
-    },
-    "radius": {
-      "$type": "dimension",
-      "$value": "{radius.md}"
-    },
-    "padding-block": {
-      "$type": "dimension",
-      "$value": "{space.lg}"
-    },
-    "padding-inline": {
-      "$type": "dimension",
-      "$value": "{space.xl}"
-    },
     "gap": {
       "$type": "dimension",
       "$value": "{space.xl}"
     },
-    "shadow": {
-      "$type": "shadow",
-      "$value": "{shadow.raised}"
-    },
-    "name-font-size": {
-      "$type": "dimension",
-      "$value": "{font.size.subheading}"
-    },
-    "name-font-weight": {
-      "$type": "fontWeight",
-      "$value": "{font.weight.display-strong}"
-    },
-    "name-line-height": {
-      "$type": "number",
-      "$value": "{font.line-height.snug}"
-    },
-    "job-font-weight": {
-      "$type": "fontWeight",
-      "$value": "{font.weight.bold}"
-    },
-    "description-font-size": {
-      "$type": "dimension",
-      "$value": "{font.size.body-sm}"
-    },
     "text-gap": {
       "$type": "dimension",
       "$value": "{space.xs}"
-    },
-    "name-font-family": {
-      "$type": "fontFamily",
-      "$value": "{font.family.display}"
     }
   }
 }

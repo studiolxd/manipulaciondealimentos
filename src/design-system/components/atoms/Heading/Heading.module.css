@@ -1,0 +1,30 @@
+.heading {
+  margin: 0;
+  font-family: var(--slxd-heading-font-family);
+  font-weight: var(--slxd-heading-font-weight);
+  line-height: var(--slxd-heading-line-height);
+}
+
+.heading[data-align='center'] {
+  text-align: center;
+}
+
+.heading[data-variant='display'] {
+  font-size: var(--slxd-heading-size-display);
+}
+
+.heading[data-variant='heading'] {
+  font-size: var(--slxd-heading-size-heading);
+}
+
+.heading[data-variant='subheading'] {
+  font-size: var(--slxd-heading-size-subheading);
+}
+
+.heading[data-variant='system'] {
+  font-size: var(--slxd-heading-size-system);
+}
+
+.hidden {
+  composes: hidden from '../../utilities/VisuallyHidden/VisuallyHidden.module.css';
+}

@@ -1,5 +1,6 @@
 .text {
   margin: 0;
+  font-family: var(--slxd-font-family-body);
   white-space: pre-line;
 }
 
@@ -11,10 +12,27 @@
   font-size: var(--slxd-font-size-body-sm);
 }
 
+.text[data-size='system'] {
+  font-size: var(--slxd-font-size-system-body);
+  line-height: var(--slxd-font-line-height-relaxed);
+}
+
 .text[data-weight='regular'] {
   font-weight: var(--slxd-font-weight-regular);
 }
 
 .text[data-weight='bold'] {
   font-weight: var(--slxd-font-weight-bold);
+}
+
+.text[data-tone='inverse'] {
+  color: var(--slxd-color-text-inverse);
+}
+
+.text[data-tone='positive'] {
+  color: var(--slxd-color-text-positive);
+}
+
+.text[data-tone='negative'] {
+  color: var(--slxd-color-text-negative);
 }

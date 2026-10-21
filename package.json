@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "pnpm tokens && tsc -b && vite build",
-    "lint": "oxlint && stylelint \"src/**/*.css\"",
+    "lint": "oxlint && stylelint \"src/**/*.css\" && node scripts/check-css-vars.ts",
     "preview": "vite preview",
     "placeholders": "node scripts/generate-placeholders.ts",
     "storybook": "storybook dev -p 6006",

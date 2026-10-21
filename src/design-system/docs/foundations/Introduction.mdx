@@ -15,21 +15,33 @@ Librería de componentes del juego **Manipulador de alimentos**. Todo lo que se 
 3. **La librería no depende del juego.** No importa nada de `engine`, `scenes` ni `content`. Los textos de
    interfaz que necesitan algunos componentes llegan por `DesignSystemProvider`.
 4. **Todo valor visual es un token.** El CSS de los componentes solo usa variables `--slxd-*`; nunca colores,
-   tamaños o duraciones en bruto. Lo impide Stylelint (`pnpm lint`).
+   tamaños o duraciones en bruto. Lo impide Stylelint, y `pnpm lint` también comprueba que cada token usado exista.
 5. **Los componentes no usan primitivos.** Usan tokens de componente o semánticos.
 
 ## Organización
 
-| Sección | Qué contiene | Carpeta |
-| --- | --- | --- |
-| **Fundamentos** | Esta introducción y los tokens por familia; aquí irá también la línea gráfica del juego. | `docs/foundations` |
-| **Átomos** | Piezas mínimas: texto, imagen, botones, alertas… | `components/atoms` |
-| **Moléculas** | Combinaciones de átomos con una función: bocadillo, carnet, panel de feedback, diálogo… | `components/molecules` |
-| **Organismos** | Bloques completos de interfaz: tarjeta deslizable, HUD, pantalla de girar… | `components/organisms` |
-| **Plantillas** | El armazón de las escenas: escenario, marco de escena, capas, posicionamiento, telón. | `components/templates` |
+Seguimos *atomic design*. Cada nivel se construye **solo con los niveles anteriores**, y solo los átomos pintan
+HTML de contenido (`p`, `h1`–`h6`, `img`, `button`, `input`…); oxlint lo impide en el resto.
 
-Cada componente tiene su carpeta con el componente (`.tsx`), sus estilos (`.module.css`), sus historias
-(`.stories.tsx`) y sus tokens de componente en `tokens/component/<componente>.json`.
+| Sección | Qué contiene | Ejemplos |
+| --- | --- | --- |
+| **Fundamentos** | Introducción, tipografía y tokens por familia; aquí irá la línea gráfica del juego. | — |
+| **Layout** | Herramientas de maquetación sobre el escenario de 1920×1080. | `Positioned`, `Layer` |
+| **Átomos** | Piezas indivisibles. No contienen otros componentes. | `Text`, `Heading`, `Label`, `Icon`, `Image`, `Surface`, `Button`, `Radio`, `Stamp`, `Typewriter` |
+| **Moléculas** | Combinaciones de átomos con una función. | `IconButton` (Button + Icon), `FeedbackPanel` (Surface + Icon + Text), `IdCard`, `ChoiceCard`… |
+| **Organismos** | Bloques completos hechos de moléculas y átomos. | `SpeechBubble`, `Dialog`, `ChoiceCardGroup`, `SwipeCard`, `SwipeSorter`, `Hud` |
+| **Plantillas** | Escenas completas a partir de organismos. | `Stage`, `SceneFrame`, `DialogueScene`, `ActivityScene`, `RotateDeviceScreen` |
+| **Utilidades** | Piezas sin parte visual. | `VisuallyHidden`, `DesignSystemProvider`, hooks, `withViewTransition` |
+
+Cada componente tiene su carpeta en `components/<nivel>/<Componente>/` con el componente (`.tsx`), sus estilos
+(`.module.css`), sus historias (`.stories.tsx`) y, si los necesita, sus tokens en `tokens/component/<componente>.json`.
+
+### Cómo se monta una escena
+
+Las escenas del juego usan sobre todo plantillas: `DialogueScene` para un personaje que habla y
+`ActivityScene` para una actividad (título, enunciado que se encoge en el HUD y zona de juego). Dentro de una
+actividad van organismos como `SwipeSorter`. Si una escena necesita algo que no existe, primero se añade a la
+librería en su nivel.
 
 ## Tokens por capas y familias
 

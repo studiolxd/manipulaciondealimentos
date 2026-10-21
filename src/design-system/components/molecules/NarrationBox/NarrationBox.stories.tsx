@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Positioned } from '../../templates/Positioned/Positioned'
 import { Text } from '../../atoms/Text/Text'
+import { Positioned } from '../../layout/Positioned/Positioned'
 import { NarrationBox } from './NarrationBox'
 
 const meta = {

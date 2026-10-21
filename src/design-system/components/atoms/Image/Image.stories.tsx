@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fixtures } from '../../../docs/fixtures'
-import { Positioned } from '../../templates/Positioned/Positioned'
+import { Positioned } from '../../layout/Positioned/Positioned'
 import { Image } from './Image'
 
 const meta = {

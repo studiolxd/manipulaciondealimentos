@@ -1,0 +1,10 @@
+.bubble {
+  padding-block-end: var(--slxd-speech-bubble-action-space);
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  right: var(--slxd-speech-bubble-next-inset);
+  bottom: var(--slxd-speech-bubble-next-inset);
+}

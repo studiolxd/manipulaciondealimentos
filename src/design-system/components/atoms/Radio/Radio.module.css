@@ -1,0 +1,3 @@
+.radio {
+  composes: hidden from '../../utilities/VisuallyHidden/VisuallyHidden.module.css';
+}

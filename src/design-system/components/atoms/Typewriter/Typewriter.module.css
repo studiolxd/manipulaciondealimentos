@@ -7,5 +7,5 @@
 }
 
 .accessible {
-  composes: hidden from '../../atoms/VisuallyHidden/VisuallyHidden.module.css';
+  composes: hidden from '../../utilities/VisuallyHidden/VisuallyHidden.module.css';
 }

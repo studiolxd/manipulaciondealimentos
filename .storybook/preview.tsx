@@ -44,10 +44,12 @@ const preview: Preview = {
         order: [
           'Fundamentos',
           ['Introducción', 'Tipografía', 'Tokens', ['Colores', 'Tipografía', 'Espaciado y tamaños', 'Forma', 'Movimiento', 'Capas']],
+          'Layout',
           'Átomos',
           'Moléculas',
           'Organismos',
           'Plantillas',
+          'Utilidades',
         ],
       },
     },

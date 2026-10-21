@@ -10,13 +10,15 @@ interface StageProps {
   /** Renders the stage as the page's main landmark. */
   landmark?: boolean
   inert?: boolean
+  /** Black curtain over the scene, used to fade between scenes. The scene is inert while it is closed. */
+  curtainClosed?: boolean
   children: ReactNode
 }
 
 // Fixed 1920×1080 canvas scaled to fit, letterboxed when the aspect ratio
 // differs. Everything inside is laid out in stage pixels; --slxd-stage-scale
 // lets tokens turn real screen minimums into stage pixels.
-export function Stage({ fit = 'viewport', landmark = true, inert, children }: StageProps) {
+export function Stage({ fit = 'viewport', landmark = true, inert, curtainClosed = false, children }: StageProps) {
   const viewportRef = useRef<HTMLDivElement>(null)
   const [scale, setScale] = useState(1)
 
@@ -35,7 +37,11 @@ export function Stage({ fit = 'viewport', landmark = true, inert, children }: St
   return (
     <div className={styles.viewport} data-fit={fit} ref={viewportRef} inert={inert}>
       <Canvas className={styles.stage} style={{ '--slxd-stage-scale': scale } as CSSProperties}>
-        {children}
+        {/* Own stacking context, so nothing in the scene rises above the curtain. */}
+        <div className={styles.scene} inert={curtainClosed}>
+          {children}
+        </div>
+        <div className={styles.curtain} data-closed={curtainClosed || undefined} aria-hidden="true" />
       </Canvas>
     </div>
   )

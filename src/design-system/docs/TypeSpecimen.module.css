@@ -19,30 +19,29 @@
   zoom: 0.5;
 }
 
+.figure .specimen[data-role='display'],
+.figure .specimen[data-role='heading'],
+.figure .specimen[data-role='subheading'] {
+  font-family: var(--slxd-heading-font-family);
+  font-weight: var(--slxd-heading-font-weight);
+  line-height: var(--slxd-heading-line-height);
+}
+
 .figure .specimen[data-role='display'] {
-  font-family: var(--slxd-activity-title-font-family);
-  font-size: var(--slxd-activity-title-font-size);
-  font-weight: var(--slxd-activity-title-font-weight);
-  line-height: var(--slxd-activity-title-line-height);
+  font-size: var(--slxd-heading-size-display);
 }
 
 .figure .specimen[data-role='heading'] {
-  font-family: var(--slxd-stage-heading-font-family);
-  font-size: var(--slxd-stage-heading-font-size);
-  font-weight: var(--slxd-stage-heading-font-weight);
-  line-height: var(--slxd-stage-heading-line-height);
+  font-size: var(--slxd-heading-size-heading);
 }
 
 .figure .specimen[data-role='subheading'] {
-  font-family: var(--slxd-id-card-name-font-family);
-  font-size: var(--slxd-id-card-name-font-size);
-  font-weight: var(--slxd-id-card-name-font-weight);
-  line-height: var(--slxd-id-card-name-line-height);
+  font-size: var(--slxd-heading-size-subheading);
 }
 
 .figure .specimen[data-role='label'] {
-  font-family: var(--slxd-button-font-family);
-  font-size: var(--slxd-button-choice-font-size);
+  font-family: var(--slxd-label-font-family);
+  font-size: var(--slxd-label-size-lg);
   font-weight: var(--slxd-button-choice-font-weight);
 }
 
@@ -53,12 +52,12 @@
 }
 
 .figure .specimen[data-role='stamp'] {
-  font-family: var(--slxd-swipe-card-stamp-font-family);
-  font-size: var(--slxd-swipe-card-stamp-font-size);
-  font-weight: var(--slxd-swipe-card-stamp-font-weight);
+  font-family: var(--slxd-stamp-font-family);
+  font-size: var(--slxd-stamp-font-size);
+  font-weight: var(--slxd-stamp-font-weight);
 }
 
-.specimen[data-role^='body'] {
+.figure .specimen[data-role^='body'] {
   max-width: 60ch;
   font-family: var(--slxd-stage-font-family);
   font-size: var(--slxd-stage-font-size);

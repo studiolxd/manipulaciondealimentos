@@ -1,5 +1,5 @@
 import { designSystemStrings, ui } from './content/ui'
-import { DesignSystemProvider, RotateDeviceScreen, Stage, useCoarsePointer, usePortrait } from './design-system'
+import { DesignSystemProvider, RotateDeviceScreen, useCoarsePointer, usePortrait } from './design-system'
 import { GameProvider } from './engine/GameProvider'
 import { SceneHost } from './engine/SceneHost'
 import { isSceneId, type SceneId } from './scenes/sceneIds'
@@ -17,9 +17,7 @@ export default function App() {
   return (
     <DesignSystemProvider strings={designSystemStrings} paused={portrait}>
       <GameProvider startScene={startScene()}>
-        <Stage inert={portrait}>
-          <SceneHost />
-        </Stage>
+        <SceneHost />
         {portrait && (
           <RotateDeviceScreen
             title={ui.rotateDevice.title}

@@ -1,0 +1,19 @@
+.stamp {
+  display: inline-block;
+  padding-block: var(--slxd-stamp-padding-block);
+  padding-inline: var(--slxd-stamp-padding-inline);
+  border: var(--slxd-stamp-border-width) solid currentcolor;
+  border-radius: var(--slxd-stamp-radius);
+  font-family: var(--slxd-stamp-font-family);
+  font-size: var(--slxd-stamp-font-size);
+  font-weight: var(--slxd-stamp-font-weight);
+  line-height: var(--slxd-stamp-line-height);
+}
+
+.stamp[data-tone='positive'] {
+  color: var(--slxd-stamp-positive);
+}
+
+.stamp[data-tone='negative'] {
+  color: var(--slxd-stamp-negative);
+}

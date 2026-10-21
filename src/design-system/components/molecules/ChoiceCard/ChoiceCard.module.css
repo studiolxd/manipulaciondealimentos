@@ -1,0 +1,19 @@
+.card {
+  display: block;
+  border-radius: var(--slxd-radius-lg);
+  cursor: pointer;
+}
+
+.card:has(input:focus-visible) {
+  outline: var(--slxd-stage-focus-ring-width) solid var(--slxd-stage-focus-ring-color);
+  outline-offset: var(--slxd-stage-focus-ring-width);
+}
+
+.surface {
+  display: flex;
+  min-width: var(--slxd-choice-card-min-width);
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--slxd-choice-card-gap);
+  align-items: center;
+}

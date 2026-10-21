@@ -16,30 +16,6 @@
     "padding": {
       "$type": "dimension",
       "$value": "{space.sm}"
-    },
-    "icon-size": {
-      "$type": "dimension",
-      "$value": "{size.hud.height}"
-    },
-    "title-font-size": {
-      "$type": "dimension",
-      "$value": "{font.size.system-heading}"
-    },
-    "message-font-size": {
-      "$type": "dimension",
-      "$value": "{font.size.system-body}"
-    },
-    "line-height": {
-      "$type": "number",
-      "$value": "{font.line-height.relaxed}"
-    },
-    "title-font-family": {
-      "$type": "fontFamily",
-      "$value": "{font.family.display}"
-    },
-    "title-font-weight": {
-      "$type": "fontWeight",
-      "$value": "{font.weight.display-strong}"
     }
   }
 }

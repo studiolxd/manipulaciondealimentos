@@ -20,13 +20,11 @@ interface Placeholder {
 }
 
 const placeholders: Record<AssetId | IconName, Placeholder> = {
-  avatarSelectBackground: { shape: 'rect', color: '#d9d4c7', label: 'Fondo · Elección de personaje' },
+  addressFormBackground: { shape: 'rect', color: '#d9d4c7', label: 'Fondo · Forma de tratamiento' },
   facadeBackground: { shape: 'rect', color: '#e8c9a0', label: 'Fondo · Fachada del restaurante' },
   diningRoomBackground: { shape: 'rect', color: '#c9d8c5', label: 'Fondo · Salón comedor' },
   diningTableBackground: { shape: 'rect', color: '#b9cbd9', label: 'Fondo · Mesa con David (POV)' },
   diningTableTopBackground: { shape: 'rect', color: '#c7b8a3', label: 'Fondo · Mesa vista desde arriba' },
-  playerMale: { shape: 'rounded', color: '#6b8fbf', label: 'Avatar · Chico' },
-  playerFemale: { shape: 'rounded', color: '#bf6b9a', label: 'Avatar · Chica' },
   davidStanding: { shape: 'rounded', color: '#4f7a5a', label: 'David · De pie' },
   davidSeated: { shape: 'rounded', color: '#4f7a5a', label: 'David · Sentado' },
   cardOscar: { shape: 'rounded', color: '#8fa9c9', label: 'Óscar' },

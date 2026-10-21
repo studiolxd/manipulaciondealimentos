@@ -1,5 +1,8 @@
 import { useEffect, useId, useRef, type ReactNode } from 'react'
 import type { ImageSource } from '../../../types'
+import { Heading } from '../../atoms/Heading/Heading'
+import { Image } from '../../atoms/Image/Image'
+import { Positioned } from '../../layout/Positioned/Positioned'
 import styles from './SceneFrame.module.css'
 
 interface SceneFrameProps {
@@ -14,7 +17,7 @@ interface SceneFrameProps {
   children?: ReactNode
 }
 
-// Common frame of every scene: full-stage background and its heading.
+// Image + Heading: common frame of every scene, a full-stage background and its heading.
 export function SceneFrame({
   heading,
   visibleHeadingTop,
@@ -30,19 +33,31 @@ export function SceneFrame({
     if (focusHeading) headingRef.current?.focus()
   }, [focusHeading])
 
-  const visible = visibleHeadingTop !== undefined
+  const title = (
+    <Heading
+      level={1}
+      id={headingId}
+      ref={headingRef}
+      focusable
+      align="center"
+      visuallyHidden={visibleHeadingTop === undefined}
+    >
+      {heading}
+    </Heading>
+  )
+
   return (
     <section className={styles.scene} aria-labelledby={headingId}>
-      <img className={styles.background} src={background.src} alt={backgroundAlt} />
-      <h1
-        id={headingId}
-        ref={headingRef}
-        tabIndex={-1}
-        className={visible ? styles.heading : styles.hiddenHeading}
-        style={visible ? { top: visibleHeadingTop } : undefined}
-      >
-        {heading}
-      </h1>
+      <div className={styles.background}>
+        <Image source={background} alt={backgroundAlt} fit="cover" />
+      </div>
+      {visibleHeadingTop === undefined ? (
+        title
+      ) : (
+        <Positioned top={visibleHeadingTop} left={0} width={1920}>
+          {title}
+        </Positioned>
+      )}
       {children}
     </section>
   )

@@ -10,13 +10,11 @@ export interface AssetSpec {
 }
 
 export const assets = {
-  avatarSelectBackground: { path: 'assets/backgrounds/avatar-select.png', width: 1920, height: 1080 },
+  addressFormBackground: { path: 'assets/backgrounds/address-form.png', width: 1920, height: 1080 },
   facadeBackground: { path: 'assets/backgrounds/facade.png', width: 1920, height: 1080 },
   diningRoomBackground: { path: 'assets/backgrounds/dining-room.png', width: 1920, height: 1080 },
   diningTableBackground: { path: 'assets/backgrounds/dining-table.png', width: 1920, height: 1080 },
   diningTableTopBackground: { path: 'assets/backgrounds/dining-table-top.png', width: 1920, height: 1080 },
-  playerMale: { path: 'assets/avatars/player-male.png', width: 480, height: 640 },
-  playerFemale: { path: 'assets/avatars/player-female.png', width: 480, height: 640 },
   davidStanding: { path: 'assets/characters/david-standing.png', width: 640, height: 960 },
   davidSeated: { path: 'assets/characters/david-seated.png', width: 720, height: 640 },
   // Activity 2: portraits on the ID cards, head to chest, in work uniform.

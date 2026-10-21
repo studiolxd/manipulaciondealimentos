@@ -6,22 +6,4 @@
 .background {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.heading {
-  position: absolute;
-  width: 100%;
-  margin: 0;
-  font-family: var(--slxd-stage-heading-font-family);
-  font-size: var(--slxd-stage-heading-font-size);
-  font-weight: var(--slxd-stage-heading-font-weight);
-  line-height: var(--slxd-stage-heading-line-height);
-  text-align: center;
-}
-
-.hiddenHeading {
-  composes: hidden from '../../atoms/VisuallyHidden/VisuallyHidden.module.css';
 }

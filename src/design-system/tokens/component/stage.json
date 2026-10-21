@@ -47,26 +47,6 @@
     "morph-easing": {
       "$type": "cubicBezier",
       "$value": "{motion.easing.standard}"
-    },
-    "heading-font-size": {
-      "$type": "dimension",
-      "$value": "{font.size.heading}"
-    },
-    "heading-font-weight": {
-      "$type": "fontWeight",
-      "$value": "{font.weight.display-strong}"
-    },
-    "error-text": {
-      "$type": "color",
-      "$value": "{color.text.negative}"
-    },
-    "heading-font-family": {
-      "$type": "fontFamily",
-      "$value": "{font.family.display}"
-    },
-    "heading-line-height": {
-      "$type": "number",
-      "$value": "{font.line-height.snug}"
     }
   }
 }

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Positioned } from '../../templates/Positioned/Positioned'
+import { Positioned } from '../../layout/Positioned/Positioned'
 import { FeedbackPanel } from './FeedbackPanel'
 
 const meta = {
@@ -27,7 +27,6 @@ export const Positive: Story = {
     },
   },
 }
-
 export const Negative: Story = {
   args: {
     feedback: {
@@ -37,6 +36,5 @@ export const Negative: Story = {
     },
   },
 }
-
 /** Hidden, but the live region is already in place to announce the first answer. */
 export const Empty: Story = { args: { feedback: null } }

@@ -12,6 +12,10 @@
   cursor: pointer;
 }
 
+.button[data-concealed] {
+  visibility: hidden;
+}
+
 .button[data-variant='primary'] {
   background: var(--slxd-button-primary-background);
   color: var(--slxd-button-primary-text);
@@ -38,4 +42,17 @@
 
 .button[data-variant='choice-negative'] {
   color: var(--slxd-button-choice-negative-text);
+}
+
+.button[data-variant='icon'] {
+  width: var(--slxd-button-icon-size);
+  min-height: 0;
+  height: var(--slxd-button-icon-size);
+  padding: var(--slxd-button-icon-padding);
+  background: var(--slxd-button-icon-background);
+  box-shadow: none;
+}
+
+.button[data-variant='icon']:hover {
+  background: var(--slxd-button-icon-background-hover);
 }

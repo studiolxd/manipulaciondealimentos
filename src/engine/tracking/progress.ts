@@ -4,7 +4,7 @@ import { isSceneId, sceneProgressWeight, type SceneId } from '../../scenes/scene
 import { scorm } from './scorm'
 
 // Course progress stored in the LMS (SCORM 1.2):
-//   cmi.suspend_data          avatar, completed scenes and current scene (to resume)
+//   cmi.suspend_data          form of address, completed scenes and current scene (to resume)
 //   cmi.core.lesson_location  current scene
 //   cmi.core.score.raw        % of script scenes completed (0–100), used as progress
 //   cmi.core.lesson_status    "incomplete" until every scene is done, then "completed"
@@ -17,6 +17,8 @@ export interface Progress {
 }
 
 const FORMAT_VERSION = 1
+const genderCode: Record<Gender, string> = { male: 'm', female: 'f', neutral: 'n' }
+const genderFromCode: Record<string, Gender> = { m: 'male', f: 'female', n: 'neutral' }
 const TOTAL_WEIGHT = Object.values(sceneProgressWeight).reduce((sum, weight) => sum + weight, 0)
 
 function check<T>(result: Result<T, unknown> | undefined, operation: string): void {
@@ -30,7 +32,7 @@ export function loadProgress(): Progress | null {
     const data = JSON.parse(result.value)
     if (data.v !== FORMAT_VERSION || !isSceneId(data.at)) return null
     return {
-      gender: data.g === 'f' ? 'female' : data.g === 'm' ? 'male' : null,
+      gender: genderFromCode[data.g] ?? null,
       done: Array.isArray(data.d) ? data.d.filter(isSceneId) : [],
       at: data.at,
     }
@@ -49,7 +51,7 @@ export function saveProgress(progress: Progress): void {
   if (!api) return
   const data = {
     v: FORMAT_VERSION,
-    g: progress.gender === 'female' ? 'f' : progress.gender === 'male' ? 'm' : null,
+    g: progress.gender ? genderCode[progress.gender] : null,
     d: progress.done,
     at: progress.at,
   }

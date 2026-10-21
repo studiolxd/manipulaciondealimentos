@@ -4,21 +4,13 @@
       "$type": "dimension",
       "$value": "{size.hud.height}"
     },
-    "text": {
-      "$type": "color",
-      "$value": "{color.text.inverse}"
-    },
-    "font-weight": {
-      "$type": "fontWeight",
-      "$value": "{font.weight.display}"
-    },
     "padding-inline": {
       "$type": "dimension",
       "$value": "{space.xl}"
     },
-    "font-family": {
-      "$type": "fontFamily",
-      "$value": "{font.family.display}"
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.md}"
     }
   }
 }

@@ -1,0 +1,23 @@
+.icon {
+  flex: none;
+}
+
+.icon[data-size='sm'] {
+  width: var(--slxd-icon-size-sm);
+  height: var(--slxd-icon-size-sm);
+}
+
+.icon[data-size='md'] {
+  width: var(--slxd-icon-size-md);
+  height: var(--slxd-icon-size-md);
+}
+
+.icon[data-size='lg'] {
+  width: var(--slxd-icon-size-lg);
+  height: var(--slxd-icon-size-lg);
+}
+
+.icon[data-size='fill'] {
+  width: 100%;
+  height: 100%;
+}

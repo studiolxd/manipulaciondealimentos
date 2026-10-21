@@ -1,0 +1,16 @@
+.title {
+  width: max-content;
+  max-width: 1600px;
+  animation: hold-then-fade var(--slxd-activity-title-hold-duration) var(--slxd-activity-title-easing) forwards;
+}
+
+@keyframes hold-then-fade {
+  0%,
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

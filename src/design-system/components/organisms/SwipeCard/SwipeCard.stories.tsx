@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
 import { fixtures } from '../../../docs/fixtures'
+import { Positioned } from '../../layout/Positioned/Positioned'
 import { IdCard } from '../../molecules/IdCard/IdCard'
-import { Positioned } from '../../templates/Positioned/Positioned'
 import { SwipeCard } from './SwipeCard'
 
 const meta = {
@@ -38,5 +38,5 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-/** Drag it left or right, or focus it and press ← / →. */
+/** Drag it left or right, or press ← / →. */
 export const Default: Story = {}

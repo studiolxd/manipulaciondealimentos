@@ -1,0 +1,24 @@
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: var(--slxd-layer-system);
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-rotate-screen-gap);
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  padding: var(--slxd-rotate-screen-padding);
+  border: 0;
+  background: var(--slxd-rotate-screen-background);
+  color: var(--slxd-rotate-screen-text);
+  text-align: center;
+}
+
+.message {
+  max-width: 32ch;
+}

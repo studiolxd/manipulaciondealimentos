@@ -1,6 +1,6 @@
 import { image } from '../content/images'
 import { comingSoon } from '../content/scenes'
-import { NarrationBox, Positioned, SceneFrame, Text } from '../design-system'
+import { Hud, NarrationBox, Positioned, SceneFrame, Text } from '../design-system'
 import { useGame } from '../engine/gameContext'
 
 // Temporary end of the game until activity 3 is built.
@@ -19,6 +19,7 @@ export function ComingSoonScene() {
           <Text>{comingSoon.message}</Text>
         </NarrationBox>
       </Positioned>
+      <Hud />
     </SceneFrame>
   )
 }

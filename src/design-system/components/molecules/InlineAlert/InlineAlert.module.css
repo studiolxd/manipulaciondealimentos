@@ -1,0 +1,6 @@
+.alert {
+  display: flex;
+  gap: var(--slxd-inline-alert-gap);
+  align-items: center;
+  justify-content: center;
+}

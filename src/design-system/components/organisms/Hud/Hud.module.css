@@ -2,8 +2,26 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: var(--slxd-layer-hud);
+  z-index: var(--slxd-layer-over-hud);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: var(--slxd-hud-height);
+  padding-inline: var(--slxd-hud-padding-inline);
+}
+
+.bar {
+  position: absolute;
+  inset: 0;
   pointer-events: none;
+}
+
+/* Positioned after the bar in the markup, so they paint over it. */
+.start,
+.end {
+  position: relative;
+  display: flex;
+  gap: var(--slxd-hud-gap);
+  align-items: center;
 }

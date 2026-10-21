@@ -2,25 +2,4 @@
   display: flex;
   gap: var(--slxd-feedback-panel-gap);
   align-items: center;
-  padding-block: var(--slxd-feedback-panel-padding-block);
-  padding-inline: var(--slxd-feedback-panel-padding-inline);
-  border-radius: var(--slxd-feedback-panel-radius);
-  background: var(--slxd-feedback-panel-background);
-  color: var(--slxd-feedback-panel-text);
-  font-size: var(--slxd-feedback-panel-font-size);
-  box-shadow: var(--slxd-feedback-panel-shadow);
-}
-
-.panel:empty {
-  visibility: hidden;
-}
-
-.icon {
-  flex: none;
-  width: var(--slxd-feedback-panel-icon-size);
-  height: var(--slxd-feedback-panel-icon-size);
-}
-
-.text {
-  margin: 0;
 }

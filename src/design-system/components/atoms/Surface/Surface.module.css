@@ -1,0 +1,76 @@
+.surface {
+  position: relative;
+  margin: 0;
+  border: var(--slxd-surface-border-width) solid var(--slxd-surface-border-color);
+  border-radius: var(--slxd-surface-radius);
+  color: var(--slxd-surface-text);
+  box-shadow: var(--slxd-surface-shadow);
+}
+
+.surface[data-tone='opaque'] {
+  background: var(--slxd-surface-opaque-background);
+}
+
+.surface[data-tone='translucent'] {
+  background: var(--slxd-surface-translucent-background);
+}
+
+.surface[data-tone='paper'] {
+  border-width: var(--slxd-surface-paper-border-width);
+  border-color: var(--slxd-surface-paper-border-color);
+  border-radius: var(--slxd-surface-paper-radius);
+  background: var(--slxd-surface-paper-background);
+}
+
+.surface[data-highlighted] {
+  border-color: var(--slxd-surface-border-color-highlighted);
+}
+
+.surface[data-padding='sm'] {
+  padding-block: var(--slxd-surface-padding-sm-block);
+  padding-inline: var(--slxd-surface-padding-sm-inline);
+}
+
+.surface[data-padding='md'] {
+  padding-block: var(--slxd-surface-padding-md-block);
+  padding-inline: var(--slxd-surface-padding-md-inline);
+}
+
+.surface[data-padding='lg'] {
+  padding-block: var(--slxd-surface-padding-lg-block);
+  padding-inline: var(--slxd-surface-padding-lg-inline);
+}
+
+.surface[data-padding='xl'] {
+  padding-block: var(--slxd-surface-padding-xl-block);
+  padding-inline: var(--slxd-surface-padding-xl-inline);
+}
+
+/* Tail: a triangle in the surface colour pointing to the speaker. */
+.surface[data-tail]::before {
+  content: '';
+  position: absolute;
+}
+
+.surface[data-tail='left']::before,
+.surface[data-tail='right']::before {
+  top: var(--slxd-surface-tail-offset);
+  border-block: calc(var(--slxd-surface-tail-base) / 2) solid var(--slxd-color-border-none);
+}
+
+.surface[data-tail='left']::before {
+  right: 100%;
+  border-inline-end: var(--slxd-surface-tail-length) solid var(--slxd-surface-opaque-background);
+}
+
+.surface[data-tail='right']::before {
+  left: 100%;
+  border-inline-start: var(--slxd-surface-tail-length) solid var(--slxd-surface-opaque-background);
+}
+
+.surface[data-tail='bottom']::before {
+  top: 100%;
+  left: var(--slxd-surface-tail-offset);
+  border-inline: calc(var(--slxd-surface-tail-base) / 2) solid var(--slxd-color-border-none);
+  border-block-start: var(--slxd-surface-tail-length) solid var(--slxd-surface-opaque-background);
+}

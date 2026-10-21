@@ -27,27 +27,17 @@
 .stamp {
   position: absolute;
   top: var(--slxd-swipe-card-stamp-inset);
-  padding-block: var(--slxd-swipe-card-stamp-padding-block);
-  padding-inline: var(--slxd-swipe-card-stamp-padding-inline);
-  border: var(--slxd-swipe-card-stamp-border-width) solid currentcolor;
-  border-radius: var(--slxd-swipe-card-stamp-radius);
-  font-family: var(--slxd-swipe-card-stamp-font-family);
-  font-size: var(--slxd-swipe-card-stamp-font-size);
-  font-weight: var(--slxd-swipe-card-stamp-font-weight);
-  line-height: var(--slxd-swipe-card-stamp-line-height);
   pointer-events: none;
 }
 
 .stamp[data-side='right'] {
   left: var(--slxd-swipe-card-stamp-inset);
-  color: var(--slxd-swipe-card-stamp-positive);
   opacity: var(--swipe-right);
   rotate: -12deg;
 }
 
 .stamp[data-side='left'] {
   right: var(--slxd-swipe-card-stamp-inset);
-  color: var(--slxd-swipe-card-stamp-negative);
   opacity: var(--swipe-left);
   rotate: 12deg;
 }

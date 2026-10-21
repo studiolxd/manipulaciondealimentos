@@ -42,6 +42,9 @@
   "size": {
     "$type": "dimension",
     "icon": {
+      "sm": {
+        "$value": "{primitive.size.48}"
+      },
       "md": {
         "$value": "{primitive.size.96}"
       },
@@ -58,6 +61,12 @@
     "hud": {
       "height": {
         "$value": "{primitive.size.120}"
+      }
+    },
+    "choice": {
+      "min-width": {
+        "$value": "{primitive.size.400}",
+        "$description": "Minimum width of a choice option, so options line up."
       }
     }
   }

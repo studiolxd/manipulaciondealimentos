@@ -1,6 +1,7 @@
 import { useEffect, useEffectEvent, useId, useImperativeHandle, useRef, useState, type CSSProperties, type ReactNode, type Ref } from 'react'
 import { tokens } from '../../../generated/tokens'
 import { useReducedMotion } from '../../../hooks/useMediaQuery'
+import { Stamp } from '../../atoms/Stamp/Stamp'
 import styles from './SwipeCard.module.css'
 
 export type SwipeDirection = 'left' | 'right'
@@ -38,7 +39,7 @@ function stageScale(element: HTMLElement): number {
   return Number(getComputedStyle(element).getPropertyValue('--slxd-stage-scale')) || 1
 }
 
-// Card answered by dragging it left or right with any pointer (mouse, touch,
+// Draggable content + Stamps. Card answered by dragging it left or right with any pointer (mouse, touch,
 // pen) or with the arrow keys. The arrows work wherever the focus is while the
 // card is on screen and usable (not inert, no dialog in use). It fills its parent.
 export function SwipeCard({
@@ -150,12 +151,12 @@ export function SwipeCard({
       <div className={styles.content} aria-hidden="true">
         {children}
       </div>
-      <span className={styles.stamp} data-side="right" aria-hidden="true">
-        {rightStamp}
-      </span>
-      <span className={styles.stamp} data-side="left" aria-hidden="true">
-        {leftStamp}
-      </span>
+      <div className={styles.stamp} data-side="right">
+        <Stamp tone="positive">{rightStamp}</Stamp>
+      </div>
+      <div className={styles.stamp} data-side="left">
+        <Stamp tone="negative">{leftStamp}</Stamp>
+      </div>
       <span id={descriptionId} hidden>
         {description}
       </span>
