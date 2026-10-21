@@ -32,6 +32,7 @@
   --slxd-primitive-duration-450: 450ms;
   --slxd-primitive-duration-600: 600ms;
   --slxd-primitive-duration-2500: 2500ms;
+  --slxd-primitive-duration-3200: 3200ms;
   --slxd-primitive-easing-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
   --slxd-primitive-easing-ease-out: cubic-bezier(0, 0, 0.58, 1);
   --slxd-primitive-easing-ease-in: cubic-bezier(0.42, 0, 1, 1);
@@ -42,6 +43,7 @@
   --slxd-primitive-border-width-4: 4px;
   --slxd-primitive-border-width-8: 8px;
   --slxd-primitive-blur-16: 16px;
+  --slxd-primitive-stroke-width-icon: 2.5; /** Icon stroke in units of the 24-unit grid: the weight of Rubik Medium stems. */
   --slxd-primitive-size-0: 0px;
   --slxd-primitive-size-4: 4px;
   --slxd-primitive-size-6: 6px;
@@ -129,6 +131,7 @@
   --slxd-motion-duration-title-hold: var(--slxd-primitive-duration-2500); /** How long an activity title stays before fading out. */
   --slxd-motion-duration-typewriter-char: var(--slxd-primitive-duration-28);
   --slxd-motion-duration-typewriter-pause: var(--slxd-primitive-duration-450); /** Pause after each sentence. */
+  --slxd-motion-duration-icon-loop: var(--slxd-primitive-duration-3200); /** One cycle of an animated icon, e.g. the device turning. */
   --slxd-motion-easing-standard: var(--slxd-primitive-easing-ease-in-out);
   --slxd-motion-easing-enter: var(--slxd-primitive-easing-ease-out);
   --slxd-motion-easing-exit: var(--slxd-primitive-easing-ease-in);
@@ -142,6 +145,7 @@
   --slxd-border-width-band: var(--slxd-primitive-size-16); /** Coloured side band (e.g. feedback). */
   --slxd-focus-ring-width: max(var(--slxd-primitive-size-6), calc(var(--slxd-primitive-screen-focus-ring-min) / var(--slxd-stage-scale)));
   --slxd-blur-glass: var(--slxd-primitive-blur-16); /** Background blur behind glass panels. */
+  --slxd-stroke-width-icon: var(--slxd-primitive-stroke-width-icon);
   --slxd-space-none: var(--slxd-primitive-size-0);
   --slxd-space-3xs: var(--slxd-primitive-size-4);
   --slxd-space-2xs: var(--slxd-primitive-size-8);
@@ -242,6 +246,14 @@
   --slxd-icon-size-sm: var(--slxd-size-icon-sm);
   --slxd-icon-size-md: var(--slxd-size-icon-md);
   --slxd-icon-size-lg: var(--slxd-size-icon-lg);
+  --slxd-icon-stroke-width: var(--slxd-stroke-width-icon);
+  --slxd-icon-color-default: var(--slxd-color-text-default); /** Ink, on light surfaces. */
+  --slxd-icon-color-inverse: var(--slxd-color-text-inverse); /** Cream, on ink panels and dark screens. */
+  --slxd-icon-color-accent: var(--slxd-color-action-primary-background);
+  --slxd-icon-color-positive: var(--slxd-color-feedback-positive);
+  --slxd-icon-color-negative: var(--slxd-color-feedback-negative);
+  --slxd-icon-loop-duration: var(--slxd-motion-duration-icon-loop);
+  --slxd-icon-loop-easing: var(--slxd-motion-easing-standard);
   --slxd-id-card-gap: var(--slxd-space-xl);
   --slxd-id-card-text-gap: var(--slxd-space-xs);
   --slxd-inline-alert-gap: var(--slxd-space-xs);

@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { IconGallery } from '../IconGallery'
+
+<Meta title="Fundamentos/Iconos" />
+
+# Iconos
+
+Los iconos de interfaz son del sistema de diseño. Se dibujan en SVG
+(`components/atoms/Icon/glyphs.tsx`) y se usan siempre con `Icon`. Son decorativos: el control o el texto que los
+acompaña lleva el significado.
+
+## Galería
+
+Cada icono sobre una superficie clara y sobre una oscura. Los marcados como «PNG provisional» siguen en
+`icons.manifest.ts` hasta que se redibujen con este estilo.
+
+<IconGallery />
+
+## Estilo
+
+Inspirado en Rubik, la tipografía de los títulos: formas geométricas, esquinas suaves y trazo uniforme.
+
+| Regla | Valor |
+| --- | --- |
+| Rejilla | 24 × 24 unidades, con 2 de margen (zona útil de 20 × 20) |
+| Trazo | 2,5 unidades (`--slxd-icon-stroke-width`), el peso de Rubik Medium. Escala con el icono |
+| Esquinas | Redondeadas, radio de 2 unidades; nunca esquinas vivas |
+| Remates y uniones | Redondos |
+| Color | Uno solo, sin rellenos ni degradados |
+
+## Color
+
+`Icon` pinta los SVG con `currentColor`. Con `tone="current"` (por defecto) toma el color del texto que lo rodea,
+así que ya funciona sobre superficies claras y oscuras. Para forzar un color:
+
+| `tone` | Token | Uso |
+| --- | --- | --- |
+| `default` | `--slxd-icon-color-default` | Tinta, sobre superficies claras |
+| `inverse` | `--slxd-icon-color-inverse` | Crema, sobre paneles de tinta y pantallas oscuras |
+| `accent` | `--slxd-icon-color-accent` | Verde azulado de acción |
+| `positive` | `--slxd-icon-color-positive` | Acierto |
+| `negative` | `--slxd-icon-color-negative` | Error |
+
+## Movimiento
+
+Con `animated`, un icono que tiene animación la reproduce en bucle (`--slxd-icon-loop-duration`). `rotateDevice`
+gira el móvil a horizontal en el sentido de la flecha, se mantiene y vuelve a empezar. Con «reducir movimiento»
+activado se queda quieto.
+
+## Añadir un icono
+
+1. Dibújalo en la rejilla de 24 con las reglas de arriba, solo con trazos (`fill="none"`).
+2. Añádelo a `glyphs` con un nombre en inglés y camelCase. Sin colores ni grosores en el SVG: los pone `Icon`.
+3. Si sustituye a un PNG provisional, quítalo de `icons.manifest.ts`, de `scripts/generate-placeholders.ts` y de
+   `public/assets/ui/`.

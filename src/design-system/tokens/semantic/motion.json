@@ -24,6 +24,10 @@
       "typewriter-pause": {
         "$value": "{primitive.duration.450}",
         "$description": "Pause after each sentence."
+      },
+      "icon-loop": {
+        "$value": "{primitive.duration.3200}",
+        "$description": "One cycle of an animated icon, e.g. the device turning."
       }
     },
     "easing": {

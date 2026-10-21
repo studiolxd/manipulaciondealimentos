@@ -49,5 +49,11 @@
       "$value": "{primitive.blur.16}",
       "$description": "Background blur behind glass panels."
     }
+  },
+  "stroke-width": {
+    "$type": "number",
+    "icon": {
+      "$value": "{primitive.stroke-width.icon}"
+    }
   }
 }

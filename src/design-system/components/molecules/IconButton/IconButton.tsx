@@ -1,7 +1,6 @@
 import type { MouseEvent, Ref } from 'react'
-import type { IconName } from '../../../icons.manifest'
 import { Button } from '../../atoms/Button/Button'
-import { Icon } from '../../atoms/Icon/Icon'
+import { Icon, type IconName } from '../../atoms/Icon/Icon'
 
 interface IconButtonProps {
   icon: IconName

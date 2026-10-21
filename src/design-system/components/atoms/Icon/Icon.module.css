@@ -21,3 +21,80 @@
   width: 100%;
   height: 100%;
 }
+
+/* Vector icons: one colour, the stroke of the 24-unit grid. */
+
+svg.icon {
+  overflow: visible;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: var(--slxd-icon-stroke-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon[data-tone='default'] {
+  color: var(--slxd-icon-color-default);
+}
+
+.icon[data-tone='inverse'] {
+  color: var(--slxd-icon-color-inverse);
+}
+
+.icon[data-tone='accent'] {
+  color: var(--slxd-icon-color-accent);
+}
+
+.icon[data-tone='positive'] {
+  color: var(--slxd-icon-color-positive);
+}
+
+.icon[data-tone='negative'] {
+  color: var(--slxd-icon-color-negative);
+}
+
+/* rotateDevice: the phone turns to landscape, holds, fades and starts again. */
+
+.rotateDevicePhone {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.icon[data-animated] .rotateDevicePhone {
+  animation: rotate-device var(--slxd-icon-loop-duration) var(--slxd-icon-loop-easing) infinite;
+}
+
+@keyframes rotate-device {
+  0%,
+  15% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  45%,
+  75% {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+
+  85% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  86% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon[data-animated] .rotateDevicePhone {
+    animation: none;
+  }
+}

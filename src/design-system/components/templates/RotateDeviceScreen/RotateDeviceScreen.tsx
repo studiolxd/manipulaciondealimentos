@@ -21,7 +21,7 @@ export function RotateDeviceScreen({ title, message }: RotateDeviceScreenProps) 
 
   return (
     <dialog open className={styles.screen} aria-modal="true" aria-labelledby={titleId} aria-describedby={messageId}>
-      <Icon name="rotateDevice" size="lg" />
+      <Icon name="rotateDevice" size="lg" animated />
       <Heading level={2} variant="system" align="center" id={titleId} ref={headingRef} focusable>
         {title}
       </Heading>

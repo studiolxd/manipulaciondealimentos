@@ -1,0 +1,53 @@
+/* Documentation only. The doubled selectors outrank Storybook's own list and
+   code styles. */
+
+.gallery.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: var(--slxd-space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery .card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-space-2xs);
+  margin: 0;
+  padding: var(--slxd-space-2xs);
+  border: var(--slxd-border-width-default) solid var(--slxd-color-border-subtle);
+  border-radius: var(--slxd-radius-sm);
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--slxd-space-2xs);
+}
+
+.swatch {
+  aspect-ratio: 1;
+  padding: var(--slxd-space-xs);
+  border-radius: var(--slxd-radius-sm);
+}
+
+.swatch[data-surface='light'] {
+  background: var(--slxd-color-surface-default);
+  color: var(--slxd-color-text-default);
+}
+
+.swatch[data-surface='dark'] {
+  background: var(--slxd-color-surface-inverse);
+  color: var(--slxd-color-text-inverse);
+}
+
+.card .name {
+  font-size: var(--slxd-font-size-system-body);
+  font-weight: var(--slxd-font-weight-bold);
+}
+
+.card .kind {
+  font-family: var(--slxd-font-family-body);
+  font-size: var(--slxd-font-size-system-body);
+}

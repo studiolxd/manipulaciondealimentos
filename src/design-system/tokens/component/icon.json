@@ -13,6 +13,38 @@
         "$type": "dimension",
         "$value": "{size.icon.lg}"
       }
+    },
+    "stroke-width": {
+      "$type": "number",
+      "$value": "{stroke-width.icon}"
+    },
+    "color": {
+      "$type": "color",
+      "default": {
+        "$value": "{color.text.default}",
+        "$description": "Ink, on light surfaces."
+      },
+      "inverse": {
+        "$value": "{color.text.inverse}",
+        "$description": "Cream, on ink panels and dark screens."
+      },
+      "accent": {
+        "$value": "{color.action.primary.background}"
+      },
+      "positive": {
+        "$value": "{color.feedback.positive}"
+      },
+      "negative": {
+        "$value": "{color.feedback.negative}"
+      }
+    },
+    "loop-duration": {
+      "$type": "duration",
+      "$value": "{motion.duration.icon-loop}"
+    },
+    "loop-easing": {
+      "$type": "cubicBezier",
+      "$value": "{motion.easing.standard}"
     }
   }
 }

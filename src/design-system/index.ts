@@ -12,7 +12,6 @@ import './styles/base.css'
 
 export { tokens, type TokenName } from './generated/tokens'
 export type { ImageSource, StageLayer } from './types'
-export type { IconName } from './icons.manifest'
 export type { DesignSystemStrings } from './hooks/useDesignSystem'
 export { DesignSystemProvider } from './providers/DesignSystemProvider'
 
@@ -26,7 +25,7 @@ export { Positioned } from './components/layout/Positioned/Positioned'
 // Atoms
 export { Button } from './components/atoms/Button/Button'
 export { Heading } from './components/atoms/Heading/Heading'
-export { Icon } from './components/atoms/Icon/Icon'
+export { Icon, type IconName, type IconTone } from './components/atoms/Icon/Icon'
 export { Image } from './components/atoms/Image/Image'
 export { Label } from './components/atoms/Label/Label'
 export { Radio } from './components/atoms/Radio/Radio'

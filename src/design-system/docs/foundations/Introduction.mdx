@@ -72,9 +72,10 @@ pantallas pequeñas el texto siga siendo legible y las zonas pulsables midan al 
 
 ## Imágenes
 
-Los gráficos de interfaz (iconos, franja del HUD) son de la librería (`icons.manifest.ts`); los del juego
-(fondos, personajes) están en `src/content/assets.ts`. Todos son PNG en `public/assets` con nombre estable:
-para poner el arte definitivo basta con sustituir el archivo. `pnpm placeholders` genera los que falten.
+Los iconos son de la librería y se dibujan en SVG (ver «Fundamentos/Iconos»); los que aún no se han redibujado
+siguen como PNG en `icons.manifest.ts`. Los gráficos del juego (fondos, personajes) están en
+`src/content/assets.ts`. Los PNG viven en `public/assets` con nombre estable: para poner el arte definitivo basta
+con sustituir el archivo. `pnpm placeholders` genera los que falten.
 
 ## Accesibilidad
 

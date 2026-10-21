@@ -7,9 +7,9 @@
 import { join } from 'node:path'
 import { generatePlaceholders, type Placeholder } from '@studiolxd/tramoya/placeholders'
 import { assets, type AssetId } from '../src/content/assets.ts'
-import { icons, type IconName } from '../src/design-system/icons.manifest.ts'
+import { icons, type RasterIconName } from '../src/design-system/icons.manifest.ts'
 
-const placeholders: Record<AssetId | IconName, Placeholder> = {
+const placeholders: Record<AssetId | RasterIconName, Placeholder> = {
   addressFormBackground: { shape: 'rect', color: '#d9d4c7', label: 'Fondo · Forma de tratamiento' },
   facadeBackground: { shape: 'rect', color: '#e8c9a0', label: 'Fondo · Fachada del restaurante' },
   diningRoomBackground: { shape: 'rect', color: '#c9d8c5', label: 'Fondo · Salón comedor' },
@@ -29,7 +29,6 @@ const placeholders: Record<AssetId | IconName, Placeholder> = {
   cardSergio: { shape: 'rounded', color: '#9aa3b5', label: 'Sergio' },
   cardElena: { shape: 'rounded', color: '#c9c28f', label: 'Elena' },
   // Design system icons
-  rotateDevice: { shape: 'circle', color: '#f2f2f2', label: 'Girar' },
   next: { shape: 'circle', color: '#c2410c', label: '>' },
   statement: { shape: 'circle', color: '#ffffff', label: 'Enunciado' },
   close: { shape: 'circle', color: '#c2410c', label: 'X' },

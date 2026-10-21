@@ -631,6 +631,86 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-icon-stroke-width",
+    "path": "icon.stroke-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "number",
+    "value": "2.5",
+    "reference": "{stroke-width.icon}",
+    "description": null
+  },
+  {
+    "name": "--slxd-icon-color-default",
+    "path": "icon.color.default",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.text.default}",
+    "description": "Ink, on light surfaces."
+  },
+  {
+    "name": "--slxd-icon-color-inverse",
+    "path": "icon.color.inverse",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{color.text.inverse}",
+    "description": "Cream, on ink panels and dark screens."
+  },
+  {
+    "name": "--slxd-icon-color-accent",
+    "path": "icon.color.accent",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#0b7676",
+    "reference": "{color.action.primary.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-icon-color-positive",
+    "path": "icon.color.positive",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{color.feedback.positive}",
+    "description": null
+  },
+  {
+    "name": "--slxd-icon-color-negative",
+    "path": "icon.color.negative",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#b91c1c",
+    "reference": "{color.feedback.negative}",
+    "description": null
+  },
+  {
+    "name": "--slxd-icon-loop-duration",
+    "path": "icon.loop-duration",
+    "layer": "component",
+    "family": "motion",
+    "type": "duration",
+    "value": "3200ms",
+    "reference": "{motion.duration.icon-loop}",
+    "description": null
+  },
+  {
+    "name": "--slxd-icon-loop-easing",
+    "path": "icon.loop-easing",
+    "layer": "component",
+    "family": "motion",
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0.42, 0, 0.58, 1)",
+    "reference": "{motion.easing.standard}",
+    "description": null
+  },
+  {
     "name": "--slxd-id-card-gap",
     "path": "id-card.gap",
     "layer": "component",
@@ -1671,6 +1751,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-duration-3200",
+    "path": "primitive.duration.3200",
+    "layer": "primitive",
+    "family": "motion",
+    "type": "duration",
+    "value": "3200ms",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-easing-ease-in-out",
     "path": "primitive.easing.ease-in-out",
     "layer": "primitive",
@@ -1779,6 +1869,16 @@ export const tokenDocs = [
     "value": "16px",
     "reference": null,
     "description": null
+  },
+  {
+    "name": "--slxd-primitive-stroke-width-icon",
+    "path": "primitive.stroke-width.icon",
+    "layer": "primitive",
+    "family": "shape",
+    "type": "number",
+    "value": "2.5",
+    "reference": null,
+    "description": "Icon stroke in units of the 24-unit grid: the weight of Rubik Medium stems."
   },
   {
     "name": "--slxd-primitive-size-0",
@@ -2641,6 +2741,16 @@ export const tokenDocs = [
     "description": "Pause after each sentence."
   },
   {
+    "name": "--slxd-motion-duration-icon-loop",
+    "path": "motion.duration.icon-loop",
+    "layer": "semantic",
+    "family": "motion",
+    "type": "duration",
+    "value": "3200ms",
+    "reference": "{primitive.duration.3200}",
+    "description": "One cycle of an animated icon, e.g. the device turning."
+  },
+  {
     "name": "--slxd-motion-easing-standard",
     "path": "motion.easing.standard",
     "layer": "semantic",
@@ -2779,6 +2889,16 @@ export const tokenDocs = [
     "value": "16px",
     "reference": "{primitive.blur.16}",
     "description": "Background blur behind glass panels."
+  },
+  {
+    "name": "--slxd-stroke-width-icon",
+    "path": "stroke-width.icon",
+    "layer": "semantic",
+    "family": "shape",
+    "type": "number",
+    "value": "2.5",
+    "reference": "{primitive.stroke-width.icon}",
+    "description": null
   },
   {
     "name": "--slxd-space-none",
