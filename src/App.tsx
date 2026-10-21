@@ -16,12 +16,14 @@ function startScene(): SceneId | undefined {
 
 export default function App() {
   const portrait = usePortrait()
-  // Outside an LMS (e.g. the public demo) the game opens with the Studio LXD logo.
-  const [splash, setSplash] = useState(!tracking.inLms)
+  const [initialScene] = useState(startScene)
+  // Outside an LMS (e.g. the public demo) the game opens with the Studio LXD
+  // logo, except when development jumps straight to a scene.
+  const [splash, setSplash] = useState(!tracking.inLms && initialScene === undefined)
   const paused = portrait || splash
   return (
     <DesignSystemProvider strings={designSystemStrings} paused={paused}>
-      <GameProvider startScene={startScene()} paused={paused}>
+      <GameProvider startScene={initialScene} paused={paused}>
         <SceneHost />
         {portrait && <RotateDeviceScreen title={ui.rotateDevice.title} />}
         {splash && <SplashScreen onFinished={() => setSplash(false)} />}
