@@ -3,10 +3,11 @@
     "$type": "color",
     "text": {
       "default": {
-        "$value": "{primitive.color.neutral.900}"
+        "$value": "{primitive.color.petrol.900}"
       },
       "inverse": {
-        "$value": "{primitive.color.white}"
+        "$value": "{primitive.color.cream.50}",
+        "$description": "Text on ink panels and over the scene."
       },
       "positive": {
         "$value": "{primitive.color.green.700}"
@@ -17,19 +18,23 @@
     },
     "surface": {
       "default": {
-        "$value": "{primitive.color.white}",
-        "$description": "Opaque panels: bubbles, dialogs, feedback."
-      },
-      "translucent": {
-        "$value": "{primitive.color.white-alpha.94}",
-        "$description": "Panels laid over a scene background."
+        "$value": "{primitive.color.cream.50}",
+        "$description": "Light panels: bubbles, dialogs, feedback, options."
       },
       "paper": {
         "$value": "{primitive.color.sand.50}",
         "$description": "Printed-looking objects such as ID cards."
       },
+      "ink": {
+        "$value": "{primitive.color.petrol-alpha.94}",
+        "$description": "Dark panels: the narrator."
+      },
+      "glass": {
+        "$value": "{primitive.color.petrol-alpha.72}",
+        "$description": "HUD band over the scene, with background blur."
+      },
       "inverse": {
-        "$value": "{primitive.color.neutral.950}",
+        "$value": "{primitive.color.petrol.900}",
         "$description": "Full-screen system messages."
       },
       "backdrop": {
@@ -44,29 +49,57 @@
       "subtle": {
         "$value": "{primitive.color.sand.300}"
       },
+      "ink": {
+        "$value": "{primitive.color.petrol.900}",
+        "$description": "Outline that separates the interface from the scene."
+      },
       "selected": {
-        "$value": "{primitive.color.orange.700}"
+        "$value": "{primitive.color.teal.700}"
       }
     },
     "action": {
       "primary": {
         "background": {
-          "$value": "{primitive.color.orange.700}"
+          "$value": "{primitive.color.teal.700}",
+          "$description": "Cool accent: it never blends with the warm scenes."
         },
         "background-hover": {
-          "$value": "{primitive.color.orange.800}"
+          "$value": "{primitive.color.teal.800}"
+        },
+        "edge": {
+          "$value": "{primitive.color.teal.900}",
+          "$description": "Lower edge that makes the button look pressable."
         },
         "text": {
-          "$value": "{primitive.color.white}"
+          "$value": "{primitive.color.cream.50}"
         }
       },
-      "secondary": {
+      "positive": {
         "background": {
-          "$value": "{primitive.color.green.700}",
-          "$description": "Secondary actions, e.g. icon buttons."
+          "$value": "{primitive.color.green.700}"
         },
         "background-hover": {
           "$value": "{primitive.color.green.800}"
+        },
+        "edge": {
+          "$value": "{primitive.color.green.900}"
+        },
+        "text": {
+          "$value": "{primitive.color.cream.50}"
+        }
+      },
+      "negative": {
+        "background": {
+          "$value": "{primitive.color.red.700}"
+        },
+        "background-hover": {
+          "$value": "{primitive.color.red.800}"
+        },
+        "edge": {
+          "$value": "{primitive.color.red.900}"
+        },
+        "text": {
+          "$value": "{primitive.color.cream.50}"
         }
       }
     },
@@ -79,13 +112,18 @@
       }
     },
     "focus": {
-      "ring": {
-        "$value": "{primitive.color.blue.700}"
+      "inner": {
+        "$value": "{primitive.color.cream.50}",
+        "$description": "Inner ring of the keyboard focus."
+      },
+      "outer": {
+        "$value": "{primitive.color.petrol.900}",
+        "$description": "Outer ring of the keyboard focus."
       }
     },
     "shadow": {
       "default": {
-        "$value": "{primitive.color.black-alpha.25}"
+        "$value": "{primitive.color.petrol-alpha.35}"
       }
     }
   }

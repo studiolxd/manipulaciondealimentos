@@ -4,11 +4,13 @@ import styles from './Surface.module.css'
 interface SurfaceProps extends Omit<HTMLAttributes<HTMLElement>, 'className' | 'style'> {
   /** `dialog` renders a non-modal <dialog open>; the caller handles modality. */
   as?: 'div' | 'dialog'
-  /** `opaque`: panels and dialogs. `translucent`: over a scene. `paper`: printed objects (ID cards). */
-  tone?: 'opaque' | 'translucent' | 'paper'
+  /** `opaque`: light panels (bubbles, dialogs, cards). `ink`: dark panels (narrator). `paper`: printed objects (ID cards). */
+  tone?: 'opaque' | 'ink' | 'paper'
   padding?: 'sm' | 'md' | 'lg' | 'xl'
-  /** Marks the surface as selected. */
+  /** Marks the surface as selected with an extra ring. */
   highlighted?: boolean
+  /** Coloured band on the leading edge, e.g. for right / wrong feedback. */
+  accent?: 'positive' | 'negative'
   /** Speech tail pointing to whoever speaks. */
   tail?: 'left' | 'right' | 'bottom'
   /** Name used to morph the surface into another element (see withViewTransition). */
@@ -19,12 +21,13 @@ interface SurfaceProps extends Omit<HTMLAttributes<HTMLElement>, 'className' | '
   children?: ReactNode
 }
 
-// Base panel of the design system: background, border, radius, shadow and padding.
+// Base panel of the design system: background, ink outline, radius, hard shadow and padding.
 export function Surface({
   as: Element = 'div',
   tone = 'opaque',
   padding = 'md',
   highlighted = false,
+  accent,
   tail,
   viewTransitionName,
   className,
@@ -41,6 +44,7 @@ export function Surface({
       data-tone={tone}
       data-padding={padding}
       data-highlighted={highlighted || undefined}
+      data-accent={accent}
       data-tail={tail}
       style={{ viewTransitionName }}
     >

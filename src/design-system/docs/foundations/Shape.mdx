@@ -16,21 +16,29 @@ Todas las esquinas redondeadas, en línea con la tipografía redondeada de los t
 | `radius.lg` | 40 px | Paneles: bocadillos, diálogos, feedback, opciones |
 | `radius.full` | Píldora | Botones |
 
-## Bordes
+## Contorno de tinta
 
-- **4 px** (`border-width.default`): borde del papel.
-- **8 px** (`border-width.strong`): borde de los paneles (transparente salvo cuando el elemento está seleccionado) y
-  de los sellos. Al reservar siempre el borde, seleccionar una opción no mueve el diseño.
+Todo lo que es interfaz lleva un **contorno de tinta de 3 px reales** (`border-width.outline`), sea cual sea la
+escala del escenario: paneles, bocadillos y su cola, botones, opciones y carnés. Es lo que separa la interfaz de la
+ilustración.
+
+- **Seleccionado:** un segundo anillo verde azulado alrededor del contorno, para que la selección no dependa solo
+  del color.
+- **Banda lateral:** 16 px de color en el borde izquierdo del feedback (verde o rojo).
 
 ## Sombra
 
-Una sola elevación (`shadow.raised`) para todo lo que flota sobre la escena: paneles, botones y carnés. Separa la
-interfaz de la ilustración sin depender del color.
+Una sola sombra (`shadow.raised`): **firme y corta**, sin difuminar, desplazada hacia abajo, como una pieza pegada
+sobre la escena. Los botones añaden un **canto** más oscuro debajo que se hunde al pulsarlos.
+
+## Cristal
+
+El HUD es una franja de tinta semitransparente con el fondo desenfocado detrás (`blur.glass`).
 
 ## Foco
 
-El anillo de foco del teclado es azul (`color.focus.ring`), de al menos 3 px reales, separado del elemento por su
-mismo grosor. Nunca se oculta: solo se omite en elementos que reciben el foco por programa (títulos de escena).
+El anillo de foco del teclado es **doble**: crema por dentro y tinta por fuera, de al menos 3 px reales cada uno.
+Se ve sobre fondos claros y oscuros. Solo se omite en elementos que reciben el foco por programa (títulos de escena).
 
 ## Tokens
 

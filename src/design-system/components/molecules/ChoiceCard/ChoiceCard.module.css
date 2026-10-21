@@ -5,8 +5,9 @@
 }
 
 .card:has(input:focus-visible) {
-  outline: var(--slxd-stage-focus-ring-width) solid var(--slxd-stage-focus-ring-color);
+  outline: var(--slxd-stage-focus-ring-width) solid var(--slxd-stage-focus-ring-outer);
   outline-offset: var(--slxd-stage-focus-ring-width);
+  box-shadow: 0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner);
 }
 
 .surface {

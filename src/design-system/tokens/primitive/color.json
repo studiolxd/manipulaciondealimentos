@@ -9,12 +9,27 @@
       "black": {
         "$value": "#000000"
       },
-      "neutral": {
+      "petrol": {
         "900": {
-          "$value": "#1d1d1f"
+          "$value": "#14262e",
+          "$description": "Ink: outlines, text and dark interface panels."
+        }
+      },
+      "petrol-alpha": {
+        "94": {
+          "$value": "rgba(20, 38, 46, 0.94)"
         },
-        "950": {
-          "$value": "#111111"
+        "72": {
+          "$value": "rgba(20, 38, 46, 0.72)"
+        },
+        "35": {
+          "$value": "rgba(20, 38, 46, 0.35)"
+        }
+      },
+      "cream": {
+        "50": {
+          "$value": "#fff8ec",
+          "$description": "Light interface panels and text on ink."
         }
       },
       "sand": {
@@ -25,22 +40,15 @@
           "$value": "#d6cdb8"
         }
       },
-      "orange": {
+      "teal": {
         "700": {
-          "$value": "#c2410c"
+          "$value": "#0b7676"
         },
         "800": {
-          "$value": "#9a3412"
-        }
-      },
-      "blue": {
-        "700": {
-          "$value": "#1d4ed8"
-        }
-      },
-      "red": {
-        "700": {
-          "$value": "#b91c1c"
+          "$value": "#095f5f"
+        },
+        "900": {
+          "$value": "#064848"
         }
       },
       "green": {
@@ -49,16 +57,20 @@
         },
         "800": {
           "$value": "#166534"
+        },
+        "900": {
+          "$value": "#14532d"
         }
       },
-      "white-alpha": {
-        "94": {
-          "$value": "rgba(255, 255, 255, 0.94)"
-        }
-      },
-      "black-alpha": {
-        "25": {
-          "$value": "rgba(0, 0, 0, 0.25)"
+      "red": {
+        "700": {
+          "$value": "#b91c1c"
+        },
+        "800": {
+          "$value": "#991b1b"
+        },
+        "900": {
+          "$value": "#7f1d1d"
         }
       },
       "transparent": {

@@ -40,6 +40,7 @@ export function SceneFrame({
       ref={headingRef}
       focusable
       align="center"
+      overlay
       visuallyHidden={visibleHeadingTop === undefined}
     >
       {heading}

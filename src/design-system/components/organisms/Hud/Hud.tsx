@@ -1,6 +1,4 @@
 import type { ReactNode } from 'react'
-import { iconSource } from '../../../icons'
-import { Image } from '../../atoms/Image/Image'
 import styles from './Hud.module.css'
 
 interface HudProps {
@@ -10,15 +8,12 @@ interface HudProps {
   end?: ReactNode
 }
 
-// Image + slots: top band of the game, over the scene.
+// Top band of the game: dark glass over the scene, with slots for controls.
 export function Hud({ start, end }: HudProps) {
   return (
     <div className={styles.hud}>
-      <div className={styles.bar}>
-        <Image source={iconSource('hudBar')} alt="" fit="cover" />
-      </div>
-      <div className={styles.start}>{start}</div>
-      <div className={styles.end}>{end}</div>
+      <div className={styles.slot}>{start}</div>
+      <div className={styles.slot}>{end}</div>
     </div>
   )
 }

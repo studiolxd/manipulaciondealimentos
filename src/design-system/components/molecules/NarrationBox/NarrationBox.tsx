@@ -9,10 +9,10 @@ interface NarrationBoxProps {
   children: ReactNode
 }
 
-// Surface + text: narrator panel over a scene.
+// Surface (ink) + text: the narrator's voice, a dark panel unlike the light speech bubbles.
 export function NarrationBox({ onClick, children }: NarrationBoxProps) {
   return (
-    <Surface tone="translucent" padding="xl" className={onClick ? styles.clickable : undefined} onClick={onClick}>
+    <Surface tone="ink" padding="xl" className={onClick ? styles.clickable : undefined} onClick={onClick}>
       {children}
     </Surface>
   )

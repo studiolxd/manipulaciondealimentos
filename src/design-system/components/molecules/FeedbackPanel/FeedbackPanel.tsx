@@ -15,12 +15,12 @@ interface FeedbackPanelProps {
   feedback: Feedback | null
 }
 
-// Surface + Icon + Text.
+// Surface with a coloured side band + Icon + Text: the result shows before it is read.
 export function FeedbackPanel({ feedback }: FeedbackPanelProps) {
   return (
     <div aria-live="polite">
       {feedback && (
-        <Surface tone="opaque" padding="sm" className={styles.panel}>
+        <Surface tone="opaque" padding="sm" accent={feedback.tone} className={styles.panel}>
           <Icon name={feedback.tone === 'positive' ? 'correct' : 'incorrect'} size="md" />
           <Text size="body-sm">
             <Text as="strong" size="body-sm" weight="bold">

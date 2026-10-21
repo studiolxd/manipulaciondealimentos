@@ -6,6 +6,8 @@ interface HeadingProps {
   /** `display`: activity titles. `heading`: scene headings. `subheading`: names. `system`: messages outside the stage. */
   variant?: 'display' | 'heading' | 'subheading' | 'system'
   align?: 'start' | 'center'
+  /** Straight over the scene, without a panel: light text with an ink outline and a hard shadow. */
+  overlay?: boolean
   /** Only for screen readers. */
   visuallyHidden?: boolean
   /** Lets the heading receive focus programmatically (e.g. when a scene starts). */
@@ -15,11 +17,12 @@ interface HeadingProps {
   children: ReactNode
 }
 
-// Titles, in the display family (Fredoka).
+// Titles, in the display family (Rubik).
 export function Heading({
   level,
   variant = 'heading',
   align = 'start',
+  overlay = false,
   visuallyHidden = false,
   focusable = false,
   id,
@@ -35,6 +38,7 @@ export function Heading({
       className={visuallyHidden ? styles.hidden : styles.heading}
       data-variant={variant}
       data-align={align}
+      data-overlay={overlay || undefined}
     >
       {children}
     </Element>

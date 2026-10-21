@@ -1,6 +1,6 @@
 {
   "surface": {
-    "$description": "Base panel of every box: bubbles, dialogs, cards, feedback.",
+    "$description": "Base panel of every box: bubbles, dialogs, cards, feedback, narration.",
     "text": {
       "$type": "color",
       "$value": "{color.text.default}"
@@ -15,13 +15,18 @@
     },
     "border-width": {
       "$type": "dimension",
-      "$value": "{border-width.strong}"
+      "$value": "{border-width.outline}"
     },
     "border-color": {
       "$type": "color",
-      "$value": "{color.border.none}"
+      "$value": "{color.border.ink}"
     },
-    "border-color-highlighted": {
+    "highlight-width": {
+      "$type": "dimension",
+      "$value": "calc({border-width.outline} * 2)",
+      "$description": "Extra ring around a selected surface, twice the outline so selection does not rely on colour alone."
+    },
+    "highlight-color": {
       "$type": "color",
       "$value": "{color.border.selected}"
     },
@@ -31,10 +36,14 @@
         "$value": "{color.surface.default}"
       }
     },
-    "translucent": {
+    "ink": {
       "background": {
         "$type": "color",
-        "$value": "{color.surface.translucent}"
+        "$value": "{color.surface.ink}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.text.inverse}"
       }
     },
     "paper": {
@@ -42,17 +51,23 @@
         "$type": "color",
         "$value": "{color.surface.paper}"
       },
-      "border-color": {
-        "$type": "color",
-        "$value": "{color.border.subtle}"
-      },
-      "border-width": {
-        "$type": "dimension",
-        "$value": "{border-width.default}"
-      },
       "radius": {
         "$type": "dimension",
         "$value": "{radius.md}"
+      }
+    },
+    "accent": {
+      "width": {
+        "$type": "dimension",
+        "$value": "{border-width.band}"
+      },
+      "positive": {
+        "$type": "color",
+        "$value": "{color.feedback.positive}"
+      },
+      "negative": {
+        "$type": "color",
+        "$value": "{color.feedback.negative}"
       }
     },
     "padding": {

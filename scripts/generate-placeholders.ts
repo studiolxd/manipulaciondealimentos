@@ -41,7 +41,6 @@ const placeholders: Record<AssetId | IconName, Placeholder> = {
   // Design system icons
   rotateDevice: { shape: 'circle', color: '#f2f2f2', label: 'Girar' },
   next: { shape: 'circle', color: '#c2410c', label: '>' },
-  hudBar: { shape: 'rect', color: '#3a3a3c', label: 'HUD' },
   statement: { shape: 'circle', color: '#ffffff', label: 'Enunciado' },
   close: { shape: 'circle', color: '#c2410c', label: 'X' },
   correct: { shape: 'circle', color: '#2f9e5b', label: 'OK' },

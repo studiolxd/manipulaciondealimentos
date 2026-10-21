@@ -9,7 +9,6 @@ export const icons = {
   correct: { path: 'assets/ui/correct.png', width: 96, height: 96 },
   incorrect: { path: 'assets/ui/incorrect.png', width: 96, height: 96 },
   rotateDevice: { path: 'assets/ui/rotate-device.png', width: 240, height: 240 },
-  hudBar: { path: 'assets/ui/hud-bar.png', width: 1920, height: 120 },
 } as const
 
 export type IconName = keyof typeof icons

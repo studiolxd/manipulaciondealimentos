@@ -25,6 +25,13 @@
   font-size: var(--slxd-heading-size-system);
 }
 
+.heading[data-overlay] {
+  color: var(--slxd-heading-overlay-text);
+  -webkit-text-stroke: var(--slxd-heading-overlay-stroke-width) var(--slxd-heading-overlay-stroke-color);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 var(--slxd-heading-overlay-shadow-offset) 0 var(--slxd-heading-overlay-shadow-color));
+}
+
 .hidden {
   composes: hidden from '../../utilities/VisuallyHidden/VisuallyHidden.module.css';
 }

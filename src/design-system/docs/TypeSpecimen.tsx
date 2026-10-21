@@ -13,7 +13,7 @@ export type TypeRole =
 
 interface TypeSpecimenProps {
   role: TypeRole
-  /** Caption, e.g. "Título de actividad · Fredoka 104 / 700". */
+  /** Caption, e.g. "Título de actividad · Rubik 104 / 700". */
   label: string
   sample: string
 }
@@ -42,7 +42,7 @@ export function FontFamilySample({ family }: FontFamilySampleProps) {
       <p className={styles.alphabet}>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Ññ Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
       <p className={styles.alphabet}>Áá Éé Íí Óó Úú Üü ¿? ¡! 0 1 2 3 4 5 6 7 8 9 % € « » — …</p>
       <p className={styles.weights}>
-        {(family === 'display' ? [300, 400, 500, 600, 700] : [200, 400, 600, 700]).map((weight) => (
+        {(family === 'display' ? [300, 400, 500, 600, 700, 800, 900] : [200, 400, 600, 700]).map((weight) => (
           <span key={weight} style={{ fontWeight: weight }}>
             {weight}
           </span>

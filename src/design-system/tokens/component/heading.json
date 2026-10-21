@@ -29,6 +29,30 @@
         "$type": "dimension",
         "$value": "{font.size.system-heading}"
       }
+    },
+    "overlay": {
+      "$description": "Headings placed straight over the scene: light text with an ink outline and a hard shadow.",
+      "text": {
+        "$type": "color",
+        "$value": "{color.text.inverse}"
+      },
+      "stroke-color": {
+        "$type": "color",
+        "$value": "{color.border.ink}"
+      },
+      "stroke-width": {
+        "$type": "dimension",
+        "$value": "calc({border-width.outline} * 3)",
+        "$description": "Three times the outline: the stroke is painted behind the fill, so about half of it shows."
+      },
+      "shadow-offset": {
+        "$type": "dimension",
+        "$value": "{space.2xs}"
+      },
+      "shadow-color": {
+        "$type": "color",
+        "$value": "{color.shadow.default}"
+      }
     }
   }
 }

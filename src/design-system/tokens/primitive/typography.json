@@ -4,14 +4,14 @@
       "family": {
         "$type": "fontFamily",
         "$description": "Google Fonts, self-hosted with Fontsource (bundled in the SCORM package, no request to Google).",
-        "fredoka": {
+        "rubik": {
           "$value": [
-            "Fredoka Variable",
-            "Fredoka",
+            "Rubik Variable",
+            "Rubik",
             "system-ui",
             "sans-serif"
           ],
-          "$description": "Rounded, friendly sans. Variable weight 300–700."
+          "$description": "Sans with slightly rounded corners, solid and compact: game interface feel. Variable weight 300–900."
         },
         "atkinson-hyperlegible-next": {
           "$value": [

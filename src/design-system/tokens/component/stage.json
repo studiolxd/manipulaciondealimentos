@@ -20,10 +20,6 @@
       "$type": "number",
       "$value": "{font.line-height.normal}"
     },
-    "focus-ring-color": {
-      "$type": "color",
-      "$value": "{color.focus.ring}"
-    },
     "focus-ring-width": {
       "$type": "dimension",
       "$value": "{focus.ring-width}"
@@ -47,6 +43,14 @@
     "morph-easing": {
       "$type": "cubicBezier",
       "$value": "{motion.easing.standard}"
+    },
+    "focus-ring-inner": {
+      "$type": "color",
+      "$value": "{color.focus.inner}"
+    },
+    "focus-ring-outer": {
+      "$type": "color",
+      "$value": "{color.focus.outer}"
     }
   }
 }

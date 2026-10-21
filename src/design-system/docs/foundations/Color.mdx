@@ -5,54 +5,53 @@ import { TokenTable } from '../TokenTable'
 
 # Color
 
-La paleta es **provisional**: se ajustará cuando llegue la línea gráfica del juego. Lo que no cambiará es cómo se
-usa: los componentes nunca eligen un color de la paleta, sino un **rol** (texto, superficie, acción, feedback…).
+La interfaz usa colores que **no existen en el mundo del juego**: las escenas son cálidas (madera, piedra, luz
+dorada) y la interfaz es tinta, crema y un verde azulado frío. Así nunca se confunde con el fondo. Ver
+[Línea gráfica](?path=/docs/fundamentos-línea-gráfica--docs).
+
+Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, superficie, acción, feedback…).
 
 ## Paleta
 
 | Familia | Tonos | Para qué |
 | --- | --- | --- |
-| Blanco y negro | `white`, `black` | Superficies, texto sobre color, fondo del escenario y del telón |
-| Neutros | `900`, `950` | Texto principal y pantallas de sistema |
-| Arena | `50`, `300` | Objetos impresos (carnés) y sus bordes |
-| Naranja | `700`, `800` | Acción principal y su estado al pasar el ratón |
-| Verde | `700`, `800` | Acción secundaria (botones de icono) y aciertos |
-| Rojo | `700` | Errores |
-| Azul | `700` | Anillo de foco del teclado |
-| Transparencias | blanco 94 %, negro 25 %, transparente | Paneles sobre una escena, sombras, bordes invisibles |
+| Tinta (petróleo) | `900` y transparencias 94 %, 72 % y 35 % | Contornos, texto, narración, HUD de cristal y sombras |
+| Crema | `50` | Paneles claros y texto sobre tinta |
+| Arena | `50`, `300` | Papel de los carnés y bordes de la documentación |
+| Verde azulado | `700`, `800`, `900` | Acción principal: fondo, al pasar el ratón y canto del botón |
+| Verde | `700`, `800`, `900` | Acierto y botón SÍ |
+| Rojo | `700`, `800`, `900` | Error y botón NO |
+| Blanco, negro y transparente | — | Fondo del escenario y del telón, bordes invisibles |
 
 ## Roles
 
 | Rol | Uso |
 | --- | --- |
-| `color.text.*` | Texto normal, inverso (sobre fondos oscuros), positivo y negativo |
-| `color.surface.*` | Paneles opacos, translúcidos sobre la escena, papel, pantallas de sistema y fondo del escenario |
-| `color.border.*` | Sin borde, borde suave y elemento seleccionado |
-| `color.action.primary.*` | Botón principal (naranja) |
-| `color.action.secondary.*` | Botones de icono (verde) |
+| `color.text.*` | Texto en tinta, inverso (crema), positivo y negativo |
+| `color.surface.*` | Panel claro, papel, panel de tinta (narración), cristal (HUD), pantalla de sistema y fondo del escenario |
+| `color.border.*` | Contorno de tinta, sin borde, borde suave y elemento seleccionado |
+| `color.action.primary.*` | Botón principal y botones de icono (verde azulado) |
+| `color.action.positive.*` / `negative.*` | Botones SÍ y NO |
 | `color.feedback.*` | Acierto (verde) y error (rojo) |
-| `color.focus.ring` | Anillo de foco (azul) |
+| `color.focus.*` | Anillo de foco doble: crema por dentro, tinta por fuera |
 
 ## Normas
 
-- **El color nunca va solo.** Un acierto o un error se comunican también con icono y texto («¡Correcto!»,
-  «¡Incorrecto!»), para quien no distingue los colores.
+- **El color nunca va solo.** Un acierto o un error se comunican también con icono, texto y banda lateral.
 - **Contraste mínimo WCAG AA:** 4,5:1 para texto y 3:1 para controles y el foco.
-- **Fondos transparentes:** el texto va siempre sobre una superficie, nunca directamente sobre la ilustración.
+- **Nunca hay texto directamente sobre la ilustración:** va en un panel o con el tratamiento de título (contorno y sombra).
 
-## Contrastes actuales
+## Contrastes
 
 | Par | Contraste | Cumple |
 | --- | --- | --- |
-| Texto `#1d1d1f` sobre blanco | 16,8:1 | AA y AAA |
-| Texto `#1d1d1f` sobre papel | 16,5:1 | AA y AAA |
-| Blanco sobre naranja 700 (botón principal) | 5,2:1 | AA |
-| Blanco sobre naranja 800 (al pasar el ratón) | 7,3:1 | AA y AAA |
-| Verde 700 sobre blanco (acierto, botón de icono) | 5,0:1 | AA |
-| Rojo 700 sobre blanco (error) | 6,5:1 | AA |
-| Azul 700 sobre blanco (foco) | 6,7:1 | AA |
-| Blanco sobre neutro 950 (pantalla de girar) | 18,9:1 | AA y AAA |
-| Borde arena 300 sobre papel | 1,6:1 | Decorativo: el carnet se distingue por la sombra y el fondo |
+| Tinta sobre crema (bocadillos, tarjetas) | 14,8:1 | AA y AAA |
+| Crema sobre tinta (narración, HUD, títulos) | 14,8:1 | AA y AAA |
+| Tinta sobre papel (carnés) | 15,3:1 | AA y AAA |
+| Crema sobre verde azulado `#0B7676` (botón principal) | 5,1:1 | AA |
+| Crema sobre verde `#15803D` (botón SÍ) | 4,8:1 | AA |
+| Crema sobre rojo `#B91C1C` (botón NO) | 6,1:1 | AA |
+| Verde y rojo sobre crema (texto de acierto y error) | 4,8:1 y 6,1:1 | AA |
 
 ## Tokens
 

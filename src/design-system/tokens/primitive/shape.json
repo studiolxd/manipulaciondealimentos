@@ -26,14 +26,21 @@
     },
     "shadow": {
       "$type": "shadow",
-      "lg": {
+      "hard": {
         "$value": {
           "offsetX": "0px",
-          "offsetY": "16px",
-          "blur": "48px",
+          "offsetY": "8px",
+          "blur": "0px",
           "spread": "0px",
-          "color": "{primitive.color.black-alpha.25}"
-        }
+          "color": "{primitive.color.petrol-alpha.35}"
+        },
+        "$description": "Short, hard shadow: the interface looks stuck on top of the scene."
+      }
+    },
+    "blur": {
+      "$type": "dimension",
+      "16": {
+        "$value": "16px"
       }
     }
   }

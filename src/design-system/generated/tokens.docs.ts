@@ -61,6 +61,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-font-family",
+    "path": "button.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
+    "reference": "{font.family.display}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-font-size",
     "path": "button.font-size",
     "layer": "component",
@@ -81,13 +91,43 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-button-shadow",
-    "path": "button.shadow",
+    "name": "--slxd-button-outline-width",
+    "path": "button.outline-width",
     "layer": "component",
-    "family": "shape",
-    "type": "shadow",
-    "value": "0px 16px 48px 0px rgba(0, 0, 0, 0.25)",
-    "reference": "{shadow.raised}",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-outline-color",
+    "path": "button.outline-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-edge-height",
+    "path": "button.edge-height",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": "Lower edge that makes buttons look pressable; it sinks when pressed."
+  },
+  {
+    "name": "--slxd-button-shadow-color",
+    "path": "button.shadow-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.35)",
+    "reference": "{color.shadow.default}",
     "description": null
   },
   {
@@ -96,7 +136,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#c2410c",
+    "value": "#0b7676",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -106,8 +146,18 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#9a3412",
+    "value": "#095f5f",
     "reference": "{color.action.primary.background-hover}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-primary-edge",
+    "path": "button.primary.edge",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#064848",
+    "reference": "{color.action.primary.edge}",
     "description": null
   },
   {
@@ -116,28 +166,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fff8ec",
     "reference": "{color.action.primary.text}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-choice-background",
-    "path": "button.choice.background",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "rgba(255, 255, 255, 0.94)",
-    "reference": "{color.surface.translucent}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-choice-background-hover",
-    "path": "button.choice.background-hover",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#ffffff",
-    "reference": "{color.surface.default}",
     "description": null
   },
   {
@@ -171,33 +201,83 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-button-choice-positive-text",
-    "path": "button.choice.positive-text",
+    "name": "--slxd-button-choice-positive-background",
+    "path": "button.choice.positive.background",
     "layer": "component",
     "family": "color",
     "type": "color",
     "value": "#15803d",
-    "reference": "{color.text.positive}",
+    "reference": "{color.action.positive.background}",
     "description": null
   },
   {
-    "name": "--slxd-button-choice-negative-text",
-    "path": "button.choice.negative-text",
+    "name": "--slxd-button-choice-positive-background-hover",
+    "path": "button.choice.positive.background-hover",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#166534",
+    "reference": "{color.action.positive.background-hover}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-choice-positive-edge",
+    "path": "button.choice.positive.edge",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14532d",
+    "reference": "{color.action.positive.edge}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-choice-positive-text",
+    "path": "button.choice.positive.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{color.action.positive.text}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-choice-negative-background",
+    "path": "button.choice.negative.background",
     "layer": "component",
     "family": "color",
     "type": "color",
     "value": "#b91c1c",
-    "reference": "{color.text.negative}",
+    "reference": "{color.action.negative.background}",
     "description": null
   },
   {
-    "name": "--slxd-button-font-family",
-    "path": "button.font-family",
+    "name": "--slxd-button-choice-negative-background-hover",
+    "path": "button.choice.negative.background-hover",
     "layer": "component",
-    "family": "typography",
-    "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
-    "reference": "{font.family.display}",
+    "family": "color",
+    "type": "color",
+    "value": "#991b1b",
+    "reference": "{color.action.negative.background-hover}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-choice-negative-edge",
+    "path": "button.choice.negative.edge",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#7f1d1d",
+    "reference": "{color.action.negative.edge}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-choice-negative-text",
+    "path": "button.choice.negative.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{color.action.negative.text}",
     "description": null
   },
   {
@@ -226,8 +306,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#15803d",
-    "reference": "{color.action.secondary.background}",
+    "value": "#0b7676",
+    "reference": "{color.action.primary.background}",
     "description": null
   },
   {
@@ -236,8 +316,28 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#166534",
-    "reference": "{color.action.secondary.background-hover}",
+    "value": "#095f5f",
+    "reference": "{color.action.primary.background-hover}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-icon-edge",
+    "path": "button.icon.edge",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#064848",
+    "reference": "{color.action.primary.edge}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-icon-text",
+    "path": "button.icon.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{color.action.primary.text}",
     "description": null
   },
   {
@@ -316,7 +416,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -381,6 +481,56 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-heading-overlay-text",
+    "path": "heading.overlay.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{color.text.inverse}",
+    "description": null
+  },
+  {
+    "name": "--slxd-heading-overlay-stroke-color",
+    "path": "heading.overlay.stroke-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-heading-overlay-stroke-width",
+    "path": "heading.overlay.stroke-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "calc(calc(3px / var(--slxd-stage-scale)) * 3)",
+    "reference": "calc({border-width.outline} * 3)",
+    "description": "Three times the outline: the stroke is painted behind the fill, so about half of it shows."
+  },
+  {
+    "name": "--slxd-heading-overlay-shadow-offset",
+    "path": "heading.overlay.shadow-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-heading-overlay-shadow-color",
+    "path": "heading.overlay.shadow-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.35)",
+    "reference": "{color.shadow.default}",
+    "description": null
+  },
+  {
     "name": "--slxd-hud-height",
     "path": "hud.height",
     "layer": "component",
@@ -408,6 +558,46 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "32px",
     "reference": "{space.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hud-background",
+    "path": "hud.background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.72)",
+    "reference": "{color.surface.glass}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hud-blur",
+    "path": "hud.blur",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{blur.glass}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hud-border-width",
+    "path": "hud.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hud-border-color",
+    "path": "hud.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
     "description": null
   },
   {
@@ -476,7 +666,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -516,7 +706,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fff8ec",
     "reference": "{color.text.inverse}",
     "description": null
   },
@@ -526,7 +716,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#111111",
+    "value": "#14262e",
     "reference": "{color.surface.inverse}",
     "description": null
   },
@@ -536,7 +726,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fff8ec",
     "reference": "{color.text.inverse}",
     "description": null
   },
@@ -586,7 +776,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#1d1d1f",
+    "value": "#14262e",
     "reference": "{color.text.default}",
     "description": null
   },
@@ -618,16 +808,6 @@ export const tokenDocs = [
     "type": "number",
     "value": "1.4",
     "reference": "{font.line-height.normal}",
-    "description": null
-  },
-  {
-    "name": "--slxd-stage-focus-ring-color",
-    "path": "stage.focus-ring-color",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#1d4ed8",
-    "reference": "{color.focus.ring}",
     "description": null
   },
   {
@@ -688,6 +868,26 @@ export const tokenDocs = [
     "type": "cubicBezier",
     "value": "cubic-bezier(0.42, 0, 0.58, 1)",
     "reference": "{motion.easing.standard}",
+    "description": null
+  },
+  {
+    "name": "--slxd-stage-focus-ring-inner",
+    "path": "stage.focus-ring-inner",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{color.focus.inner}",
+    "description": null
+  },
+  {
+    "name": "--slxd-stage-focus-ring-outer",
+    "path": "stage.focus-ring-outer",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.focus.outer}",
     "description": null
   },
   {
@@ -786,7 +986,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -796,7 +996,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#1d1d1f",
+    "value": "#14262e",
     "reference": "{color.text.default}",
     "description": null
   },
@@ -816,7 +1016,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "shape",
     "type": "shadow",
-    "value": "0px 16px 48px 0px rgba(0, 0, 0, 0.25)",
+    "value": "0px 8px 0px 0px rgba(20, 38, 46, 0.35)",
     "reference": "{shadow.raised}",
     "description": null
   },
@@ -826,8 +1026,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "shape",
     "type": "dimension",
-    "value": "8px",
-    "reference": "{border-width.strong}",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
     "description": null
   },
   {
@@ -836,17 +1036,27 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "rgba(0, 0, 0, 0)",
-    "reference": "{color.border.none}",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
     "description": null
   },
   {
-    "name": "--slxd-surface-border-color-highlighted",
-    "path": "surface.border-color-highlighted",
+    "name": "--slxd-surface-highlight-width",
+    "path": "surface.highlight-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "calc(calc(3px / var(--slxd-stage-scale)) * 2)",
+    "reference": "calc({border-width.outline} * 2)",
+    "description": "Extra ring around a selected surface, twice the outline so selection does not rely on colour alone."
+  },
+  {
+    "name": "--slxd-surface-highlight-color",
+    "path": "surface.highlight-color",
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#c2410c",
+    "value": "#0b7676",
     "reference": "{color.border.selected}",
     "description": null
   },
@@ -856,18 +1066,28 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fff8ec",
     "reference": "{color.surface.default}",
     "description": null
   },
   {
-    "name": "--slxd-surface-translucent-background",
-    "path": "surface.translucent.background",
+    "name": "--slxd-surface-ink-background",
+    "path": "surface.ink.background",
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "rgba(255, 255, 255, 0.94)",
-    "reference": "{color.surface.translucent}",
+    "value": "rgba(20, 38, 46, 0.94)",
+    "reference": "{color.surface.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-surface-ink-text",
+    "path": "surface.ink.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{color.text.inverse}",
     "description": null
   },
   {
@@ -881,26 +1101,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-surface-paper-border-color",
-    "path": "surface.paper.border-color",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#d6cdb8",
-    "reference": "{color.border.subtle}",
-    "description": null
-  },
-  {
-    "name": "--slxd-surface-paper-border-width",
-    "path": "surface.paper.border-width",
-    "layer": "component",
-    "family": "shape",
-    "type": "dimension",
-    "value": "4px",
-    "reference": "{border-width.default}",
-    "description": null
-  },
-  {
     "name": "--slxd-surface-paper-radius",
     "path": "surface.paper.radius",
     "layer": "component",
@@ -908,6 +1108,36 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "32px",
     "reference": "{radius.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-surface-accent-width",
+    "path": "surface.accent.width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{border-width.band}",
+    "description": null
+  },
+  {
+    "name": "--slxd-surface-accent-positive",
+    "path": "surface.accent.positive",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{color.feedback.positive}",
+    "description": null
+  },
+  {
+    "name": "--slxd-surface-accent-negative",
+    "path": "surface.accent.negative",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#b91c1c",
+    "reference": "{color.feedback.negative}",
     "description": null
   },
   {
@@ -1071,24 +1301,54 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-neutral-900",
-    "path": "primitive.color.neutral.900",
+    "name": "--slxd-primitive-color-petrol-900",
+    "path": "primitive.color.petrol.900",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "#1d1d1f",
+    "value": "#14262e",
+    "reference": null,
+    "description": "Ink: outlines, text and dark interface panels."
+  },
+  {
+    "name": "--slxd-primitive-color-petrol-alpha-35",
+    "path": "primitive.color.petrol-alpha.35",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.35)",
     "reference": null,
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-neutral-950",
-    "path": "primitive.color.neutral.950",
+    "name": "--slxd-primitive-color-petrol-alpha-72",
+    "path": "primitive.color.petrol-alpha.72",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "#111111",
+    "value": "rgba(20, 38, 46, 0.72)",
     "reference": null,
     "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-petrol-alpha-94",
+    "path": "primitive.color.petrol-alpha.94",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.94)",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-cream-50",
+    "path": "primitive.color.cream.50",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": null,
+    "description": "Light interface panels and text on ink."
   },
   {
     "name": "--slxd-primitive-color-sand-50",
@@ -1111,42 +1371,32 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-orange-700",
-    "path": "primitive.color.orange.700",
+    "name": "--slxd-primitive-color-teal-700",
+    "path": "primitive.color.teal.700",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "#c2410c",
+    "value": "#0b7676",
     "reference": null,
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-orange-800",
-    "path": "primitive.color.orange.800",
+    "name": "--slxd-primitive-color-teal-800",
+    "path": "primitive.color.teal.800",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "#9a3412",
+    "value": "#095f5f",
     "reference": null,
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-blue-700",
-    "path": "primitive.color.blue.700",
+    "name": "--slxd-primitive-color-teal-900",
+    "path": "primitive.color.teal.900",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "#1d4ed8",
-    "reference": null,
-    "description": null
-  },
-  {
-    "name": "--slxd-primitive-color-red-700",
-    "path": "primitive.color.red.700",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "#b91c1c",
+    "value": "#064848",
     "reference": null,
     "description": null
   },
@@ -1171,22 +1421,42 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-white-alpha-94",
-    "path": "primitive.color.white-alpha.94",
+    "name": "--slxd-primitive-color-green-900",
+    "path": "primitive.color.green.900",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "rgba(255, 255, 255, 0.94)",
+    "value": "#14532d",
     "reference": null,
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-black-alpha-25",
-    "path": "primitive.color.black-alpha.25",
+    "name": "--slxd-primitive-color-red-700",
+    "path": "primitive.color.red.700",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "rgba(0, 0, 0, 0.25)",
+    "value": "#b91c1c",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-red-800",
+    "path": "primitive.color.red.800",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#991b1b",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-red-900",
+    "path": "primitive.color.red.900",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#7f1d1d",
     "reference": null,
     "description": null
   },
@@ -1391,12 +1661,22 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-shadow-lg",
-    "path": "primitive.shadow.lg",
+    "name": "--slxd-primitive-shadow-hard",
+    "path": "primitive.shadow.hard",
     "layer": "primitive",
     "family": "shape",
     "type": "shadow",
-    "value": "0px 16px 48px 0px rgba(0, 0, 0, 0.25)",
+    "value": "0px 8px 0px 0px rgba(20, 38, 46, 0.35)",
+    "reference": null,
+    "description": "Short, hard shadow: the interface looks stuck on top of the scene."
+  },
+  {
+    "name": "--slxd-primitive-blur-16",
+    "path": "primitive.blur.16",
+    "layer": "primitive",
+    "family": "shape",
+    "type": "dimension",
+    "value": "16px",
     "reference": null,
     "description": null
   },
@@ -1621,14 +1901,24 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-font-family-fredoka",
-    "path": "primitive.font.family.fredoka",
+    "name": "--slxd-primitive-screen-outline",
+    "path": "primitive.screen.outline",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "3px",
+    "reference": null,
+    "description": "Ink outline of the interface, always 3 real pixels."
+  },
+  {
+    "name": "--slxd-primitive-font-family-rubik",
+    "path": "primitive.font.family.rubik",
     "layer": "primitive",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
     "reference": null,
-    "description": "Rounded, friendly sans. Variable weight 300–700."
+    "description": "Sans with slightly rounded corners, solid and compact: game interface feel. Variable weight 300–900."
   },
   {
     "name": "--slxd-primitive-font-family-atkinson-hyperlegible-next",
@@ -1826,8 +2116,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#1d1d1f",
-    "reference": "{primitive.color.neutral.900}",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
     "description": null
   },
   {
@@ -1836,9 +2126,9 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#ffffff",
-    "reference": "{primitive.color.white}",
-    "description": null
+    "value": "#fff8ec",
+    "reference": "{primitive.color.cream.50}",
+    "description": "Text on ink panels and over the scene."
   },
   {
     "name": "--slxd-color-text-positive",
@@ -1866,19 +2156,9 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#ffffff",
-    "reference": "{primitive.color.white}",
-    "description": "Opaque panels: bubbles, dialogs, feedback."
-  },
-  {
-    "name": "--slxd-color-surface-translucent",
-    "path": "color.surface.translucent",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "rgba(255, 255, 255, 0.94)",
-    "reference": "{primitive.color.white-alpha.94}",
-    "description": "Panels laid over a scene background."
+    "value": "#fff8ec",
+    "reference": "{primitive.color.cream.50}",
+    "description": "Light panels: bubbles, dialogs, feedback, options."
   },
   {
     "name": "--slxd-color-surface-paper",
@@ -1891,13 +2171,33 @@ export const tokenDocs = [
     "description": "Printed-looking objects such as ID cards."
   },
   {
+    "name": "--slxd-color-surface-ink",
+    "path": "color.surface.ink",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.94)",
+    "reference": "{primitive.color.petrol-alpha.94}",
+    "description": "Dark panels: the narrator."
+  },
+  {
+    "name": "--slxd-color-surface-glass",
+    "path": "color.surface.glass",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.72)",
+    "reference": "{primitive.color.petrol-alpha.72}",
+    "description": "HUD band over the scene, with background blur."
+  },
+  {
     "name": "--slxd-color-surface-inverse",
     "path": "color.surface.inverse",
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#111111",
-    "reference": "{primitive.color.neutral.950}",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
     "description": "Full-screen system messages."
   },
   {
@@ -1931,13 +2231,23 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-color-border-ink",
+    "path": "color.border.ink",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
+    "description": "Outline that separates the interface from the scene."
+  },
+  {
     "name": "--slxd-color-border-selected",
     "path": "color.border.selected",
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#c2410c",
-    "reference": "{primitive.color.orange.700}",
+    "value": "#0b7676",
+    "reference": "{primitive.color.teal.700}",
     "description": null
   },
   {
@@ -1946,9 +2256,9 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#c2410c",
-    "reference": "{primitive.color.orange.700}",
-    "description": null
+    "value": "#0b7676",
+    "reference": "{primitive.color.teal.700}",
+    "description": "Cool accent: it never blends with the warm scenes."
   },
   {
     "name": "--slxd-color-action-primary-background-hover",
@@ -1956,9 +2266,19 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#9a3412",
-    "reference": "{primitive.color.orange.800}",
+    "value": "#095f5f",
+    "reference": "{primitive.color.teal.800}",
     "description": null
+  },
+  {
+    "name": "--slxd-color-action-primary-edge",
+    "path": "color.action.primary.edge",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#064848",
+    "reference": "{primitive.color.teal.900}",
+    "description": "Lower edge that makes the button look pressable."
   },
   {
     "name": "--slxd-color-action-primary-text",
@@ -1966,28 +2286,88 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#ffffff",
-    "reference": "{primitive.color.white}",
+    "value": "#fff8ec",
+    "reference": "{primitive.color.cream.50}",
     "description": null
   },
   {
-    "name": "--slxd-color-action-secondary-background",
-    "path": "color.action.secondary.background",
+    "name": "--slxd-color-action-positive-background",
+    "path": "color.action.positive.background",
     "layer": "semantic",
     "family": "color",
     "type": "color",
     "value": "#15803d",
     "reference": "{primitive.color.green.700}",
-    "description": "Secondary actions, e.g. icon buttons."
+    "description": null
   },
   {
-    "name": "--slxd-color-action-secondary-background-hover",
-    "path": "color.action.secondary.background-hover",
+    "name": "--slxd-color-action-positive-background-hover",
+    "path": "color.action.positive.background-hover",
     "layer": "semantic",
     "family": "color",
     "type": "color",
     "value": "#166534",
     "reference": "{primitive.color.green.800}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-positive-edge",
+    "path": "color.action.positive.edge",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#14532d",
+    "reference": "{primitive.color.green.900}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-positive-text",
+    "path": "color.action.positive.text",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{primitive.color.cream.50}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-negative-background",
+    "path": "color.action.negative.background",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#b91c1c",
+    "reference": "{primitive.color.red.700}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-negative-background-hover",
+    "path": "color.action.negative.background-hover",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#991b1b",
+    "reference": "{primitive.color.red.800}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-negative-edge",
+    "path": "color.action.negative.edge",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#7f1d1d",
+    "reference": "{primitive.color.red.900}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-negative-text",
+    "path": "color.action.negative.text",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#fff8ec",
+    "reference": "{primitive.color.cream.50}",
     "description": null
   },
   {
@@ -2011,14 +2391,24 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-color-focus-ring",
-    "path": "color.focus.ring",
+    "name": "--slxd-color-focus-inner",
+    "path": "color.focus.inner",
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#1d4ed8",
-    "reference": "{primitive.color.blue.700}",
-    "description": null
+    "value": "#fff8ec",
+    "reference": "{primitive.color.cream.50}",
+    "description": "Inner ring of the keyboard focus."
+  },
+  {
+    "name": "--slxd-color-focus-outer",
+    "path": "color.focus.outer",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
+    "description": "Outer ring of the keyboard focus."
   },
   {
     "name": "--slxd-color-shadow-default",
@@ -2026,8 +2416,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "rgba(0, 0, 0, 0.25)",
-    "reference": "{primitive.color.black-alpha.25}",
+    "value": "rgba(20, 38, 46, 0.35)",
+    "reference": "{primitive.color.petrol-alpha.35}",
     "description": null
   },
   {
@@ -2241,6 +2631,26 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-border-width-outline",
+    "path": "border-width.outline",
+    "layer": "semantic",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "calc({primitive.screen.outline} / var(--slxd-stage-scale))",
+    "description": "Ink outline: 3 real pixels at any stage scale."
+  },
+  {
+    "name": "--slxd-border-width-band",
+    "path": "border-width.band",
+    "layer": "semantic",
+    "family": "shape",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{primitive.size.16}",
+    "description": "Coloured side band (e.g. feedback)."
+  },
+  {
     "name": "--slxd-focus-ring-width",
     "path": "focus.ring-width",
     "layer": "semantic",
@@ -2256,9 +2666,19 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "shape",
     "type": "shadow",
-    "value": "0px 16px 48px 0px rgba(0, 0, 0, 0.25)",
-    "reference": "{primitive.shadow.lg}",
+    "value": "0px 8px 0px 0px rgba(20, 38, 46, 0.35)",
+    "reference": "{primitive.shadow.hard}",
     "description": null
+  },
+  {
+    "name": "--slxd-blur-glass",
+    "path": "blur.glass",
+    "layer": "semantic",
+    "family": "shape",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{primitive.blur.16}",
+    "description": "Background blur behind glass panels."
   },
   {
     "name": "--slxd-space-none",
@@ -2446,8 +2866,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
-    "reference": "{primitive.font.family.fredoka}",
+    "value": "'Rubik Variable', Rubik, system-ui, sans-serif",
+    "reference": "{primitive.font.family.rubik}",
     "description": "Titles, headings and controls (buttons, labels, stamps)."
   },
   {
@@ -2588,7 +3008,7 @@ export const tokenDocs = [
     "type": "fontWeight",
     "value": "700",
     "reference": "{primitive.font.weight.700}",
-    "description": "Display family: titles and headings (its maximum weight)."
+    "description": "Display family: titles and headings."
   },
   {
     "name": "--slxd-font-line-height-tight",

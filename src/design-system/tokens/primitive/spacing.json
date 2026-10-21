@@ -73,6 +73,10 @@
       },
       "focus-ring-min": {
         "$value": "3px"
+      },
+      "outline": {
+        "$value": "3px",
+        "$description": "Ink outline of the interface, always 3 real pixels."
       }
     }
   }

@@ -9,18 +9,12 @@
   width: 100%;
   height: var(--slxd-hud-height);
   padding-inline: var(--slxd-hud-padding-inline);
+  border-bottom: var(--slxd-hud-border-width) solid var(--slxd-hud-border-color);
+  background: var(--slxd-hud-background);
+  backdrop-filter: blur(var(--slxd-hud-blur));
 }
 
-.bar {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-/* Positioned after the bar in the markup, so they paint over it. */
-.start,
-.end {
-  position: relative;
+.slot {
   display: flex;
   gap: var(--slxd-hud-gap);
   align-items: center;

@@ -3,7 +3,7 @@
     "family": {
       "$type": "fontFamily",
       "display": {
-        "$value": "{primitive.font.family.fredoka}",
+        "$value": "{primitive.font.family.rubik}",
         "$description": "Titles, headings and controls (buttons, labels, stamps)."
       },
       "body": {
@@ -58,7 +58,7 @@
       },
       "display-strong": {
         "$value": "{primitive.font.weight.700}",
-        "$description": "Display family: titles and headings (its maximum weight)."
+        "$description": "Display family: titles and headings."
       }
     },
     "line-height": {

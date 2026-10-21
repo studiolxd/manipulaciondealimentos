@@ -25,8 +25,11 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Opaque: Story = {}
-export const Translucent: Story = { args: { tone: 'translucent' } }
+/** The narrator's dark panel. */
+export const Ink: Story = { args: { tone: 'ink' } }
 export const Paper: Story = { args: { tone: 'paper' } }
-export const Highlighted: Story = { args: { tone: 'translucent', highlighted: true } }
+export const Highlighted: Story = { args: { highlighted: true } }
+export const AccentPositive: Story = { args: { accent: 'positive' } }
+export const AccentNegative: Story = { args: { accent: 'negative' } }
 /** Speech tail, used by SpeechBubble. */
 export const WithTail: Story = { args: { tail: 'left' } }

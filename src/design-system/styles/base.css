@@ -30,13 +30,16 @@ button {
 }
 
 :focus-visible {
-  outline: var(--slxd-stage-focus-ring-width) solid var(--slxd-stage-focus-ring-color);
+  /* Double ring, light inside and ink outside: visible over any background. */
+  outline: var(--slxd-stage-focus-ring-width) solid var(--slxd-stage-focus-ring-outer);
   outline-offset: var(--slxd-stage-focus-ring-width);
+  box-shadow: 0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner);
 }
 
 /* Headings and dialogs receive focus programmatically. */
 [tabindex='-1']:focus {
   outline: none;
+  box-shadow: none;
 }
 
 /* View Transitions: only elements with a view-transition-name animate; the

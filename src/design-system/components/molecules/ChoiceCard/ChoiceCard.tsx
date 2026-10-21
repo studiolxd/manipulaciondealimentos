@@ -23,7 +23,7 @@ export function ChoiceCard({ name, value, label, image, imageWidth, checked, onC
   const id = useId()
   return (
     <label htmlFor={id} className={styles.card}>
-      <Surface tone="translucent" padding="md" highlighted={checked} className={styles.surface}>
+      <Surface tone="opaque" padding="md" highlighted={checked} className={styles.surface}>
         <Radio id={id} name={name} value={value} checked={checked} onChange={onChange} />
         {image && <Image source={image} alt="" width={imageWidth} />}
         <Label size={image ? 'md' : 'lg'}>{label}</Label>

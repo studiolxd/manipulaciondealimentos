@@ -1,58 +1,76 @@
+/* Solid button with an ink outline and a darker lower edge that sinks when
+   pressed. Each variant sets its colours through the local --button-* props. */
 .button {
+  --button-background: var(--slxd-button-primary-background);
+  --button-background-hover: var(--slxd-button-primary-background-hover);
+  --button-edge: var(--slxd-button-primary-edge);
+  --button-text: var(--slxd-button-primary-text);
+  --button-shadow:
+    0 var(--slxd-button-edge-height) 0 var(--button-edge),
+    0 calc(var(--slxd-button-edge-height) * 2) 0 var(--slxd-button-shadow-color);
+
   min-height: var(--slxd-button-min-height);
   padding-block: var(--slxd-button-padding-block);
   padding-inline: var(--slxd-button-padding-inline);
-  border: 0;
+  border: var(--slxd-button-outline-width) solid var(--slxd-button-outline-color);
   border-radius: var(--slxd-button-radius);
+  background: var(--button-background);
+  color: var(--button-text);
   font-family: var(--slxd-button-font-family);
   font-size: var(--slxd-button-font-size);
   font-weight: var(--slxd-button-font-weight);
   white-space: nowrap;
-  box-shadow: var(--slxd-button-shadow);
+  box-shadow: var(--button-shadow);
   cursor: pointer;
+}
+
+.button:hover {
+  background: var(--button-background-hover);
+}
+
+.button:active {
+  translate: 0 var(--slxd-button-edge-height);
+  box-shadow: none;
+}
+
+.button:focus-visible {
+  --button-shadow:
+    0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner),
+    0 var(--slxd-button-edge-height) 0 var(--button-edge);
 }
 
 .button[data-concealed] {
   visibility: hidden;
 }
 
-.button[data-variant='primary'] {
-  background: var(--slxd-button-primary-background);
-  color: var(--slxd-button-primary-text);
-}
-
-.button[data-variant='primary']:hover {
-  background: var(--slxd-button-primary-background-hover);
-}
-
 .button[data-variant^='choice'] {
   padding-inline: var(--slxd-button-choice-padding-inline);
-  background: var(--slxd-button-choice-background);
   font-size: var(--slxd-button-choice-font-size);
   font-weight: var(--slxd-button-choice-font-weight);
 }
 
-.button[data-variant^='choice']:hover {
-  background: var(--slxd-button-choice-background-hover);
-}
-
 .button[data-variant='choice-positive'] {
-  color: var(--slxd-button-choice-positive-text);
+  --button-background: var(--slxd-button-choice-positive-background);
+  --button-background-hover: var(--slxd-button-choice-positive-background-hover);
+  --button-edge: var(--slxd-button-choice-positive-edge);
+  --button-text: var(--slxd-button-choice-positive-text);
 }
 
 .button[data-variant='choice-negative'] {
-  color: var(--slxd-button-choice-negative-text);
+  --button-background: var(--slxd-button-choice-negative-background);
+  --button-background-hover: var(--slxd-button-choice-negative-background-hover);
+  --button-edge: var(--slxd-button-choice-negative-edge);
+  --button-text: var(--slxd-button-choice-negative-text);
 }
 
 .button[data-variant='icon'] {
+  --button-background: var(--slxd-button-icon-background);
+  --button-background-hover: var(--slxd-button-icon-background-hover);
+  --button-edge: var(--slxd-button-icon-edge);
+  --button-text: var(--slxd-button-icon-text);
+
   width: var(--slxd-button-icon-size);
   min-height: 0;
   height: var(--slxd-button-icon-size);
   padding: var(--slxd-button-icon-padding);
-  background: var(--slxd-button-icon-background);
-  box-shadow: none;
-}
-
-.button[data-variant='icon']:hover {
-  background: var(--slxd-button-icon-background-hover);
 }

@@ -16,6 +16,10 @@
       "$type": "dimension",
       "$value": "{radius.full}"
     },
+    "font-family": {
+      "$type": "fontFamily",
+      "$value": "{font.family.display}"
+    },
     "font-size": {
       "$type": "dimension",
       "$value": "{font.size.body}"
@@ -24,32 +28,43 @@
       "$type": "fontWeight",
       "$value": "{font.weight.display}"
     },
-    "shadow": {
-      "$type": "shadow",
-      "$value": "{shadow.raised}"
+    "outline-width": {
+      "$type": "dimension",
+      "$value": "{border-width.outline}"
+    },
+    "outline-color": {
+      "$type": "color",
+      "$value": "{color.border.ink}"
+    },
+    "edge-height": {
+      "$type": "dimension",
+      "$value": "{space.2xs}",
+      "$description": "Lower edge that makes buttons look pressable; it sinks when pressed."
+    },
+    "shadow-color": {
+      "$type": "color",
+      "$value": "{color.shadow.default}"
     },
     "primary": {
-      "$type": "color",
       "background": {
+        "$type": "color",
         "$value": "{color.action.primary.background}"
       },
       "background-hover": {
+        "$type": "color",
         "$value": "{color.action.primary.background-hover}"
       },
+      "edge": {
+        "$type": "color",
+        "$value": "{color.action.primary.edge}"
+      },
       "text": {
+        "$type": "color",
         "$value": "{color.action.primary.text}"
       }
     },
     "choice": {
-      "$description": "Large secondary answers placed over a scene, e.g. YES / NO.",
-      "background": {
-        "$type": "color",
-        "$value": "{color.surface.translucent}"
-      },
-      "background-hover": {
-        "$type": "color",
-        "$value": "{color.surface.default}"
-      },
+      "$description": "Large YES / NO answers placed over a scene.",
       "padding-inline": {
         "$type": "dimension",
         "$value": "{space.lg}"
@@ -62,18 +77,42 @@
         "$type": "fontWeight",
         "$value": "{font.weight.display-strong}"
       },
-      "positive-text": {
-        "$type": "color",
-        "$value": "{color.text.positive}"
+      "positive": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.action.positive.background}"
+        },
+        "background-hover": {
+          "$type": "color",
+          "$value": "{color.action.positive.background-hover}"
+        },
+        "edge": {
+          "$type": "color",
+          "$value": "{color.action.positive.edge}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.action.positive.text}"
+        }
       },
-      "negative-text": {
-        "$type": "color",
-        "$value": "{color.text.negative}"
+      "negative": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.action.negative.background}"
+        },
+        "background-hover": {
+          "$type": "color",
+          "$value": "{color.action.negative.background-hover}"
+        },
+        "edge": {
+          "$type": "color",
+          "$value": "{color.action.negative.edge}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.action.negative.text}"
+        }
       }
-    },
-    "font-family": {
-      "$type": "fontFamily",
-      "$value": "{font.family.display}"
     },
     "icon": {
       "$description": "Round icon-only button (IconButton).",
@@ -87,11 +126,19 @@
       },
       "background": {
         "$type": "color",
-        "$value": "{color.action.secondary.background}"
+        "$value": "{color.action.primary.background}"
       },
       "background-hover": {
         "$type": "color",
-        "$value": "{color.action.secondary.background-hover}"
+        "$value": "{color.action.primary.background-hover}"
+      },
+      "edge": {
+        "$type": "color",
+        "$value": "{color.action.primary.edge}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.action.primary.text}"
       }
     }
   }
