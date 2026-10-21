@@ -6,7 +6,7 @@ import { TokenTable } from '../TokenTable'
 # Color
 
 La interfaz usa colores que **no existen en el mundo del juego**: las escenas son cálidas (madera, piedra, luz
-dorada) y la interfaz es tinta, crema y un menta frío. Así nunca se confunde con el fondo. Ver
+dorada) y la interfaz es tinta, blanco y un menta frío. Así nunca se confunde con el fondo. Ver
 [Línea gráfica](?path=/docs/fundamentos-línea-gráfica--docs).
 
 Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, superficie, acción, feedback…).
@@ -16,26 +16,25 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 | Familia | Tonos | Para qué |
 | --- | --- | --- |
 | Tinta (petróleo) | `900` y transparencias 94 %, 72 % y 35 % | Contornos, texto, narración, HUD de cristal y sombras |
-| Crema | `50` | Texto sobre tinta, títulos sobre la escena y foco |
 | Arena | `50`, `300` | Papel de los carnés y bordes de la documentación |
 | Menta claro | `300` | Botón principal y botones de icono |
 | Menta | `600`, `800` | Elemento seleccionado e iconos de acento, legibles sobre blanco |
 | Verde | `700`, `800`, `900` | Acierto y botón SÍ |
 | Rojo | `700`, `800`, `900` | Error y botón NO |
-| Blanco, negro y transparente | — | Paneles claros (bocadillos, diálogos, feedback, opciones), pantalla de girar el dispositivo, botón secundario, fondo del escenario y del telón, bordes invisibles |
+| Blanco, negro y transparente | — | Paneles claros (bocadillos, diálogos, feedback, opciones), texto sobre tinta, foco, pantalla de girar el dispositivo, botón secundario, fondo del escenario y del telón, bordes invisibles |
 
 ## Roles
 
 | Rol | Uso |
 | --- | --- |
-| `color.text.*` | Texto en tinta, inverso (crema), acento (menta oscuro), positivo y negativo |
+| `color.text.*` | Texto en tinta, inverso (blanco), acento (menta oscuro), positivo y negativo |
 | `color.surface.*` | Panel claro, papel, panel de tinta (narración), cristal (HUD), pantalla de sistema (blanco, como la de girar el dispositivo), tinta de referencia y fondo del escenario |
 | `color.border.*` | Contorno de tinta, sin borde, borde suave y elemento seleccionado |
 | `color.action.primary.*` | Botón principal y botones de icono: menta con texto y sombra de tinta |
 | `color.action.secondary.*` | Opciones que actúan al pulsarlas: blanco con texto y sombra de tinta |
 | `color.action.positive.*` / `negative.*` | Botones SÍ y NO |
 | `color.feedback.*` | Acierto (verde) y error (rojo) |
-| `color.focus.*` | Anillo de foco doble: crema por dentro, tinta por fuera |
+| `color.focus.*` | Anillo de foco doble: blanco por dentro, tinta por fuera |
 
 ## Normas
 
@@ -49,7 +48,7 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 | Par | Contraste | Cumple |
 | --- | --- | --- |
 | Tinta sobre blanco (bocadillos, tarjetas, paneles) | 15,8:1 | AA y AAA |
-| Crema sobre tinta (narración, HUD, títulos) | 14,8:1 | AA y AAA |
+| Blanco sobre tinta (narración, HUD, títulos) | 15,8:1 | AA y AAA |
 | Tinta sobre papel (carnés) | 15,3:1 | AA y AAA |
 | Tinta sobre menta `#A6F0D3` (botón principal) | 11,8:1 | AA y AAA |
 | Tinta sobre blanco (pantalla de girar) | 15,8:1 | AA y AAA |

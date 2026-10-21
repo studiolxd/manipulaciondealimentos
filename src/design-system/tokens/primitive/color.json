@@ -32,12 +32,6 @@
           "$value": "rgba(20, 38, 46, 0.35)"
         }
       },
-      "cream": {
-        "50": {
-          "$value": "#fff8ec",
-          "$description": "Light interface panels and text on ink."
-        }
-      },
       "sand": {
         "50": {
           "$value": "#fffdf7"

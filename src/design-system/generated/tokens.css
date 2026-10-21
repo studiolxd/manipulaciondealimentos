@@ -10,7 +10,6 @@
   --slxd-primitive-color-petrol-alpha-35: rgba(20, 38, 46, 0.35);
   --slxd-primitive-color-petrol-alpha-72: rgba(20, 38, 46, 0.72);
   --slxd-primitive-color-petrol-alpha-94: rgba(20, 38, 46, 0.94);
-  --slxd-primitive-color-cream-50: #fff8ec; /** Light interface panels and text on ink. */
   --slxd-primitive-color-sand-50: #fffdf7;
   --slxd-primitive-color-sand-300: #d6cdb8;
   --slxd-primitive-color-mint-300: #a6f0d3; /** Mint: buttons and accent screens. */
@@ -91,7 +90,7 @@
   --slxd-primitive-font-letter-spacing-40: 0.04em;
   --slxd-primitive-shadow-hard: 0px 4px 0px 0px var(--slxd-primitive-color-petrol-900); /** Short, hard shadow in the ink of the outlines: the interface looks stuck on top of the scene. */
   --slxd-color-text-default: var(--slxd-primitive-color-petrol-900);
-  --slxd-color-text-inverse: var(--slxd-primitive-color-cream-50); /** Text on ink panels and over the scene. */
+  --slxd-color-text-inverse: var(--slxd-primitive-color-white); /** Text on ink panels and over the scene. */
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
   --slxd-color-text-accent: var(--slxd-primitive-color-mint-800); /** Dark mint, legible on light surfaces (e.g. accent icons). */
@@ -118,7 +117,7 @@
   --slxd-color-action-negative-text: var(--slxd-primitive-color-white);
   --slxd-color-feedback-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-feedback-negative: var(--slxd-primitive-color-red-700);
-  --slxd-color-focus-inner: var(--slxd-primitive-color-cream-50); /** Inner ring of the keyboard focus. */
+  --slxd-color-focus-inner: var(--slxd-primitive-color-white); /** Inner ring of the keyboard focus. */
   --slxd-color-focus-outer: var(--slxd-primitive-color-petrol-900); /** Outer ring of the keyboard focus. */
   --slxd-color-shadow-default: var(--slxd-primitive-color-petrol-alpha-35);
   --slxd-layer-base: var(--slxd-primitive-z-index-0);
@@ -257,7 +256,7 @@
   --slxd-icon-size-lg: var(--slxd-size-icon-lg);
   --slxd-icon-stroke-width: var(--slxd-stroke-width-icon);
   --slxd-icon-color-default: var(--slxd-color-text-default); /** Ink, on light surfaces. */
-  --slxd-icon-color-inverse: var(--slxd-color-text-inverse); /** Cream, on ink panels and dark screens. */
+  --slxd-icon-color-inverse: var(--slxd-color-text-inverse); /** White, on ink panels and dark screens. */
   --slxd-icon-color-accent: var(--slxd-color-text-accent);
   --slxd-icon-color-positive: var(--slxd-color-feedback-positive);
   --slxd-icon-color-negative: var(--slxd-color-feedback-negative);

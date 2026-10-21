@@ -6,7 +6,7 @@
         "$value": "{primitive.color.petrol.900}"
       },
       "inverse": {
-        "$value": "{primitive.color.cream.50}",
+        "$value": "{primitive.color.white}",
         "$description": "Text on ink panels and over the scene."
       },
       "positive": {
@@ -120,7 +120,7 @@
     },
     "focus": {
       "inner": {
-        "$value": "{primitive.color.cream.50}",
+        "$value": "{primitive.color.white}",
         "$description": "Inner ring of the keyboard focus."
       },
       "outer": {

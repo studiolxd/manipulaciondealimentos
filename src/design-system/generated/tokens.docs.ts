@@ -516,7 +516,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.text.inverse}",
     "description": null
   },
@@ -686,9 +686,9 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.text.inverse}",
-    "description": "Cream, on ink panels and dark screens."
+    "description": "White, on ink panels and dark screens."
   },
   {
     "name": "--slxd-icon-color-accent",
@@ -826,7 +826,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.text.inverse}",
     "description": null
   },
@@ -1086,7 +1086,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.focus.inner}",
     "description": null
   },
@@ -1296,7 +1296,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
+    "value": "#ffffff",
     "reference": "{color.text.inverse}",
     "description": null
   },
@@ -1709,16 +1709,6 @@ export const tokenDocs = [
     "value": "rgba(20, 38, 46, 0.94)",
     "reference": null,
     "description": null
-  },
-  {
-    "name": "--slxd-primitive-color-cream-50",
-    "path": "primitive.color.cream.50",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "#fff8ec",
-    "reference": null,
-    "description": "Light interface panels and text on ink."
   },
   {
     "name": "--slxd-primitive-color-sand-50",
@@ -2526,8 +2516,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
-    "reference": "{primitive.color.cream.50}",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
     "description": "Text on ink panels and over the scene."
   },
   {
@@ -2796,8 +2786,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#fff8ec",
-    "reference": "{primitive.color.cream.50}",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
     "description": "Inner ring of the keyboard focus."
   },
   {

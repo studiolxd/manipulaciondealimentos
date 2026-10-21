@@ -26,7 +26,7 @@
       },
       "inverse": {
         "$value": "{color.text.inverse}",
-        "$description": "Cream, on ink panels and dark screens."
+        "$description": "White, on ink panels and dark screens."
       },
       "accent": {
         "$value": "{color.text.accent}"
