@@ -8,7 +8,7 @@ interface LabelProps {
   children: ReactNode
 }
 
-// Short text in the display family (Roboto): counters, option names, labels.
+// Short text in the display family (Fredoka): counters, option names, labels.
 export function Label({ size = 'md', tone = 'default', children }: LabelProps) {
   return (
     <span className={styles.label} data-size={size} data-tone={tone}>

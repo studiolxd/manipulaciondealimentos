@@ -66,7 +66,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -466,7 +466,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -796,7 +796,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -1206,7 +1206,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -2301,14 +2301,14 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-font-family-roboto",
-    "path": "primitive.font.family.roboto",
+    "name": "--slxd-primitive-font-family-fredoka",
+    "path": "primitive.font.family.fredoka",
     "layer": "primitive",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
     "reference": null,
-    "description": "Neo-grotesque sans, clear and neutral. Variable weight 100–900."
+    "description": "Rounded sans, friendly and solid: game interface feel. Variable weight 300–700."
   },
   {
     "name": "--slxd-primitive-font-family-atkinson-hyperlegible-next",
@@ -3376,8 +3376,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Roboto Variable', Roboto, system-ui, sans-serif",
-    "reference": "{primitive.font.family.roboto}",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{primitive.font.family.fredoka}",
     "description": "Titles, headings and controls (buttons, labels, stamps)."
   },
   {

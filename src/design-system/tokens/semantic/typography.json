@@ -3,7 +3,7 @@
     "family": {
       "$type": "fontFamily",
       "display": {
-        "$value": "{primitive.font.family.roboto}",
+        "$value": "{primitive.font.family.fredoka}",
         "$description": "Titles, headings and controls (buttons, labels, stamps)."
       },
       "body": {

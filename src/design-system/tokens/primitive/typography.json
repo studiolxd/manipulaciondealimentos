@@ -4,14 +4,14 @@
       "family": {
         "$type": "fontFamily",
         "$description": "Google Fonts, self-hosted with Fontsource (bundled in the SCORM package, no request to Google).",
-        "roboto": {
+        "fredoka": {
           "$value": [
-            "Roboto Variable",
-            "Roboto",
+            "Fredoka Variable",
+            "Fredoka",
             "system-ui",
             "sans-serif"
           ],
-          "$description": "Neo-grotesque sans, clear and neutral. Variable weight 100–900."
+          "$description": "Rounded sans, friendly and solid: game interface feel. Variable weight 300–700."
         },
         "atkinson-hyperlegible-next": {
           "$value": [
