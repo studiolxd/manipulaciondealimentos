@@ -41,6 +41,9 @@
     "$type": "shadow",
     "raised": {
       "$value": "{primitive.shadow.hard}"
+    },
+    "glass": {
+      "$value": "{primitive.shadow.soft}"
     }
   },
   "blur": {

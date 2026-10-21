@@ -16,8 +16,12 @@
         "$value": "{primitive.color.red.700}"
       },
       "on-accent": {
-        "$value": "{primitive.color.white}",
-        "$description": "Text on the action colour: buttons and accent screens."
+        "$value": "{primitive.color.petrol.900}",
+        "$description": "Text on the mint action colour: buttons and accent screens."
+      },
+      "accent": {
+        "$value": "{primitive.color.mint.800}",
+        "$description": "Dark mint, legible on light surfaces (e.g. accent icons)."
       }
     },
     "surface": {
@@ -42,7 +46,7 @@
         "$description": "Dark reference surface, e.g. in the documentation."
       },
       "accent": {
-        "$value": "{primitive.color.teal.700}",
+        "$value": "{primitive.color.mint.300}",
         "$description": "Full-screen system messages, in the colour of the buttons."
       },
       "backdrop": {
@@ -71,20 +75,20 @@
         "$description": "Outline that separates the interface from the scene."
       },
       "selected": {
-        "$value": "{primitive.color.teal.700}"
+        "$value": "{primitive.color.mint.600}"
       }
     },
     "action": {
       "secondary": {
         "background": {
-          "$value": "{primitive.color.cream.50}",
-          "$description": "Light button, like the panels: options that act straight away."
+          "$value": "{primitive.color.white-alpha.55}",
+          "$description": "Clear glass: options that act straight away."
         },
         "background-hover": {
-          "$value": "{primitive.color.cream.200}"
+          "$value": "{primitive.color.white-alpha.75}"
         },
         "edge": {
-          "$value": "{primitive.color.sand.300}"
+          "$value": "{primitive.color.white-alpha.75}"
         },
         "text": {
           "$value": "{primitive.color.petrol.900}"
@@ -92,18 +96,18 @@
       },
       "primary": {
         "background": {
-          "$value": "{primitive.color.teal.700}",
-          "$description": "Cool accent: it never blends with the warm scenes."
+          "$value": "{primitive.color.mint-alpha.70}",
+          "$description": "Mint glass: a cool accent that never blends with the warm scenes, blurring them behind."
         },
         "background-hover": {
-          "$value": "{primitive.color.teal.800}"
+          "$value": "{primitive.color.mint-alpha.85}"
         },
         "edge": {
-          "$value": "{primitive.color.teal.900}",
-          "$description": "Lower edge that makes the button look pressable."
+          "$value": "{primitive.color.white-alpha.75}",
+          "$description": "Light edge and top highlight of the glass."
         },
         "text": {
-          "$value": "{primitive.color.white}"
+          "$value": "{primitive.color.petrol.900}"
         }
       },
       "positive": {

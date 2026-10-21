@@ -6,7 +6,7 @@ import { TokenTable } from '../TokenTable'
 # Color
 
 La interfaz usa colores que **no existen en el mundo del juego**: las escenas son cálidas (madera, piedra, luz
-dorada) y la interfaz es tinta, crema y un verde azulado frío. Así nunca se confunde con el fondo. Ver
+dorada) y la interfaz es tinta, crema y un menta frío. Así nunca se confunde con el fondo. Ver
 [Línea gráfica](?path=/docs/fundamentos-línea-gráfica--docs).
 
 Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, superficie, acción, feedback…).
@@ -18,19 +18,21 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 | Tinta (petróleo) | `900` y transparencias 94 %, 72 % y 35 % | Contornos, texto, narración, HUD de cristal y sombras |
 | Crema | `50` | Paneles claros y texto sobre tinta |
 | Arena | `50`, `300` | Papel de los carnés y bordes de la documentación |
-| Verde azulado | `700`, `800`, `900` | Acción principal (fondo, al pasar el ratón y canto del botón) y pantalla de girar el dispositivo |
+| Menta | `300`, `600`, `800` y transparencias 70 % y 85 % | Botones de cristal, pantalla de girar el dispositivo, elemento seleccionado e iconos de acento |
+| Blanco translúcido | 55 % y 75 % | Botón secundario de cristal y borde claro del cristal |
 | Verde | `700`, `800`, `900` | Acierto y botón SÍ |
 | Rojo | `700`, `800`, `900` | Error y botón NO |
-| Blanco, negro y transparente | — | Texto de los botones y sobre verde azulado, fondo del escenario y del telón, bordes invisibles |
+| Blanco, negro y transparente | — | Fondo del escenario y del telón, bordes invisibles |
 
 ## Roles
 
 | Rol | Uso |
 | --- | --- |
-| `color.text.*` | Texto en tinta, inverso (crema), sobre el color de acción (blanco), positivo y negativo |
-| `color.surface.*` | Panel claro, papel, panel de tinta (narración), cristal (HUD), pantalla de sistema (verde azulado), tinta de referencia y fondo del escenario |
+| `color.text.*` | Texto en tinta, inverso (crema), sobre menta (tinta), acento (menta oscuro), positivo y negativo |
+| `color.surface.*` | Panel claro, papel, panel de tinta (narración), cristal (HUD), pantalla de sistema (menta), tinta de referencia y fondo del escenario |
 | `color.border.*` | Contorno de tinta, sin borde, borde suave y elemento seleccionado |
-| `color.action.primary.*` | Botón principal y botones de icono (verde azulado, texto blanco) |
+| `color.action.primary.*` | Botón principal y botones de icono: cristal menta con texto de tinta |
+| `color.action.secondary.*` | Opciones que actúan al pulsarlas: cristal blanco |
 | `color.action.positive.*` / `negative.*` | Botones SÍ y NO |
 | `color.feedback.*` | Acierto (verde) y error (rojo) |
 | `color.focus.*` | Anillo de foco doble: crema por dentro, tinta por fuera |
@@ -48,9 +50,10 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 | Tinta sobre crema (bocadillos, tarjetas) | 14,8:1 | AA y AAA |
 | Crema sobre tinta (narración, HUD, títulos) | 14,8:1 | AA y AAA |
 | Tinta sobre papel (carnés) | 15,3:1 | AA y AAA |
-| Crema sobre verde azulado `#0B7676` (botón principal) | 5,1:1 | AA |
-| Crema sobre verde `#15803D` (botón SÍ) | 4,8:1 | AA |
-| Crema sobre rojo `#B91C1C` (botón NO) | 6,1:1 | AA |
+| Tinta sobre menta `#A6F0D3` (pantalla de girar) | 11,8:1 | AA y AAA |
+| Tinta sobre cristal menta (botón principal; peor caso, sobre una escena negra) | 5,7:1 | AA |
+| Blanco sobre verde `#15803D` (botón SÍ) | 5,0:1 | AA |
+| Blanco sobre rojo `#B91C1C` (botón NO) | 6,5:1 | AA |
 | Verde y rojo sobre crema (texto de acierto y error) | 4,8:1 y 6,1:1 | AA |
 
 ## Tokens

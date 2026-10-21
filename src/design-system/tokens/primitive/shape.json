@@ -35,6 +35,16 @@
           "color": "{primitive.color.petrol-alpha.35}"
         },
         "$description": "Short, hard shadow: the interface looks stuck on top of the scene."
+      },
+      "soft": {
+        "$value": {
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "24px",
+          "spread": "0px",
+          "color": "{primitive.color.petrol-alpha.35}"
+        },
+        "$description": "Soft shadow under glass: it floats over the scene."
       }
     },
     "blur": {

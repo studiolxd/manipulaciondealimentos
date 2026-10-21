@@ -36,9 +36,6 @@
         "50": {
           "$value": "#fff8ec",
           "$description": "Light interface panels and text on ink."
-        },
-        "200": {
-          "$value": "#f3e6cf"
         }
       },
       "sand": {
@@ -49,15 +46,32 @@
           "$value": "#d6cdb8"
         }
       },
-      "teal": {
-        "700": {
-          "$value": "#0b7676"
+      "mint": {
+        "300": {
+          "$value": "#a6f0d3",
+          "$description": "Mint: the tint of glass buttons and accent screens."
+        },
+        "600": {
+          "$value": "#1f9e74"
         },
         "800": {
-          "$value": "#095f5f"
+          "$value": "#0f5c45"
+        }
+      },
+      "mint-alpha": {
+        "70": {
+          "$value": "rgba(166, 240, 211, 0.7)"
         },
-        "900": {
-          "$value": "#064848"
+        "85": {
+          "$value": "rgba(166, 240, 211, 0.85)"
+        }
+      },
+      "white-alpha": {
+        "55": {
+          "$value": "rgba(255, 255, 255, 0.55)"
+        },
+        "75": {
+          "$value": "rgba(255, 255, 255, 0.75)"
         }
       },
       "green": {

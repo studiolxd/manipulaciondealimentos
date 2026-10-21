@@ -45,6 +45,22 @@
       "$type": "color",
       "$value": "{color.shadow.default}"
     },
+    "glass": {
+      "$description": "Primary, secondary and icon buttons: translucent, blurring the scene behind, with a light edge and a soft shadow.",
+      "blur": {
+        "$type": "dimension",
+        "$value": "{blur.glass}"
+      },
+      "shadow": {
+        "$type": "shadow",
+        "$value": "{shadow.glass}"
+      },
+      "highlight-height": {
+        "$type": "dimension",
+        "$value": "{space.3xs}",
+        "$description": "Light line inside the top edge of the glass."
+      }
+    },
     "primary": {
       "background": {
         "$type": "color",

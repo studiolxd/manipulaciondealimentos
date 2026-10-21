@@ -1,5 +1,6 @@
 /* Solid button with an ink outline and a darker lower edge that sinks when
-   pressed. Each variant sets its colours through the local --button-* props. */
+   pressed (YES / NO), or glass (the rest, below). Each variant sets its colours
+   through the local --button-* props. */
 .button {
   --button-background: var(--slxd-button-primary-background);
   --button-background-hover: var(--slxd-button-primary-background-hover);
@@ -37,6 +38,27 @@
   --button-shadow:
     0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner),
     0 var(--slxd-button-edge-height) 0 var(--button-edge);
+}
+
+/* Glass: translucent tint that blurs the scene behind, a light edge with a
+   highlight along the top, and a soft shadow. It shrinks a little when pressed. */
+.button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']) {
+  --button-shadow:
+    inset 0 var(--slxd-button-glass-highlight-height) 0 var(--button-edge), var(--slxd-button-glass-shadow);
+
+  border-color: var(--button-edge);
+  backdrop-filter: blur(var(--slxd-button-glass-blur));
+}
+
+.button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']):active {
+  translate: none;
+  scale: 0.97;
+  box-shadow: var(--button-shadow);
+}
+
+.button:is([data-variant='primary'], [data-variant='secondary'], [data-variant='icon']):focus-visible {
+  --button-shadow:
+    0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner), var(--slxd-button-glass-shadow);
 }
 
 .button[data-concealed] {

@@ -29,7 +29,7 @@
         "$description": "Cream, on ink panels and dark screens."
       },
       "accent": {
-        "$value": "{color.action.primary.background}"
+        "$value": "{color.text.accent}"
       },
       "positive": {
         "$value": "{color.feedback.positive}"
