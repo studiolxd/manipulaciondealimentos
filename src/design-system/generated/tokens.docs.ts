@@ -86,7 +86,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "500",
+    "value": "400",
     "reference": "{font.weight.control}",
     "description": null
   },
@@ -96,7 +96,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "0.08em",
+    "value": "0.04em",
     "reference": "{font.letter-spacing.control}",
     "description": null
   },
@@ -2561,12 +2561,12 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-font-letter-spacing-80",
-    "path": "primitive.font.letter-spacing.80",
+    "name": "--slxd-primitive-font-letter-spacing-40",
+    "path": "primitive.font.letter-spacing.40",
     "layer": "primitive",
     "family": "typography",
     "type": "dimension",
-    "value": "0.08em",
+    "value": "0.04em",
     "reference": null,
     "description": null
   },
@@ -3616,8 +3616,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontWeight",
-    "value": "500",
-    "reference": "{primitive.font.weight.500}",
+    "value": "400",
+    "reference": "{primitive.font.weight.400}",
     "description": "Display family: button text, uppercase and spaced."
   },
   {
@@ -3666,8 +3666,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "0.08em",
-    "reference": "{primitive.font.letter-spacing.80}",
+    "value": "0.04em",
+    "reference": "{primitive.font.letter-spacing.40}",
     "description": "Tracking of uppercase button text."
   }
 ] as const

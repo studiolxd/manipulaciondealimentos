@@ -9,8 +9,8 @@ export const tokens = {
   'button.radius': "999px",
   'button.font-family': "'Montserrat Variable', Montserrat, system-ui, sans-serif",
   'button.font-size': "max(44px, calc(15px / var(--slxd-stage-scale)))",
-  'button.font-weight': 500,
-  'button.letter-spacing': "0.08em",
+  'button.font-weight': 400,
+  'button.letter-spacing': "0.04em",
   'button.outline-width': "calc(3px / var(--slxd-stage-scale))",
   'button.outline-color': "#14262e",
   'button.edge-height': "4px",
@@ -267,12 +267,12 @@ export const tokens = {
   'font.weight.bold': 700,
   'font.weight.display': 600,
   'font.weight.display-strong': 700,
-  'font.weight.control': 500,
+  'font.weight.control': 400,
   'font.line-height.tight': 1.1,
   'font.line-height.snug': 1.15,
   'font.line-height.normal': 1.4,
   'font.line-height.relaxed': 1.5,
-  'font.letter-spacing.control': "0.08em",
+  'font.letter-spacing.control': "0.04em",
 } as const
 
 export type TokenName = keyof typeof tokens

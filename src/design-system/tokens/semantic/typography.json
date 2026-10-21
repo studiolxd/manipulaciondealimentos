@@ -61,7 +61,7 @@
         "$description": "Display family: titles and headings."
       },
       "control": {
-        "$value": "{primitive.font.weight.500}",
+        "$value": "{primitive.font.weight.400}",
         "$description": "Display family: button text, uppercase and spaced."
       }
     },
@@ -83,7 +83,7 @@
     "letter-spacing": {
       "$type": "dimension",
       "control": {
-        "$value": "{primitive.font.letter-spacing.80}",
+        "$value": "{primitive.font.letter-spacing.40}",
         "$description": "Tracking of uppercase button text."
       }
     }

@@ -94,8 +94,8 @@
       },
       "letter-spacing": {
         "$type": "dimension",
-        "80": {
-          "$value": "0.08em"
+        "40": {
+          "$value": "0.04em"
         }
       }
     }
