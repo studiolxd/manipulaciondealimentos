@@ -93,7 +93,7 @@
   --slxd-primitive-font-line-height-140: 1.4;
   --slxd-primitive-font-line-height-150: 1.5;
   --slxd-primitive-font-letter-spacing-40: 0.04em;
-  --slxd-primitive-shadow-hard: 0px 8px 0px 0px var(--slxd-primitive-color-petrol-900); /** Short, hard shadow in the ink of the outlines: the interface looks stuck on top of the scene. */
+  --slxd-primitive-shadow-hard: 0px 4px 0px 0px var(--slxd-primitive-color-petrol-900); /** Short, hard shadow in the ink of the outlines: the interface looks stuck on top of the scene. */
   --slxd-color-text-default: var(--slxd-primitive-color-petrol-900);
   --slxd-color-text-inverse: var(--slxd-primitive-color-cream-50); /** Text on ink panels and over the scene. */
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);

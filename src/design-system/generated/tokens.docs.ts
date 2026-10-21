@@ -1316,7 +1316,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "shape",
     "type": "shadow",
-    "value": "0px 8px 0px 0px #14262e",
+    "value": "0px 4px 0px 0px #14262e",
     "reference": "{shadow.raised}",
     "description": null
   },
@@ -2106,7 +2106,7 @@ export const tokenDocs = [
     "layer": "primitive",
     "family": "shape",
     "type": "shadow",
-    "value": "0px 8px 0px 0px #14262e",
+    "value": "0px 4px 0px 0px #14262e",
     "reference": null,
     "description": "Short, hard shadow in the ink of the outlines: the interface looks stuck on top of the scene."
   },
@@ -3256,7 +3256,7 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "shape",
     "type": "shadow",
-    "value": "0px 8px 0px 0px #14262e",
+    "value": "0px 4px 0px 0px #14262e",
     "reference": "{primitive.shadow.hard}",
     "description": null
   },

@@ -29,7 +29,7 @@
       "hard": {
         "$value": {
           "offsetX": "0px",
-          "offsetY": "8px",
+          "offsetY": "4px",
           "blur": "0px",
           "spread": "0px",
           "color": "{primitive.color.petrol.900}"
