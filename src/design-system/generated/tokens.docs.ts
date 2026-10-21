@@ -141,6 +141,36 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-enter-distance",
+    "path": "button.enter.distance",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-enter-duration",
+    "path": "button.enter.duration",
+    "layer": "component",
+    "family": "motion",
+    "type": "duration",
+    "value": "450ms",
+    "reference": "{motion.duration.morph}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-enter-easing",
+    "path": "button.enter.easing",
+    "layer": "component",
+    "family": "motion",
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0, 0, 0.58, 1)",
+    "reference": "{motion.easing.enter}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-lift-rest",
     "path": "button.lift.rest",
     "layer": "component",

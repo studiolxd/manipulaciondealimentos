@@ -50,6 +50,21 @@
       "$type": "color",
       "$value": "{color.shadow.default}"
     },
+    "enter": {
+      "$description": "Entrance of a button that appears after something else (entrance=\"slide-up\"): it slides up and fades in.",
+      "distance": {
+        "$type": "dimension",
+        "$value": "{space.xl}"
+      },
+      "duration": {
+        "$type": "duration",
+        "$value": "{motion.duration.morph}"
+      },
+      "easing": {
+        "$type": "cubicBezier",
+        "$value": "{motion.easing.enter}"
+      }
+    },
     "lift": {
       "$description": "Primary, secondary and icon buttons: a hard shadow in the outline colour that grows on hover and disappears when pressed.",
       "rest": {

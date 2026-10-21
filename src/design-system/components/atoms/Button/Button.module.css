@@ -73,6 +73,31 @@
     0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner), 0 var(--button-lift) 0 var(--button-edge);
 }
 
+/* Entrance. It animates `transform`, so it does not fight the lift, which uses
+   `translate`. With reduced motion it only fades in. */
+.button[data-entrance='slide-up'] {
+  animation: button-slide-up var(--slxd-button-enter-duration) var(--slxd-button-enter-easing) both;
+}
+
+@keyframes button-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(var(--slxd-button-enter-distance));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button[data-entrance='slide-up'] {
+    animation-name: button-fade-in;
+  }
+}
+
+@keyframes button-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
 .button[data-concealed] {
   visibility: hidden;
 }

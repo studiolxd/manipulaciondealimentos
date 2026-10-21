@@ -216,6 +216,9 @@
   --slxd-button-outline-color: var(--slxd-color-border-ink);
   --slxd-button-edge-height: var(--slxd-space-3xs); /** Lower edge that makes buttons look pressable; it sinks when pressed. */
   --slxd-button-shadow-color: var(--slxd-color-shadow-default);
+  --slxd-button-enter-distance: var(--slxd-space-xl);
+  --slxd-button-enter-duration: var(--slxd-motion-duration-morph);
+  --slxd-button-enter-easing: var(--slxd-motion-easing-enter);
   --slxd-button-lift-rest: var(--slxd-space-3xs);
   --slxd-button-lift-hover: var(--slxd-space-2xs);
   --slxd-button-lift-duration: var(--slxd-motion-duration-press);
