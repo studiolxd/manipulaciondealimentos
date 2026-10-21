@@ -635,8 +635,8 @@ export const tokenDocs = [
     "path": "icon.stroke-width",
     "layer": "component",
     "family": "shape",
-    "type": "dimension",
-    "value": "calc(2.5px / var(--slxd-stage-scale))",
+    "type": "number",
+    "value": "1",
     "reference": "{stroke-width.icon}",
     "description": null
   },
@@ -1871,6 +1871,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-stroke-width-1",
+    "path": "primitive.stroke-width.1",
+    "layer": "primitive",
+    "family": "shape",
+    "type": "number",
+    "value": "1",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-size-0",
     "path": "primitive.size.0",
     "layer": "primitive",
@@ -2099,16 +2109,6 @@ export const tokenDocs = [
     "value": "3px",
     "reference": null,
     "description": "Ink outline of the interface, always 3 real pixels."
-  },
-  {
-    "name": "--slxd-primitive-screen-icon-stroke",
-    "path": "primitive.screen.icon-stroke",
-    "layer": "primitive",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "2.5px",
-    "reference": null,
-    "description": "Stroke of vector icons, always 2.5 real pixels."
   },
   {
     "name": "--slxd-primitive-font-family-rubik",
@@ -2895,10 +2895,10 @@ export const tokenDocs = [
     "path": "stroke-width.icon",
     "layer": "semantic",
     "family": "shape",
-    "type": "dimension",
-    "value": "calc(2.5px / var(--slxd-stage-scale))",
-    "reference": "calc({primitive.screen.icon-stroke} / var(--slxd-stage-scale))",
-    "description": "Icon stroke: 2.5 real pixels at any icon size and stage scale."
+    "type": "number",
+    "value": "1",
+    "reference": "{primitive.stroke-width.1}",
+    "description": "Icon stroke in grid units: it grows with the icon, rounded to whole real pixels."
   },
   {
     "name": "--slxd-space-none",

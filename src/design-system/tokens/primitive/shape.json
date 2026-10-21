@@ -42,6 +42,13 @@
       "16": {
         "$value": "16px"
       }
+    },
+    "stroke-width": {
+      "$type": "number",
+      "$description": "In units of the 24-unit icon grid.",
+      "1": {
+        "$value": 1
+      }
     }
   }
 }

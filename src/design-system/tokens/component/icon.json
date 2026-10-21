@@ -15,7 +15,7 @@
       }
     },
     "stroke-width": {
-      "$type": "dimension",
+      "$type": "number",
       "$value": "{stroke-width.icon}"
     },
     "color": {

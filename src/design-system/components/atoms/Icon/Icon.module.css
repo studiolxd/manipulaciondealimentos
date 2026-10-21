@@ -22,18 +22,33 @@
   height: 100%;
 }
 
-/* Vector icons: one colour and the same real stroke at any size. */
+/* Vector icons: one colour. The stroke is a fraction of the 24-unit grid,
+   rounded to whole real pixels so it stays sharp on non-retina screens; it
+   ignores the viewBox scaling and divides by the stage scale, which is applied
+   on top. `fill` icons (inside buttons) take the medium stroke. */
 
 svg.icon {
+  --icon-size: var(--slxd-icon-size-md);
+
   overflow: visible;
   fill: none;
   stroke: currentcolor;
-  stroke-width: var(--slxd-icon-stroke-width);
+  stroke-width: calc(
+    max(1px, round(var(--icon-size) * var(--slxd-stage-scale) * var(--slxd-icon-stroke-width) / 24, 1px)) /
+      var(--slxd-stage-scale)
+  );
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-/* The stroke ignores the viewBox scaling, so it does not grow with the icon. */
+svg.icon[data-size='sm'] {
+  --icon-size: var(--slxd-icon-size-sm);
+}
+
+svg.icon[data-size='lg'] {
+  --icon-size: var(--slxd-icon-size-lg);
+}
+
 svg.icon * {
   vector-effect: non-scaling-stroke;
 }

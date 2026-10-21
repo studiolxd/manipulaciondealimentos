@@ -51,10 +51,10 @@
     }
   },
   "stroke-width": {
-    "$type": "dimension",
+    "$type": "number",
     "icon": {
-      "$value": "calc({primitive.screen.icon-stroke} / var(--slxd-stage-scale))",
-      "$description": "Icon stroke: 2.5 real pixels at any icon size and stage scale."
+      "$value": "{primitive.stroke-width.1}",
+      "$description": "Icon stroke in grid units: it grows with the icon, rounded to whole real pixels."
     }
   }
 }
