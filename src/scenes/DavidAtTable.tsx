@@ -32,7 +32,7 @@ export function DavidAtTable({ heading, backgroundAlt, davidAlt, speech, next, o
           <SpeechBubble
             speaker="David"
             blocks={speech}
-            portrait={image('davidPortrait')}
+            tail="left"
             onFinished={() => setFinished(true)}
           />
         </Positioned>

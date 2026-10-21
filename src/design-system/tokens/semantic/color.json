@@ -59,6 +59,15 @@
         "text": {
           "$value": "{primitive.color.white}"
         }
+      },
+      "secondary": {
+        "background": {
+          "$value": "{primitive.color.green.700}",
+          "$description": "Secondary actions, e.g. icon buttons."
+        },
+        "background-hover": {
+          "$value": "{primitive.color.green.800}"
+        }
       }
     },
     "feedback": {

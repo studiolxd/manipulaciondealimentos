@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
-import { fixtures } from '../../../docs/fixtures'
 import { Positioned } from '../../templates/Positioned/Positioned'
 import { SpeechBubble } from './SpeechBubble'
 
@@ -28,9 +27,10 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const WithPortrait: Story = { args: { portrait: fixtures.portrait } }
-
+/** The tail points to whoever speaks. */
 export const TailLeft: Story = { args: { tail: 'left' } }
+export const TailRight: Story = { args: { tail: 'right' } }
+export const TailBottom: Story = { args: { tail: 'bottom' } }
 
 /** The final click closes it (used to shrink a statement into an icon). */
 export const Dismissible: Story = { args: { onDismiss: fn() } }

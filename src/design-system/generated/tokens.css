@@ -14,6 +14,7 @@
   --slxd-primitive-color-blue-700: #1d4ed8;
   --slxd-primitive-color-red-700: #b91c1c;
   --slxd-primitive-color-green-700: #15803d;
+  --slxd-primitive-color-green-800: #166534;
   --slxd-primitive-color-white-alpha-94: rgba(255, 255, 255, 0.94);
   --slxd-primitive-color-black-alpha-25: rgba(0, 0, 0, 0.25);
   --slxd-primitive-color-transparent: rgba(0, 0, 0, 0);
@@ -93,6 +94,8 @@
   --slxd-color-action-primary-background: var(--slxd-primitive-color-orange-700);
   --slxd-color-action-primary-background-hover: var(--slxd-primitive-color-orange-800);
   --slxd-color-action-primary-text: var(--slxd-primitive-color-white);
+  --slxd-color-action-secondary-background: var(--slxd-primitive-color-green-700); /** Secondary actions, e.g. icon buttons. */
+  --slxd-color-action-secondary-background-hover: var(--slxd-primitive-color-green-800);
   --slxd-color-feedback-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-feedback-negative: var(--slxd-primitive-color-red-700);
   --slxd-color-focus-ring: var(--slxd-primitive-color-blue-700);
@@ -217,6 +220,8 @@
   --slxd-icon-button-size: var(--slxd-size-target-min);
   --slxd-icon-button-padding: var(--slxd-space-2xs);
   --slxd-icon-button-radius: var(--slxd-radius-full);
+  --slxd-icon-button-background: var(--slxd-color-action-secondary-background);
+  --slxd-icon-button-background-hover: var(--slxd-color-action-secondary-background-hover);
   --slxd-id-card-background: var(--slxd-color-surface-paper);
   --slxd-id-card-text: var(--slxd-color-text-default);
   --slxd-id-card-border-color: var(--slxd-color-border-subtle);
@@ -253,11 +258,10 @@
   --slxd-speech-bubble-padding-block-start: var(--slxd-space-xl);
   --slxd-speech-bubble-padding-block-end: var(--slxd-space-4xl);
   --slxd-speech-bubble-padding-inline: var(--slxd-space-2xl);
-  --slxd-speech-bubble-gap: var(--slxd-space-lg);
-  --slxd-speech-bubble-portrait-size: var(--slxd-size-icon-lg);
   --slxd-speech-bubble-tail-base: var(--slxd-space-3xl);
   --slxd-speech-bubble-tail-length: var(--slxd-space-xl);
   --slxd-speech-bubble-next-inset: var(--slxd-space-sm);
+  --slxd-speech-bubble-tail-offset: var(--slxd-space-5xl); /** Distance from the corner to the tail. */
   --slxd-stage-backdrop: var(--slxd-color-surface-backdrop);
   --slxd-stage-text: var(--slxd-color-text-default);
   --slxd-stage-font-family: var(--slxd-font-family-body);

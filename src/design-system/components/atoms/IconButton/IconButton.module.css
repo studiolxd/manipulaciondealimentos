@@ -4,8 +4,12 @@
   padding: var(--slxd-icon-button-padding);
   border: 0;
   border-radius: var(--slxd-icon-button-radius);
-  background: none;
+  background: var(--slxd-icon-button-background);
   cursor: pointer;
+}
+
+.button:hover {
+  background: var(--slxd-icon-button-background-hover);
 }
 
 .button[data-concealed] {

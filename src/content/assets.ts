@@ -19,7 +19,6 @@ export const assets = {
   playerFemale: { path: 'assets/avatars/player-female.png', width: 480, height: 640 },
   davidStanding: { path: 'assets/characters/david-standing.png', width: 640, height: 960 },
   davidSeated: { path: 'assets/characters/david-seated.png', width: 720, height: 640 },
-  davidPortrait: { path: 'assets/characters/david-portrait.png', width: 200, height: 200 },
   // Activity 2: portraits on the ID cards, head to chest, in work uniform.
   cardOscar: { path: 'assets/cards/oscar.png', width: 360, height: 440 },
   cardLaura: { path: 'assets/cards/laura.png', width: 360, height: 440 },

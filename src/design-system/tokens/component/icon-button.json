@@ -1,7 +1,24 @@
 {
   "icon-button": {
-    "size": { "$type": "dimension", "$value": "{size.target.min}" },
-    "padding": { "$type": "dimension", "$value": "{space.2xs}" },
-    "radius": { "$type": "dimension", "$value": "{radius.full}" }
+    "size": {
+      "$type": "dimension",
+      "$value": "{size.target.min}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.2xs}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.full}"
+    },
+    "background": {
+      "$type": "color",
+      "$value": "{color.action.secondary.background}"
+    },
+    "background-hover": {
+      "$type": "color",
+      "$value": "{color.action.secondary.background-hover}"
+    }
   }
 }

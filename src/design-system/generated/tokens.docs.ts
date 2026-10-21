@@ -661,6 +661,26 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-icon-button-background",
+    "path": "icon-button.background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{color.action.secondary.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-icon-button-background-hover",
+    "path": "icon-button.background-hover",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#166534",
+    "reference": "{color.action.secondary.background-hover}",
+    "description": null
+  },
+  {
     "name": "--slxd-id-card-background",
     "path": "id-card.background",
     "layer": "component",
@@ -1041,16 +1061,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-speech-bubble-gap",
-    "path": "speech-bubble.gap",
-    "layer": "component",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "40px",
-    "reference": "{space.lg}",
-    "description": null
-  },
-  {
     "name": "--slxd-speech-bubble-shadow",
     "path": "speech-bubble.shadow",
     "layer": "component",
@@ -1058,16 +1068,6 @@ export const tokenDocs = [
     "type": "shadow",
     "value": "0px 16px 48px 0px rgba(0, 0, 0, 0.25)",
     "reference": "{shadow.raised}",
-    "description": null
-  },
-  {
-    "name": "--slxd-speech-bubble-portrait-size",
-    "path": "speech-bubble.portrait-size",
-    "layer": "component",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "160px",
-    "reference": "{size.icon.lg}",
     "description": null
   },
   {
@@ -1099,6 +1099,16 @@ export const tokenDocs = [
     "value": "24px",
     "reference": "{space.sm}",
     "description": null
+  },
+  {
+    "name": "--slxd-speech-bubble-tail-offset",
+    "path": "speech-bubble.tail-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "96px",
+    "reference": "{space.5xl}",
+    "description": "Distance from the corner to the tail."
   },
   {
     "name": "--slxd-stage-backdrop",
@@ -1507,6 +1517,16 @@ export const tokenDocs = [
     "family": "color",
     "type": "color",
     "value": "#15803d",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-green-800",
+    "path": "primitive.color.green.800",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#166534",
     "reference": null,
     "description": null
   },
@@ -2298,6 +2318,26 @@ export const tokenDocs = [
     "type": "color",
     "value": "#ffffff",
     "reference": "{primitive.color.white}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-secondary-background",
+    "path": "color.action.secondary.background",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{primitive.color.green.700}",
+    "description": "Secondary actions, e.g. icon buttons."
+  },
+  {
+    "name": "--slxd-color-action-secondary-background-hover",
+    "path": "color.action.secondary.background-hover",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#166534",
+    "reference": "{primitive.color.green.800}",
     "description": null
   },
   {

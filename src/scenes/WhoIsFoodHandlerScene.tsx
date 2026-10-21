@@ -101,6 +101,8 @@ export function WhoIsFoodHandlerScene() {
           <SpeechBubble
             speaker="David"
             blocks={whoIsFoodHandler.statement}
+            // David is not on screen in this top view: the tail points down, towards the player's side of the table.
+            tail="bottom"
             viewTransitionName={STATEMENT_TRANSITION}
             onDismiss={startCards}
           />

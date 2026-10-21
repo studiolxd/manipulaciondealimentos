@@ -1,6 +1,5 @@
 import { useEffect, useEffectEvent, useState } from 'react'
 import { useDesignSystem } from '../../../hooks/useDesignSystem'
-import type { ImageSource } from '../../../types'
 import { IconButton } from '../../atoms/IconButton/IconButton'
 import { Typewriter } from '../../atoms/Typewriter/Typewriter'
 import styles from './SpeechBubble.module.css'
@@ -9,9 +8,11 @@ interface SpeechBubbleProps {
   speaker: string
   /** Each block is typed out and the player advances to the next with a click. */
   blocks: string[]
-  portrait?: ImageSource
-  /** Side the tail points to, towards the speaker. */
-  tail?: 'left' | 'none'
+  /**
+   * Side of the tail, pointing to the speaker. Every bubble has one: it tells
+   * speech apart from plain text panels.
+   */
+  tail?: 'left' | 'right' | 'bottom'
   /** Name used to morph the bubble into another element (see withViewTransition). */
   viewTransitionName?: string
   /** Called once the last block is fully shown. */
@@ -23,8 +24,7 @@ interface SpeechBubbleProps {
 export function SpeechBubble({
   speaker,
   blocks,
-  portrait,
-  tail = 'none',
+  tail = 'left',
   viewTransitionName,
   onFinished,
   onDismiss,
@@ -59,7 +59,6 @@ export function SpeechBubble({
     // Clicking anywhere on the bubble is a shortcut; the button inside is the accessible control.
     // oxlint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div className={styles.bubble} data-tail={tail} style={{ viewTransitionName }} onClick={advance}>
-      {portrait && <img className={styles.portrait} src={portrait.src} alt="" />}
       <div className={styles.body}>
         <p className={styles.speaker}>{strings.speakerSays(speaker)}</p>
         {/* Announces each new block as the player advances. */}

@@ -29,7 +29,6 @@ const placeholders: Record<AssetId | IconName, Placeholder> = {
   playerFemale: { shape: 'rounded', color: '#bf6b9a', label: 'Avatar · Chica' },
   davidStanding: { shape: 'rounded', color: '#4f7a5a', label: 'David · De pie' },
   davidSeated: { shape: 'rounded', color: '#4f7a5a', label: 'David · Sentado' },
-  davidPortrait: { shape: 'circle', color: '#4f7a5a', label: 'David' },
   cardOscar: { shape: 'rounded', color: '#8fa9c9', label: 'Óscar' },
   cardLaura: { shape: 'rounded', color: '#c98fb4', label: 'Laura' },
   cardPablo: { shape: 'rounded', color: '#8fc9b0', label: 'Pablo' },
