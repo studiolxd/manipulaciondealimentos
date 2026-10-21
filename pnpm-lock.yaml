@@ -15,8 +15,8 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0
       '@studiolxd/tramoya':
-        specifier: https://github.com/studiolxd/tramoya/releases/download/v0.3.0/studiolxd-tramoya-0.3.0.tgz
-        version: https://github.com/studiolxd/tramoya/releases/download/v0.3.0/studiolxd-tramoya-0.3.0.tgz(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sharp@0.35.5(@types/node@24.19.2))
+        specifier: https://github.com/studiolxd/tramoya/releases/download/v0.4.0/studiolxd-tramoya-0.4.0.tgz
+        version: https://github.com/studiolxd/tramoya/releases/download/v0.4.0/studiolxd-tramoya-0.4.0.tgz(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sharp@0.35.5(@types/node@24.19.2))
       react:
         specifier: ^19.3.1
         version: 19.3.1
@@ -1293,9 +1293,9 @@ packages:
       vue:
         optional: true
 
-  '@studiolxd/tramoya@https://github.com/studiolxd/tramoya/releases/download/v0.3.0/studiolxd-tramoya-0.3.0.tgz':
-    resolution: {integrity: sha512-5o1Kbl0MWU2LBaRYJ3BdJZVI2WsmiZOgvN0Ff/SQHZuPCqcA/08Ws585ygqS+weVuTf6m63/dnWD7GWsQG1OYg==, tarball: https://github.com/studiolxd/tramoya/releases/download/v0.3.0/studiolxd-tramoya-0.3.0.tgz}
-    version: 0.3.0
+  '@studiolxd/tramoya@https://github.com/studiolxd/tramoya/releases/download/v0.4.0/studiolxd-tramoya-0.4.0.tgz':
+    resolution: {integrity: sha512-xHBafBkD6TOWxeigya23jUMQSLPyPr1C0eaCrfWYWcutcAuMLUHca4YgH4Toffuak1fKfaPIeFtt4SnnZ78Epg==, tarball: https://github.com/studiolxd/tramoya/releases/download/v0.4.0/studiolxd-tramoya-0.4.0.tgz}
+    version: 0.4.0
     hasBin: true
     peerDependencies:
       react: ^19.2.0
@@ -3972,7 +3972,7 @@ snapshots:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
 
-  '@studiolxd/tramoya@https://github.com/studiolxd/tramoya/releases/download/v0.3.0/studiolxd-tramoya-0.3.0.tgz(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sharp@0.35.5(@types/node@24.19.2))':
+  '@studiolxd/tramoya@https://github.com/studiolxd/tramoya/releases/download/v0.4.0/studiolxd-tramoya-0.4.0.tgz(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(sharp@0.35.5(@types/node@24.19.2))':
     dependencies:
       '@studiolxd/scorm': 2.0.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@studiolxd/xapi': 1.0.0(react-dom@19.3.1(react@19.3.1))(react@19.3.1)

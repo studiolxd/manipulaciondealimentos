@@ -31,15 +31,15 @@ interface TypewriterProps extends TextStyle {
 // screen readers, which get the full text at once.
 export function Typewriter({ text, complete = false, voice, onDone, size, weight, tone }: TypewriterProps) {
   const { paused } = useDesignSystem()
-  const voiceMs = useVoice(voice)
-  // Even pace across the whole text, so text and voice end together.
-  const voicedDelay = voiceMs === undefined ? undefined : voiceMs / Math.max(text.length, 1)
+  // In step with the voice, measured against where the audio actually is.
+  const pace = useVoice(voice)
   const { ref, visible } = useTypewriter<HTMLSpanElement>({
     text,
     complete,
     paused,
-    charDelayMs: voicedDelay ?? CHAR_DELAY_MS,
-    sentencePauseMs: voicedDelay ?? SENTENCE_PAUSE_MS,
+    charDelayMs: CHAR_DELAY_MS,
+    sentencePauseMs: SENTENCE_PAUSE_MS,
+    pace,
     onDone,
   })
 

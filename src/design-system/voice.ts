@@ -6,6 +6,8 @@
 const GAP_MS = 300
 
 export interface VoicePlayback {
+  /** How far the line has got, in ms (clips and pauses), following the audio itself. */
+  elapsedMs: () => number
   stop: () => void
   pause: () => void
   resume: () => void
@@ -43,6 +45,9 @@ export function playVoice(urls: readonly string[], onDuration?: (ms: number | nu
   let index = 0
   let audio: HTMLAudioElement | null = null
   let gap: ReturnType<typeof setTimeout> | undefined
+  // Time of the clips (and pauses) already over, and when the current pause began.
+  let doneMs = 0
+  let gapStartedAt: number | null = null
   let stopped = false
   let paused = false
 
@@ -58,10 +63,17 @@ export function playVoice(urls: readonly string[], onDuration?: (ms: number | nu
 
   function playClip() {
     if (stopped || index >= clips.length) return
+    gapStartedAt = null
     audio = clips[index]
     audio.addEventListener('ended', () => {
+      doneMs += (clips[index]?.duration ?? 0) * 1000
       index += 1
-      gap = setTimeout(playClip, GAP_MS)
+      if (index >= clips.length) return
+      gapStartedAt = performance.now()
+      gap = setTimeout(() => {
+        doneMs += GAP_MS
+        playClip()
+      }, GAP_MS)
     })
     // Browsers may refuse to play (e.g. before any user gesture): the text is still there.
     if (!paused)
@@ -71,6 +83,11 @@ export function playVoice(urls: readonly string[], onDuration?: (ms: number | nu
   }
 
   const playback: VoicePlayback = {
+    elapsedMs() {
+      if (gapStartedAt !== null) return doneMs + Math.min(performance.now() - gapStartedAt, GAP_MS)
+      if (audio && index < clips.length) return doneMs + audio.currentTime * 1000
+      return doneMs
+    },
     stop() {
       stopped = true
       clearTimeout(gap)
