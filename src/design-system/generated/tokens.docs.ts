@@ -136,29 +136,9 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "16px",
-    "reference": "{blur.glass}",
+    "value": "2px",
+    "reference": "{blur.subtle}",
     "description": null
-  },
-  {
-    "name": "--slxd-button-glass-shadow",
-    "path": "button.glass.shadow",
-    "layer": "component",
-    "family": "shape",
-    "type": "shadow",
-    "value": "0px 8px 24px 0px rgba(20, 38, 46, 0.35)",
-    "reference": "{shadow.glass}",
-    "description": null
-  },
-  {
-    "name": "--slxd-button-glass-highlight-height",
-    "path": "button.glass.highlight-height",
-    "layer": "component",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "4px",
-    "reference": "{space.3xs}",
-    "description": "Light line inside the top edge of the glass."
   },
   {
     "name": "--slxd-button-primary-background",
@@ -166,7 +146,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "rgba(166, 240, 211, 0.7)",
+    "value": "rgba(57, 255, 136, 0.7)",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -176,7 +156,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "rgba(166, 240, 211, 0.85)",
+    "value": "rgba(57, 255, 136, 0.85)",
     "reference": "{color.action.primary.background-hover}",
     "description": null
   },
@@ -386,7 +366,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "rgba(166, 240, 211, 0.7)",
+    "value": "rgba(57, 255, 136, 0.7)",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -396,7 +376,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "rgba(166, 240, 211, 0.85)",
+    "value": "rgba(57, 255, 136, 0.85)",
     "reference": "{color.action.primary.background-hover}",
     "description": null
   },
@@ -886,7 +866,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#39ff88",
     "reference": "{color.surface.accent}",
     "description": null
   },
@@ -1731,14 +1711,34 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-mint-300",
-    "path": "primitive.color.mint.300",
+    "name": "--slxd-primitive-color-neon-400",
+    "path": "primitive.color.neon.400",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#39ff88",
     "reference": null,
-    "description": "Mint: the tint of glass buttons and accent screens."
+    "description": "Neon green: the tint of glass buttons and accent screens."
+  },
+  {
+    "name": "--slxd-primitive-color-neon-alpha-70",
+    "path": "primitive.color.neon-alpha.70",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(57, 255, 136, 0.7)",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-neon-alpha-85",
+    "path": "primitive.color.neon-alpha.85",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(57, 255, 136, 0.85)",
+    "reference": null,
+    "description": null
   },
   {
     "name": "--slxd-primitive-color-mint-600",
@@ -1757,26 +1757,6 @@ export const tokenDocs = [
     "family": "color",
     "type": "color",
     "value": "#0f5c45",
-    "reference": null,
-    "description": null
-  },
-  {
-    "name": "--slxd-primitive-color-mint-alpha-70",
-    "path": "primitive.color.mint-alpha.70",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "rgba(166, 240, 211, 0.7)",
-    "reference": null,
-    "description": null
-  },
-  {
-    "name": "--slxd-primitive-color-mint-alpha-85",
-    "path": "primitive.color.mint-alpha.85",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "rgba(166, 240, 211, 0.85)",
     "reference": null,
     "description": null
   },
@@ -2091,14 +2071,14 @@ export const tokenDocs = [
     "description": "Short, hard shadow: the interface looks stuck on top of the scene."
   },
   {
-    "name": "--slxd-primitive-shadow-soft",
-    "path": "primitive.shadow.soft",
+    "name": "--slxd-primitive-blur-2",
+    "path": "primitive.blur.2",
     "layer": "primitive",
     "family": "shape",
-    "type": "shadow",
-    "value": "0px 8px 24px 0px rgba(20, 38, 46, 0.35)",
+    "type": "dimension",
+    "value": "2px",
     "reference": null,
-    "description": "Soft shadow under glass: it floats over the scene."
+    "description": null
   },
   {
     "name": "--slxd-primitive-blur-16",
@@ -2618,7 +2598,7 @@ export const tokenDocs = [
     "type": "color",
     "value": "#14262e",
     "reference": "{primitive.color.petrol.900}",
-    "description": "Text on the mint action colour: buttons and accent screens."
+    "description": "Text on the neon action colour: buttons and accent screens."
   },
   {
     "name": "--slxd-color-text-accent",
@@ -2686,8 +2666,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
-    "reference": "{primitive.color.mint.300}",
+    "value": "#39ff88",
+    "reference": "{primitive.color.neon.400}",
     "description": "Full-screen system messages, in the colour of the buttons."
   },
   {
@@ -2806,9 +2786,9 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "rgba(166, 240, 211, 0.7)",
-    "reference": "{primitive.color.mint-alpha.70}",
-    "description": "Mint glass: a cool accent that never blends with the warm scenes, blurring them behind."
+    "value": "rgba(57, 255, 136, 0.7)",
+    "reference": "{primitive.color.neon-alpha.70}",
+    "description": "Neon green glass: a cool accent that never blends with the warm scenes."
   },
   {
     "name": "--slxd-color-action-primary-background-hover",
@@ -2816,8 +2796,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "rgba(166, 240, 211, 0.85)",
-    "reference": "{primitive.color.mint-alpha.85}",
+    "value": "rgba(57, 255, 136, 0.85)",
+    "reference": "{primitive.color.neon-alpha.85}",
     "description": null
   },
   {
@@ -2828,7 +2808,7 @@ export const tokenDocs = [
     "type": "color",
     "value": "rgba(255, 255, 255, 0.75)",
     "reference": "{primitive.color.white-alpha.75}",
-    "description": "Light edge and top highlight of the glass."
+    "description": "Edge colour; glass buttons do not show it."
   },
   {
     "name": "--slxd-color-action-primary-text",
@@ -3241,16 +3221,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-shadow-glass",
-    "path": "shadow.glass",
-    "layer": "semantic",
-    "family": "shape",
-    "type": "shadow",
-    "value": "0px 8px 24px 0px rgba(20, 38, 46, 0.35)",
-    "reference": "{primitive.shadow.soft}",
-    "description": null
-  },
-  {
     "name": "--slxd-blur-glass",
     "path": "blur.glass",
     "layer": "semantic",
@@ -3259,6 +3229,16 @@ export const tokenDocs = [
     "value": "16px",
     "reference": "{primitive.blur.16}",
     "description": "Background blur behind glass panels."
+  },
+  {
+    "name": "--slxd-blur-subtle",
+    "path": "blur.subtle",
+    "layer": "semantic",
+    "family": "shape",
+    "type": "dimension",
+    "value": "2px",
+    "reference": "{primitive.blur.2}",
+    "description": "Light blur behind glass buttons: the scene stays recognisable."
   },
   {
     "name": "--slxd-stroke-width-icon",

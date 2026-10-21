@@ -17,7 +17,7 @@
       },
       "on-accent": {
         "$value": "{primitive.color.petrol.900}",
-        "$description": "Text on the mint action colour: buttons and accent screens."
+        "$description": "Text on the neon action colour: buttons and accent screens."
       },
       "accent": {
         "$value": "{primitive.color.mint.800}",
@@ -46,7 +46,7 @@
         "$description": "Dark reference surface, e.g. in the documentation."
       },
       "accent": {
-        "$value": "{primitive.color.mint.300}",
+        "$value": "{primitive.color.neon.400}",
         "$description": "Full-screen system messages, in the colour of the buttons."
       },
       "backdrop": {
@@ -96,15 +96,15 @@
       },
       "primary": {
         "background": {
-          "$value": "{primitive.color.mint-alpha.70}",
-          "$description": "Mint glass: a cool accent that never blends with the warm scenes, blurring them behind."
+          "$value": "{primitive.color.neon-alpha.70}",
+          "$description": "Neon green glass: a cool accent that never blends with the warm scenes."
         },
         "background-hover": {
-          "$value": "{primitive.color.mint-alpha.85}"
+          "$value": "{primitive.color.neon-alpha.85}"
         },
         "edge": {
           "$value": "{primitive.color.white-alpha.75}",
-          "$description": "Light edge and top highlight of the glass."
+          "$description": "Edge colour; glass buttons do not show it."
         },
         "text": {
           "$value": "{primitive.color.petrol.900}"

@@ -13,11 +13,11 @@
   --slxd-primitive-color-cream-50: #fff8ec; /** Light interface panels and text on ink. */
   --slxd-primitive-color-sand-50: #fffdf7;
   --slxd-primitive-color-sand-300: #d6cdb8;
-  --slxd-primitive-color-mint-300: #a6f0d3; /** Mint: the tint of glass buttons and accent screens. */
+  --slxd-primitive-color-neon-400: #39ff88; /** Neon green: the tint of glass buttons and accent screens. */
+  --slxd-primitive-color-neon-alpha-70: rgba(57, 255, 136, 0.7);
+  --slxd-primitive-color-neon-alpha-85: rgba(57, 255, 136, 0.85);
   --slxd-primitive-color-mint-600: #1f9e74;
   --slxd-primitive-color-mint-800: #0f5c45;
-  --slxd-primitive-color-mint-alpha-70: rgba(166, 240, 211, 0.7);
-  --slxd-primitive-color-mint-alpha-85: rgba(166, 240, 211, 0.85);
   --slxd-primitive-color-white-alpha-55: rgba(255, 255, 255, 0.55);
   --slxd-primitive-color-white-alpha-75: rgba(255, 255, 255, 0.75);
   --slxd-primitive-color-green-700: #15803d;
@@ -48,6 +48,7 @@
   --slxd-primitive-radius-full: 999px;
   --slxd-primitive-border-width-4: 4px;
   --slxd-primitive-border-width-8: 8px;
+  --slxd-primitive-blur-2: 2px;
   --slxd-primitive-blur-16: 16px;
   --slxd-primitive-stroke-width-1: 1;
   --slxd-primitive-size-0: 0px;
@@ -96,19 +97,18 @@
   --slxd-primitive-font-line-height-140: 1.4;
   --slxd-primitive-font-line-height-150: 1.5;
   --slxd-primitive-shadow-hard: 0px 8px 0px 0px var(--slxd-primitive-color-petrol-alpha-35); /** Short, hard shadow: the interface looks stuck on top of the scene. */
-  --slxd-primitive-shadow-soft: 0px 8px 24px 0px var(--slxd-primitive-color-petrol-alpha-35); /** Soft shadow under glass: it floats over the scene. */
   --slxd-color-text-default: var(--slxd-primitive-color-petrol-900);
   --slxd-color-text-inverse: var(--slxd-primitive-color-cream-50); /** Text on ink panels and over the scene. */
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
-  --slxd-color-text-on-accent: var(--slxd-primitive-color-petrol-900); /** Text on the mint action colour: buttons and accent screens. */
+  --slxd-color-text-on-accent: var(--slxd-primitive-color-petrol-900); /** Text on the neon action colour: buttons and accent screens. */
   --slxd-color-text-accent: var(--slxd-primitive-color-mint-800); /** Dark mint, legible on light surfaces (e.g. accent icons). */
   --slxd-color-surface-default: var(--slxd-primitive-color-cream-50); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-paper: var(--slxd-primitive-color-sand-50); /** Printed-looking objects such as ID cards. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
   --slxd-color-surface-inverse: var(--slxd-primitive-color-petrol-900); /** Dark reference surface, e.g. in the documentation. */
-  --slxd-color-surface-accent: var(--slxd-primitive-color-mint-300); /** Full-screen system messages, in the colour of the buttons. */
+  --slxd-color-surface-accent: var(--slxd-primitive-color-neon-400); /** Full-screen system messages, in the colour of the buttons. */
   --slxd-color-surface-backdrop: var(--slxd-primitive-color-black); /** Letterbox around the stage and fade curtain. */
   --slxd-color-brand-logo: var(--slxd-primitive-color-prussian-900);
   --slxd-color-brand-background: var(--slxd-primitive-color-white); /** Behind the Studio LXD logo. */
@@ -120,9 +120,9 @@
   --slxd-color-action-secondary-background-hover: var(--slxd-primitive-color-white-alpha-75);
   --slxd-color-action-secondary-edge: var(--slxd-primitive-color-white-alpha-75);
   --slxd-color-action-secondary-text: var(--slxd-primitive-color-petrol-900);
-  --slxd-color-action-primary-background: var(--slxd-primitive-color-mint-alpha-70); /** Mint glass: a cool accent that never blends with the warm scenes, blurring them behind. */
-  --slxd-color-action-primary-background-hover: var(--slxd-primitive-color-mint-alpha-85);
-  --slxd-color-action-primary-edge: var(--slxd-primitive-color-white-alpha-75); /** Light edge and top highlight of the glass. */
+  --slxd-color-action-primary-background: var(--slxd-primitive-color-neon-alpha-70); /** Neon green glass: a cool accent that never blends with the warm scenes. */
+  --slxd-color-action-primary-background-hover: var(--slxd-primitive-color-neon-alpha-85);
+  --slxd-color-action-primary-edge: var(--slxd-primitive-color-white-alpha-75); /** Edge colour; glass buttons do not show it. */
   --slxd-color-action-primary-text: var(--slxd-primitive-color-petrol-900);
   --slxd-color-action-positive-background: var(--slxd-primitive-color-green-700);
   --slxd-color-action-positive-background-hover: var(--slxd-primitive-color-green-800);
@@ -164,6 +164,7 @@
   --slxd-border-width-band: var(--slxd-primitive-size-16); /** Coloured side band (e.g. feedback). */
   --slxd-focus-ring-width: max(var(--slxd-primitive-size-6), calc(var(--slxd-primitive-screen-focus-ring-min) / var(--slxd-stage-scale)));
   --slxd-blur-glass: var(--slxd-primitive-blur-16); /** Background blur behind glass panels. */
+  --slxd-blur-subtle: var(--slxd-primitive-blur-2); /** Light blur behind glass buttons: the scene stays recognisable. */
   --slxd-stroke-width-icon: var(--slxd-primitive-stroke-width-1); /** Icon stroke in grid units: it grows with the icon, rounded to whole real pixels. */
   --slxd-space-none: var(--slxd-primitive-size-0);
   --slxd-space-3xs: var(--slxd-primitive-size-4);
@@ -216,8 +217,7 @@
   --slxd-button-outline-color: var(--slxd-color-border-ink);
   --slxd-button-edge-height: var(--slxd-space-3xs); /** Lower edge that makes buttons look pressable; it sinks when pressed. */
   --slxd-button-shadow-color: var(--slxd-color-shadow-default);
-  --slxd-button-glass-blur: var(--slxd-blur-glass);
-  --slxd-button-glass-highlight-height: var(--slxd-space-3xs); /** Light line inside the top edge of the glass. */
+  --slxd-button-glass-blur: var(--slxd-blur-subtle);
   --slxd-button-primary-background: var(--slxd-color-action-primary-background);
   --slxd-button-primary-background-hover: var(--slxd-color-action-primary-background-hover);
   --slxd-button-primary-edge: var(--slxd-color-action-primary-edge);
@@ -365,7 +365,5 @@
   --slxd-text-input-font-size: var(--slxd-font-size-body);
   --slxd-text-input-invalid-border-color: var(--slxd-color-feedback-negative);
   --slxd-shadow-raised: var(--slxd-primitive-shadow-hard);
-  --slxd-shadow-glass: var(--slxd-primitive-shadow-soft);
-  --slxd-button-glass-shadow: var(--slxd-shadow-glass);
   --slxd-surface-shadow: var(--slxd-shadow-raised);
 }
