@@ -27,3 +27,7 @@ Demo: https://studiolxd.github.io/manipulaciondealimentos/
 Cada push a `main` publica la demo en GitHub Pages.
 
 Para cambiar Tramoya a la vez que el juego, ver «Instalación» en su README.
+
+## Créditos
+
+- Sonido de clic de los botones: [UI Audio](https://kenney.nl/assets/ui-audio) de Kenney, CC0.

@@ -1,0 +1,6 @@
+click.mp3: "click1" from UI Audio by Kenney (www.kenney.nl), converted to MP3.
+https://kenney.nl/assets/ui-audio
+
+License: Creative Commons Zero (CC0)
+http://creativecommons.org/publicdomain/zero/1.0/
+Free for personal and commercial projects; credit is not required.

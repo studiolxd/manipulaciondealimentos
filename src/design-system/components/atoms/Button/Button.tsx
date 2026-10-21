@@ -1,5 +1,6 @@
 import { useAutoFocus } from '@studiolxd/tramoya'
 import { useRef, type MouseEvent, type ReactNode, type Ref } from 'react'
+import { playSound } from '../../../sounds'
 import styles from './Button.module.css'
 
 interface ButtonProps {
@@ -62,7 +63,10 @@ export function Button({
       data-advance={advance || undefined}
       data-concealed={concealed || undefined}
       style={{ viewTransitionName: concealed ? undefined : viewTransitionName }}
-      onClick={onClick}
+      onClick={(event) => {
+        playSound('click')
+        onClick(event)
+      }}
     >
       {children}
     </button>

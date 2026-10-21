@@ -77,6 +77,11 @@ siguen como PNG en `icons.manifest.ts`. Los gráficos del juego (fondos, persona
 `src/content/assets.ts`. Los PNG viven en `public/assets` con nombre estable: para poner el arte definitivo basta
 con sustituir el archivo. `pnpm placeholders` genera los que falten.
 
+Los sonidos de interfaz también son de la librería (`sounds.ts`, archivos en `public/assets/audio`). Todos los
+botones suenan al pulsarse con un clic de [UI Audio de Kenney](https://kenney.nl/assets/ui-audio), con licencia CC0
+(uso comercial permitido, sin atribución obligatoria); el origen y la licencia de cada sonido están en
+`public/assets/audio/LICENSE.txt`.
+
 ## Accesibilidad
 
 Cada historia pasa la revisión automática de accesibilidad (panel **Accessibility**). Los componentes interactivos
