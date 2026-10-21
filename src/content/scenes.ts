@@ -48,7 +48,9 @@ export const diningRoom = {
   davidAlt: 'David, el encargado.',
   speech: [
     (g) =>
-      `¡Hola! Soy David, el encargado. Tú debes ser el nuevo fichaje... ¡te estábamos esperando! ${g('Bienvenido al equipo', 'Bienvenida al equipo', 'Te damos la bienvenida al equipo')}. A partir de ahora yo seré quien te enseñe todo lo que necesitas para trabajar aquí. Durante tu formación recorrerás las distintas zonas del restaurante y pondrás en práctica todo lo que vayas aprendiendo. ¡Vamos a ponernos cómodos!`,
+      `¡Hola! Soy David, el encargado. Tú debes ser el nuevo fichaje... ¡te estábamos esperando! ${g('Bienvenido al equipo', 'Bienvenida al equipo', 'Te damos la bienvenida al equipo')}.`,
+    'A partir de ahora yo seré quien te enseñe todo lo que necesitas para trabajar aquí.',
+    'Durante tu formación recorrerás las distintas zonas del restaurante y pondrás en práctica todo lo que vayas aprendiendo. ¡Vamos a ponernos cómodos!',
   ] satisfies GenderedText[],
   next: '¡Vamos!',
 }
