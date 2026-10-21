@@ -66,7 +66,7 @@ export const handlerDefinition = {
       `Antes de empezar a moverte por el restaurante, hay algo que debes tener claro: qué significa manipular alimentos. ${g('Tranquilo', 'Tranquila', 'No te preocupes')}, es más sencillo de lo que parece.`,
     'Una persona que manipula alimentos es cualquiera que, por su trabajo, entra en contacto con alimentos o realiza tareas que pueden influir en su seguridad.',
     (g) =>
-      `Fíjate en la última parte: "cualquier persona que... realiza tareas que pueden influir en su seguridad". Eso incluye a mucha más gente de la que parece. De hecho, ahora mismo voy a ponerte a prueba con algunos ejemplos. ${g('¿Preparado?', '¿Preparada?', '¿Empezamos?')}`,
+      `Fíjate en la última parte: "cualquiera que... realiza tareas que pueden influir en su seguridad". Eso incluye a mucha más gente de la que parece. De hecho, ahora mismo voy a ponerte a prueba con algunos ejemplos. ${g('¿Preparado?', '¿Preparada?', '¿Empezamos?')}`,
   ] satisfies GenderedText[],
   next: '¡A por ello!',
 }
