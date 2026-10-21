@@ -34,7 +34,7 @@
         "$description": "HUD band over the scene, with background blur."
       },
       "scrim": {
-        "$value": "{primitive.color.white-alpha.80}",
+        "$value": "{primitive.color.white-alpha.72}",
         "$description": "Translucent white over the whole stage behind a modal panel."
       },
       "inverse": {

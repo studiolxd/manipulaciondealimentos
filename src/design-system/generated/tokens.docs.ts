@@ -26,7 +26,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "rgba(255, 255, 255, 0.8)",
+    "value": "rgba(255, 255, 255, 0.72)",
     "reference": "{color.surface.scrim}",
     "description": null
   },
@@ -1731,12 +1731,12 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-color-white-alpha-80",
-    "path": "primitive.color.white-alpha.80",
+    "name": "--slxd-primitive-color-white-alpha-72",
+    "path": "primitive.color.white-alpha.72",
     "layer": "primitive",
     "family": "color",
     "type": "color",
-    "value": "rgba(255, 255, 255, 0.8)",
+    "value": "rgba(255, 255, 255, 0.72)",
     "reference": null,
     "description": null
   },
@@ -2666,8 +2666,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "rgba(255, 255, 255, 0.8)",
-    "reference": "{primitive.color.white-alpha.80}",
+    "value": "rgba(255, 255, 255, 0.72)",
+    "reference": "{primitive.color.white-alpha.72}",
     "description": "Translucent white over the whole stage behind a modal panel."
   },
   {
