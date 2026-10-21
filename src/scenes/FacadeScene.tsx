@@ -26,7 +26,7 @@ export function FacadeScene() {
       )}
       {typed && (
         <Positioned bottom={96} center="x">
-          <Button claimFocus entrance="slide-up" onClick={() => goTo('dining-room')}>
+          <Button claimFocus advance onClick={() => goTo('dining-room')}>
             {facade.enter}
           </Button>
         </Positioned>

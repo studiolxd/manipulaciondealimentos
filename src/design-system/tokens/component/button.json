@@ -51,7 +51,7 @@
       "$value": "{color.shadow.default}"
     },
     "enter": {
-      "$description": "Entrance of a button that appears after something else (entrance=\"slide-up\"): it slides up and fades in.",
+      "$description": "Entrance of the buttons that take the player to another scene (advance): they slide up and fade in.",
       "distance": {
         "$type": "dimension",
         "$value": "{space.xl}"

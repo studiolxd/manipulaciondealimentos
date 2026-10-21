@@ -73,9 +73,10 @@
     0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner), 0 var(--button-lift) 0 var(--button-edge);
 }
 
-/* Entrance. It animates `transform`, so it does not fight the lift, which uses
-   `translate`. With reduced motion it only fades in. */
-.button[data-entrance='slide-up'] {
+/* Buttons that take the player to another scene slide up as they appear. It
+   animates `transform`, so it does not fight the lift, which uses `translate`.
+   With reduced motion it only fades in. */
+.button[data-advance] {
   animation: button-slide-up var(--slxd-button-enter-duration) var(--slxd-button-enter-easing) both;
 }
 
@@ -87,7 +88,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .button[data-entrance='slide-up'] {
+  .button[data-advance] {
     animation-name: button-fade-in;
   }
 }

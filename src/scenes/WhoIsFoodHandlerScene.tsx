@@ -110,7 +110,7 @@ export function WhoIsFoodHandlerScene() {
           noButton: activity.noButton,
         }}
         done={
-          <Button claimFocus onClick={() => goTo('who-is-food-handler-conclusion')}>
+          <Button claimFocus advance onClick={() => goTo('who-is-food-handler-conclusion')}>
             {activity.next}
           </Button>
         }

@@ -10,17 +10,19 @@ interface OptionButtonsProps<T extends string> {
   /** Group name, read by screen readers. */
   label: string
   options: OptionButton<T>[]
+  /** Choosing an option takes the player to another scene (see Button `advance`). */
+  advance?: boolean
   onSelect: (value: T) => void
 }
 
 // Buttons: a single choice that acts as soon as an option is pressed, with no
 // separate confirm button.
-export function OptionButtons<T extends string>({ label, options, onSelect }: OptionButtonsProps<T>) {
+export function OptionButtons<T extends string>({ label, options, advance = false, onSelect }: OptionButtonsProps<T>) {
   return (
     <fieldset className={styles.group}>
       <legend className={styles.legend}>{label}</legend>
       {options.map((option) => (
-        <Button key={option.value} variant="secondary" onClick={() => onSelect(option.value)}>
+        <Button key={option.value} variant="secondary" advance={advance} onClick={() => onSelect(option.value)}>
           {option.label}
         </Button>
       ))}

@@ -51,9 +51,13 @@ export function NameFormScene() {
       <Positioned top={680} left={0} width={1920}>
         <InlineAlert id={ERROR_ID} message={showError ? nameForm.missingName : null} />
       </Positioned>
-      <Positioned bottom={120} center="x">
-        <Button onClick={next}>{nameForm.next}</Button>
-      </Positioned>
+      {sceneReady && (
+        <Positioned bottom={120} center="x">
+          <Button advance onClick={next}>
+            {nameForm.next}
+          </Button>
+        </Positioned>
+      )}
     </SceneFrame>
   )
 }

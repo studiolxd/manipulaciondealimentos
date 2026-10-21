@@ -16,16 +16,19 @@ export function AddressFormScene() {
       backgroundAlt=""
       focusHeading={sceneReady}
     >
-      <Positioned top={480} center="x">
-        <OptionButtons
-          label={addressForm.legend}
-          options={addressForm.options.map((option) => ({ value: option.gender, label: option.label }))}
-          onSelect={(gender) => {
-            setGender(gender)
-            goTo('facade')
-          }}
-        />
-      </Positioned>
+      {sceneReady && (
+        <Positioned top={480} center="x">
+          <OptionButtons
+            advance
+            label={addressForm.legend}
+            options={addressForm.options.map((option) => ({ value: option.gender, label: option.label }))}
+            onSelect={(gender) => {
+              setGender(gender)
+              goTo('facade')
+            }}
+          />
+        </Positioned>
+      )}
     </SceneFrame>
   )
 }

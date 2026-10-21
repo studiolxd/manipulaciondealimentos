@@ -29,6 +29,13 @@ temporizadores nunca se desincronizan.
 `standard` (entrada y salida suaves) para transiciones de estado, `enter` para lo que aparece y `exit` para lo que
 desaparece.
 
+## Botones que avanzan
+
+**Regla:** todo botón que lleva a otra escena usa `advance` (en `Button`, `OptionButtons` o la acción de
+`DialogueScene`) y entra deslizándose hacia arriba mientras aparece con un fundido (`--slxd-button-enter-*`).
+Avanzar se ve igual en todo el juego. Se muestran cuando la escena ya se ve (`sceneReady`), para que la entrada no
+quede tapada por el telón; en la portada, además, después del logo y del aviso de girar el dispositivo.
+
 ## Movimiento reducido
 
 Con «reducir movimiento» activado en el sistema (`prefers-reduced-motion`):
@@ -37,7 +44,7 @@ Con «reducir movimiento» activado en el sistema (`prefers-reduced-motion`):
 - El enunciado no se encoge animado: cambia directamente.
 - La tarjeta deslizada no sale volando: se responde al instante.
 - Los iconos animados, como el de girar el dispositivo, se quedan quietos.
-- Los botones que entran deslizándose hacia arriba (`entrance="slide-up"`) solo aparecen con un fundido.
+- Los botones que llevan a otra escena solo aparecen con un fundido, sin deslizarse.
 - Los fundidos entre escenas se mantienen, porque son cambios de opacidad sin desplazamiento.
 
 ## Tokens

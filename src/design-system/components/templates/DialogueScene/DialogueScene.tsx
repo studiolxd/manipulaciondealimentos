@@ -24,7 +24,7 @@ interface DialogueSceneProps {
   /** Character on screen, placed in stage pixels. */
   character?: Box & { source: ImageSource; alt: string; height: number }
   speech: Box & { speaker: string; blocks: string[]; tail?: 'left' | 'right' | 'bottom' }
-  /** Button shown when the speech ends. */
+  /** Button shown when the speech ends; it takes the player to another scene. */
   action: { label: string; onClick: () => void }
   hud?: boolean
 }
@@ -49,7 +49,7 @@ export function DialogueScene({ heading, background, backgroundAlt, ready, chara
       )}
       {finished && (
         <Positioned bottom={64} center="x">
-          <Button claimFocus onClick={action.onClick}>
+          <Button claimFocus advance onClick={action.onClick}>
             {action.label}
           </Button>
         </Positioned>

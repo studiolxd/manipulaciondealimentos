@@ -15,8 +15,12 @@ interface ButtonProps {
    * lose their place.
    */
   claimFocus?: boolean
-  /** Animates the button in when it appears: `slide-up` slides it up while it fades in. */
-  entrance?: 'slide-up'
+  /**
+   * The button takes the player to another scene. Rule of the design system:
+   * these buttons always enter sliding up while they fade in, so moving on
+   * looks the same everywhere. Render them once the scene can be seen.
+   */
+  advance?: boolean
   /** Accessible name when it must say more than the visible text; it must start with that text. */
   'aria-label'?: string
   'aria-haspopup'?: 'dialog'
@@ -32,7 +36,7 @@ interface ButtonProps {
 export function Button({
   variant = 'primary',
   claimFocus = false,
-  entrance,
+  advance = false,
   concealed = false,
   viewTransitionName,
   ref,
@@ -55,7 +59,7 @@ export function Button({
       type="button"
       className={styles.button}
       data-variant={variant}
-      data-entrance={entrance}
+      data-advance={advance || undefined}
       data-concealed={concealed || undefined}
       style={{ viewTransitionName: concealed ? undefined : viewTransitionName }}
       onClick={onClick}

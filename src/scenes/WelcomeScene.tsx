@@ -6,7 +6,7 @@ import { useGame } from '../game/game'
 // Title screen on every load: begins the game, or continues it when the LMS
 // has progress from a previous session.
 export function WelcomeScene() {
-  const { sceneReady, hasProgress, start } = useGame()
+  const { sceneReady, paused, hasProgress, start } = useGame()
 
   return (
     <SceneFrame
@@ -17,9 +17,14 @@ export function WelcomeScene() {
       backgroundAlt=""
       focusHeading={sceneReady}
     >
-      <Positioned bottom={240} center="x">
-        <Button onClick={start}>{hasProgress ? welcome.resume : welcome.start}</Button>
-      </Positioned>
+      {/* After the logo or the rotate-device screen, so its entrance is seen. */}
+      {sceneReady && !paused && (
+        <Positioned bottom={240} center="x">
+          <Button claimFocus advance onClick={start}>
+            {hasProgress ? welcome.resume : welcome.start}
+          </Button>
+        </Positioned>
+      )}
     </SceneFrame>
   )
 }
