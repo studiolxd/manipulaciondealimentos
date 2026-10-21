@@ -7,7 +7,7 @@ const meta = {
   title: 'Átomos/Text',
   component: Text,
   parameters: { stage: true },
-  args: { children: 'Un manipulador de alimentos es cualquier persona que, por su trabajo, entra en contacto con alimentos.' },
+  args: { children: 'Una persona que manipula alimentos es cualquiera que, por su trabajo, entra en contacto con alimentos.' },
   decorators: [
     (Story) => (
       <Positioned center="both" width={1200}>

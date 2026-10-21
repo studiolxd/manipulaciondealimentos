@@ -11,7 +11,7 @@ const meta = {
     speaker: 'David',
     blocks: [
       'Antes de empezar a moverte por el restaurante, hay algo que debes tener claro: qué significa manipular alimentos.',
-      'Un manipulador de alimentos es cualquier persona que, por su trabajo, entra en contacto con alimentos.',
+      'Una persona que manipula alimentos es cualquiera que, por su trabajo, entra en contacto con alimentos.',
     ],
     onFinished: fn(),
   },
