@@ -1,10 +1,22 @@
 .bubble {
-  padding-block-end: var(--slxd-speech-bubble-action-space);
   cursor: pointer;
 }
 
+/* The next button is only for keyboard and screen reader users: it stays
+   hidden and shows up next to the bubble while it has the focus, so the
+   focus is always visible (WCAG 2.4.7). Pointer users click the bubble. */
 .next {
   position: absolute;
   right: var(--slxd-speech-bubble-next-inset);
-  bottom: var(--slxd-speech-bubble-next-inset);
+  bottom: 0;
+  translate: 0 50%;
+}
+
+.next:not(:focus-within) {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

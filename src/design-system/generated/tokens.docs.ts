@@ -571,16 +571,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-speech-bubble-action-space",
-    "path": "speech-bubble.action-space",
-    "layer": "component",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "72px",
-    "reference": "{space.4xl}",
-    "description": "Room at the bottom for the next button."
-  },
-  {
     "name": "--slxd-stage-backdrop",
     "path": "stage.backdrop",
     "layer": "component",

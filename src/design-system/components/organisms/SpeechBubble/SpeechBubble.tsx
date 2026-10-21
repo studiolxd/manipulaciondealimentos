@@ -23,7 +23,7 @@ interface SpeechBubbleProps {
   onDismiss?: () => void
 }
 
-// Surface with tail + Typewriter + IconButton.
+// Surface with tail + Typewriter + IconButton (hidden until it has the focus).
 export function SpeechBubble({ speaker, blocks, tail = 'left', viewTransitionName, onFinished, onDismiss }: SpeechBubbleProps) {
   const { strings } = useDesignSystem()
   const [index, setIndex] = useState(0)
@@ -52,7 +52,7 @@ export function SpeechBubble({ speaker, blocks, tail = 'left', viewTransitionNam
   }, [finished])
 
   return (
-    // Clicking anywhere on the bubble is a shortcut; the button inside is the accessible control.
+    // Pointer users click the bubble; the hidden button inside is the keyboard and screen reader control.
     <Surface tone="opaque" padding="lg" tail={tail} viewTransitionName={viewTransitionName} className={styles.bubble} onClick={advance}>
       <VisuallyHidden as="p">{strings.speakerSays(speaker)}</VisuallyHidden>
       {/* Announces each new block as the player advances. */}

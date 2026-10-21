@@ -58,7 +58,6 @@ export const tokens = {
   'rotate-screen.gap': "16px",
   'rotate-screen.padding': "24px",
   'speech-bubble.next-inset': "24px",
-  'speech-bubble.action-space': "72px",
   'stage.backdrop': "#000000",
   'stage.text': "#1d1d1f",
   'stage.font-family': "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",

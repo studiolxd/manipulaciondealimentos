@@ -216,7 +216,6 @@
   --slxd-rotate-screen-gap: var(--slxd-space-xs);
   --slxd-rotate-screen-padding: var(--slxd-space-sm);
   --slxd-speech-bubble-next-inset: var(--slxd-space-sm);
-  --slxd-speech-bubble-action-space: var(--slxd-space-4xl); /** Room at the bottom for the next button. */
   --slxd-stage-backdrop: var(--slxd-color-surface-backdrop);
   --slxd-stage-text: var(--slxd-color-text-default);
   --slxd-stage-font-family: var(--slxd-font-family-body);

@@ -3,11 +3,6 @@
     "next-inset": {
       "$type": "dimension",
       "$value": "{space.sm}"
-    },
-    "action-space": {
-      "$type": "dimension",
-      "$value": "{space.4xl}",
-      "$description": "Room at the bottom for the next button."
     }
   }
 }
