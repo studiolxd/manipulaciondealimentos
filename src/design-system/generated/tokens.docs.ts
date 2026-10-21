@@ -216,7 +216,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#000000",
+    "value": "#14262e",
     "reference": "{color.action.primary.text}",
     "description": null
   },
@@ -376,7 +376,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#000000",
+    "value": "#14262e",
     "reference": "{color.action.secondary.text}",
     "description": null
   },
@@ -446,7 +446,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#000000",
+    "value": "#14262e",
     "reference": "{color.action.primary.text}",
     "description": null
   },
@@ -766,9 +766,9 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#000000",
+    "value": "#14262e",
     "reference": "{color.text.default}",
-    "description": "Black, on light surfaces."
+    "description": "Ink, on light surfaces."
   },
   {
     "name": "--slxd-icon-color-inverse",
@@ -936,7 +936,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#000000",
+    "value": "#14262e",
     "reference": "{color.text.on-accent}",
     "description": null
   },
@@ -1066,7 +1066,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#000000",
+    "value": "#14262e",
     "reference": "{color.text.default}",
     "description": null
   },
@@ -1286,7 +1286,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#000000",
+    "value": "#14262e",
     "reference": "{color.text.default}",
     "description": null
   },
@@ -1646,7 +1646,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#000000",
+    "value": "#14262e",
     "reference": "{color.text.default}",
     "description": null
   },
@@ -2596,8 +2596,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#000000",
-    "reference": "{primitive.color.black}",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
     "description": null
   },
   {
@@ -2636,8 +2636,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#000000",
-    "reference": "{primitive.color.black}",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
     "description": "Text on the mint action colour: buttons and accent screens."
   },
   {
@@ -2816,8 +2816,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#000000",
-    "reference": "{primitive.color.black}",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
     "description": null
   },
   {
@@ -2856,8 +2856,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#000000",
-    "reference": "{primitive.color.black}",
+    "value": "#14262e",
+    "reference": "{primitive.color.petrol.900}",
     "description": null
   },
   {

@@ -3,7 +3,7 @@
     "$type": "color",
     "text": {
       "default": {
-        "$value": "{primitive.color.black}"
+        "$value": "{primitive.color.petrol.900}"
       },
       "inverse": {
         "$value": "{primitive.color.cream.50}",
@@ -16,7 +16,7 @@
         "$value": "{primitive.color.red.700}"
       },
       "on-accent": {
-        "$value": "{primitive.color.black}",
+        "$value": "{primitive.color.petrol.900}",
         "$description": "Text on the mint action colour: buttons and accent screens."
       },
       "accent": {
@@ -93,7 +93,7 @@
           "$description": "Lift shadow, the colour of the outline."
         },
         "text": {
-          "$value": "{primitive.color.black}"
+          "$value": "{primitive.color.petrol.900}"
         }
       },
       "primary": {
@@ -110,7 +110,7 @@
           "$description": "Lift shadow, the colour of the outline."
         },
         "text": {
-          "$value": "{primitive.color.black}"
+          "$value": "{primitive.color.petrol.900}"
         }
       },
       "positive": {

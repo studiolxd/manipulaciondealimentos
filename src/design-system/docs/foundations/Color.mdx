@@ -15,24 +15,24 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 
 | Familia | Tonos | Para qué |
 | --- | --- | --- |
-| Tinta (petróleo) | `900` y transparencias 94 %, 72 % y 35 % | Contornos, narración, HUD de cristal y sombras |
+| Tinta (petróleo) | `900` y transparencias 94 %, 72 % y 35 % | Contornos, texto, narración, HUD de cristal y sombras |
 | Crema | `50` | Paneles claros y texto sobre tinta |
 | Arena | `50`, `300` | Papel de los carnés y bordes de la documentación |
 | Menta claro | `300` | Botón principal, botones de icono y pantalla de girar el dispositivo |
 | Menta | `600`, `800` | Elemento seleccionado e iconos de acento, legibles sobre crema |
 | Verde | `700`, `800`, `900` | Acierto y botón SÍ |
 | Rojo | `700`, `800`, `900` | Error y botón NO |
-| Blanco, negro y transparente | — | Texto (negro), fondo del escenario y del telón, bordes invisibles |
+| Blanco, negro y transparente | — | Fondo del escenario y del telón, bordes invisibles |
 
 ## Roles
 
 | Rol | Uso |
 | --- | --- |
-| `color.text.*` | Texto en negro, inverso (crema), sobre menta (negro), acento (menta oscuro), positivo y negativo |
+| `color.text.*` | Texto en tinta, inverso (crema), sobre menta (tinta), acento (menta oscuro), positivo y negativo |
 | `color.surface.*` | Panel claro, papel, panel de tinta (narración), cristal (HUD), pantalla de sistema (menta), tinta de referencia y fondo del escenario |
 | `color.border.*` | Contorno de tinta, sin borde, borde suave y elemento seleccionado |
-| `color.action.primary.*` | Botón principal y botones de icono: menta con texto negro y sombra de tinta |
-| `color.action.secondary.*` | Opciones que actúan al pulsarlas: blanco con texto negro y sombra de tinta |
+| `color.action.primary.*` | Botón principal y botones de icono: menta con texto y sombra de tinta |
+| `color.action.secondary.*` | Opciones que actúan al pulsarlas: blanco con texto y sombra de tinta |
 | `color.action.positive.*` / `negative.*` | Botones SÍ y NO |
 | `color.feedback.*` | Acierto (verde) y error (rojo) |
 | `color.focus.*` | Anillo de foco doble: crema por dentro, tinta por fuera |
@@ -47,10 +47,10 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 
 | Par | Contraste | Cumple |
 | --- | --- | --- |
-| Negro sobre crema (bocadillos, tarjetas) | 19,7:1 | AA y AAA |
+| Tinta sobre crema (bocadillos, tarjetas) | 14,8:1 | AA y AAA |
 | Crema sobre tinta (narración, HUD, títulos) | 14,8:1 | AA y AAA |
-| Negro sobre papel (carnés) | 20,7:1 | AA y AAA |
-| Negro sobre menta `#A6F0D3` (botón principal, pantalla de girar) | 16,0:1 | AA y AAA |
+| Tinta sobre papel (carnés) | 15,3:1 | AA y AAA |
+| Tinta sobre menta `#A6F0D3` (botón principal, pantalla de girar) | 11,8:1 | AA y AAA |
 | Blanco sobre verde `#15803D` (botón SÍ) | 5,0:1 | AA |
 | Blanco sobre rojo `#B91C1C` (botón NO) | 6,5:1 | AA |
 | Verde y rojo sobre crema (texto de acierto y error) | 4,8:1 y 6,1:1 | AA |

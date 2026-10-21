@@ -94,11 +94,11 @@
   --slxd-primitive-font-line-height-150: 1.5;
   --slxd-primitive-font-letter-spacing-40: 0.04em;
   --slxd-primitive-shadow-hard: 0px 8px 0px 0px var(--slxd-primitive-color-petrol-alpha-35); /** Short, hard shadow: the interface looks stuck on top of the scene. */
-  --slxd-color-text-default: var(--slxd-primitive-color-black);
+  --slxd-color-text-default: var(--slxd-primitive-color-petrol-900);
   --slxd-color-text-inverse: var(--slxd-primitive-color-cream-50); /** Text on ink panels and over the scene. */
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
-  --slxd-color-text-on-accent: var(--slxd-primitive-color-black); /** Text on the mint action colour: buttons and accent screens. */
+  --slxd-color-text-on-accent: var(--slxd-primitive-color-petrol-900); /** Text on the mint action colour: buttons and accent screens. */
   --slxd-color-text-accent: var(--slxd-primitive-color-mint-800); /** Dark mint, legible on light surfaces (e.g. accent icons). */
   --slxd-color-surface-default: var(--slxd-primitive-color-cream-50); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-paper: var(--slxd-primitive-color-sand-50); /** Printed-looking objects such as ID cards. */
@@ -116,11 +116,11 @@
   --slxd-color-action-secondary-background: var(--slxd-primitive-color-white); /** White button: options that act straight away. */
   --slxd-color-action-secondary-background-hover: var(--slxd-primitive-color-white); /** Unchanged: on hover the button lifts instead. */
   --slxd-color-action-secondary-edge: var(--slxd-primitive-color-petrol-900); /** Lift shadow, the colour of the outline. */
-  --slxd-color-action-secondary-text: var(--slxd-primitive-color-black);
+  --slxd-color-action-secondary-text: var(--slxd-primitive-color-petrol-900);
   --slxd-color-action-primary-background: var(--slxd-primitive-color-mint-300); /** Mint: a cool accent that never blends with the warm scenes. */
   --slxd-color-action-primary-background-hover: var(--slxd-primitive-color-mint-300); /** Unchanged: on hover the button lifts instead. */
   --slxd-color-action-primary-edge: var(--slxd-primitive-color-petrol-900); /** Lift shadow, the colour of the outline. */
-  --slxd-color-action-primary-text: var(--slxd-primitive-color-black);
+  --slxd-color-action-primary-text: var(--slxd-primitive-color-petrol-900);
   --slxd-color-action-positive-background: var(--slxd-primitive-color-green-700);
   --slxd-color-action-positive-background-hover: var(--slxd-primitive-color-green-800);
   --slxd-color-action-positive-edge: var(--slxd-primitive-color-green-900);
@@ -279,7 +279,7 @@
   --slxd-icon-size-md: var(--slxd-size-icon-md);
   --slxd-icon-size-lg: var(--slxd-size-icon-lg);
   --slxd-icon-stroke-width: var(--slxd-stroke-width-icon);
-  --slxd-icon-color-default: var(--slxd-color-text-default); /** Black, on light surfaces. */
+  --slxd-icon-color-default: var(--slxd-color-text-default); /** Ink, on light surfaces. */
   --slxd-icon-color-inverse: var(--slxd-color-text-inverse); /** Cream, on ink panels and dark screens. */
   --slxd-icon-color-accent: var(--slxd-color-text-accent);
   --slxd-icon-color-positive: var(--slxd-color-feedback-positive);
