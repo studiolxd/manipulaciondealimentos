@@ -38,7 +38,7 @@
     },
     "edge-height": {
       "$type": "dimension",
-      "$value": "{space.2xs}",
+      "$value": "{space.3xs}",
       "$description": "Lower edge that makes buttons look pressable; it sinks when pressed."
     },
     "shadow-color": {

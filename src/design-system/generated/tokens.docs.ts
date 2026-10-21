@@ -116,8 +116,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "8px",
-    "reference": "{space.2xs}",
+    "value": "4px",
+    "reference": "{space.3xs}",
     "description": "Lower edge that makes buttons look pressable; it sinks when pressed."
   },
   {

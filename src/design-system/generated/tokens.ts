@@ -12,7 +12,7 @@ export const tokens = {
   'button.font-weight': 600,
   'button.outline-width': "calc(3px / var(--slxd-stage-scale))",
   'button.outline-color': "#14262e",
-  'button.edge-height': "8px",
+  'button.edge-height': "4px",
   'button.shadow-color': "rgba(20, 38, 46, 0.35)",
   'button.primary.background': "#0b7676",
   'button.primary.background-hover': "#095f5f",
