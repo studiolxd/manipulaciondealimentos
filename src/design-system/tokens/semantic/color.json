@@ -25,10 +25,6 @@
         "$value": "{primitive.color.white}",
         "$description": "Light panels: bubbles, dialogs, feedback, options."
       },
-      "paper": {
-        "$value": "{primitive.color.sand.50}",
-        "$description": "Printed-looking objects such as ID cards."
-      },
       "ink": {
         "$value": "{primitive.color.petrol-alpha.94}",
         "$description": "Dark panels: the narrator."

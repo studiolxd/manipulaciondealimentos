@@ -22,7 +22,7 @@
     },
     "background": {
       "$type": "color",
-      "$value": "{color.surface.paper}"
+      "$value": "{color.surface.default}"
     },
     "text": {
       "$type": "color",

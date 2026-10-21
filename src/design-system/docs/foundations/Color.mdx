@@ -16,7 +16,7 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 | Familia | Tonos | Para qué |
 | --- | --- | --- |
 | Tinta (petróleo) | `900` y transparencias 94 %, 72 % y 35 % | Contornos, texto, narración, HUD de cristal y sombras |
-| Arena | `50`, `300` | Papel de los carnés y bordes de la documentación |
+| Arena | `300` | Bordes de la documentación |
 | Menta claro | `300` | Botón principal y botones de icono |
 | Menta | `600`, `800` | Elemento seleccionado e iconos de acento, legibles sobre blanco |
 | Verde | `700`, `800`, `900` | Acierto y botón SÍ |
@@ -28,7 +28,7 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 | Rol | Uso |
 | --- | --- |
 | `color.text.*` | Texto en tinta, inverso (blanco), acento (menta oscuro), positivo y negativo |
-| `color.surface.*` | Panel claro, papel, panel de tinta (narración), cristal (HUD), pantalla de sistema (blanco, como la de girar el dispositivo), tinta de referencia y fondo del escenario |
+| `color.surface.*` | Panel claro (también carnés y campos de texto), panel de tinta (narración), cristal (HUD), pantalla de sistema (blanco, como la de girar el dispositivo), tinta de referencia y fondo del escenario |
 | `color.border.*` | Contorno de tinta, sin borde, borde suave y elemento seleccionado |
 | `color.action.primary.*` | Botón principal y botones de icono: menta con texto y sombra de tinta |
 | `color.action.secondary.*` | Opciones que actúan al pulsarlas: blanco con texto y sombra de tinta |
@@ -47,9 +47,8 @@ Los componentes nunca eligen un color de la paleta, sino un **rol** (texto, supe
 
 | Par | Contraste | Cumple |
 | --- | --- | --- |
-| Tinta sobre blanco (bocadillos, tarjetas, paneles) | 15,8:1 | AA y AAA |
+| Tinta sobre blanco (bocadillos, tarjetas, carnés, paneles) | 15,8:1 | AA y AAA |
 | Blanco sobre tinta (narración, HUD, títulos) | 15,8:1 | AA y AAA |
-| Tinta sobre papel (carnés) | 15,3:1 | AA y AAA |
 | Tinta sobre menta `#A6F0D3` (botón principal) | 11,8:1 | AA y AAA |
 | Tinta sobre blanco (pantalla de girar) | 15,8:1 | AA y AAA |
 | Blanco sobre verde `#15803D` (botón SÍ) | 5,0:1 | AA |

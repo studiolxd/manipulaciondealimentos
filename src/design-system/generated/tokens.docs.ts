@@ -1306,8 +1306,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fffdf7",
-    "reference": "{color.surface.paper}",
+    "value": "#ffffff",
+    "reference": "{color.surface.default}",
     "description": null
   },
   {
@@ -1606,8 +1606,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#fffdf7",
-    "reference": "{color.surface.paper}",
+    "value": "#ffffff",
+    "reference": "{color.surface.default}",
     "description": null
   },
   {
@@ -1707,16 +1707,6 @@ export const tokenDocs = [
     "family": "color",
     "type": "color",
     "value": "rgba(20, 38, 46, 0.94)",
-    "reference": null,
-    "description": null
-  },
-  {
-    "name": "--slxd-primitive-color-sand-50",
-    "path": "primitive.color.sand.50",
-    "layer": "primitive",
-    "family": "color",
-    "type": "color",
-    "value": "#fffdf7",
     "reference": null,
     "description": null
   },
@@ -2559,16 +2549,6 @@ export const tokenDocs = [
     "value": "#ffffff",
     "reference": "{primitive.color.white}",
     "description": "Light panels: bubbles, dialogs, feedback, options."
-  },
-  {
-    "name": "--slxd-color-surface-paper",
-    "path": "color.surface.paper",
-    "layer": "semantic",
-    "family": "color",
-    "type": "color",
-    "value": "#fffdf7",
-    "reference": "{primitive.color.sand.50}",
-    "description": "Printed-looking objects such as ID cards."
   },
   {
     "name": "--slxd-color-surface-ink",

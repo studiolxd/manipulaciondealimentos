@@ -49,7 +49,7 @@
     "paper": {
       "background": {
         "$type": "color",
-        "$value": "{color.surface.paper}"
+        "$value": "{color.surface.default}"
       },
       "radius": {
         "$type": "dimension",

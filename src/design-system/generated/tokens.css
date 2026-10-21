@@ -10,7 +10,6 @@
   --slxd-primitive-color-petrol-alpha-35: rgba(20, 38, 46, 0.35);
   --slxd-primitive-color-petrol-alpha-72: rgba(20, 38, 46, 0.72);
   --slxd-primitive-color-petrol-alpha-94: rgba(20, 38, 46, 0.94);
-  --slxd-primitive-color-sand-50: #fffdf7;
   --slxd-primitive-color-sand-300: #d6cdb8;
   --slxd-primitive-color-mint-300: #a6f0d3; /** Mint: buttons and accent screens. */
   --slxd-primitive-color-mint-600: #1f9e74;
@@ -95,7 +94,6 @@
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
   --slxd-color-text-accent: var(--slxd-primitive-color-mint-800); /** Dark mint, legible on light surfaces (e.g. accent icons). */
   --slxd-color-surface-default: var(--slxd-primitive-color-white); /** Light panels: bubbles, dialogs, feedback, options. */
-  --slxd-color-surface-paper: var(--slxd-primitive-color-sand-50); /** Printed-looking objects such as ID cards. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
   --slxd-color-surface-inverse: var(--slxd-primitive-color-petrol-900); /** Dark reference surface, e.g. in the documentation. */
@@ -317,7 +315,7 @@
   --slxd-surface-opaque-background: var(--slxd-color-surface-default);
   --slxd-surface-ink-background: var(--slxd-color-surface-ink);
   --slxd-surface-ink-text: var(--slxd-color-text-inverse);
-  --slxd-surface-paper-background: var(--slxd-color-surface-paper);
+  --slxd-surface-paper-background: var(--slxd-color-surface-default);
   --slxd-surface-paper-radius: var(--slxd-radius-md);
   --slxd-surface-accent-shadow-offset: var(--slxd-space-3xs); /** The offset of the surface shadow. */
   --slxd-surface-accent-positive: var(--slxd-color-feedback-positive);
@@ -347,7 +345,7 @@
   --slxd-text-input-radius: var(--slxd-radius-md);
   --slxd-text-input-border-width: var(--slxd-border-width-outline);
   --slxd-text-input-border-color: var(--slxd-color-border-ink);
-  --slxd-text-input-background: var(--slxd-color-surface-paper);
+  --slxd-text-input-background: var(--slxd-color-surface-default);
   --slxd-text-input-text: var(--slxd-color-text-default);
   --slxd-text-input-font-size: var(--slxd-font-size-body);
   --slxd-text-input-invalid-border-color: var(--slxd-color-feedback-negative);

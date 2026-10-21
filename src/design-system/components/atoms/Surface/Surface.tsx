@@ -4,7 +4,7 @@ import styles from './Surface.module.css'
 interface SurfaceProps extends Omit<HTMLAttributes<HTMLElement>, 'className' | 'style'> {
   /** `dialog` renders a non-modal <dialog open>; the caller handles modality. */
   as?: 'div' | 'dialog'
-  /** `opaque`: light panels (bubbles, dialogs, cards). `ink`: dark panels (narrator). `paper`: printed objects (ID cards). */
+  /** `opaque`: light panels (bubbles, dialogs, cards). `ink`: dark panels (narrator). `paper`: printed objects (ID cards), white like `opaque` but with a smaller radius. */
   tone?: 'opaque' | 'ink' | 'paper'
   padding?: 'sm' | 'md' | 'lg' | 'xl'
   /** Marks the surface as selected with an extra ring. */
