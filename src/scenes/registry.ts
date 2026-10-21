@@ -5,11 +5,21 @@ import { DiningRoomScene } from './DiningRoomScene'
 import { FacadeScene } from './FacadeScene'
 import { HandlerDefinitionScene } from './HandlerDefinitionScene'
 import type { SceneId } from './sceneIds'
+import { WhoIsFoodHandlerConclusionScene } from './WhoIsFoodHandlerConclusionScene'
+import { WhoIsFoodHandlerScene } from './WhoIsFoodHandlerScene'
 
-export const scenes: Record<SceneId, ComponentType> = {
-  'avatar-select': AvatarSelectScene,
-  facade: FacadeScene,
-  'dining-room': DiningRoomScene,
-  'handler-definition': HandlerDefinitionScene,
-  'coming-soon': ComingSoonScene,
+interface SceneDefinition {
+  component: ComponentType
+  /** Shows the top HUD band. */
+  hud?: boolean
+}
+
+export const scenes: Record<SceneId, SceneDefinition> = {
+  'avatar-select': { component: AvatarSelectScene },
+  facade: { component: FacadeScene },
+  'dining-room': { component: DiningRoomScene },
+  'handler-definition': { component: HandlerDefinitionScene },
+  'who-is-food-handler': { component: WhoIsFoodHandlerScene, hud: true },
+  'who-is-food-handler-conclusion': { component: WhoIsFoodHandlerConclusionScene, hud: true },
+  'coming-soon': { component: ComingSoonScene, hud: true },
 }

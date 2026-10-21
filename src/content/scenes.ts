@@ -55,5 +55,5 @@ export const handlerDefinition = {
 // Temporary end of the playable script.
 export const comingSoon = {
   heading: 'Continuará',
-  message: 'La actividad «¿Quién es manipulador de alimentos?» está en desarrollo.',
+  message: 'La actividad «Cámaras de seguridad: del manipulador al consumidor» está en desarrollo.',
 }

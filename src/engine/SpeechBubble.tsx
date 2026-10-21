@@ -12,10 +12,24 @@ interface SpeechBubbleProps {
   /** Side the tail points to, towards the speaker. */
   tail?: 'left' | 'bottom' | 'none'
   className?: string
-  onFinished: () => void
+  /** Name used to morph the bubble into another element (see withViewTransition). */
+  viewTransitionName?: string
+  /** Called once the last block is fully shown. */
+  onFinished?: () => void
+  /** When given, the bubble keeps its button on the last block and a final click calls this. */
+  onDismiss?: () => void
 }
 
-export function SpeechBubble({ speaker, blocks, portrait, tail = 'none', className, onFinished }: SpeechBubbleProps) {
+export function SpeechBubble({
+  speaker,
+  blocks,
+  portrait,
+  tail = 'none',
+  className,
+  viewTransitionName,
+  onFinished,
+  onDismiss,
+}: SpeechBubbleProps) {
   const [index, setIndex] = useState(0)
   const [skipRequested, setSkipRequested] = useState(false)
   const [typed, setTyped] = useState(false)
@@ -31,16 +45,22 @@ export function SpeechBubble({ speaker, blocks, portrait, tail = 'none', classNa
       setIndex(index + 1)
       setSkipRequested(false)
       setTyped(false)
+    } else {
+      onDismiss?.()
     }
   }
 
-  const notifyFinished = useEffectEvent(onFinished)
+  const notifyFinished = useEffectEvent(() => onFinished?.())
   useEffect(() => {
     if (finished) notifyFinished()
   }, [finished])
 
   return (
-    <div className={`speech-bubble speech-bubble--tail-${tail} ${className ?? ''}`} onClick={advance}>
+    <div
+      className={`speech-bubble speech-bubble--tail-${tail} ${className ?? ''}`}
+      style={{ viewTransitionName }}
+      onClick={advance}
+    >
       {portrait && <img className="speech-bubble__portrait" src={assetUrl(portrait)} alt="" />}
       <div className="speech-bubble__body">
         <p className="speech-bubble__speaker visually-hidden">{ui.speakerSays(speaker)}</p>
@@ -49,7 +69,7 @@ export function SpeechBubble({ speaker, blocks, portrait, tail = 'none', classNa
           <Typewriter key={index} text={blocks[index]} complete={skipRequested} onDone={() => setTyped(true)} />
         </p>
       </div>
-      {!finished && (
+      {(!finished || onDismiss) && (
         <button
           type="button"
           className="speech-bubble__next"

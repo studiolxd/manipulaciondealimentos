@@ -26,6 +26,11 @@
   inset: 0;
 }
 
+/* Own stacking context, so nothing inside can rise above the curtain. */
+.scene-host {
+  z-index: 0;
+}
+
 .scene__background {
   position: absolute;
   inset: 0;
@@ -37,6 +42,7 @@
 .curtain {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: #000000;
   opacity: 0;
   pointer-events: none;
@@ -201,4 +207,104 @@
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.5;
+}
+
+/* HUD: fixed top band. Scene controls placed over it use z-index 2. */
+
+.hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 1920px;
+  height: 120px;
+  pointer-events: none;
+}
+
+/* Activity title: shown over the scene, fades out after 2 seconds. */
+
+.activity-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: max-content;
+  max-width: 1600px;
+  margin: 0;
+  padding: 40px 80px;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius-box);
+  background: var(--color-surface-translucent);
+  font-size: var(--title-size);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  animation: activity-title 2.5s ease-in forwards;
+}
+
+@keyframes activity-title {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Morph between a bubble and the icon that reopens it (View Transitions). */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-group(statement) {
+  animation-duration: 450ms;
+  animation-timing-function: ease-in-out;
+}
+
+::view-transition-old(statement),
+::view-transition-new(statement) {
+  height: 100%;
+  overflow: clip;
+}
+
+/* Swipe card */
+
+.swipe-card {
+  position: absolute;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.swipe-card:active {
+  cursor: grabbing;
+}
+
+.swipe-card__stamp {
+  position: absolute;
+  top: 32px;
+  padding: 4px 32px;
+  border: 8px solid currentColor;
+  border-radius: 16px;
+  font-size: 88px;
+  font-weight: 800;
+  line-height: 1.1;
+  pointer-events: none;
+}
+
+.swipe-card__stamp--right {
+  left: 40px;
+  color: var(--color-correct);
+  opacity: var(--swipe-right, 0);
+  transform: rotate(-12deg);
+}
+
+.swipe-card__stamp--left {
+  right: 40px;
+  color: var(--color-error);
+  opacity: var(--swipe-left, 0);
+  transform: rotate(12deg);
 }

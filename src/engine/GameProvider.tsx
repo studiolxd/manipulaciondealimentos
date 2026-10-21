@@ -22,14 +22,17 @@ export function GameProvider({ initialScene, children }: GameProviderProps) {
 
   // Every new scene starts behind the closed curtain and fades in.
   useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined
     let frame = requestAnimationFrame(() => {
       // Second frame so the closed curtain is painted before it starts to open.
-      frame = requestAnimationFrame(() => setCurtainClosed(false))
+      frame = requestAnimationFrame(() => {
+        setCurtainClosed(false)
+        timer = setTimeout(() => {
+          transitioning.current = false
+          setSceneReady(true)
+        }, FADE_MS)
+      })
     })
-    const timer = setTimeout(() => {
-      transitioning.current = false
-      setSceneReady(true)
-    }, FADE_MS)
     return () => {
       cancelAnimationFrame(frame)
       clearTimeout(timer)

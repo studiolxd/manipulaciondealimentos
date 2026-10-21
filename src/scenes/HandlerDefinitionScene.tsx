@@ -28,7 +28,7 @@ export function HandlerDefinitionScene() {
         />
       )}
       {finished && (
-        <ActionButton className="scene__action" onClick={() => goTo('coming-soon')}>
+        <ActionButton className="scene__action" onClick={() => goTo('who-is-food-handler')}>
           {handlerDefinition.next}
         </ActionButton>
       )}
