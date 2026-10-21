@@ -7,6 +7,10 @@
   border: 0;
 }
 
+.group[data-wrap] {
+  flex-wrap: wrap;
+}
+
 .legend {
   composes: hidden from '../../utilities/VisuallyHidden/VisuallyHidden.module.css';
 }

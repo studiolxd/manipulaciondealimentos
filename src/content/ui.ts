@@ -13,4 +13,9 @@ export const ui = {
   rotateDevice: {
     title: 'Gira tu dispositivo',
   },
+  // Development only (Ctrl+Shift+M).
+  devSceneMenu: {
+    label: 'Ir a una escena',
+    close: 'Cerrar',
+  },
 }

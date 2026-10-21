@@ -1438,7 +1438,7 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "4px",
     "reference": "{space.3xs}",
-    "description": "A bottom tail's ink triangle moves down by the surface shadow, so the tail keeps the shadow."
+    "description": "The surface shadow offset: a bottom tail's outline is this much thicker, like the panel's bottom edge."
   },
   {
     "name": "--slxd-surface-tail-overlap",

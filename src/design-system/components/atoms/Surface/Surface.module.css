@@ -106,17 +106,17 @@
   border-inline-start: calc(var(--slxd-surface-tail-length) + var(--slxd-surface-tail-overlap)) solid var(--surface-background);
 }
 
+/* Pointing down, the tail continues the panel's bottom edge, outline plus
+   shadow: its ink triangle grows so each slanted side is that thick. For the
+   tail's proportions (64 × 48), a side offset by t widens the base by t × 1.2
+   on each side and lengthens the tip by t × 1.8. */
 .surface[data-tail='bottom']::before {
-  top: 100%;
-  left: calc(var(--slxd-surface-tail-offset) - var(--slxd-surface-border-width));
-  border-inline: calc(var(--slxd-surface-tail-base) / 2 + var(--slxd-surface-border-width)) solid var(--slxd-color-border-none);
-  border-block-start: calc(var(--slxd-surface-tail-length) + var(--slxd-surface-border-width) * 1.6) solid var(--slxd-surface-border-color);
-}
+  --tail-outline: calc(var(--slxd-surface-border-width) + var(--slxd-surface-tail-shadow-offset));
 
-/* Pointing down, the tail continues the shadow: its ink triangle moves down by
-   the shadow offset, so its outline is thicker below, like the panel's. */
-.surface[data-tail='bottom']::before {
-  translate: 0 var(--slxd-surface-tail-shadow-offset);
+  top: 100%;
+  left: calc(var(--slxd-surface-tail-offset) - var(--tail-outline) * 1.2);
+  border-inline: calc(var(--slxd-surface-tail-base) / 2 + var(--tail-outline) * 1.2) solid var(--slxd-color-border-none);
+  border-block-start: calc(var(--slxd-surface-tail-length) + var(--tail-outline) * 1.8) solid var(--slxd-surface-border-color);
 }
 
 .surface[data-tail='bottom']::after {
