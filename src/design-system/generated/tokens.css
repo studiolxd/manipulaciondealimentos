@@ -202,7 +202,7 @@
   --slxd-font-line-height-snug: var(--slxd-primitive-font-line-height-115);
   --slxd-font-line-height-normal: var(--slxd-primitive-font-line-height-140);
   --slxd-font-line-height-relaxed: var(--slxd-primitive-font-line-height-150);
-  --slxd-font-letter-spacing-caps: var(--slxd-primitive-font-letter-spacing-40); /** Tracking of uppercase display text: titles and buttons. */
+  --slxd-font-letter-spacing-caps: var(--slxd-primitive-font-letter-spacing-40); /** Tracking of titles, buttons and text inputs. */
   --slxd-activity-title-hold-duration: var(--slxd-motion-duration-title-hold);
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
   --slxd-button-min-height: var(--slxd-size-target-min);
@@ -367,6 +367,7 @@
   --slxd-text-input-border-color: var(--slxd-color-border-ink);
   --slxd-text-input-background: var(--slxd-color-surface-paper);
   --slxd-text-input-text: var(--slxd-color-text-default);
+  --slxd-text-input-letter-spacing: var(--slxd-font-letter-spacing-caps);
   --slxd-text-input-font-size: var(--slxd-font-size-body);
   --slxd-text-input-invalid-border-color: var(--slxd-color-feedback-negative);
   --slxd-shadow-raised: var(--slxd-primitive-shadow-hard);

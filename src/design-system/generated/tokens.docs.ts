@@ -1651,6 +1651,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-text-input-letter-spacing",
+    "path": "text-input.letter-spacing",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.04em",
+    "reference": "{font.letter-spacing.caps}",
+    "description": null
+  },
+  {
     "name": "--slxd-text-input-font-size",
     "path": "text-input.font-size",
     "layer": "component",
@@ -3678,6 +3688,6 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "0.04em",
     "reference": "{primitive.font.letter-spacing.40}",
-    "description": "Tracking of uppercase display text: titles and buttons."
+    "description": "Tracking of titles, buttons and text inputs."
   }
 ] as const

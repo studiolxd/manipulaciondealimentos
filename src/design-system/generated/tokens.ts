@@ -166,6 +166,7 @@ export const tokens = {
   'text-input.border-color': "#14262e",
   'text-input.background': "#fffdf7",
   'text-input.text': "#000000",
+  'text-input.letter-spacing': "0.04em",
   'text-input.font-size': "max(44px, calc(15px / var(--slxd-stage-scale)))",
   'text-input.invalid-border-color': "#b91c1c",
   'color.text.default': "#000000",
