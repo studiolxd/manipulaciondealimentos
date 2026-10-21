@@ -5,7 +5,9 @@
 // built only from the levels below it; only atoms render semantic HTML.
 
 // Self-hosted Google Fonts (see tokens/primitive/typography.json).
-import '@fontsource-variable/montserrat'
+// Only the Latin subsets: the Korean files would bloat the SCORM package.
+import '@fontsource/gasoek-one/latin.css'
+import '@fontsource/gasoek-one/latin-ext.css'
 import '@fontsource-variable/atkinson-hyperlegible-next'
 import './generated/tokens.css'
 import './styles/base.css'

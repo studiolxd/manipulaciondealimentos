@@ -3,7 +3,7 @@
     "family": {
       "$type": "fontFamily",
       "display": {
-        "$value": "{primitive.font.family.montserrat}",
+        "$value": "{primitive.font.family.gasoek-one}",
         "$description": "Titles, headings and controls (buttons, labels, stamps)."
       },
       "body": {
@@ -53,12 +53,12 @@
         "$value": "{primitive.font.weight.700}"
       },
       "display": {
-        "$value": "{primitive.font.weight.600}",
-        "$description": "Display family: controls and labels."
+        "$value": "{primitive.font.weight.400}",
+        "$description": "Display family: labels. Gasoek One has a single weight, 400."
       },
       "display-strong": {
-        "$value": "{primitive.font.weight.700}",
-        "$description": "Display family: titles and headings."
+        "$value": "{primitive.font.weight.400}",
+        "$description": "Display family: titles and headings. Gasoek One has a single weight, 400."
       },
       "control": {
         "$value": "{primitive.font.weight.400}",

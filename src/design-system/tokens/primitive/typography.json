@@ -4,14 +4,13 @@
       "family": {
         "$type": "fontFamily",
         "$description": "Google Fonts, self-hosted with Fontsource (bundled in the SCORM package, no request to Google).",
-        "montserrat": {
+        "gasoek-one": {
           "$value": [
-            "Montserrat Variable",
-            "Montserrat",
+            "Gasoek One",
             "system-ui",
             "sans-serif"
           ],
-          "$description": "Geometric sans, wide and clean, solid in bold weights. Variable weight 100–900."
+          "$description": "Heavy display sans with a single weight (400): already as bold as it gets. Latin subsets only."
         },
         "atkinson-hyperlegible-next": {
           "$value": [

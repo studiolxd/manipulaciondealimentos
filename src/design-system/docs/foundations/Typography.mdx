@@ -11,9 +11,9 @@ dependen de que el LMS permita cargar recursos externos y no se envía la direcc
 
 ## Familias
 
-### Montserrat: títulos y controles
+### Gasoek One: títulos y controles
 
-Sans geométrica, ancha y limpia, que se mantiene sólida en los pesos fuertes. Para todo lo que se lee de un vistazo: títulos de actividad, encabezados, nombres, botones, etiquetas y
+Sans de exhibición muy gruesa, con un solo peso (400) que ya es negrísimo. Solo se cargan los caracteres latinos. Para todo lo que se lee de un vistazo: títulos de actividad, encabezados, nombres, botones, etiquetas y
 sellos. Token: `--slxd-font-family-display`.
 
 <FontFamilySample family="display" />
@@ -28,11 +28,11 @@ narración, descripciones y feedback. Token: `--slxd-font-family-body`.
 
 ## Normas
 
-- **Montserrat nunca para párrafos.** Si un texto ocupa más de una línea y hay que leerlo entero, va en Atkinson.
-- **Los controles van en Montserrat**, aunque su texto sea una frase («Entrar al restaurante»).
-- **Pesos.** 400 en botones (`--slxd-font-weight-control`), 600 en etiquetas (`--slxd-font-weight-display`) y 700
-  en títulos y en los botones SÍ / NO (`--slxd-font-weight-display-strong`). En la prosa, 400 para el texto y 700
-  para destacar.
+- **Gasoek One nunca para párrafos.** Si un texto ocupa más de una línea y hay que leerlo entero, va en Atkinson.
+- **Los controles van en Gasoek One**, aunque su texto sea una frase («Entrar al restaurante»).
+- **Pesos.** Gasoek One solo tiene peso 400, así que botones, etiquetas y títulos van todos a 400 (los tokens
+  `--slxd-font-weight-control`, `-display` y `-display-strong` siguen separados por si cambia la familia). En la
+  prosa, 400 para el texto y 700 para destacar.
 - **Botones en mayúsculas**, con espaciado de 0,04 em (`--slxd-font-letter-spacing-control`). El texto se escribe
   normal en el contenido; las mayúsculas las pone el estilo, así los lectores de pantalla no lo deletrean.
 - **Tamaño mínimo.** Los tamaños de texto en prosa nunca bajan de 15 px reales en pantalla, ni los encabezados de
@@ -45,22 +45,22 @@ Muestras a la **mitad** de su tamaño en el escenario de 1920×1080.
 
 | Rol | Familia | Tamaño | Peso | Dónde |
 | --- | --- | --- | --- | --- |
-| Título de actividad | Montserrat | 104 px | 700 | `Heading` display (`ActivityTitle`) |
-| Encabezado | Montserrat | 72 px | 700 | `Heading` heading (`SceneFrame`) |
-| Subtítulo | Montserrat | 60 px | 700 | `Heading` subheading (nombre en `IdCard`) |
-| Etiqueta grande | Montserrat | 64 px | 700 | `Label` lg, botones SÍ / NO |
-| Control | Montserrat | 44 px | 400, mayúsculas, espaciado 0,04 em | `Button` |
-| Sello | Montserrat | 88 px | 700 | `Stamp` |
+| Título de actividad | Gasoek One | 104 px | 400 | `Heading` display (`ActivityTitle`) |
+| Encabezado | Gasoek One | 72 px | 400 | `Heading` heading (`SceneFrame`) |
+| Subtítulo | Gasoek One | 60 px | 400 | `Heading` subheading (nombre en `IdCard`) |
+| Etiqueta grande | Gasoek One | 64 px | 400 | `Label` lg, botones SÍ / NO |
+| Control | Gasoek One | 44 px | 400, mayúsculas, espaciado 0,04 em | `Button` |
+| Sello | Gasoek One | 88 px | 400 | `Stamp` |
 | Prosa | Atkinson | 44 px | 400 | `Text` (bocadillos, narración) |
 | Prosa destacada | Atkinson | 44 px | 700 | `Text` bold («¡Correcto!») |
 | Prosa pequeña | Atkinson | 40 px | 400 | `Text` body-sm (descripciones, feedback) |
 
-<TypeSpecimen role="display" label="Título de actividad · Montserrat 104 / 700" sample="¿Quién es manipulador de alimentos?" />
-<TypeSpecimen role="heading" label="Encabezado · Montserrat 72 / 700" sample="Elige tu personaje" />
-<TypeSpecimen role="subheading" label="Subtítulo · Montserrat 60 / 700" sample="Óscar Fernández" />
-<TypeSpecimen role="label" label="Etiqueta grande · Montserrat 64 / 700" sample="← NO   SÍ →" />
-<TypeSpecimen role="control" label="Control · Montserrat 44 / 400 · mayúsculas" sample="Entrar al restaurante" />
-<TypeSpecimen role="stamp" label="Sello · Montserrat 88 / 700" sample="SÍ" />
+<TypeSpecimen role="display" label="Título de actividad · Gasoek One 104 / 400" sample="¿Quién es manipulador de alimentos?" />
+<TypeSpecimen role="heading" label="Encabezado · Gasoek One 72 / 400" sample="Elige tu personaje" />
+<TypeSpecimen role="subheading" label="Subtítulo · Gasoek One 60 / 400" sample="Óscar Fernández" />
+<TypeSpecimen role="label" label="Etiqueta grande · Gasoek One 64 / 400" sample="← NO   SÍ →" />
+<TypeSpecimen role="control" label="Control · Gasoek One 44 / 400 · mayúsculas" sample="Entrar al restaurante" />
+<TypeSpecimen role="stamp" label="Sello · Gasoek One 88 / 400" sample="SÍ" />
 <TypeSpecimen role="body" label="Prosa · Atkinson 44 / 400" sample="Un manipulador de alimentos es cualquier persona que, por su trabajo, entra en contacto con alimentos o realiza tareas que pueden influir en su seguridad." />
 <TypeSpecimen role="body-strong" label="Prosa destacada · Atkinson 44 / 700" sample="¡Correcto!" />
 <TypeSpecimen role="body-sm" label="Prosa pequeña · Atkinson 40 / 400" sample="Me encargo de preparar los platos de la carta para que los clientes queden satisfechos." />

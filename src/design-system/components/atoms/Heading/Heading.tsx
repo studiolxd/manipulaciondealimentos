@@ -17,7 +17,7 @@ interface HeadingProps {
   children: ReactNode
 }
 
-// Titles, in the display family (Montserrat).
+// Titles, in the display family (Gasoek One).
 export function Heading({
   level,
   variant = 'heading',

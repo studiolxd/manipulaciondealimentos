@@ -66,7 +66,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
+    "value": "'Gasoek One', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -216,7 +216,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "700",
+    "value": "400",
     "reference": "{font.weight.display-strong}",
     "description": null
   },
@@ -486,7 +486,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
+    "value": "'Gasoek One', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -496,7 +496,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "700",
+    "value": "400",
     "reference": "{font.weight.display-strong}",
     "description": null
   },
@@ -816,7 +816,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
+    "value": "'Gasoek One', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -826,7 +826,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "600",
+    "value": "400",
     "reference": "{font.weight.display}",
     "description": null
   },
@@ -1186,7 +1186,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "700",
+    "value": "400",
     "reference": "{font.weight.display-strong}",
     "description": null
   },
@@ -1226,7 +1226,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
+    "value": "'Gasoek One', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -2361,14 +2361,14 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-font-family-montserrat",
-    "path": "primitive.font.family.montserrat",
+    "name": "--slxd-primitive-font-family-gasoek-one",
+    "path": "primitive.font.family.gasoek-one",
     "layer": "primitive",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
+    "value": "'Gasoek One', system-ui, sans-serif",
     "reference": null,
-    "description": "Geometric sans, wide and clean, solid in bold weights. Variable weight 100–900."
+    "description": "Heavy display sans with a single weight (400): already as bold as it gets. Latin subsets only."
   },
   {
     "name": "--slxd-primitive-font-family-atkinson-hyperlegible-next",
@@ -3466,8 +3466,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
-    "reference": "{primitive.font.family.montserrat}",
+    "value": "'Gasoek One', system-ui, sans-serif",
+    "reference": "{primitive.font.family.gasoek-one}",
     "description": "Titles, headings and controls (buttons, labels, stamps)."
   },
   {
@@ -3596,9 +3596,9 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontWeight",
-    "value": "600",
-    "reference": "{primitive.font.weight.600}",
-    "description": "Display family: controls and labels."
+    "value": "400",
+    "reference": "{primitive.font.weight.400}",
+    "description": "Display family: labels. Gasoek One has a single weight, 400."
   },
   {
     "name": "--slxd-font-weight-display-strong",
@@ -3606,9 +3606,9 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontWeight",
-    "value": "700",
-    "reference": "{primitive.font.weight.700}",
-    "description": "Display family: titles and headings."
+    "value": "400",
+    "reference": "{primitive.font.weight.400}",
+    "description": "Display family: titles and headings. Gasoek One has a single weight, 400."
   },
   {
     "name": "--slxd-font-weight-control",
