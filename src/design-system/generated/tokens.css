@@ -59,6 +59,7 @@
   --slxd-primitive-size-112: 112px;
   --slxd-primitive-size-120: 120px;
   --slxd-primitive-size-160: 160px;
+  --slxd-primitive-size-200: 200px;
   --slxd-primitive-size-400: 400px;
   --slxd-primitive-screen-target-min: 44px; /** Comfortable touch target (WCAG 2.5.5). */
   --slxd-primitive-screen-text-min: 15px;
@@ -167,6 +168,7 @@
   --slxd-size-icon-lg: var(--slxd-primitive-size-160);
   --slxd-size-logo-splash: clamp(var(--slxd-primitive-screen-logo-min), 40vw, var(--slxd-primitive-screen-logo-max)); /** Studio LXD logo on the splash screen: 40% of the window, between the minimum and maximum. */
   --slxd-size-target-min: max(var(--slxd-primitive-size-112), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Minimum size of anything clickable: 112 stage px, never less than 44 real px. */
+  --slxd-size-avatar: var(--slxd-primitive-size-200); /** Round portrait on ID cards. */
   --slxd-size-hud-height: var(--slxd-primitive-size-120);
   --slxd-size-choice-min-width: var(--slxd-primitive-size-400); /** Minimum width of a choice option, so options line up. */
   --slxd-font-family-display: var(--slxd-primitive-font-family-gasoek-one); /** Titles, headings and controls (buttons, labels, stamps). */
@@ -267,8 +269,12 @@
   --slxd-icon-color-negative: var(--slxd-color-feedback-negative);
   --slxd-icon-loop-duration: var(--slxd-motion-duration-icon-loop);
   --slxd-icon-loop-easing: var(--slxd-motion-easing-standard);
-  --slxd-id-card-gap: var(--slxd-space-xl);
-  --slxd-id-card-text-gap: var(--slxd-space-xs);
+  --slxd-id-card-gap: var(--slxd-space-md);
+  --slxd-id-card-text-gap: var(--slxd-space-2xs);
+  --slxd-id-card-avatar-size: var(--slxd-size-avatar);
+  --slxd-id-card-avatar-radius: var(--slxd-radius-full);
+  --slxd-id-card-avatar-border-width: var(--slxd-border-width-outline);
+  --slxd-id-card-avatar-border-color: var(--slxd-color-border-ink);
   --slxd-inline-alert-gap: var(--slxd-space-xs);
   --slxd-label-font-family: var(--slxd-font-family-display);
   --slxd-label-font-weight: var(--slxd-font-weight-display);

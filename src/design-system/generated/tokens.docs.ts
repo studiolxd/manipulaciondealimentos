@@ -776,8 +776,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "48px",
-    "reference": "{space.xl}",
+    "value": "32px",
+    "reference": "{space.md}",
     "description": null
   },
   {
@@ -786,8 +786,48 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "16px",
-    "reference": "{space.xs}",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-id-card-avatar-size",
+    "path": "id-card.avatar-size",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "200px",
+    "reference": "{size.avatar}",
+    "description": null
+  },
+  {
+    "name": "--slxd-id-card-avatar-radius",
+    "path": "id-card.avatar-radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "999px",
+    "reference": "{radius.full}",
+    "description": null
+  },
+  {
+    "name": "--slxd-id-card-avatar-border-width",
+    "path": "id-card.avatar-border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-id-card-avatar-border-color",
+    "path": "id-card.avatar-border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
     "description": null
   },
   {
@@ -2321,6 +2361,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-size-200",
+    "path": "primitive.size.200",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "200px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-size-400",
     "path": "primitive.size.400",
     "layer": "primitive",
@@ -3399,6 +3449,16 @@ export const tokenDocs = [
     "value": "max(112px, calc(44px / var(--slxd-stage-scale)))",
     "reference": "max({primitive.size.112}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
     "description": "Minimum size of anything clickable: 112 stage px, never less than 44 real px."
+  },
+  {
+    "name": "--slxd-size-avatar",
+    "path": "size.avatar",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "200px",
+    "reference": "{primitive.size.200}",
+    "description": "Round portrait on ID cards."
   },
   {
     "name": "--slxd-size-hud-height",

@@ -8,23 +8,30 @@ import styles from './IdCard.module.css'
 interface IdCardProps {
   name: string
   job: string
+  /** Where the person works, if known. */
+  company?: string
   description: string
+  /** Head-to-chest portrait, cropped into a round avatar. */
   portrait: ImageSource
 }
 
-// Surface (paper) + Heading + Text + Image: ID-card layout with the details
-// on the left and a head-to-chest portrait on the right. It fills its parent.
-export function IdCard({ name, job, description, portrait }: IdCardProps) {
+// Surface (paper) + Image + Heading + Text: ID card, centred and stacked: round
+// avatar, then name, job and company on a line each, then the description.
+// It fills its parent.
+export function IdCard({ name, job, company, description, portrait }: IdCardProps) {
   return (
     <Surface tone="paper" padding="md" className={styles.card}>
-      <div className={styles.details}>
-        <Heading level={2} variant="subheading">
+      <div className={styles.avatar}>
+        <Image source={portrait} alt="" fit="cover" />
+      </div>
+      <div className={styles.identity}>
+        <Heading level={2} variant="subheading" align="center">
           {name}
         </Heading>
         <Text weight="bold">{job}</Text>
-        <Text size="body-sm">{description}</Text>
+        {company && <Text>{company}</Text>}
       </div>
-      <Image source={portrait} alt="" />
+      <Text size="body-sm">{description}</Text>
     </Surface>
   )
 }

@@ -8,6 +8,8 @@ export interface PersonCard {
   id: string
   name: string
   job: string
+  /** Where they work, if the script names it. */
+  company?: string
   description: string
   portrait: AssetId
   isFoodHandler: boolean
@@ -36,7 +38,8 @@ export const whoIsFoodHandler = {
   noButton: 'NO, no es manipulador de alimentos',
   progress: (current: number, total: number) => `Tarjeta ${current} de ${total}`,
   /** Question text recorded with each answer (xAPI). */
-  question: (card: PersonCard) => `¿${card.name} (${card.job}) es manipulador de alimentos?`,
+  question: (card: PersonCard) =>
+    `¿${card.name} (${[card.job, card.company].filter(Boolean).join(', ')}) es manipulador de alimentos?`,
   correct: '¡Correcto!',
   incorrect: '¡Incorrecto!',
   feedbackContinue: 'Continuar',
@@ -45,7 +48,8 @@ export const whoIsFoodHandler = {
     {
       id: 'oscar',
       name: 'Óscar Fernández',
-      job: 'Cocinero del restaurante El Caserío',
+      job: 'Cocinero',
+      company: 'Restaurante El Caserío',
       description: 'Me encargo de preparar los platos de la carta para que los clientes queden satisfechos.',
       portrait: 'cardOscar',
       isFoodHandler: true,
@@ -55,7 +59,8 @@ export const whoIsFoodHandler = {
     {
       id: 'laura',
       name: 'Laura Martín',
-      job: 'Camarera de la cafetería La plaza',
+      job: 'Camarera',
+      company: 'Cafetería La plaza',
       description: 'Sirvo los platos y las bebidas. Además atiendo a los clientes en la sala.',
       portrait: 'cardLaura',
       isFoodHandler: true,
@@ -75,7 +80,8 @@ export const whoIsFoodHandler = {
     {
       id: 'marta',
       name: 'Marta López',
-      job: 'Transportista de la frutería Hermanos López',
+      job: 'Transportista',
+      company: 'Frutería Hermanos López',
       description: 'Reparto la mercancía a los restaurantes de la zona.',
       portrait: 'cardMarta',
       isFoodHandler: true,
@@ -85,7 +91,8 @@ export const whoIsFoodHandler = {
     {
       id: 'miguel',
       name: 'Miguel Rodríguez',
-      job: 'Repartidor de la pizzería Primavera',
+      job: 'Repartidor',
+      company: 'Pizzería Primavera',
       description: 'Llevo en moto los pedidos a domicilio.',
       portrait: 'cardMiguel',
       isFoodHandler: true,
@@ -95,7 +102,8 @@ export const whoIsFoodHandler = {
     {
       id: 'javier',
       name: 'Javier Ruiz',
-      job: 'Mozo de almacén de Supermercados Luna',
+      job: 'Mozo de almacén',
+      company: 'Supermercados Luna',
       description:
         'Recibo las mercancías, compruebo los productos y los coloco en las zonas de almacenamiento correspondientes.',
       portrait: 'cardJavier',
@@ -106,7 +114,8 @@ export const whoIsFoodHandler = {
     {
       id: 'ana',
       name: 'Ana García',
-      job: 'Dependienta de la carnicería Loli',
+      job: 'Dependienta',
+      company: 'Carnicería Loli',
       description: 'Atiendo a los clientes, preparo y entrego los productos cárnicos que solicitan.',
       portrait: 'cardAna',
       isFoodHandler: true,
@@ -136,7 +145,8 @@ export const whoIsFoodHandler = {
     {
       id: 'sergio',
       name: 'Sergio Navarro',
-      job: 'Comercial de Homesec',
+      job: 'Comercial',
+      company: 'Homesec',
       description:
         'Visito establecimientos para presentar nuestros productos y explicar sus características a los clientes.',
       portrait: 'cardSergio',
@@ -147,7 +157,8 @@ export const whoIsFoodHandler = {
     {
       id: 'elena',
       name: 'Elena Torres',
-      job: 'Recepcionista de hotel Gold',
+      job: 'Recepcionista',
+      company: 'Hotel Gold',
       description: 'Recibo a los clientes, gestiono sus entradas y salidas y atiendo sus consultas.',
       portrait: 'cardElena',
       isFoodHandler: false,

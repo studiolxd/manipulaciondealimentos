@@ -79,7 +79,8 @@ export const Activity: Story = {
           content: (
             <IdCard
               name="Óscar Fernández"
-              job="Cocinero del restaurante El Caserío"
+              job="Cocinero"
+              company="Restaurante El Caserío"
               description="Me encargo de preparar los platos de la carta para que los clientes queden satisfechos."
               portrait={fixtures.idPortrait}
             />

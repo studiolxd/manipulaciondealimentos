@@ -30,8 +30,16 @@ function toItem(card: PersonCard): SwipeSorterItem {
   return {
     id: card.id,
     label: card.name,
-    description: `${card.job}. ${card.description}`,
-    content: <IdCard name={card.name} job={card.job} description={card.description} portrait={image(card.portrait)} />,
+    description: `${[card.job, card.company].filter(Boolean).join(', ')}. ${card.description}`,
+    content: (
+      <IdCard
+        name={card.name}
+        job={card.job}
+        company={card.company}
+        description={card.description}
+        portrait={image(card.portrait)}
+      />
+    ),
   }
 }
 

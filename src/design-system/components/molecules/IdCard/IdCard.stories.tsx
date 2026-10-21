@@ -9,13 +9,14 @@ const meta = {
   parameters: { stage: true },
   args: {
     name: 'Javier Ruiz',
-    job: 'Mozo de almacén de Supermercados Luna',
+    job: 'Mozo de almacén',
+    company: 'Supermercados Luna',
     description: 'Recibo las mercancías, compruebo los productos y los coloco en las zonas de almacenamiento correspondientes.',
     portrait: fixtures.idPortrait,
   },
   decorators: [
     (Story) => (
-      <Positioned top={160} left={400} width={1120} height={520}>
+      <Positioned top={160} left={580} width={760} height={840}>
         <Story />
       </Positioned>
     ),
@@ -26,3 +27,5 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
+/** Without a company, the job is followed by the description. */
+export const WithoutCompany: Story = { args: { name: 'Carmen Díaz', job: 'Personal de limpieza', company: undefined } }

@@ -1,14 +1,26 @@
 .card {
   display: flex;
+  flex-direction: column;
   gap: var(--slxd-id-card-gap);
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 
-.details {
+/* Round avatar with the ink outline of the interface. */
+.avatar {
+  flex: none;
+  width: var(--slxd-id-card-avatar-size);
+  height: var(--slxd-id-card-avatar-size);
+  overflow: hidden;
+  border: var(--slxd-id-card-avatar-border-width) solid var(--slxd-id-card-avatar-border-color);
+  border-radius: var(--slxd-id-card-avatar-radius);
+}
+
+.identity {
   display: flex;
-  flex: 1;
   flex-direction: column;
-  justify-content: center;
   gap: var(--slxd-id-card-text-gap);
 }

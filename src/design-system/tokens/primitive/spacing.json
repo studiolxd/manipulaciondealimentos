@@ -49,6 +49,9 @@
       "160": {
         "$value": "160px"
       },
+      "200": {
+        "$value": "200px"
+      },
       "$type": "dimension",
       "$description": "Size scale in stage pixels (the game is laid out on a 1920×1080 stage).",
       "400": {
