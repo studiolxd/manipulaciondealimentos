@@ -1,0 +1,102 @@
+/* Documentation only. Specimens are shown at half their stage size. The
+   doubled selectors outrank Storybook's own paragraph styles. */
+
+.figure {
+  margin: 0;
+  padding-block: var(--slxd-space-xs);
+  border-bottom: var(--slxd-border-width-default) solid var(--slxd-color-border-subtle);
+}
+
+.figure .caption {
+  font-family: var(--slxd-font-family-body);
+  font-size: var(--slxd-font-size-system-body);
+  font-weight: var(--slxd-font-weight-bold);
+}
+
+.figure .specimen {
+  margin: 0;
+  line-height: var(--slxd-font-line-height-snug);
+  zoom: 0.5;
+}
+
+.figure .specimen[data-role='display'] {
+  font-family: var(--slxd-activity-title-font-family);
+  font-size: var(--slxd-activity-title-font-size);
+  font-weight: var(--slxd-activity-title-font-weight);
+  line-height: var(--slxd-activity-title-line-height);
+}
+
+.figure .specimen[data-role='heading'] {
+  font-family: var(--slxd-stage-heading-font-family);
+  font-size: var(--slxd-stage-heading-font-size);
+  font-weight: var(--slxd-stage-heading-font-weight);
+  line-height: var(--slxd-stage-heading-line-height);
+}
+
+.figure .specimen[data-role='subheading'] {
+  font-family: var(--slxd-id-card-name-font-family);
+  font-size: var(--slxd-id-card-name-font-size);
+  font-weight: var(--slxd-id-card-name-font-weight);
+  line-height: var(--slxd-id-card-name-line-height);
+}
+
+.figure .specimen[data-role='label'] {
+  font-family: var(--slxd-button-font-family);
+  font-size: var(--slxd-button-choice-font-size);
+  font-weight: var(--slxd-button-choice-font-weight);
+}
+
+.figure .specimen[data-role='control'] {
+  font-family: var(--slxd-button-font-family);
+  font-size: var(--slxd-button-font-size);
+  font-weight: var(--slxd-button-font-weight);
+}
+
+.figure .specimen[data-role='stamp'] {
+  font-family: var(--slxd-swipe-card-stamp-font-family);
+  font-size: var(--slxd-swipe-card-stamp-font-size);
+  font-weight: var(--slxd-swipe-card-stamp-font-weight);
+}
+
+.specimen[data-role^='body'] {
+  max-width: 60ch;
+  font-family: var(--slxd-stage-font-family);
+  font-size: var(--slxd-stage-font-size);
+  font-weight: var(--slxd-font-weight-regular);
+  line-height: var(--slxd-stage-line-height);
+}
+
+.figure .specimen[data-role='body-strong'] {
+  font-weight: var(--slxd-font-weight-bold);
+}
+
+.figure .specimen[data-role='body-sm'] {
+  font-size: var(--slxd-font-size-body-sm);
+}
+
+.family {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-space-2xs);
+}
+
+.family .alphabet,
+.family .weights {
+  margin: 0;
+  font-size: var(--slxd-font-size-system-heading);
+}
+
+.family[data-family='display'] .alphabet,
+.family[data-family='display'] .weights {
+  font-family: var(--slxd-font-family-display);
+}
+
+.family[data-family='body'] .alphabet,
+.family[data-family='body'] .weights {
+  font-family: var(--slxd-font-family-body);
+}
+
+.weights {
+  display: flex;
+  gap: var(--slxd-space-sm);
+}

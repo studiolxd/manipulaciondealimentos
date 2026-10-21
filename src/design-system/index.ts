@@ -1,6 +1,9 @@
 // Public API of the Studio LXD design system. Game code imports UI only from
 // here; the internals of this folder are private (enforced by oxlint).
 
+// Self-hosted Google Fonts (see tokens/primitive/typography.json).
+import '@fontsource-variable/fredoka'
+import '@fontsource-variable/atkinson-hyperlegible-next'
 import './generated/tokens.css'
 import './styles/base.css'
 

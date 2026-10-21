@@ -15,8 +15,10 @@
   position: absolute;
   width: 100%;
   margin: 0;
+  font-family: var(--slxd-stage-heading-font-family);
   font-size: var(--slxd-stage-heading-font-size);
   font-weight: var(--slxd-stage-heading-font-weight);
+  line-height: var(--slxd-stage-heading-line-height);
   text-align: center;
 }
 

@@ -24,6 +24,7 @@
   border-radius: var(--slxd-choice-card-radius);
   background: var(--slxd-choice-card-background);
   color: var(--slxd-choice-card-text);
+  font-family: var(--slxd-choice-card-font-family);
   font-weight: var(--slxd-choice-card-font-weight);
   cursor: pointer;
 }

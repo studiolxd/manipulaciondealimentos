@@ -57,6 +57,8 @@
   --slxd-primitive-screen-heading-min: 22px;
   --slxd-primitive-screen-title-min: 28px;
   --slxd-primitive-screen-focus-ring-min: 3px;
+  --slxd-primitive-font-family-fredoka: 'Fredoka Variable', Fredoka, system-ui, sans-serif; /** Rounded, friendly sans. Variable weight 300–700. */
+  --slxd-primitive-font-family-atkinson-hyperlegible-next: 'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif; /** Designed by the Braille Institute for maximum legibility. Variable weight 200–800. */
   --slxd-primitive-font-family-system: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --slxd-primitive-font-size-18: 18px;
   --slxd-primitive-font-size-24: 24px;
@@ -68,8 +70,9 @@
   --slxd-primitive-font-size-88: 88px;
   --slxd-primitive-font-size-104: 104px;
   --slxd-primitive-font-weight-400: 400;
+  --slxd-primitive-font-weight-500: 500;
+  --slxd-primitive-font-weight-600: 600;
   --slxd-primitive-font-weight-700: 700;
-  --slxd-primitive-font-weight-800: 800;
   --slxd-primitive-font-line-height-110: 1.1;
   --slxd-primitive-font-line-height-115: 1.15;
   --slxd-primitive-font-line-height-140: 1.4;
@@ -132,7 +135,8 @@
   --slxd-size-icon-lg: var(--slxd-primitive-size-160);
   --slxd-size-target-min: max(var(--slxd-primitive-size-112), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Minimum size of anything clickable: 112 stage px, never less than 44 real px. */
   --slxd-size-hud-height: var(--slxd-primitive-size-120);
-  --slxd-font-family-body: var(--slxd-primitive-font-family-system);
+  --slxd-font-family-display: var(--slxd-primitive-font-family-fredoka); /** Titles, headings and controls (buttons, labels, stamps). */
+  --slxd-font-family-body: var(--slxd-primitive-font-family-atkinson-hyperlegible-next); /** Prose: dialogues, narration, descriptions and feedback. */
   --slxd-font-size-body: max(var(--slxd-primitive-font-size-44), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale)));
   --slxd-font-size-body-sm: max(var(--slxd-primitive-font-size-40), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale)));
   --slxd-font-size-subheading: var(--slxd-primitive-font-size-60);
@@ -144,7 +148,8 @@
   --slxd-font-size-system-body: var(--slxd-primitive-font-size-18); /** Messages outside the stage, in real pixels. */
   --slxd-font-weight-regular: var(--slxd-primitive-font-weight-400);
   --slxd-font-weight-bold: var(--slxd-primitive-font-weight-700);
-  --slxd-font-weight-heavy: var(--slxd-primitive-font-weight-800);
+  --slxd-font-weight-display: var(--slxd-primitive-font-weight-600); /** Display family: controls and labels. */
+  --slxd-font-weight-display-strong: var(--slxd-primitive-font-weight-700); /** Display family: titles and headings (its maximum weight). */
   --slxd-font-line-height-tight: var(--slxd-primitive-font-line-height-110);
   --slxd-font-line-height-snug: var(--slxd-primitive-font-line-height-115);
   --slxd-font-line-height-normal: var(--slxd-primitive-font-line-height-140);
@@ -155,16 +160,17 @@
   --slxd-activity-title-padding-block: var(--slxd-space-lg);
   --slxd-activity-title-padding-inline: var(--slxd-space-5xl);
   --slxd-activity-title-font-size: var(--slxd-font-size-display);
-  --slxd-activity-title-font-weight: var(--slxd-font-weight-heavy);
+  --slxd-activity-title-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-activity-title-line-height: var(--slxd-font-line-height-snug);
   --slxd-activity-title-hold-duration: var(--slxd-motion-duration-title-hold);
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
+  --slxd-activity-title-font-family: var(--slxd-font-family-display);
   --slxd-button-min-height: var(--slxd-size-target-min);
   --slxd-button-padding-block: var(--slxd-space-xs);
   --slxd-button-padding-inline: var(--slxd-space-4xl);
   --slxd-button-radius: var(--slxd-radius-full);
   --slxd-button-font-size: var(--slxd-font-size-body);
-  --slxd-button-font-weight: var(--slxd-font-weight-bold);
+  --slxd-button-font-weight: var(--slxd-font-weight-display);
   --slxd-button-primary-background: var(--slxd-color-action-primary-background);
   --slxd-button-primary-background-hover: var(--slxd-color-action-primary-background-hover);
   --slxd-button-primary-text: var(--slxd-color-action-primary-text);
@@ -172,9 +178,10 @@
   --slxd-button-choice-background-hover: var(--slxd-color-surface-default);
   --slxd-button-choice-padding-inline: var(--slxd-space-lg);
   --slxd-button-choice-font-size: var(--slxd-font-size-label-lg);
-  --slxd-button-choice-font-weight: var(--slxd-font-weight-heavy);
+  --slxd-button-choice-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-button-choice-positive-text: var(--slxd-color-text-positive);
   --slxd-button-choice-negative-text: var(--slxd-color-text-negative);
+  --slxd-button-font-family: var(--slxd-font-family-display);
   --slxd-choice-card-background: var(--slxd-color-surface-translucent);
   --slxd-choice-card-text: var(--slxd-color-text-default);
   --slxd-choice-card-border-color: var(--slxd-color-border-none);
@@ -183,8 +190,9 @@
   --slxd-choice-card-radius: var(--slxd-radius-lg);
   --slxd-choice-card-padding: var(--slxd-space-md);
   --slxd-choice-card-gap: var(--slxd-space-sm);
-  --slxd-choice-card-font-weight: var(--slxd-font-weight-bold);
+  --slxd-choice-card-font-weight: var(--slxd-font-weight-display);
   --slxd-choice-card-group-gap: var(--slxd-space-5xl);
+  --slxd-choice-card-font-family: var(--slxd-font-family-display);
   --slxd-dialog-background: var(--slxd-color-surface-default);
   --slxd-dialog-text: var(--slxd-color-text-default);
   --slxd-dialog-radius: var(--slxd-radius-lg);
@@ -203,8 +211,9 @@
   --slxd-feedback-panel-icon-size: var(--slxd-size-icon-md);
   --slxd-hud-height: var(--slxd-size-hud-height);
   --slxd-hud-text: var(--slxd-color-text-inverse);
-  --slxd-hud-font-weight: var(--slxd-font-weight-bold);
+  --slxd-hud-font-weight: var(--slxd-font-weight-display);
   --slxd-hud-padding-inline: var(--slxd-space-xl);
+  --slxd-hud-font-family: var(--slxd-font-family-display);
   --slxd-icon-button-size: var(--slxd-size-target-min);
   --slxd-icon-button-padding: var(--slxd-space-2xs);
   --slxd-icon-button-radius: var(--slxd-radius-full);
@@ -217,11 +226,12 @@
   --slxd-id-card-padding-inline: var(--slxd-space-xl);
   --slxd-id-card-gap: var(--slxd-space-xl);
   --slxd-id-card-name-font-size: var(--slxd-font-size-subheading);
-  --slxd-id-card-name-font-weight: var(--slxd-font-weight-heavy);
+  --slxd-id-card-name-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-id-card-name-line-height: var(--slxd-font-line-height-snug);
   --slxd-id-card-job-font-weight: var(--slxd-font-weight-bold);
   --slxd-id-card-description-font-size: var(--slxd-font-size-body-sm);
   --slxd-id-card-text-gap: var(--slxd-space-xs);
+  --slxd-id-card-name-font-family: var(--slxd-font-family-display);
   --slxd-narration-box-background: var(--slxd-color-surface-translucent);
   --slxd-narration-box-text: var(--slxd-color-text-default);
   --slxd-narration-box-radius: var(--slxd-radius-lg);
@@ -235,6 +245,8 @@
   --slxd-rotate-screen-title-font-size: var(--slxd-font-size-system-heading);
   --slxd-rotate-screen-message-font-size: var(--slxd-font-size-system-body);
   --slxd-rotate-screen-line-height: var(--slxd-font-line-height-relaxed);
+  --slxd-rotate-screen-title-font-family: var(--slxd-font-family-display);
+  --slxd-rotate-screen-title-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-speech-bubble-background: var(--slxd-color-surface-default);
   --slxd-speech-bubble-text: var(--slxd-color-text-default);
   --slxd-speech-bubble-radius: var(--slxd-radius-lg);
@@ -259,8 +271,10 @@
   --slxd-stage-morph-duration: var(--slxd-motion-duration-morph);
   --slxd-stage-morph-easing: var(--slxd-motion-easing-standard);
   --slxd-stage-heading-font-size: var(--slxd-font-size-heading);
-  --slxd-stage-heading-font-weight: var(--slxd-font-weight-bold);
+  --slxd-stage-heading-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-stage-error-text: var(--slxd-color-text-negative);
+  --slxd-stage-heading-font-family: var(--slxd-font-family-display);
+  --slxd-stage-heading-line-height: var(--slxd-font-line-height-snug);
   --slxd-swipe-card-exit-duration: var(--slxd-motion-duration-exit);
   --slxd-swipe-card-exit-easing: var(--slxd-motion-easing-enter);
   --slxd-swipe-card-stamp-inset: var(--slxd-space-lg);
@@ -269,10 +283,11 @@
   --slxd-swipe-card-stamp-border-width: var(--slxd-border-width-strong);
   --slxd-swipe-card-stamp-radius: var(--slxd-radius-sm);
   --slxd-swipe-card-stamp-font-size: var(--slxd-font-size-stamp);
-  --slxd-swipe-card-stamp-font-weight: var(--slxd-font-weight-heavy);
+  --slxd-swipe-card-stamp-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-swipe-card-stamp-line-height: var(--slxd-font-line-height-tight);
   --slxd-swipe-card-stamp-positive: var(--slxd-color-feedback-positive);
   --slxd-swipe-card-stamp-negative: var(--slxd-color-feedback-negative);
+  --slxd-swipe-card-stamp-font-family: var(--slxd-font-family-display);
   --slxd-shadow-raised: var(--slxd-primitive-shadow-lg);
   --slxd-button-shadow: var(--slxd-shadow-raised);
   --slxd-dialog-shadow: var(--slxd-shadow-raised);

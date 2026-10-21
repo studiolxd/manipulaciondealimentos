@@ -3,6 +3,7 @@
   margin: 0;
   padding-inline: var(--slxd-hud-padding-inline);
   color: var(--slxd-hud-text);
+  font-family: var(--slxd-hud-font-family);
   font-weight: var(--slxd-hud-font-weight);
   line-height: var(--slxd-hud-height);
 }

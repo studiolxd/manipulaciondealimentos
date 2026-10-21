@@ -1,0 +1,64 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { FontFamilySample, TypeSpecimen } from '../TypeSpecimen'
+
+<Meta title="Fundamentos/Tipografía" />
+
+# Tipografía
+
+El juego usa dos familias de Google Fonts. Van **dentro del paquete** (Fontsource): funcionan sin conexión, no
+dependen de que el LMS permita cargar recursos externos y no se envía la dirección IP del alumno a Google.
+
+## Familias
+
+### Fredoka: títulos y controles
+
+Sans redondeada y amable, con tono de juego. Para todo lo que se lee de un vistazo: títulos de actividad, encabezados,
+nombres, botones, etiquetas y sellos. Token: `--slxd-font-family-display`.
+
+<FontFamilySample family="display" />
+
+### Atkinson Hyperlegible Next: prosa
+
+Diseñada por el Braille Institute para la máxima legibilidad, también para personas con baja visión: distingue con
+claridad caracteres que se confunden (I l 1, O 0, b d). Para todo lo que se lee con calma: diálogos de David,
+narración, descripciones y feedback. Token: `--slxd-font-family-body`.
+
+<FontFamilySample family="body" />
+
+## Normas
+
+- **Fredoka nunca para párrafos.** Si un texto ocupa más de una línea y hay que leerlo entero, va en Atkinson.
+- **Los controles van en Fredoka**, aunque su texto sea una frase («Entrar al restaurante»).
+- **Pesos.** Fredoka llega a 700: 600 en controles y etiquetas (`--slxd-font-weight-display`) y 700 en títulos
+  (`--slxd-font-weight-display-strong`). En la prosa, 400 para el texto y 700 para destacar.
+- **Tamaño mínimo.** Los tamaños de texto en prosa nunca bajan de 15 px reales en pantalla, ni los encabezados de
+  22 px ni los títulos de 28 px, aunque el escenario se reduzca (ver tokens).
+- **Interlineado.** 1,4 en la prosa, más ajustado (1,1–1,15) en títulos.
+
+## Escala tipográfica
+
+Muestras a la **mitad** de su tamaño en el escenario de 1920×1080.
+
+| Rol | Familia | Tamaño | Peso | Dónde |
+| --- | --- | --- | --- | --- |
+| Título de actividad | Fredoka | 104 px | 700 | `ActivityTitle` |
+| Encabezado | Fredoka | 72 px | 700 | `SceneFrame` (visible) |
+| Subtítulo | Fredoka | 60 px | 700 | Nombre en `IdCard` |
+| Etiqueta grande | Fredoka | 64 px | 700 | Botones SÍ / NO |
+| Control | Fredoka | 44 px | 600 | `Button` |
+| Sello | Fredoka | 88 px | 700 | Sellos de `SwipeCard` |
+| Prosa | Atkinson | 44 px | 400 | Bocadillos, narración |
+| Prosa destacada | Atkinson | 44 px | 700 | «¡Correcto!» en el feedback |
+| Prosa pequeña | Atkinson | 40 px | 400 | Descripciones, feedback |
+
+<TypeSpecimen role="display" label="Título de actividad · Fredoka 104 / 700" sample="¿Quién es manipulador de alimentos?" />
+<TypeSpecimen role="heading" label="Encabezado · Fredoka 72 / 700" sample="Elige tu personaje" />
+<TypeSpecimen role="subheading" label="Subtítulo · Fredoka 60 / 700" sample="Óscar Fernández" />
+<TypeSpecimen role="label" label="Etiqueta grande · Fredoka 64 / 700" sample="← NO   SÍ →" />
+<TypeSpecimen role="control" label="Control · Fredoka 44 / 600" sample="Entrar al restaurante" />
+<TypeSpecimen role="stamp" label="Sello · Fredoka 88 / 700" sample="SÍ" />
+<TypeSpecimen role="body" label="Prosa · Atkinson 44 / 400" sample="Un manipulador de alimentos es cualquier persona que, por su trabajo, entra en contacto con alimentos o realiza tareas que pueden influir en su seguridad." />
+<TypeSpecimen role="body-strong" label="Prosa destacada · Atkinson 44 / 700" sample="¡Correcto!" />
+<TypeSpecimen role="body-sm" label="Prosa pequeña · Atkinson 40 / 400" sample="Me encargo de preparar los platos de la carta para que los clientes queden satisfechos." />
+
+Los tokens de cada rol están en [Tokens › Tipografía](?path=/docs/fundamentos-tokens-tipografía--docs).

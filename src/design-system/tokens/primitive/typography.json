@@ -3,6 +3,25 @@
     "font": {
       "family": {
         "$type": "fontFamily",
+        "$description": "Google Fonts, self-hosted with Fontsource (bundled in the SCORM package, no request to Google).",
+        "fredoka": {
+          "$value": [
+            "Fredoka Variable",
+            "Fredoka",
+            "system-ui",
+            "sans-serif"
+          ],
+          "$description": "Rounded, friendly sans. Variable weight 300–700."
+        },
+        "atkinson-hyperlegible-next": {
+          "$value": [
+            "Atkinson Hyperlegible Next Variable",
+            "Atkinson Hyperlegible Next",
+            "system-ui",
+            "sans-serif"
+          ],
+          "$description": "Designed by the Braille Institute for maximum legibility. Variable weight 200–800."
+        },
         "system": {
           "$value": [
             "system-ui",
@@ -44,16 +63,19 @@
         "$type": "dimension"
       },
       "weight": {
+        "$type": "fontWeight",
         "400": {
           "$value": 400
         },
+        "500": {
+          "$value": 500
+        },
+        "600": {
+          "$value": 600
+        },
         "700": {
           "$value": 700
-        },
-        "800": {
-          "$value": 800
-        },
-        "$type": "fontWeight"
+        }
       },
       "line-height": {
         "110": {

@@ -5,9 +5,10 @@ import styles from './SwipeCard.module.css'
 
 export type SwipeDirection = 'left' | 'right'
 
-/** Lets other controls answer with the same exit animation as a drag. */
 export interface SwipeCardHandle {
+  /** Answers with the same exit animation as a drag (e.g. from YES / NO buttons). */
   swipe: (direction: SwipeDirection) => void
+  focus: () => void
 }
 
 // Distance in stage pixels a card must travel to count as an answer.
@@ -38,7 +39,8 @@ function stageScale(element: HTMLElement): number {
 }
 
 // Card answered by dragging it left or right with any pointer (mouse, touch,
-// pen) or with the arrow keys. It fills its parent.
+// pen) or with the arrow keys. The arrows work wherever the focus is while the
+// card is on screen and usable (not inert, no dialog in use). It fills its parent.
 export function SwipeCard({
   label,
   description,
@@ -75,7 +77,22 @@ export function SwipeCard({
     if (!leaving) setLeaving(direction)
   }
 
-  useImperativeHandle(ref, () => ({ swipe: release }))
+  useImperativeHandle(ref, () => ({ swipe: release, focus: () => cardRef.current?.focus() }))
+
+  const handleKey = useEffectEvent((event: KeyboardEvent) => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return
+    if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return
+    // Leave the arrows alone where they have their own job, and while the card cannot be used.
+    const target = event.target instanceof Element ? event.target : null
+    if (target?.closest('input, textarea, select, [contenteditable="true"], dialog, [role="dialog"]')) return
+    if (cardRef.current?.closest('[inert]')) return
+    event.preventDefault()
+    release(event.key === 'ArrowRight' ? 'right' : 'left')
+  })
+  useEffect(() => {
+    document.addEventListener('keydown', handleKey)
+    return () => document.removeEventListener('keydown', handleKey)
+  }, [])
 
   function endDrag() {
     drag.current = null
@@ -92,7 +109,7 @@ export function SwipeCard({
   } as CSSProperties
 
   return (
-    // role="application" is an interactive widget with its own keyboard handling; the rules do not know it.
+    // role="application" is an interactive widget (arrow keys, pointer drag); the rules do not know it.
     // oxlint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
       ref={cardRef}
@@ -105,12 +122,6 @@ export function SwipeCard({
       className={styles.card}
       data-dragging={dragging || reducedMotion || undefined}
       style={style}
-      onKeyDown={(event) => {
-        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-          event.preventDefault()
-          release(event.key === 'ArrowRight' ? 'right' : 'left')
-        }
-      }}
       onPointerDown={(event) => {
         if (leaving || drag.current) return
         event.currentTarget.setPointerCapture(event.pointerId)

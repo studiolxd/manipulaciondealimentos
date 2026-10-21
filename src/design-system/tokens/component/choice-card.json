@@ -34,11 +34,15 @@
     },
     "font-weight": {
       "$type": "fontWeight",
-      "$value": "{font.weight.bold}"
+      "$value": "{font.weight.display}"
     },
     "group-gap": {
       "$type": "dimension",
       "$value": "{space.5xl}"
+    },
+    "font-family": {
+      "$type": "fontFamily",
+      "$value": "{font.family.display}"
     }
   }
 }

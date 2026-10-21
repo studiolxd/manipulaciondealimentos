@@ -7,6 +7,7 @@
   border-radius: var(--slxd-activity-title-radius);
   background: var(--slxd-activity-title-background);
   color: var(--slxd-activity-title-text);
+  font-family: var(--slxd-activity-title-font-family);
   font-size: var(--slxd-activity-title-font-size);
   font-weight: var(--slxd-activity-title-font-weight);
   line-height: var(--slxd-activity-title-line-height);

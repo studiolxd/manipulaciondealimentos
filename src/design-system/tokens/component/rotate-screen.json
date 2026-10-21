@@ -32,6 +32,14 @@
     "line-height": {
       "$type": "number",
       "$value": "{font.line-height.relaxed}"
+    },
+    "title-font-family": {
+      "$type": "fontFamily",
+      "$value": "{font.family.display}"
+    },
+    "title-font-weight": {
+      "$type": "fontWeight",
+      "$value": "{font.weight.display-strong}"
     }
   }
 }

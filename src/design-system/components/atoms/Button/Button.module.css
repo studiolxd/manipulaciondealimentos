@@ -4,6 +4,7 @@
   padding-inline: var(--slxd-button-padding-inline);
   border: 0;
   border-radius: var(--slxd-button-radius);
+  font-family: var(--slxd-button-font-family);
   font-size: var(--slxd-button-font-size);
   font-weight: var(--slxd-button-font-weight);
   white-space: nowrap;

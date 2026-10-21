@@ -2,8 +2,13 @@
   "font": {
     "family": {
       "$type": "fontFamily",
+      "display": {
+        "$value": "{primitive.font.family.fredoka}",
+        "$description": "Titles, headings and controls (buttons, labels, stamps)."
+      },
       "body": {
-        "$value": "{primitive.font.family.system}"
+        "$value": "{primitive.font.family.atkinson-hyperlegible-next}",
+        "$description": "Prose: dialogues, narration, descriptions and feedback."
       }
     },
     "size": {
@@ -47,8 +52,13 @@
       "bold": {
         "$value": "{primitive.font.weight.700}"
       },
-      "heavy": {
-        "$value": "{primitive.font.weight.800}"
+      "display": {
+        "$value": "{primitive.font.weight.600}",
+        "$description": "Display family: controls and labels."
+      },
+      "display-strong": {
+        "$value": "{primitive.font.weight.700}",
+        "$description": "Display family: titles and headings (its maximum weight)."
       }
     },
     "line-height": {

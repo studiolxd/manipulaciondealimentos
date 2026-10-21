@@ -66,8 +66,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "800",
-    "reference": "{font.weight.heavy}",
+    "value": "700",
+    "reference": "{font.weight.display-strong}",
     "description": null
   },
   {
@@ -98,6 +98,16 @@ export const tokenDocs = [
     "type": "cubicBezier",
     "value": "cubic-bezier(0.42, 0, 1, 1)",
     "reference": "{motion.easing.exit}",
+    "description": null
+  },
+  {
+    "name": "--slxd-activity-title-font-family",
+    "path": "activity-title.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{font.family.display}",
     "description": null
   },
   {
@@ -156,8 +166,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "700",
-    "reference": "{font.weight.bold}",
+    "value": "600",
+    "reference": "{font.weight.display}",
     "description": null
   },
   {
@@ -246,8 +256,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "800",
-    "reference": "{font.weight.heavy}",
+    "value": "700",
+    "reference": "{font.weight.display-strong}",
     "description": null
   },
   {
@@ -268,6 +278,16 @@ export const tokenDocs = [
     "type": "color",
     "value": "#b91c1c",
     "reference": "{color.text.negative}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-font-family",
+    "path": "button.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{font.family.display}",
     "description": null
   },
   {
@@ -356,8 +376,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "700",
-    "reference": "{font.weight.bold}",
+    "value": "600",
+    "reference": "{font.weight.display}",
     "description": null
   },
   {
@@ -368,6 +388,16 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "96px",
     "reference": "{space.5xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-choice-card-font-family",
+    "path": "choice-card.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{font.family.display}",
     "description": null
   },
   {
@@ -576,8 +606,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "700",
-    "reference": "{font.weight.bold}",
+    "value": "600",
+    "reference": "{font.weight.display}",
     "description": null
   },
   {
@@ -588,6 +618,16 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "48px",
     "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hud-font-family",
+    "path": "hud.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{font.family.display}",
     "description": null
   },
   {
@@ -726,8 +766,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "800",
-    "reference": "{font.weight.heavy}",
+    "value": "700",
+    "reference": "{font.weight.display-strong}",
     "description": null
   },
   {
@@ -768,6 +808,16 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "16px",
     "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-id-card-name-font-family",
+    "path": "id-card.name-font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{font.family.display}",
     "description": null
   },
   {
@@ -908,6 +958,26 @@ export const tokenDocs = [
     "type": "number",
     "value": "1.5",
     "reference": "{font.line-height.relaxed}",
+    "description": null
+  },
+  {
+    "name": "--slxd-rotate-screen-title-font-family",
+    "path": "rotate-screen.title-font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{font.family.display}",
+    "description": null
+  },
+  {
+    "name": "--slxd-rotate-screen-title-font-weight",
+    "path": "rotate-screen.title-font-weight",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontWeight",
+    "value": "700",
+    "reference": "{font.weight.display-strong}",
     "description": null
   },
   {
@@ -1056,7 +1126,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
     "reference": "{font.family.body}",
     "description": null
   },
@@ -1167,7 +1237,7 @@ export const tokenDocs = [
     "family": "typography",
     "type": "fontWeight",
     "value": "700",
-    "reference": "{font.weight.bold}",
+    "reference": "{font.weight.display-strong}",
     "description": null
   },
   {
@@ -1178,6 +1248,26 @@ export const tokenDocs = [
     "type": "color",
     "value": "#b91c1c",
     "reference": "{color.text.negative}",
+    "description": null
+  },
+  {
+    "name": "--slxd-stage-heading-font-family",
+    "path": "stage.heading-font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{font.family.display}",
+    "description": null
+  },
+  {
+    "name": "--slxd-stage-heading-line-height",
+    "path": "stage.heading-line-height",
+    "layer": "component",
+    "family": "typography",
+    "type": "number",
+    "value": "1.15",
+    "reference": "{font.line-height.snug}",
     "description": null
   },
   {
@@ -1266,8 +1356,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "800",
-    "reference": "{font.weight.heavy}",
+    "value": "700",
+    "reference": "{font.weight.display-strong}",
     "description": null
   },
   {
@@ -1298,6 +1388,16 @@ export const tokenDocs = [
     "type": "color",
     "value": "#b91c1c",
     "reference": "{color.feedback.negative}",
+    "description": null
+  },
+  {
+    "name": "--slxd-swipe-card-stamp-font-family",
+    "path": "swipe-card.stamp.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{font.family.display}",
     "description": null
   },
   {
@@ -1851,6 +1951,26 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-family-fredoka",
+    "path": "primitive.font.family.fredoka",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": null,
+    "description": "Rounded, friendly sans. Variable weight 300–700."
+  },
+  {
+    "name": "--slxd-primitive-font-family-atkinson-hyperlegible-next",
+    "path": "primitive.font.family.atkinson-hyperlegible-next",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+    "reference": null,
+    "description": "Designed by the Braille Institute for maximum legibility. Variable weight 200–800."
+  },
+  {
     "name": "--slxd-primitive-font-family-system",
     "path": "primitive.font.family.system",
     "layer": "primitive",
@@ -1961,22 +2081,32 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-weight-500",
+    "path": "primitive.font.weight.500",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "fontWeight",
+    "value": "500",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-font-weight-600",
+    "path": "primitive.font.weight.600",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "fontWeight",
+    "value": "600",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-font-weight-700",
     "path": "primitive.font.weight.700",
     "layer": "primitive",
     "family": "typography",
     "type": "fontWeight",
     "value": "700",
-    "reference": null,
-    "description": null
-  },
-  {
-    "name": "--slxd-primitive-font-weight-800",
-    "path": "primitive.font.weight.800",
-    "layer": "primitive",
-    "family": "typography",
-    "type": "fontWeight",
-    "value": "800",
     "reference": null,
     "description": null
   },
@@ -2601,14 +2731,24 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-font-family-display",
+    "path": "font.family.display",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "reference": "{primitive.font.family.fredoka}",
+    "description": "Titles, headings and controls (buttons, labels, stamps)."
+  },
+  {
     "name": "--slxd-font-family-body",
     "path": "font.family.body",
     "layer": "semantic",
     "family": "typography",
     "type": "fontFamily",
-    "value": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
-    "reference": "{primitive.font.family.system}",
-    "description": null
+    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+    "reference": "{primitive.font.family.atkinson-hyperlegible-next}",
+    "description": "Prose: dialogues, narration, descriptions and feedback."
   },
   {
     "name": "--slxd-font-size-body",
@@ -2721,14 +2861,24 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-font-weight-heavy",
-    "path": "font.weight.heavy",
+    "name": "--slxd-font-weight-display",
+    "path": "font.weight.display",
     "layer": "semantic",
     "family": "typography",
     "type": "fontWeight",
-    "value": "800",
-    "reference": "{primitive.font.weight.800}",
-    "description": null
+    "value": "600",
+    "reference": "{primitive.font.weight.600}",
+    "description": "Display family: controls and labels."
+  },
+  {
+    "name": "--slxd-font-weight-display-strong",
+    "path": "font.weight.display-strong",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "fontWeight",
+    "value": "700",
+    "reference": "{primitive.font.weight.700}",
+    "description": "Display family: titles and headings (its maximum weight)."
   },
   {
     "name": "--slxd-font-line-height-tight",

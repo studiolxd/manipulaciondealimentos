@@ -69,7 +69,11 @@ export function WhoIsFoodHandlerScene() {
 
   function startCards() {
     xapi.activityAttempted(ACTIVITY_ID, whoIsFoodHandler.title)
-    withViewTransition(() => setPhase('cards'))
+    // The first card takes the focus, so screen readers announce it with its keyboard hint.
+    withViewTransition(
+      () => setPhase('cards'),
+      () => cardRef.current?.focus(),
+    )
   }
 
   function closeStatement() {

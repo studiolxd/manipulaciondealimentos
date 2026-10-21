@@ -25,6 +25,7 @@
 }
 
 .name {
+  font-family: var(--slxd-id-card-name-font-family);
   font-size: var(--slxd-id-card-name-font-size);
   font-weight: var(--slxd-id-card-name-font-weight);
   line-height: var(--slxd-id-card-name-line-height);

@@ -43,7 +43,7 @@ const preview: Preview = {
         method: 'alphabetical',
         order: [
           'Fundamentos',
-          ['Introducción', 'Tokens', ['Colores', 'Tipografía', 'Espaciado y tamaños', 'Forma', 'Movimiento', 'Capas']],
+          ['Introducción', 'Tipografía', 'Tokens', ['Colores', 'Tipografía', 'Espaciado y tamaños', 'Forma', 'Movimiento', 'Capas']],
           'Átomos',
           'Moléculas',
           'Organismos',
