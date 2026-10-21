@@ -205,6 +205,7 @@
   --slxd-button-enter-distance: var(--slxd-space-xl);
   --slxd-button-enter-duration: var(--slxd-motion-duration-morph);
   --slxd-button-enter-easing: var(--slxd-motion-easing-enter);
+  --slxd-button-focus-gap: calc(var(--slxd-focus-ring-width) + var(--slxd-space-2xs)); /** Distance from a focused button to its ink focus line: the ring plus the lifted shadow, so the shadow shows inside the light halo. */
   --slxd-button-lift-rest: var(--slxd-space-3xs);
   --slxd-button-lift-hover: var(--slxd-space-2xs);
   --slxd-button-lift-duration: var(--slxd-motion-duration-press);

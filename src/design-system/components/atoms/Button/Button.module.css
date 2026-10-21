@@ -33,12 +33,15 @@
   --button-lift: var(--slxd-button-lift-hover);
 }
 
-/* Keyboard focus: the button lifts as on hover, inside the double ring (light
-   gap, ink line) that follows its radius like an echo of the outline. */
+/* Keyboard focus: the button lifts as on hover. A light halo wide enough for
+   the lifted shadow, with the shadow drawn on top, and an ink line around it
+   that follows the radius like an echo of the outline. */
 .button:focus-visible {
   --button-lift: var(--slxd-button-lift-hover);
   --button-shadow:
-    0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner), 0 var(--button-lift) 0 var(--slxd-button-outline-color);
+    0 var(--button-lift) 0 var(--slxd-button-outline-color), 0 0 0 var(--slxd-button-focus-gap) var(--slxd-stage-focus-ring-inner);
+
+  outline-offset: var(--slxd-button-focus-gap);
 }
 
 /* After the focus, so pressing a focused button still sinks it. */

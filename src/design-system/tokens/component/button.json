@@ -56,6 +56,11 @@
         "$value": "{motion.easing.enter}"
       }
     },
+    "focus-gap": {
+      "$type": "dimension",
+      "$value": "calc({focus.ring-width} + {space.2xs})",
+      "$description": "Distance from a focused button to its ink focus line: the ring plus the lifted shadow, so the shadow shows inside the light halo."
+    },
     "lift": {
       "$description": "Every button: a hard shadow in the outline colour that grows on hover and disappears when pressed.",
       "rest": {

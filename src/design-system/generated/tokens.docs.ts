@@ -151,6 +151,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-focus-gap",
+    "path": "button.focus-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "calc(max(6px, calc(3px / var(--slxd-stage-scale))) + 8px)",
+    "reference": "calc({focus.ring-width} + {space.2xs})",
+    "description": "Distance from a focused button to its ink focus line: the ring plus the lifted shadow, so the shadow shows inside the light halo."
+  },
+  {
     "name": "--slxd-button-lift-rest",
     "path": "button.lift.rest",
     "layer": "component",
