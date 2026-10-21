@@ -504,7 +504,7 @@ export const tokenDocs = [
     "name": "--slxd-heading-overlay-stroke-width",
     "path": "heading.overlay.stroke-width",
     "layer": "component",
-    "family": "spacing",
+    "family": "shape",
     "type": "dimension",
     "value": "calc(calc(3px / var(--slxd-stage-scale)) * 3)",
     "reference": "calc({border-width.outline} * 3)",
@@ -635,8 +635,8 @@ export const tokenDocs = [
     "path": "icon.stroke-width",
     "layer": "component",
     "family": "shape",
-    "type": "number",
-    "value": "2.5",
+    "type": "dimension",
+    "value": "calc(2.5px / var(--slxd-stage-scale))",
     "reference": "{stroke-width.icon}",
     "description": null
   },
@@ -1871,16 +1871,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-stroke-width-icon",
-    "path": "primitive.stroke-width.icon",
-    "layer": "primitive",
-    "family": "shape",
-    "type": "number",
-    "value": "2.5",
-    "reference": null,
-    "description": "Icon stroke in units of the 24-unit grid: the weight of Rubik Medium stems."
-  },
-  {
     "name": "--slxd-primitive-size-0",
     "path": "primitive.size.0",
     "layer": "primitive",
@@ -2109,6 +2099,16 @@ export const tokenDocs = [
     "value": "3px",
     "reference": null,
     "description": "Ink outline of the interface, always 3 real pixels."
+  },
+  {
+    "name": "--slxd-primitive-screen-icon-stroke",
+    "path": "primitive.screen.icon-stroke",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "2.5px",
+    "reference": null,
+    "description": "Stroke of vector icons, always 2.5 real pixels."
   },
   {
     "name": "--slxd-primitive-font-family-rubik",
@@ -2895,10 +2895,10 @@ export const tokenDocs = [
     "path": "stroke-width.icon",
     "layer": "semantic",
     "family": "shape",
-    "type": "number",
-    "value": "2.5",
-    "reference": "{primitive.stroke-width.icon}",
-    "description": null
+    "type": "dimension",
+    "value": "calc(2.5px / var(--slxd-stage-scale))",
+    "reference": "calc({primitive.screen.icon-stroke} / var(--slxd-stage-scale))",
+    "description": "Icon stroke: 2.5 real pixels at any icon size and stage scale."
   },
   {
     "name": "--slxd-space-none",

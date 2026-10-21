@@ -22,7 +22,7 @@
   height: 100%;
 }
 
-/* Vector icons: one colour, the stroke of the 24-unit grid. */
+/* Vector icons: one colour and the same real stroke at any size. */
 
 svg.icon {
   overflow: visible;
@@ -31,6 +31,11 @@ svg.icon {
   stroke-width: var(--slxd-icon-stroke-width);
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+/* The stroke ignores the viewBox scaling, so it does not grow with the icon. */
+svg.icon * {
+  vector-effect: non-scaling-stroke;
 }
 
 .icon[data-tone='default'] {

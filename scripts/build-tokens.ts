@@ -121,11 +121,10 @@ function familyOf(token: TransformedToken, layer: string, file: string): Family 
     case 'shadow':
       return 'shape'
     case 'number':
-      if (path.includes('stroke-width')) return 'shape'
       return path.includes('line-height') ? 'typography' : 'layer'
     default:
       if (path.includes('font')) return 'typography'
-      if (/radius|border-width/.test(path)) return 'shape'
+      if (/radius|border-width|stroke-width/.test(path)) return 'shape'
       return 'spacing'
   }
 }

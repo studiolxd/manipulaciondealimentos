@@ -42,13 +42,6 @@
       "16": {
         "$value": "16px"
       }
-    },
-    "stroke-width": {
-      "$type": "number",
-      "icon": {
-        "$value": 2.5,
-        "$description": "Icon stroke in units of the 24-unit grid: the weight of Rubik Medium stems."
-      }
     }
   }
 }

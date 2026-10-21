@@ -43,7 +43,6 @@
   --slxd-primitive-border-width-4: 4px;
   --slxd-primitive-border-width-8: 8px;
   --slxd-primitive-blur-16: 16px;
-  --slxd-primitive-stroke-width-icon: 2.5; /** Icon stroke in units of the 24-unit grid: the weight of Rubik Medium stems. */
   --slxd-primitive-size-0: 0px;
   --slxd-primitive-size-4: 4px;
   --slxd-primitive-size-6: 6px;
@@ -67,6 +66,7 @@
   --slxd-primitive-screen-title-min: 28px;
   --slxd-primitive-screen-focus-ring-min: 3px;
   --slxd-primitive-screen-outline: 3px; /** Ink outline of the interface, always 3 real pixels. */
+  --slxd-primitive-screen-icon-stroke: 2.5px; /** Stroke of vector icons, always 2.5 real pixels. */
   --slxd-primitive-font-family-rubik: 'Rubik Variable', Rubik, system-ui, sans-serif; /** Sans with slightly rounded corners, solid and compact: game interface feel. Variable weight 300–900. */
   --slxd-primitive-font-family-atkinson-hyperlegible-next: 'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif; /** Designed by the Braille Institute for maximum legibility. Variable weight 200–800. */
   --slxd-primitive-font-family-system: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -145,7 +145,7 @@
   --slxd-border-width-band: var(--slxd-primitive-size-16); /** Coloured side band (e.g. feedback). */
   --slxd-focus-ring-width: max(var(--slxd-primitive-size-6), calc(var(--slxd-primitive-screen-focus-ring-min) / var(--slxd-stage-scale)));
   --slxd-blur-glass: var(--slxd-primitive-blur-16); /** Background blur behind glass panels. */
-  --slxd-stroke-width-icon: var(--slxd-primitive-stroke-width-icon);
+  --slxd-stroke-width-icon: calc(var(--slxd-primitive-screen-icon-stroke) / var(--slxd-stage-scale)); /** Icon stroke: 2.5 real pixels at any icon size and stage scale. */
   --slxd-space-none: var(--slxd-primitive-size-0);
   --slxd-space-3xs: var(--slxd-primitive-size-4);
   --slxd-space-2xs: var(--slxd-primitive-size-8);

@@ -77,6 +77,10 @@
       "outline": {
         "$value": "3px",
         "$description": "Ink outline of the interface, always 3 real pixels."
+      },
+      "icon-stroke": {
+        "$value": "2.5px",
+        "$description": "Stroke of vector icons, always 2.5 real pixels."
       }
     }
   }
