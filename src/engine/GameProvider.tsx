@@ -3,6 +3,7 @@ import { resolveText, type Gender, type GenderedText } from '../content/gendered
 import { tokens, usePortrait } from '../design-system'
 import { sceneProgressWeight, type SceneId } from '../scenes/sceneIds'
 import { GameContext, type GameContextValue } from './gameContext'
+import { lmsLearnerName } from './tracking/learner'
 import { loadProgress, saveProgress, type Progress } from './tracking/progress'
 import { xapi } from './tracking/xapi'
 
@@ -19,12 +20,22 @@ interface GameProviderProps {
 export function GameProvider({ startScene, children }: GameProviderProps) {
   // Progress saved in the LMS from a previous session, read once.
   const [saved] = useState(loadProgress)
-  const [sceneId, setSceneId] = useState<SceneId>(startScene ?? saved?.at ?? 'address-form')
+  // Inside an LMS the learner's name comes from it; otherwise the player types it first.
+  const [lmsName] = useState(lmsLearnerName)
+  const [playerName, setPlayerNameState] = useState<string | null>(lmsName ?? saved?.name ?? null)
+  const [sceneId, setSceneId] = useState<SceneId>(
+    startScene ?? saved?.at ?? (lmsName ? 'address-form' : 'name-form'),
+  )
   const [gender, setGenderState] = useState<Gender>(saved?.gender ?? 'neutral')
   const [curtainClosed, setCurtainClosed] = useState(true)
   const [sceneReady, setSceneReady] = useState(false)
   const transitioning = useRef(false)
-  const progress = useRef<Progress>({ gender: saved?.gender ?? null, done: saved?.done ?? [], at: sceneId })
+  const progress = useRef<Progress>({
+    name: lmsName ? null : (saved?.name ?? null),
+    gender: saved?.gender ?? null,
+    done: saved?.done ?? [],
+    at: sceneId,
+  })
   const reportedScene = useRef<SceneId | null>(null)
   const paused = usePortrait()
 
@@ -59,6 +70,11 @@ export function GameProvider({ startScene, children }: GameProviderProps) {
     }
   }, [sceneId])
 
+  const setPlayerName = useCallback((value: string) => {
+    progress.current.name = value
+    setPlayerNameState(value)
+  }, [])
+
   const setGender = useCallback((value: Gender) => {
     progress.current.gender = value
     setGenderState(value)
@@ -82,8 +98,8 @@ export function GameProvider({ startScene, children }: GameProviderProps) {
   const text = useCallback((value: GenderedText) => resolveText(value, gender), [gender])
 
   const value = useMemo<GameContextValue>(
-    () => ({ sceneId, gender, setGender, goTo, sceneReady, curtainClosed, paused, text }),
-    [sceneId, gender, setGender, goTo, sceneReady, curtainClosed, paused, text],
+    () => ({ sceneId, playerName, setPlayerName, gender, setGender, goTo, sceneReady, curtainClosed, paused, text }),
+    [sceneId, playerName, setPlayerName, gender, setGender, goTo, sceneReady, curtainClosed, paused, text],
   )
 
   return <GameContext value={value}>{children}</GameContext>

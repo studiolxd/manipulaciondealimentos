@@ -1281,6 +1281,106 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-text-field-gap",
+    "path": "text-field.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-min-height",
+    "path": "text-input.min-height",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(112px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.min}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-padding-inline",
+    "path": "text-input.padding-inline",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{space.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-radius",
+    "path": "text-input.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{radius.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-border-width",
+    "path": "text-input.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-border-color",
+    "path": "text-input.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-background",
+    "path": "text-input.background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#fffdf7",
+    "reference": "{color.surface.paper}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-text",
+    "path": "text-input.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.text.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-font-size",
+    "path": "text-input.font-size",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "{font.size.body}",
+    "description": null
+  },
+  {
+    "name": "--slxd-text-input-invalid-border-color",
+    "path": "text-input.invalid-border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#b91c1c",
+    "reference": "{color.feedback.negative}",
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-color-white",
     "path": "primitive.color.white",
     "layer": "primitive",

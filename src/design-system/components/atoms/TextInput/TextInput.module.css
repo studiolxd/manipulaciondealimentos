@@ -1,0 +1,15 @@
+.input {
+  width: 100%;
+  min-height: var(--slxd-text-input-min-height);
+  padding-inline: var(--slxd-text-input-padding-inline);
+  border: var(--slxd-text-input-border-width) solid var(--slxd-text-input-border-color);
+  border-radius: var(--slxd-text-input-radius);
+  background: var(--slxd-text-input-background);
+  color: var(--slxd-text-input-text);
+  font-family: var(--slxd-font-family-body);
+  font-size: var(--slxd-text-input-font-size);
+}
+
+.input[aria-invalid] {
+  border-color: var(--slxd-text-input-invalid-border-color);
+}

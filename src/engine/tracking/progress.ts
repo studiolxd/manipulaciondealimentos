@@ -4,13 +4,15 @@ import { isSceneId, sceneProgressWeight, type SceneId } from '../../scenes/scene
 import { scorm } from './scorm'
 
 // Course progress stored in the LMS (SCORM 1.2):
-//   cmi.suspend_data          form of address, completed scenes and current scene (to resume)
+//   cmi.suspend_data          name (outside an LMS), form of address, completed scenes and current scene (to resume)
 //   cmi.core.lesson_location  current scene
 //   cmi.core.score.raw        % of script scenes completed (0–100), used as progress
 //   cmi.core.lesson_status    "incomplete" until every scene is done, then "completed"
 // SCORM 1.2 limits suspend_data to 4096 characters; scene ids keep it small.
 
 export interface Progress {
+  /** Name typed by the player; inside an LMS the name comes from the LMS instead. */
+  name: string | null
   gender: Gender | null
   done: SceneId[]
   at: SceneId
@@ -32,6 +34,7 @@ export function loadProgress(): Progress | null {
     const data = JSON.parse(result.value)
     if (data.v !== FORMAT_VERSION || !isSceneId(data.at)) return null
     return {
+      name: typeof data.n === 'string' && data.n ? data.n : null,
       gender: genderFromCode[data.g] ?? null,
       done: Array.isArray(data.d) ? data.d.filter(isSceneId) : [],
       at: data.at,
@@ -51,6 +54,7 @@ export function saveProgress(progress: Progress): void {
   if (!api) return
   const data = {
     v: FORMAT_VERSION,
+    n: progress.name,
     g: progress.gender ? genderCode[progress.gender] : null,
     d: progress.done,
     at: progress.at,

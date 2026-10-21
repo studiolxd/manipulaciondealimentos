@@ -7,7 +7,7 @@ import { useGame } from '../engine/gameContext'
 
 // Before the script: the player chooses how to be addressed, and texts adapt.
 export function AddressFormScene() {
-  const { sceneReady, setGender, goTo } = useGame()
+  const { sceneReady, playerName, setGender, goTo } = useGame()
   const [choice, setChoice] = useState<Gender | null>(null)
   const [showError, setShowError] = useState(false)
 
@@ -22,7 +22,7 @@ export function AddressFormScene() {
 
   return (
     <SceneFrame
-      heading={addressForm.heading}
+      heading={addressForm.heading(playerName)}
       visibleHeadingTop={160}
       background={image('addressFormBackground')}
       backgroundAlt=""

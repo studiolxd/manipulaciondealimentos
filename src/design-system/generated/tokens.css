@@ -306,6 +306,16 @@
   --slxd-swipe-card-exit-duration: var(--slxd-motion-duration-exit);
   --slxd-swipe-card-exit-easing: var(--slxd-motion-easing-enter);
   --slxd-swipe-card-stamp-inset: var(--slxd-space-lg);
+  --slxd-text-field-gap: var(--slxd-space-xs);
+  --slxd-text-input-min-height: var(--slxd-size-target-min);
+  --slxd-text-input-padding-inline: var(--slxd-space-md);
+  --slxd-text-input-radius: var(--slxd-radius-md);
+  --slxd-text-input-border-width: var(--slxd-border-width-outline);
+  --slxd-text-input-border-color: var(--slxd-color-border-ink);
+  --slxd-text-input-background: var(--slxd-color-surface-paper);
+  --slxd-text-input-text: var(--slxd-color-text-default);
+  --slxd-text-input-font-size: var(--slxd-font-size-body);
+  --slxd-text-input-invalid-border-color: var(--slxd-color-feedback-negative);
   --slxd-shadow-raised: var(--slxd-primitive-shadow-hard);
   --slxd-surface-shadow: var(--slxd-shadow-raised);
 }

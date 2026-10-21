@@ -10,8 +10,11 @@ El juego informa al LMS con **SCORM 1.2** y, opcionalmente, registra el detalle 
 | `cmi.core.score.raw` | **Progreso**, no nota: % de escenas del guion completadas (0–100). Un 10 % significa 10 escenas de 100. |
 | `cmi.core.lesson_status` | `incomplete` mientras quede alguna escena; `completed` al terminarlas todas. Nunca `passed`/`failed`: no hay nota de corte. |
 | `cmi.core.lesson_location` | Escena en la que está el alumno. |
-| `cmi.suspend_data` | Avatar, escenas completadas y escena actual, para **continuar por donde iba** al volver. |
+| `cmi.suspend_data` | Forma de tratamiento, escenas completadas y escena actual, para **continuar por donde iba** al volver; fuera de un LMS, también el nombre escrito. |
+| `cmi.core.student_name` | **Nombre del alumno**, solo lectura. Viene como «Apellido, Nombre» y el juego usa el nombre de pila. |
 
+- **Nombre:** dentro de un LMS se toma de `cmi.core.student_name`. Fuera de un LMS, la primera pantalla pregunta
+  «¿Cómo te llamas?».
 - No hay nota por actividad.
 - Una escena se da por completada al salir de ella.
 - Las escenas cuentan según el guion: las escenas 4 y 5 son una sola pantalla del juego, pero suman dos

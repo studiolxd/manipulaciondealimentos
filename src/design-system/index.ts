@@ -35,6 +35,7 @@ export { Radio } from './components/atoms/Radio/Radio'
 export { Stamp } from './components/atoms/Stamp/Stamp'
 export { Surface } from './components/atoms/Surface/Surface'
 export { Text } from './components/atoms/Text/Text'
+export { TextInput } from './components/atoms/TextInput/TextInput'
 
 // Molecules
 export { ActivityTitle } from './components/molecules/ActivityTitle/ActivityTitle'
@@ -44,6 +45,7 @@ export { IconButton } from './components/molecules/IconButton/IconButton'
 export { IdCard } from './components/molecules/IdCard/IdCard'
 export { InlineAlert } from './components/molecules/InlineAlert/InlineAlert'
 export { NarrationBox } from './components/molecules/NarrationBox/NarrationBox'
+export { TextField } from './components/molecules/TextField/TextField'
 export { Typewriter } from './components/molecules/Typewriter/Typewriter'
 
 // Organisms

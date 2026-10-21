@@ -4,6 +4,9 @@ import type { SceneId } from '../scenes/sceneIds'
 
 export interface GameContextValue {
   sceneId: SceneId
+  /** The player's name: from the LMS, or typed on the first screen. */
+  playerName: string | null
+  setPlayerName: (name: string) => void
   gender: Gender
   setGender: (gender: Gender) => void
   /** Fades out the current scene and fades in the next one. */

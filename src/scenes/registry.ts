@@ -4,11 +4,13 @@ import { ComingSoonScene } from './ComingSoonScene'
 import { DiningRoomScene } from './DiningRoomScene'
 import { FacadeScene } from './FacadeScene'
 import { HandlerDefinitionScene } from './HandlerDefinitionScene'
+import { NameFormScene } from './NameFormScene'
 import type { SceneId } from './sceneIds'
 import { WhoIsFoodHandlerConclusionScene } from './WhoIsFoodHandlerConclusionScene'
 import { WhoIsFoodHandlerScene } from './WhoIsFoodHandlerScene'
 
 export const scenes: Record<SceneId, ComponentType> = {
+  'name-form': NameFormScene,
   'address-form': AddressFormScene,
   facade: FacadeScene,
   'dining-room': DiningRoomScene,

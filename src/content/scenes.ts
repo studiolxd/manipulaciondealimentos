@@ -4,9 +4,18 @@ import type { Gender, GenderedText } from './gendered'
 // docs/Manipulador de alimentos.xlsx. Headings and image descriptions are only
 // read by screen readers.
 
+// Before the script, only outside an LMS (inside one the name comes from it).
+export const nameForm = {
+  heading: '¿Cómo te llamas?',
+  label: 'Tu nombre',
+  missingName: 'Escribe tu nombre para continuar.',
+  next: 'Continuar',
+}
+
 // Before the script: how the player wants to be addressed.
 export const addressForm = {
-  heading: '¿Cómo quieres que nos dirijamos a ti?',
+  heading: (name: string | null) =>
+    name ? `¡Hola, ${name}! ¿Cómo quieres que nos dirijamos a ti?` : '¿Cómo quieres que nos dirijamos a ti?',
   legend: 'Forma de tratamiento',
   options: [
     { gender: 'male', label: 'Masculino' },
