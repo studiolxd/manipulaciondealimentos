@@ -328,6 +328,7 @@
   --slxd-surface-padding-lg-inline: var(--slxd-space-2xl);
   --slxd-surface-padding-xl-block: var(--slxd-space-2xl);
   --slxd-surface-padding-xl-inline: var(--slxd-space-4xl);
+  --slxd-surface-tail-shadow-offset: var(--slxd-space-3xs); /** A bottom tail's ink triangle moves down by the surface shadow, so the tail keeps the shadow. */
   --slxd-surface-tail-overlap: calc(var(--slxd-border-width-outline) / 3); /** 1 real pixel: the tail fill reaches into the bubble so no seam shows where they meet. */
   --slxd-surface-tail-base: var(--slxd-space-3xl);
   --slxd-surface-tail-length: var(--slxd-space-xl);

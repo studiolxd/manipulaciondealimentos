@@ -113,6 +113,12 @@
   border-block-start: calc(var(--slxd-surface-tail-length) + var(--slxd-surface-border-width) * 1.6) solid var(--slxd-surface-border-color);
 }
 
+/* Pointing down, the tail continues the shadow: its ink triangle moves down by
+   the shadow offset, so its outline is thicker below, like the panel's. */
+.surface[data-tail='bottom']::before {
+  translate: 0 var(--slxd-surface-tail-shadow-offset);
+}
+
 .surface[data-tail='bottom']::after {
   top: calc(100% - var(--slxd-surface-tail-overlap));
   left: var(--slxd-surface-tail-offset);

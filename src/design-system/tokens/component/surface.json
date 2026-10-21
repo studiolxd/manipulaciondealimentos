@@ -115,6 +115,11 @@
       }
     },
     "tail": {
+      "shadow-offset": {
+        "$type": "dimension",
+        "$value": "{space.3xs}",
+        "$description": "A bottom tail's ink triangle moves down by the surface shadow, so the tail keeps the shadow."
+      },
       "overlap": {
         "$type": "dimension",
         "$value": "calc({border-width.outline} / 3)",
