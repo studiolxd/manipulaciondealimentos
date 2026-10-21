@@ -1,4 +1,5 @@
 import type { Gender, GenderedText } from '@studiolxd/tramoya'
+import type { VoiceLine } from './voices'
 
 // Texts for each scene, taken from the "Guion" sheet of
 // docs/Manipulador de alimentos.xlsx. Headings and image descriptions are only
@@ -37,6 +38,7 @@ export const facade = {
   backgroundAlt: 'Fachada de un restaurante a pie de calle, con la puerta de entrada en el centro, ventanales a los lados, un toldo y el rótulo del restaurante.',
   narration:
     'Hoy será tu primer día en hostelería. Debes entrar y buscar a David, el encargado. Él te ayudará y te enseñará todo lo que necesitas. ¡Buena suerte!',
+  narrationVoice: ['narratorFacade'] satisfies VoiceLine,
   enter: 'Entrar al restaurante',
 }
 
@@ -53,6 +55,13 @@ export const diningRoom = {
     'A partir de ahora yo seré quien te enseñe todo lo que necesitas para trabajar aquí.',
     'Durante tu formación recorrerás las distintas zonas del restaurante y pondrás en práctica todo lo que vayas aprendiendo. ¡Vamos a ponernos cómodos!',
   ],
+  // Voice-over of each block. The name is not voiced; the ending follows the form of address.
+  speechVoice: [
+    (gender) => [
+      'davidDiningRoom1',
+      gender === 'male' ? 'davidDiningRoom1Male' : gender === 'female' ? 'davidDiningRoom1Female' : 'davidDiningRoom1Neutral',
+    ],
+  ] satisfies VoiceLine[],
   next: '¡Vamos!',
 }
 

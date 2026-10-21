@@ -33,7 +33,7 @@ function Game() {
   const [splash, setSplash] = useState(!tracking.inLms && initialScene === undefined)
   const paused = portrait || splash
   return (
-    <DesignSystemProvider strings={designSystemStrings} paused={paused} soundEffects={settings.effects}>
+    <DesignSystemProvider strings={designSystemStrings} paused={paused} soundEffects={settings.effects} voiceOvers={settings.voice}>
       <GameProvider startScene={initialScene} paused={paused}>
         <SceneHost />
         {portrait && <RotateDeviceScreen title={ui.rotateDevice.title} />}

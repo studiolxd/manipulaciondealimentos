@@ -32,3 +32,5 @@ Para cambiar Tramoya a la vez que el juego, ver «Instalación» en su README.
 
 - Sonido de clic de los botones: [UI Audio](https://kenney.nl/assets/ui-audio) de Kenney, CC0.
 - Sonidos de acierto y error: [Interface Sounds](https://kenney.nl/assets/interface-sounds) de Kenney, CC0.
+- Locuciones: generadas con [ElevenLabs](https://elevenlabs.io) (modelo eleven_v4). Narradora: voz «Carolina - Natural,
+  Neutral and Clear»; David: voz «Juan Garcia Jimenez». Ver `src/content/voices.ts`.

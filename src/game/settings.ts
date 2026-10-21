@@ -4,7 +4,7 @@ import { createContext, useContext } from 'react'
 // without using the SCORM progress space).
 
 export interface Settings {
-  /** Voice-overs. There are none yet: the setting is kept for when there are. */
+  /** Voice-overs of speech bubbles and narration. */
   voice: boolean
   /** Interface sounds: clicks and right / wrong. */
   effects: boolean

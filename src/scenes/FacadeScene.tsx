@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { image } from '../content/images'
 import { facade } from '../content/scenes'
+import { voiceUrls } from '../content/voices'
 import { Button, NarrationBox, Positioned, SceneFrame, Typewriter } from '../design-system'
 import { useGame } from '../game/game'
 
 // Scene 1: the restaurant from the street.
 export function FacadeScene() {
-  const { sceneReady, goTo } = useGame()
+  const { sceneReady, goTo, gender } = useGame()
   const [skipRequested, setSkipRequested] = useState(false)
   const [typed, setTyped] = useState(false)
 
@@ -19,7 +20,7 @@ export function FacadeScene() {
     >
       {sceneReady && (
         <Positioned center="both" width={1200}>
-          <NarrationBox onClick={() => setSkipRequested(true)}>
+          <NarrationBox voice={voiceUrls(facade.narrationVoice, gender)} onClick={() => setSkipRequested(true)}>
             <Typewriter text={facade.narration} complete={skipRequested} onDone={() => setTyped(true)} />
           </NarrationBox>
         </Positioned>

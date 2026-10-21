@@ -29,3 +29,17 @@ basta con sustituir el archivo.
 2. Añádelo a `sounds` en `src/design-system/sounds.ts` y a esta página.
 3. Anota su origen y licencia en `public/assets/audio/LICENSE.txt` y en los créditos del README.
 4. Reprodúcelo desde el componente que corresponda con `playSound`.
+
+## Locuciones
+
+Los bocadillos (`SpeechBubble`, también dentro de `DialogueScene`) y la narración (`NarrationBox`) pueden locutarse
+con la propiedad `voice`: las URL de los fragmentos de cada texto, que suenan en orden con una pausa de 0,3 s entre
+ellos. Así una frase se puede dividir en un punto: una parte común y un final distinto según la forma de tratamiento,
+sin generar la frase entera tres veces.
+
+- Cada texto suena al aparecer. Avanzar al siguiente bloque, salir de la escena o abrir otra locución la corta.
+- Se detiene mientras el juego está en pausa (por ejemplo, con la pantalla de girar el dispositivo).
+- El jugador puede apagarlas desde «Ajustes» en la portada (`voiceOvers` de `DesignSystemProvider`).
+- El texto siempre está en pantalla: la locución lo acompaña, nunca lo sustituye.
+
+Los archivos son del juego (`src/content/voices.ts`, en `public/assets/voice`), no de la librería.

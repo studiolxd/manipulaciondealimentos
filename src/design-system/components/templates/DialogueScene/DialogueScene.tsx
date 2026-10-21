@@ -23,7 +23,13 @@ interface DialogueSceneProps {
   ready: boolean
   /** Character on screen, placed in stage pixels. */
   character?: Box & { source: ImageSource; alt: string; height: number }
-  speech: Box & { speaker: string; blocks: string[]; tail?: 'left' | 'right' | 'bottom' }
+  speech: Box & {
+    speaker: string
+    blocks: string[]
+    /** Voice-over of each block (see SpeechBubble). */
+    voice?: (readonly string[] | undefined)[]
+    tail?: 'left' | 'right' | 'bottom'
+  }
   /** Button shown when the speech ends; it takes the player to another scene. */
   action: { label: string; onClick: () => void }
   hud?: boolean
@@ -33,7 +39,7 @@ interface DialogueSceneProps {
 // player, who continues when the speech ends.
 export function DialogueScene({ heading, background, backgroundAlt, ready, character, speech, action, hud }: DialogueSceneProps) {
   const [finished, setFinished] = useState(false)
-  const { speaker, blocks, tail, ...speechBox } = speech
+  const { speaker, blocks, voice, tail, ...speechBox } = speech
 
   return (
     <SceneFrame heading={heading} background={background} backgroundAlt={backgroundAlt} focusHeading={ready}>
@@ -44,7 +50,7 @@ export function DialogueScene({ heading, background, backgroundAlt, ready, chara
       )}
       {ready && (
         <Positioned {...speechBox}>
-          <SpeechBubble speaker={speaker} blocks={blocks} tail={tail} onFinished={() => setFinished(true)} />
+          <SpeechBubble speaker={speaker} blocks={blocks} voice={voice} tail={tail} onFinished={() => setFinished(true)} />
         </Positioned>
       )}
       {finished && (
