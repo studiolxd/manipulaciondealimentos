@@ -153,6 +153,7 @@ export const tokens = {
   'surface.padding.lg.inline': "56px",
   'surface.padding.xl.block': "56px",
   'surface.padding.xl.inline': "72px",
+  'surface.tail.overlap': "calc(calc(3px / var(--slxd-stage-scale)) / 3)",
   'surface.tail.base': "64px",
   'surface.tail.length': "48px",
   'surface.tail.offset': "96px",

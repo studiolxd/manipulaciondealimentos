@@ -1521,6 +1521,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-surface-tail-overlap",
+    "path": "surface.tail.overlap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "calc(calc(3px / var(--slxd-stage-scale)) / 3)",
+    "reference": "calc({border-width.outline} / 3)",
+    "description": "1 real pixel: the tail fill reaches into the bubble so no seam shows where they meet."
+  },
+  {
     "name": "--slxd-surface-tail-base",
     "path": "surface.tail.base",
     "layer": "component",

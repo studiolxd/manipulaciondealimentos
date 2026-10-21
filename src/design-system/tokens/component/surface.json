@@ -113,6 +113,11 @@
       }
     },
     "tail": {
+      "overlap": {
+        "$type": "dimension",
+        "$value": "calc({border-width.outline} / 3)",
+        "$description": "1 real pixel: the tail fill reaches into the bubble so no seam shows where they meet."
+      },
       "base": {
         "$type": "dimension",
         "$value": "{space.3xl}"

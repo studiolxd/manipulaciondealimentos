@@ -62,7 +62,8 @@
 
 /* Tail pointing to the speaker: an ink triangle (::before) with a slightly
    smaller triangle of the surface colour on top (::after), so the outline
-   follows the tail and the bubble opens into it. */
+   follows the tail and the bubble opens into it. The fill reaches slightly into
+   the bubble (and is that much longer) so no seam shows where they meet. */
 .surface[data-tail]::before,
 .surface[data-tail]::after {
   content: '';
@@ -87,8 +88,8 @@
 }
 
 .surface[data-tail='left']::after {
-  right: 100%;
-  border-inline-end: var(--slxd-surface-tail-length) solid var(--surface-background);
+  right: calc(100% - var(--slxd-surface-tail-overlap));
+  border-inline-end: calc(var(--slxd-surface-tail-length) + var(--slxd-surface-tail-overlap)) solid var(--surface-background);
 }
 
 .surface[data-tail='right']::before {
@@ -97,8 +98,8 @@
 }
 
 .surface[data-tail='right']::after {
-  left: 100%;
-  border-inline-start: var(--slxd-surface-tail-length) solid var(--surface-background);
+  left: calc(100% - var(--slxd-surface-tail-overlap));
+  border-inline-start: calc(var(--slxd-surface-tail-length) + var(--slxd-surface-tail-overlap)) solid var(--surface-background);
 }
 
 .surface[data-tail='bottom']::before {
@@ -109,8 +110,8 @@
 }
 
 .surface[data-tail='bottom']::after {
-  top: 100%;
+  top: calc(100% - var(--slxd-surface-tail-overlap));
   left: var(--slxd-surface-tail-offset);
   border-inline: calc(var(--slxd-surface-tail-base) / 2) solid var(--slxd-color-border-none);
-  border-block-start: var(--slxd-surface-tail-length) solid var(--surface-background);
+  border-block-start: calc(var(--slxd-surface-tail-length) + var(--slxd-surface-tail-overlap)) solid var(--surface-background);
 }

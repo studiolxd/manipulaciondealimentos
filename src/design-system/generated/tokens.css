@@ -353,6 +353,7 @@
   --slxd-surface-padding-lg-inline: var(--slxd-space-2xl);
   --slxd-surface-padding-xl-block: var(--slxd-space-2xl);
   --slxd-surface-padding-xl-inline: var(--slxd-space-4xl);
+  --slxd-surface-tail-overlap: calc(var(--slxd-border-width-outline) / 3); /** 1 real pixel: the tail fill reaches into the bubble so no seam shows where they meet. */
   --slxd-surface-tail-base: var(--slxd-space-3xl);
   --slxd-surface-tail-length: var(--slxd-space-xl);
   --slxd-surface-tail-offset: var(--slxd-space-5xl); /** Distance from the corner to the tail. */
