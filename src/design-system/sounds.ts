@@ -10,13 +10,15 @@ const sounds = {
 
 export type SoundName = keyof typeof sounds
 
+export const soundNames = Object.keys(sounds) as SoundName[]
+
 // Interface sounds sit under any narration or music.
 const VOLUME = 0.6
 
 // Loaded once, up front, so the first press already sounds on time.
 const loaded = new Map<SoundName, HTMLAudioElement>()
 if (typeof Audio !== 'undefined') {
-  for (const name of Object.keys(sounds) as SoundName[]) {
+  for (const name of soundNames) {
     const audio = new Audio(import.meta.env.BASE_URL + sounds[name])
     audio.preload = 'auto'
     audio.volume = VOLUME

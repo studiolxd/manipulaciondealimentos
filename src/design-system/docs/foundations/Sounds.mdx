@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { SoundGallery } from '../SoundGallery'
+
+<Meta title="Fundamentos/Sonidos" />
+
+# Sonidos
+
+Los sonidos de interfaz son del sistema de diseño (`sounds.ts`) y los reproducen sus componentes; el juego no los
+llama directamente. Los archivos están en `public/assets/audio` con nombre estable: para poner el sonido definitivo
+basta con sustituir el archivo.
+
+<SoundGallery />
+
+## Reglas
+
+- **Cortos y discretos.** Acompañan la acción, no la tapan. Todos suenan al 60 % del volumen, por debajo de cualquier
+  narración o música.
+- **Nunca solos.** Un sonido refuerza algo que también se ve (el botón que se hunde, el color y el icono del feedback):
+  quien juega sin sonido no pierde información.
+- **MP3.** Funciona en cualquier navegador y LMS.
+- **Si el navegador bloquea el audio,** el juego sigue en silencio.
+- **Licencia.** Solo sonidos que permitan uso comercial. Los actuales son de [Kenney](https://kenney.nl), con licencia
+  CC0 (sin atribución obligatoria). El origen de cada uno está en `public/assets/audio/LICENSE.txt`.
+
+## Añadir un sonido
+
+1. Conviértelo a MP3 y guárdalo en `public/assets/audio/` con un nombre en inglés.
+2. Añádelo a `sounds` en `src/design-system/sounds.ts` y a esta página.
+3. Anota su origen y licencia en `public/assets/audio/LICENSE.txt` y en los créditos del README.
+4. Reprodúcelo desde el componente que corresponda con `playSound`.

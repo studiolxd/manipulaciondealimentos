@@ -1,0 +1,35 @@
+/* Documentation only. The doubled selectors outrank Storybook's own list styles. */
+
+.gallery.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery .row {
+  display: grid;
+  grid-template-columns: 8rem 1fr 1fr auto;
+  gap: var(--slxd-space-xs);
+  align-items: center;
+  margin: 0;
+  padding-block: var(--slxd-space-2xs);
+  border-bottom: var(--slxd-border-width-default) solid var(--slxd-color-border-subtle);
+  font-family: var(--slxd-font-family-body);
+  font-size: var(--slxd-font-size-system-body);
+}
+
+.row .name {
+  font-weight: var(--slxd-font-weight-bold);
+}
+
+.row .source {
+  color: var(--slxd-color-text-default);
+}
+
+/* Buttons are sized for the stage; here they are shown at half size. */
+.row > button {
+  zoom: 0.5;
+}

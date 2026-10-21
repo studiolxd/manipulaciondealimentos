@@ -22,6 +22,8 @@ interface ButtonProps {
    * looks the same everywhere. Render them once the scene can be seen.
    */
   advance?: boolean
+  /** Does not play the click, e.g. a button that plays another sound itself. */
+  silent?: boolean
   /** Accessible name when it must say more than the visible text; it must start with that text. */
   'aria-label'?: string
   'aria-haspopup'?: 'dialog'
@@ -38,6 +40,7 @@ export function Button({
   variant = 'primary',
   claimFocus = false,
   advance = false,
+  silent = false,
   concealed = false,
   viewTransitionName,
   ref,
@@ -64,7 +67,7 @@ export function Button({
       data-concealed={concealed || undefined}
       style={{ viewTransitionName: concealed ? undefined : viewTransitionName }}
       onClick={(event) => {
-        playSound('click')
+        if (!silent) playSound('click')
         onClick(event)
       }}
     >
