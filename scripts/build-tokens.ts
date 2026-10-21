@@ -124,7 +124,7 @@ function familyOf(token: TransformedToken, layer: string, file: string): Family 
       if (path.includes('stroke-width')) return 'shape'
       return path.includes('line-height') ? 'typography' : 'layer'
     default:
-      if (path.includes('font')) return 'typography'
+      if (path.includes('font') || path.includes('letter-spacing')) return 'typography'
       if (/radius|border-width|stroke-width/.test(path)) return 'shape'
       return 'spacing'
   }

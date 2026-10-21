@@ -59,6 +59,10 @@
       "display-strong": {
         "$value": "{primitive.font.weight.700}",
         "$description": "Display family: titles and headings."
+      },
+      "control": {
+        "$value": "{primitive.font.weight.500}",
+        "$description": "Display family: button text, uppercase and spaced."
       }
     },
     "line-height": {
@@ -74,6 +78,13 @@
       },
       "relaxed": {
         "$value": "{primitive.font.line-height.150}"
+      }
+    },
+    "letter-spacing": {
+      "$type": "dimension",
+      "control": {
+        "$value": "{primitive.font.letter-spacing.80}",
+        "$description": "Tracking of uppercase button text."
       }
     }
   }

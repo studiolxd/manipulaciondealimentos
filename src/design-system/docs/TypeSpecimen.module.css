@@ -49,6 +49,8 @@
   font-family: var(--slxd-button-font-family);
   font-size: var(--slxd-button-font-size);
   font-weight: var(--slxd-button-font-weight);
+  letter-spacing: var(--slxd-button-letter-spacing);
+  text-transform: uppercase;
 }
 
 .figure .specimen[data-role='stamp'] {

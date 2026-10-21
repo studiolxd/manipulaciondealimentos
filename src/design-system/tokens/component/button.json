@@ -26,7 +26,11 @@
     },
     "font-weight": {
       "$type": "fontWeight",
-      "$value": "{font.weight.display}"
+      "$value": "{font.weight.control}"
+    },
+    "letter-spacing": {
+      "$type": "dimension",
+      "$value": "{font.letter-spacing.control}"
     },
     "outline-width": {
       "$type": "dimension",

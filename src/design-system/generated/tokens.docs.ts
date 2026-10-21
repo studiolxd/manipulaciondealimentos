@@ -86,8 +86,18 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontWeight",
-    "value": "600",
-    "reference": "{font.weight.display}",
+    "value": "500",
+    "reference": "{font.weight.control}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-letter-spacing",
+    "path": "button.letter-spacing",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.08em",
+    "reference": "{font.letter-spacing.control}",
     "description": null
   },
   {
@@ -2551,6 +2561,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-letter-spacing-80",
+    "path": "primitive.font.letter-spacing.80",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.08em",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-color-text-default",
     "path": "color.text.default",
     "layer": "semantic",
@@ -3591,6 +3611,16 @@ export const tokenDocs = [
     "description": "Display family: titles and headings."
   },
   {
+    "name": "--slxd-font-weight-control",
+    "path": "font.weight.control",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "fontWeight",
+    "value": "500",
+    "reference": "{primitive.font.weight.500}",
+    "description": "Display family: button text, uppercase and spaced."
+  },
+  {
     "name": "--slxd-font-line-height-tight",
     "path": "font.line-height.tight",
     "layer": "semantic",
@@ -3629,5 +3659,15 @@ export const tokenDocs = [
     "value": "1.5",
     "reference": "{primitive.font.line-height.150}",
     "description": null
+  },
+  {
+    "name": "--slxd-font-letter-spacing-control",
+    "path": "font.letter-spacing.control",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.08em",
+    "reference": "{primitive.font.letter-spacing.80}",
+    "description": "Tracking of uppercase button text."
   }
 ] as const

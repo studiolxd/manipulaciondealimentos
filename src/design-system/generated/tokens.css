@@ -96,6 +96,7 @@
   --slxd-primitive-font-line-height-115: 1.15;
   --slxd-primitive-font-line-height-140: 1.4;
   --slxd-primitive-font-line-height-150: 1.5;
+  --slxd-primitive-font-letter-spacing-80: 0.08em;
   --slxd-primitive-shadow-hard: 0px 8px 0px 0px var(--slxd-primitive-color-petrol-alpha-35); /** Short, hard shadow: the interface looks stuck on top of the scene. */
   --slxd-color-text-default: var(--slxd-primitive-color-black);
   --slxd-color-text-inverse: var(--slxd-primitive-color-cream-50); /** Text on ink panels and over the scene. */
@@ -200,10 +201,12 @@
   --slxd-font-weight-bold: var(--slxd-primitive-font-weight-700);
   --slxd-font-weight-display: var(--slxd-primitive-font-weight-600); /** Display family: controls and labels. */
   --slxd-font-weight-display-strong: var(--slxd-primitive-font-weight-700); /** Display family: titles and headings. */
+  --slxd-font-weight-control: var(--slxd-primitive-font-weight-500); /** Display family: button text, uppercase and spaced. */
   --slxd-font-line-height-tight: var(--slxd-primitive-font-line-height-110);
   --slxd-font-line-height-snug: var(--slxd-primitive-font-line-height-115);
   --slxd-font-line-height-normal: var(--slxd-primitive-font-line-height-140);
   --slxd-font-line-height-relaxed: var(--slxd-primitive-font-line-height-150);
+  --slxd-font-letter-spacing-control: var(--slxd-primitive-font-letter-spacing-80); /** Tracking of uppercase button text. */
   --slxd-activity-title-hold-duration: var(--slxd-motion-duration-title-hold);
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
   --slxd-button-min-height: var(--slxd-size-target-min);
@@ -212,7 +215,8 @@
   --slxd-button-radius: var(--slxd-radius-full);
   --slxd-button-font-family: var(--slxd-font-family-display);
   --slxd-button-font-size: var(--slxd-font-size-body);
-  --slxd-button-font-weight: var(--slxd-font-weight-display);
+  --slxd-button-font-weight: var(--slxd-font-weight-control);
+  --slxd-button-letter-spacing: var(--slxd-font-letter-spacing-control);
   --slxd-button-outline-width: var(--slxd-border-width-outline);
   --slxd-button-outline-color: var(--slxd-color-border-ink);
   --slxd-button-edge-height: var(--slxd-space-3xs); /** Lower edge that makes buttons look pressable; it sinks when pressed. */

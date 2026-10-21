@@ -91,6 +91,12 @@
           "$value": 1.5
         },
         "$type": "number"
+      },
+      "letter-spacing": {
+        "$type": "dimension",
+        "80": {
+          "$value": "0.08em"
+        }
       }
     }
   }
