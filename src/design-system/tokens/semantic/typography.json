@@ -3,7 +3,7 @@
     "family": {
       "$type": "fontFamily",
       "display": {
-        "$value": "{primitive.font.family.fredoka}",
+        "$value": "{primitive.font.family.montserrat}",
         "$description": "Titles, headings and controls (buttons, labels, stamps)."
       },
       "body": {

@@ -13,7 +13,7 @@ export type TypeRole =
 
 interface TypeSpecimenProps {
   role: TypeRole
-  /** Caption, e.g. "Título de actividad · Fredoka 104 / 700". */
+  /** Caption, e.g. "Título de actividad · Montserrat 104 / 700". */
   label: string
   sample: string
 }

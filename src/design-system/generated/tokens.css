@@ -76,7 +76,7 @@
   --slxd-primitive-screen-outline: 3px; /** Ink outline of the interface, always 3 real pixels. */
   --slxd-primitive-screen-logo-min: 280px; /** Smallest width of the Studio LXD logo on the splash screen, also on phones. */
   --slxd-primitive-screen-logo-max: 640px;
-  --slxd-primitive-font-family-fredoka: 'Fredoka Variable', Fredoka, system-ui, sans-serif; /** Rounded sans, friendly and solid: game interface feel. Variable weight 300–700. */
+  --slxd-primitive-font-family-montserrat: 'Montserrat Variable', Montserrat, system-ui, sans-serif; /** Geometric sans, wide and clean, solid in bold weights. Variable weight 100–900. */
   --slxd-primitive-font-family-atkinson-hyperlegible-next: 'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif; /** Designed by the Braille Institute for maximum legibility. Variable weight 200–800. */
   --slxd-primitive-font-family-system: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --slxd-primitive-font-size-18: 18px;
@@ -185,7 +185,7 @@
   --slxd-size-target-min: max(var(--slxd-primitive-size-112), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Minimum size of anything clickable: 112 stage px, never less than 44 real px. */
   --slxd-size-hud-height: var(--slxd-primitive-size-120);
   --slxd-size-choice-min-width: var(--slxd-primitive-size-400); /** Minimum width of a choice option, so options line up. */
-  --slxd-font-family-display: var(--slxd-primitive-font-family-fredoka); /** Titles, headings and controls (buttons, labels, stamps). */
+  --slxd-font-family-display: var(--slxd-primitive-font-family-montserrat); /** Titles, headings and controls (buttons, labels, stamps). */
   --slxd-font-family-body: var(--slxd-primitive-font-family-atkinson-hyperlegible-next); /** Prose: dialogues, narration, descriptions and feedback. */
   --slxd-font-size-body: max(var(--slxd-primitive-font-size-44), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale)));
   --slxd-font-size-body-sm: max(var(--slxd-primitive-font-size-40), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale)));

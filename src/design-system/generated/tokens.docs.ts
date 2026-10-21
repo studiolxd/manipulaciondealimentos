@@ -66,7 +66,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -476,7 +476,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -806,7 +806,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -1216,7 +1216,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -2351,14 +2351,14 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-font-family-fredoka",
-    "path": "primitive.font.family.fredoka",
+    "name": "--slxd-primitive-font-family-montserrat",
+    "path": "primitive.font.family.montserrat",
     "layer": "primitive",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
+    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
     "reference": null,
-    "description": "Rounded sans, friendly and solid: game interface feel. Variable weight 300–700."
+    "description": "Geometric sans, wide and clean, solid in bold weights. Variable weight 100–900."
   },
   {
     "name": "--slxd-primitive-font-family-atkinson-hyperlegible-next",
@@ -3446,8 +3446,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Fredoka Variable', Fredoka, system-ui, sans-serif",
-    "reference": "{primitive.font.family.fredoka}",
+    "value": "'Montserrat Variable', Montserrat, system-ui, sans-serif",
+    "reference": "{primitive.font.family.montserrat}",
     "description": "Titles, headings and controls (buttons, labels, stamps)."
   },
   {

@@ -4,14 +4,14 @@
       "family": {
         "$type": "fontFamily",
         "$description": "Google Fonts, self-hosted with Fontsource (bundled in the SCORM package, no request to Google).",
-        "fredoka": {
+        "montserrat": {
           "$value": [
-            "Fredoka Variable",
-            "Fredoka",
+            "Montserrat Variable",
+            "Montserrat",
             "system-ui",
             "sans-serif"
           ],
-          "$description": "Rounded sans, friendly and solid: game interface feel. Variable weight 300–700."
+          "$description": "Geometric sans, wide and clean, solid in bold weights. Variable weight 100–900."
         },
         "atkinson-hyperlegible-next": {
           "$value": [
