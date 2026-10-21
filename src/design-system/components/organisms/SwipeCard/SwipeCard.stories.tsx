@@ -14,8 +14,6 @@ const meta = {
     description: 'Cocinero del restaurante El Caserío. Me encargo de preparar los platos de la carta.',
     roleDescription: 'Carnet',
     keyboardHint: 'Pulsa la flecha derecha para SÍ o la flecha izquierda para NO.',
-    leftStamp: 'NO',
-    rightStamp: 'SÍ',
     onSwipe: fn(),
     children: (
       <IdCard

@@ -25,10 +25,6 @@
     "outline": {
       "$value": "calc({primitive.screen.outline} / var(--slxd-stage-scale))",
       "$description": "Ink outline: 3 real pixels at any stage scale."
-    },
-    "band": {
-      "$value": "{primitive.size.16}",
-      "$description": "Coloured side band (e.g. feedback)."
     }
   },
   "focus": {

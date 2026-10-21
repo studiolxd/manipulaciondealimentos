@@ -28,16 +28,20 @@
   outline: var(--slxd-surface-highlight-width) solid var(--slxd-surface-highlight-color);
 }
 
+/* Right / wrong: the whole outline and the shadow take the feedback colour. */
 .surface[data-accent] {
-  border-inline-start-width: var(--slxd-surface-accent-width);
+  --surface-accent-shadow: 0 var(--slxd-surface-accent-shadow-offset) 0 var(--surface-accent);
+
+  border-color: var(--surface-accent);
+  box-shadow: var(--surface-accent-shadow);
 }
 
 .surface[data-accent='positive'] {
-  border-inline-start-color: var(--slxd-surface-accent-positive);
+  --surface-accent: var(--slxd-surface-accent-positive);
 }
 
 .surface[data-accent='negative'] {
-  border-inline-start-color: var(--slxd-surface-accent-negative);
+  --surface-accent: var(--slxd-surface-accent-negative);
 }
 
 .surface[data-padding='sm'] {

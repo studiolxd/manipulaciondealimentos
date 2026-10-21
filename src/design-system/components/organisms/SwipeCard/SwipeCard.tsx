@@ -1,7 +1,6 @@
 import { useSwipe, type SwipeDirection } from '@studiolxd/tramoya'
 import { useId, useImperativeHandle, type CSSProperties, type ReactNode, type Ref } from 'react'
 import { tokens } from '../../../generated/tokens'
-import { Stamp } from '../../atoms/Stamp/Stamp'
 import styles from './SwipeCard.module.css'
 
 export type { SwipeDirection }
@@ -26,9 +25,6 @@ interface SwipeCardProps {
   roleDescription: string
   /** Keyboard instructions, only exposed to assistive technology. */
   keyboardHint: string
-  /** Stamps shown while dragging towards each side. */
-  leftStamp: string
-  rightStamp: string
   ref?: Ref<SwipeCardHandle>
   onSwipe: (direction: SwipeDirection) => void
   /** Visual content of the card (e.g. <IdCard>), hidden from assistive technology. */
@@ -39,16 +35,15 @@ function stageScale(element: HTMLElement): number {
   return Number(getComputedStyle(element).getPropertyValue('--slxd-stage-scale')) || 1
 }
 
-// Draggable content + Stamps. Card answered by dragging it left or right with any pointer (mouse, touch,
-// pen) or with the arrow keys. The arrows work wherever the focus is while the
+// Draggable content. Card answered by dragging it left or right with any pointer (mouse, touch,
+// pen) or with the arrow keys. While it moves, its outline and shadow turn green
+// towards YES (right) and red towards NO (left). The arrows work wherever the focus is while the
 // card is on screen and usable (not inert, no dialog in use). It fills its parent.
 export function SwipeCard({
   label,
   description,
   roleDescription,
   keyboardHint,
-  leftStamp,
-  rightStamp,
   ref,
   onSwipe,
   children,
@@ -91,12 +86,8 @@ export function SwipeCard({
       <div className={styles.content} aria-hidden="true">
         {children}
       </div>
-      <div className={styles.stamp} data-side="right">
-        <Stamp tone="positive">{rightStamp}</Stamp>
-      </div>
-      <div className={styles.stamp} data-side="left">
-        <Stamp tone="negative">{leftStamp}</Stamp>
-      </div>
+      <div className={styles.frame} data-side="right" />
+      <div className={styles.frame} data-side="left" />
       <span id={descriptionId} hidden>
         {description}
       </span>

@@ -9,7 +9,7 @@ interface SurfaceProps extends Omit<HTMLAttributes<HTMLElement>, 'className' | '
   padding?: 'sm' | 'md' | 'lg' | 'xl'
   /** Marks the surface as selected with an extra ring. */
   highlighted?: boolean
-  /** Coloured band on the leading edge, e.g. for right / wrong feedback. */
+  /** Right / wrong feedback: the outline and the shadow take its colour. */
   accent?: 'positive' | 'negative'
   /** Speech tail pointing to whoever speaks. */
   tail?: 'left' | 'right' | 'bottom'

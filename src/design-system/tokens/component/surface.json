@@ -57,9 +57,11 @@
       }
     },
     "accent": {
-      "width": {
+      "$description": "Right / wrong surfaces: outline and shadow in the feedback colour.",
+      "shadow-offset": {
         "$type": "dimension",
-        "$value": "{border-width.band}"
+        "$value": "{space.3xs}",
+        "$description": "The offset of the surface shadow."
       },
       "positive": {
         "$type": "color",

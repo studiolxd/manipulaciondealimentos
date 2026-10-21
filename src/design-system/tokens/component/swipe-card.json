@@ -8,9 +8,28 @@
       "$type": "cubicBezier",
       "$value": "{motion.easing.enter}"
     },
-    "stamp-inset": {
+    "frame-width": {
       "$type": "dimension",
-      "$value": "{space.lg}"
+      "$value": "{border-width.outline}",
+      "$description": "The coloured frame covers the card's outline exactly."
+    },
+    "frame-radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}",
+      "$description": "The radius of the paper surface (IdCard)."
+    },
+    "frame-shadow-offset": {
+      "$type": "dimension",
+      "$value": "{space.3xs}",
+      "$description": "The offset of the surface shadow, which the frame covers."
+    },
+    "frame-positive": {
+      "$type": "color",
+      "$value": "{color.feedback.positive}"
+    },
+    "frame-negative": {
+      "$type": "color",
+      "$value": "{color.feedback.negative}"
     }
   }
 }

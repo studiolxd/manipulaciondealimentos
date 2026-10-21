@@ -146,7 +146,6 @@
   --slxd-border-width-default: var(--slxd-primitive-border-width-4);
   --slxd-border-width-strong: var(--slxd-primitive-border-width-8);
   --slxd-border-width-outline: calc(var(--slxd-primitive-screen-outline) / var(--slxd-stage-scale)); /** Ink outline: 3 real pixels at any stage scale. */
-  --slxd-border-width-band: var(--slxd-primitive-size-16); /** Coloured side band (e.g. feedback). */
   --slxd-focus-ring-width: max(var(--slxd-primitive-size-6), calc(var(--slxd-primitive-screen-focus-ring-min) / var(--slxd-stage-scale)));
   --slxd-blur-glass: var(--slxd-primitive-blur-16); /** Background blur behind glass panels. */
   --slxd-stroke-width-icon: var(--slxd-primitive-stroke-width-1); /** Icon stroke in grid units: it grows with the icon, rounded to whole real pixels. */
@@ -321,7 +320,7 @@
   --slxd-surface-ink-text: var(--slxd-color-text-inverse);
   --slxd-surface-paper-background: var(--slxd-color-surface-paper);
   --slxd-surface-paper-radius: var(--slxd-radius-md);
-  --slxd-surface-accent-width: var(--slxd-border-width-band);
+  --slxd-surface-accent-shadow-offset: var(--slxd-space-3xs); /** The offset of the surface shadow. */
   --slxd-surface-accent-positive: var(--slxd-color-feedback-positive);
   --slxd-surface-accent-negative: var(--slxd-color-feedback-negative);
   --slxd-surface-padding-sm-block: var(--slxd-space-md);
@@ -338,7 +337,11 @@
   --slxd-surface-tail-offset: var(--slxd-space-5xl); /** Distance from the corner to the tail. */
   --slxd-swipe-card-exit-duration: var(--slxd-motion-duration-exit);
   --slxd-swipe-card-exit-easing: var(--slxd-motion-easing-enter);
-  --slxd-swipe-card-stamp-inset: var(--slxd-space-lg);
+  --slxd-swipe-card-frame-width: var(--slxd-border-width-outline); /** The coloured frame covers the card's outline exactly. */
+  --slxd-swipe-card-frame-radius: var(--slxd-radius-md); /** The radius of the paper surface (IdCard). */
+  --slxd-swipe-card-frame-shadow-offset: var(--slxd-space-3xs); /** The offset of the surface shadow, which the frame covers. */
+  --slxd-swipe-card-frame-positive: var(--slxd-color-feedback-positive);
+  --slxd-swipe-card-frame-negative: var(--slxd-color-feedback-negative);
   --slxd-text-field-gap: var(--slxd-space-xs);
   --slxd-text-input-min-height: var(--slxd-size-target-min);
   --slxd-text-input-padding-inline: var(--slxd-space-md);

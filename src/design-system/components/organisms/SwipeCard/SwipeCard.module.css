@@ -24,20 +24,26 @@
   height: 100%;
 }
 
-.stamp {
+/* Coloured outline and shadow laid over the card's own (the paper surface of
+   IdCard), fading in with the drag: green towards YES, red towards NO. */
+.frame {
+  --frame-color: var(--slxd-swipe-card-frame-positive);
+  --frame-shadow: 0 var(--slxd-swipe-card-frame-shadow-offset) 0 var(--frame-color);
+
   position: absolute;
-  top: var(--slxd-swipe-card-stamp-inset);
+  inset: 0;
+  border: var(--slxd-swipe-card-frame-width) solid var(--frame-color);
+  border-radius: var(--slxd-swipe-card-frame-radius);
+  box-shadow: var(--frame-shadow);
   pointer-events: none;
 }
 
-.stamp[data-side='right'] {
-  left: var(--slxd-swipe-card-stamp-inset);
+.frame[data-side='right'] {
   opacity: var(--swipe-right);
-  rotate: -12deg;
 }
 
-.stamp[data-side='left'] {
-  right: var(--slxd-swipe-card-stamp-inset);
+.frame[data-side='left'] {
+  --frame-color: var(--slxd-swipe-card-frame-negative);
+
   opacity: var(--swipe-left);
-  rotate: 12deg;
 }

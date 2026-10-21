@@ -1321,14 +1321,14 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-surface-accent-width",
-    "path": "surface.accent.width",
+    "name": "--slxd-surface-accent-shadow-offset",
+    "path": "surface.accent.shadow-offset",
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "16px",
-    "reference": "{border-width.band}",
-    "description": null
+    "value": "4px",
+    "reference": "{space.3xs}",
+    "description": "The offset of the surface shadow."
   },
   {
     "name": "--slxd-surface-accent-positive",
@@ -1491,13 +1491,53 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-swipe-card-stamp-inset",
-    "path": "swipe-card.stamp-inset",
+    "name": "--slxd-swipe-card-frame-width",
+    "path": "swipe-card.frame-width",
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "40px",
-    "reference": "{space.lg}",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": "The coloured frame covers the card's outline exactly."
+  },
+  {
+    "name": "--slxd-swipe-card-frame-radius",
+    "path": "swipe-card.frame-radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{radius.md}",
+    "description": "The radius of the paper surface (IdCard)."
+  },
+  {
+    "name": "--slxd-swipe-card-frame-shadow-offset",
+    "path": "swipe-card.frame-shadow-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "4px",
+    "reference": "{space.3xs}",
+    "description": "The offset of the surface shadow, which the frame covers."
+  },
+  {
+    "name": "--slxd-swipe-card-frame-positive",
+    "path": "swipe-card.frame-positive",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{color.feedback.positive}",
+    "description": null
+  },
+  {
+    "name": "--slxd-swipe-card-frame-negative",
+    "path": "swipe-card.frame-negative",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#b91c1c",
+    "reference": "{color.feedback.negative}",
     "description": null
   },
   {
@@ -3029,16 +3069,6 @@ export const tokenDocs = [
     "value": "calc(3px / var(--slxd-stage-scale))",
     "reference": "calc({primitive.screen.outline} / var(--slxd-stage-scale))",
     "description": "Ink outline: 3 real pixels at any stage scale."
-  },
-  {
-    "name": "--slxd-border-width-band",
-    "path": "border-width.band",
-    "layer": "semantic",
-    "family": "shape",
-    "type": "dimension",
-    "value": "16px",
-    "reference": "{primitive.size.16}",
-    "description": "Coloured side band (e.g. feedback)."
   },
   {
     "name": "--slxd-focus-ring-width",

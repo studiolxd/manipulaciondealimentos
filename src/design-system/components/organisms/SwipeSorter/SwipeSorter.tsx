@@ -60,8 +60,6 @@ export function SwipeSorter({ item, feedback, labels, done, ref, onAnswer }: Swi
               description={item.description}
               roleDescription={labels.roleDescription}
               keyboardHint={labels.keyboardHint}
-              leftStamp={labels.no}
-              rightStamp={labels.yes}
               onSwipe={onAnswer}
             >
               {item.content}
