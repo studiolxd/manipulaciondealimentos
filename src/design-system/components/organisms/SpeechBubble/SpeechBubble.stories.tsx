@@ -10,7 +10,7 @@ const meta = {
   args: {
     speaker: 'David',
     blocks: [
-      'Antes de empezar a moverte por el restaurante, hay algo que debes tener claro: qué significa ser manipulador de alimentos.',
+      'Antes de empezar a moverte por el restaurante, hay algo que debes tener claro: qué significa manipular alimentos.',
       'Un manipulador de alimentos es cualquier persona que, por su trabajo, entra en contacto con alimentos.',
     ],
     onFinished: fn(),

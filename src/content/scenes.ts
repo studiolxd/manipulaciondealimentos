@@ -63,7 +63,7 @@ export const handlerDefinition = {
   davidAlt: 'David, sentado frente a ti.',
   speech: [
     (g) =>
-      `Antes de empezar a moverte por el restaurante, hay algo que debes tener claro: qué significa ser manipulador de alimentos. ${g('Tranquilo', 'Tranquila', 'No te preocupes')}, es más sencillo de lo que parece:`,
+      `Antes de empezar a moverte por el restaurante, hay algo que debes tener claro: qué significa manipular alimentos. ${g('Tranquilo', 'Tranquila', 'No te preocupes')}, es más sencillo de lo que parece:`,
     'Un manipulador de alimentos es cualquier persona que, por su trabajo, entra en contacto con alimentos o realiza tareas que pueden influir en su seguridad.',
     (g) =>
       `Fíjate en la última parte: "cualquier persona que... realiza tareas que pueden influir en su seguridad". Eso incluye a mucha más gente de la que parece. De hecho, ahora mismo voy a ponerte a prueba con algunos ejemplos. ${g('¿Preparado?', '¿Preparada?', '¿Empezamos?')}`,

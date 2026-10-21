@@ -30,5 +30,5 @@ Frases que se dirigen al jugador pero se han dejado igual en las tres formas.
 
 | Escena | Texto | Motivo |
 | --- | --- | --- |
-| 2 · Salón comedor: bienvenida de David | «Tú debes ser el nuevo fichaje» | «Fichaje» es el mismo sustantivo para cualquier persona. |
-| 3 · ¿Qué es un manipulador de alimentos? | «qué significa ser manipulador de alimentos» | Nombra la figura profesional y el curso. Pendiente de decidir si se reformula como «qué significa manipular alimentos». |
+| 2 · Salón comedor: bienvenida de David | «Tú debes ser [nombre], el nuevo fichaje» | «Fichaje» es el mismo sustantivo para cualquier persona. |
+| 3 · ¿Qué es un manipulador de alimentos? | «qué significa manipular alimentos» | Reformulado desde «qué significa ser manipulador de alimentos» para que no dependa de la forma de tratamiento. |
