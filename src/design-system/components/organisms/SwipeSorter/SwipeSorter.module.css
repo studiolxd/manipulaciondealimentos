@@ -10,3 +10,30 @@
   transition-duration: var(--slxd-swipe-sorter-stack-duration);
   transition-timing-function: var(--slxd-swipe-sorter-stack-easing);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .behind {
+    transition: none;
+  }
+}
+
+/* The card in front. While the feedback is open it waits in the first place
+   of the stack, and comes down to the front when the feedback closes. */
+.front {
+  position: absolute;
+  inset: 0;
+  transition-property: transform;
+  transition-duration: var(--slxd-swipe-sorter-stack-duration);
+  transition-timing-function: var(--slxd-swipe-sorter-stack-easing);
+}
+
+.front[data-waiting] {
+  transform: translateY(calc(var(--slxd-swipe-sorter-stack-step) * -1))
+    scale(calc(1 - var(--slxd-swipe-sorter-stack-shrink)));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .front {
+    transition: none;
+  }
+}

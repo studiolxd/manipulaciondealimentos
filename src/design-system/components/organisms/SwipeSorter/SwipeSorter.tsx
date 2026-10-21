@@ -68,13 +68,15 @@ export function SwipeSorter({ item, upcoming = [], feedback, labels, done, ref, 
       {item && (
         <Layer inert={feedbackOpen}>
           <Positioned top={160} left={400} width={1120} height={520}>
-            {/* The stack: the next cards behind, deepest first, each a little higher and smaller. */}
+            {/* The stack: the next cards behind, deepest first, each a little higher and smaller.
+                While the feedback is open the whole stack waits one place back, and moves
+                forward when it closes, so the move is seen. */}
             {upcoming
               .map((next, index) => (
                 <div
                   key={next.id}
                   className={styles.behind}
-                  style={{ '--stack-depth': index + 1 } as CSSProperties}
+                  style={{ '--stack-depth': index + 1 + (feedbackOpen ? 1 : 0) } as CSSProperties}
                   aria-hidden="true"
                   inert
                 >
@@ -82,20 +84,21 @@ export function SwipeSorter({ item, upcoming = [], feedback, labels, done, ref, 
                 </div>
               ))
               .reverse()}
-            <SwipeCard
-              key={item.id}
-              ref={cardRef}
-              label={item.label}
-              description={item.description}
-              roleDescription={labels.roleDescription}
-              keyboardHint={labels.keyboardHint}
-              onSwipe={(direction) => {
-                onAnswer(direction)
-                setFeedbackOpen(true)
-              }}
-            >
-              {item.content}
-            </SwipeCard>
+            <div key={item.id} className={styles.front} data-waiting={feedbackOpen || undefined}>
+              <SwipeCard
+                ref={cardRef}
+                label={item.label}
+                description={item.description}
+                roleDescription={labels.roleDescription}
+                keyboardHint={labels.keyboardHint}
+                onSwipe={(direction) => {
+                  onAnswer(direction)
+                  setFeedbackOpen(true)
+                }}
+              >
+                {item.content}
+              </SwipeCard>
+            </div>
           </Positioned>
           <Positioned top={370} left={64}>
             <Button variant="choice-negative" aria-label={labels.noButton} onClick={() => cardRef.current?.swipe('left')}>
