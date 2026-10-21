@@ -708,7 +708,7 @@ export const tokenDocs = [
     "type": "color",
     "value": "#000000",
     "reference": "{color.text.default}",
-    "description": "Ink, on light surfaces."
+    "description": "Black, on light surfaces."
   },
   {
     "name": "--slxd-icon-color-inverse",

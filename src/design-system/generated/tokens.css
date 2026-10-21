@@ -274,7 +274,7 @@
   --slxd-icon-size-md: var(--slxd-size-icon-md);
   --slxd-icon-size-lg: var(--slxd-size-icon-lg);
   --slxd-icon-stroke-width: var(--slxd-stroke-width-icon);
-  --slxd-icon-color-default: var(--slxd-color-text-default); /** Ink, on light surfaces. */
+  --slxd-icon-color-default: var(--slxd-color-text-default); /** Black, on light surfaces. */
   --slxd-icon-color-inverse: var(--slxd-color-text-inverse); /** Cream, on ink panels and dark screens. */
   --slxd-icon-color-accent: var(--slxd-color-text-accent);
   --slxd-icon-color-positive: var(--slxd-color-feedback-positive);

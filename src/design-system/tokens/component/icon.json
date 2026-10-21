@@ -22,7 +22,7 @@
       "$type": "color",
       "default": {
         "$value": "{color.text.default}",
-        "$description": "Ink, on light surfaces."
+        "$description": "Black, on light surfaces."
       },
       "inverse": {
         "$value": "{color.text.inverse}",
