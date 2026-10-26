@@ -21,7 +21,7 @@ export function RadioOption({ name, value, label, checked, onChange }: RadioOpti
     <label htmlFor={id} className={styles.option} data-checked={checked || undefined}>
       <Radio id={id} name={name} value={value} checked={checked} onChange={onChange} />
       <span className={styles.mark} aria-hidden="true" />
-      <Text size="body-sm">{label}</Text>
+      <Text size="small">{label}</Text>
     </label>
   )
 }

@@ -179,7 +179,7 @@ export function SecurityCamerasScene() {
                 </Positioned>
               )}
               {view.step === 'question' && question && (
-                <Positioned top={60} center="x" width={1200}>
+                <Positioned top={32} center="x" width={1400} height={736}>
                   <QuestionPanel
                     key={`${view.question}-${attempt}`}
                     name={`${current.id}-q${view.question + 1}`}

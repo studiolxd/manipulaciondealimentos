@@ -2,11 +2,16 @@
   "question-panel": {
     "gap": {
       "$type": "dimension",
-      "$value": "{space.md}"
+      "$value": "{space.sm}"
     },
     "answer-gap": {
       "$type": "dimension",
       "$value": "{space.xs}"
+    },
+    "shadow-room": {
+      "$type": "dimension",
+      "$value": "{space.2xs}",
+      "$description": "Room below the last answer, so the scroll area does not cut its outline."
     }
   }
 }

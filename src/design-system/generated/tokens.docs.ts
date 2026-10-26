@@ -1346,8 +1346,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "32px",
-    "reference": "{space.md}",
+    "value": "24px",
+    "reference": "{space.sm}",
     "description": null
   },
   {
@@ -1359,6 +1359,16 @@ export const tokenDocs = [
     "value": "16px",
     "reference": "{space.xs}",
     "description": null
+  },
+  {
+    "name": "--slxd-question-panel-shadow-room",
+    "path": "question-panel.shadow-room",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": "Room below the last answer, so the scroll area does not cut its outline."
   },
   {
     "name": "--slxd-radio-option-gap",
@@ -1376,8 +1386,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "16px",
-    "reference": "{space.xs}",
+    "value": "8px",
+    "reference": "{space.2xs}",
     "description": null
   },
   {
@@ -1456,8 +1466,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "48px",
-    "reference": "{space.xl}",
+    "value": "40px",
+    "reference": "{space.lg}",
     "description": null
   },
   {
@@ -1476,8 +1486,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "8px",
-    "reference": "{space.2xs}",
+    "value": "4px",
+    "reference": "{space.3xs}",
     "description": "White ring between the outline and the mint dot of a chosen answer."
   },
   {

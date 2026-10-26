@@ -334,10 +334,11 @@
   --slxd-poster-list-indent: var(--slxd-space-xl);
   --slxd-poster-line-height: var(--slxd-font-line-height-normal);
   --slxd-poster-marker: var(--slxd-color-text-negative);
-  --slxd-question-panel-gap: var(--slxd-space-md);
+  --slxd-question-panel-gap: var(--slxd-space-sm);
   --slxd-question-panel-answer-gap: var(--slxd-space-xs);
+  --slxd-question-panel-shadow-room: var(--slxd-space-2xs); /** Room below the last answer, so the scroll area does not cut its outline. */
   --slxd-radio-option-gap: var(--slxd-space-sm);
-  --slxd-radio-option-padding-block: var(--slxd-space-xs);
+  --slxd-radio-option-padding-block: var(--slxd-space-2xs);
   --slxd-radio-option-padding-inline: var(--slxd-space-sm);
   --slxd-radio-option-radius: var(--slxd-radius-md);
   --slxd-radio-option-border-width: var(--slxd-border-width-outline);
@@ -345,9 +346,9 @@
   --slxd-radio-option-checked-border-color: var(--slxd-color-border-selected);
   --slxd-radio-option-background: var(--slxd-color-surface-default);
   --slxd-radio-option-text: var(--slxd-color-text-default);
-  --slxd-radio-option-mark-size: var(--slxd-space-xl);
+  --slxd-radio-option-mark-size: var(--slxd-space-lg);
   --slxd-radio-option-mark-radius: var(--slxd-radius-full);
-  --slxd-radio-option-mark-inset: var(--slxd-space-2xs); /** White ring between the outline and the mint dot of a chosen answer. */
+  --slxd-radio-option-mark-inset: var(--slxd-space-3xs); /** White ring between the outline and the mint dot of a chosen answer. */
   --slxd-radio-option-mark-checked: var(--slxd-color-action-primary-background);
   --slxd-rotate-screen-background: var(--slxd-color-surface-system);
   --slxd-rotate-screen-text: var(--slxd-color-text-default);
