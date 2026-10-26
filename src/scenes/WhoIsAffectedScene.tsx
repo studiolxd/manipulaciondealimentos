@@ -11,7 +11,7 @@ const ACTIVITY_ID = 'who-is-affected'
 // Scenes 21 and 22 (activity 5): David, standing in front of the player, reads
 // a consequence at a time; the player says who it affects with one of three
 // buttons. David gives the feedback in the same bubble; a wrong answer is
-// tried again, and "Siguiente" appears only once it is right.
+// tried again, and "Siguiente" takes the place of the buttons once it is right.
 export function WhoIsAffectedScene() {
   const { sceneReady, goTo } = useGame()
   // Shuffled once per game load.
@@ -68,38 +68,36 @@ export function WhoIsAffectedScene() {
         openLabel: activity.title,
         closeLabel: activity.title,
       }}
-      character={{ source: image('davidHalfBody'), alt: activity.davidAlt, bottom: 0, left: 140, height: 900 }}
+      character={{ source: image('davidHalfBody'), alt: activity.davidAlt, bottom: 0, left: 40, height: 900 }}
       startLabel={activity.start}
       hudEnd={<Label tone="inverse">{activity.progress(index + 1, deck.length)}</Label>}
       onPlayStart={() => xapi.activityAttempted(ACTIVITY_ID, activity.title)}
     >
-      <Positioned top={160} left={820} width={1000}>
+      <Positioned top={140} left={760} width={1120}>
         <SpeechBubble key={`${current.id}-${answers}`} speaker="David" blocks={[speech]} tail="left" />
       </Positioned>
 
-      <Positioned bottom={200} left={1080} width={480}>
-        <OptionButtons stacked disabled={right} label={activity.optionsLabel} options={activity.options} onSelect={choose} />
+      {/* In a row under the bubble, so a long feedback never runs under them.
+          Once the answer is right, the next button takes their place. */}
+      <Positioned bottom={56} right={40}>
+        {!right ? (
+          <OptionButtons label={activity.optionsLabel} options={activity.options} onSelect={choose} />
+        ) : last ? (
+          <Button claimFocus advance onClick={() => goTo('who-is-affected-conclusion')}>
+            {activity.finish}
+          </Button>
+        ) : (
+          <Button
+            claimFocus
+            onClick={() => {
+              setIndex(index + 1)
+              setResult(null)
+            }}
+          >
+            {activity.next}
+          </Button>
+        )}
       </Positioned>
-
-      {right && (
-        <Positioned bottom={64} left={1080} width={480}>
-          {last ? (
-            <Button claimFocus advance onClick={() => goTo('who-is-affected-conclusion')}>
-              {activity.finish}
-            </Button>
-          ) : (
-            <Button
-              claimFocus
-              onClick={() => {
-                setIndex(index + 1)
-                setResult(null)
-              }}
-            >
-              {activity.next}
-            </Button>
-          )}
-        </Positioned>
-      )}
     </ActivityScene>
   )
 }

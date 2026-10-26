@@ -29,7 +29,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Positioned top={150} left={80} width={1760} height={860}>
+      <Positioned top={130} left={40} width={1840} height={930}>
         <TabletFrame>
           <Story />
         </TabletFrame>

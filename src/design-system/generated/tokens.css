@@ -238,7 +238,9 @@
   --slxd-button-option-text: var(--slxd-color-text-default);
   --slxd-button-option-done-background: var(--slxd-color-action-positive-background);
   --slxd-button-option-done-text: var(--slxd-color-action-positive-text);
-  --slxd-button-option-padding-inline: var(--slxd-space-sm);
+  --slxd-button-option-min-height: var(--slxd-size-target-compact);
+  --slxd-button-option-padding-block: var(--slxd-space-2xs);
+  --slxd-button-option-padding-inline: var(--slxd-space-xs);
   --slxd-button-option-font-family: var(--slxd-font-family-body);
   --slxd-button-option-font-size: var(--slxd-font-size-small);
   --slxd-button-option-font-weight: var(--slxd-font-weight-bold);
@@ -271,10 +273,10 @@
   --slxd-heading-overlay-stroke-width: calc(var(--slxd-border-width-outline) * 3); /** Three times the outline: the stroke is painted behind the fill, so about half of it shows. */
   --slxd-heading-overlay-shadow-offset: var(--slxd-space-2xs);
   --slxd-heading-overlay-shadow-color: var(--slxd-color-shadow-default);
-  --slxd-hotspot-match-gap: var(--slxd-space-lg);
-  --slxd-hotspot-match-padding: var(--slxd-space-lg);
-  --slxd-hotspot-match-item-gap: var(--slxd-space-xs);
-  --slxd-hotspot-match-list-width: var(--slxd-size-choice-min-width);
+  --slxd-hotspot-match-gap: var(--slxd-space-sm);
+  --slxd-hotspot-match-padding: var(--slxd-space-sm);
+  --slxd-hotspot-match-item-gap: var(--slxd-space-2xs);
+  --slxd-hotspot-match-list-width: var(--slxd-size-choice-min-width); /** Width of each of the two columns of the list. */
   --slxd-hotspot-match-radius: var(--slxd-radius-md);
   --slxd-hotspot-match-border-width: var(--slxd-border-width-outline);
   --slxd-hotspot-match-border-color: var(--slxd-color-border-ink);

@@ -3,19 +3,20 @@
     "$description": "Match list items to hidden points of a picture (HotspotMatch).",
     "gap": {
       "$type": "dimension",
-      "$value": "{space.lg}"
+      "$value": "{space.sm}"
     },
     "padding": {
       "$type": "dimension",
-      "$value": "{space.lg}"
+      "$value": "{space.sm}"
     },
     "item-gap": {
       "$type": "dimension",
-      "$value": "{space.xs}"
+      "$value": "{space.2xs}"
     },
     "list-width": {
       "$type": "dimension",
-      "$value": "{size.choice.min-width}"
+      "$value": "{size.choice.min-width}",
+      "$description": "Width of each of the two columns of the list."
     },
     "radius": {
       "$type": "dimension",

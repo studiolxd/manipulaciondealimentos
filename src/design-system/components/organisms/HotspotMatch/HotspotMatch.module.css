@@ -8,22 +8,29 @@
   padding: var(--slxd-hotspot-match-padding);
 }
 
+/* Two columns, so every item fits next to the picture without scrolling.
+   The scroll is only a safeguard for very large text; the padding keeps the
+   buttons' lift and shadow from being cut. */
 .list {
   margin: 0;
-  padding: 0;
+  padding: var(--slxd-hotspot-match-item-gap);
   border: 0;
-  display: flex;
+  display: grid;
   flex: none;
-  flex-direction: column;
+  grid-template-columns: repeat(2, var(--slxd-hotspot-match-list-width));
   gap: var(--slxd-hotspot-match-item-gap);
-  width: var(--slxd-hotspot-match-list-width);
+  align-content: center;
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 .legend {
   composes: hidden from '../../utilities/VisuallyHidden/VisuallyHidden.module.css';
 }
 
+/* A grid, so the button fills the height of its row. */
 .item {
+  display: grid;
   touch-action: none;
 }
 

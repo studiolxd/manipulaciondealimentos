@@ -381,13 +381,33 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-option-min-height",
+    "path": "button.option.min-height",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(72px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.compact}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-padding-block",
+    "path": "button.option.padding-block",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-option-padding-inline",
     "path": "button.option.padding-inline",
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "24px",
-    "reference": "{space.sm}",
+    "value": "16px",
+    "reference": "{space.xs}",
     "description": null
   },
   {
@@ -716,8 +736,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "40px",
-    "reference": "{space.lg}",
+    "value": "24px",
+    "reference": "{space.sm}",
     "description": null
   },
   {
@@ -726,8 +746,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "40px",
-    "reference": "{space.lg}",
+    "value": "24px",
+    "reference": "{space.sm}",
     "description": null
   },
   {
@@ -736,8 +756,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "16px",
-    "reference": "{space.xs}",
+    "value": "8px",
+    "reference": "{space.2xs}",
     "description": null
   },
   {
@@ -748,7 +768,7 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "400px",
     "reference": "{size.choice.min-width}",
-    "description": null
+    "description": "Width of each of the two columns of the list."
   },
   {
     "name": "--slxd-hotspot-match-radius",
