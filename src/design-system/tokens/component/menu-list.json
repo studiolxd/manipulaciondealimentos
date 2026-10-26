@@ -1,0 +1,16 @@
+{
+  "menu-list": {
+    "column-gap": {
+      "$type": "dimension",
+      "$value": "{space.xl}"
+    },
+    "padding-block": {
+      "$type": "dimension",
+      "$value": "{space.2xs}"
+    },
+    "current": {
+      "$type": "color",
+      "$value": "{color.text.accent}"
+    }
+  }
+}

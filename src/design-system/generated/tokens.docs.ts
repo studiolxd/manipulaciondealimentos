@@ -1241,6 +1241,36 @@ export const tokenDocs = [
     "description": "A done tile fades a little besides turning black and white."
   },
   {
+    "name": "--slxd-menu-list-column-gap",
+    "path": "menu-list.column-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-menu-list-padding-block",
+    "path": "menu-list.padding-block",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-menu-list-current",
+    "path": "menu-list.current",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#0f5c45",
+    "reference": "{color.text.accent}",
+    "description": null
+  },
+  {
     "name": "--slxd-option-buttons-gap",
     "path": "option-buttons.gap",
     "layer": "component",

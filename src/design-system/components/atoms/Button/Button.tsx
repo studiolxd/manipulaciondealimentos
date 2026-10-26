@@ -40,6 +40,7 @@ interface ButtonProps {
   /** Accessible name when it must say more than the visible text; it must start with that text. */
   'aria-label'?: string
   'aria-haspopup'?: 'dialog'
+  'aria-current'?: boolean
   /** Hidden but kept in place, e.g. while it has turned into another element. */
   concealed?: boolean
   /** Can no longer be pressed, e.g. something already done. */

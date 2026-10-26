@@ -1,0 +1,26 @@
+.list {
+  column-count: 3;
+  column-gap: var(--slxd-menu-list-column-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  margin: 0;
+  break-inside: avoid;
+}
+
+.item > button {
+  width: 100%;
+  padding-block: var(--slxd-menu-list-padding-block);
+  text-align: start;
+}
+
+.item > button:hover {
+  text-decoration: underline;
+}
+
+.item[data-current] {
+  color: var(--slxd-menu-list-current);
+}

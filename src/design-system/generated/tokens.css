@@ -324,6 +324,9 @@
   --slxd-media-tile-hover-border-color: var(--slxd-color-border-selected);
   --slxd-media-tile-shadow-offset: var(--slxd-space-3xs);
   --slxd-media-tile-done-opacity: var(--slxd-opacity-muted); /** A done tile fades a little besides turning black and white. */
+  --slxd-menu-list-column-gap: var(--slxd-space-xl);
+  --slxd-menu-list-padding-block: var(--slxd-space-2xs);
+  --slxd-menu-list-current: var(--slxd-color-text-accent);
   --slxd-option-buttons-gap: var(--slxd-space-xl);
   --slxd-poster-gap: var(--slxd-space-md);
   --slxd-poster-column-gap: var(--slxd-space-3xl);
