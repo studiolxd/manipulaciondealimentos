@@ -46,6 +46,13 @@
       "$description": "Background blur behind glass panels."
     }
   },
+  "opacity": {
+    "$type": "number",
+    "muted": {
+      "$value": "{primitive.opacity.60}",
+      "$description": "Elements that are done or no longer available."
+    }
+  },
   "scale": {
     "$type": "number",
     "stack-step": {

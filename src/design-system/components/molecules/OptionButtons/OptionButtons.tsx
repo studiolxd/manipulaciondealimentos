@@ -14,6 +14,10 @@ interface OptionButtonsProps<T extends string> {
   advance?: boolean
   /** Lets the options wrap onto several rows when there are many. */
   wrap?: boolean
+  /** One under the other, all as wide as the widest. */
+  stacked?: boolean
+  /** Options can no longer be chosen (e.g. while the answer is being checked). */
+  disabled?: boolean
   onSelect: (value: T) => void
 }
 
@@ -24,10 +28,12 @@ export function OptionButtons<T extends string>({
   options,
   advance = false,
   wrap = false,
+  stacked = false,
+  disabled = false,
   onSelect,
 }: OptionButtonsProps<T>) {
   return (
-    <fieldset className={styles.group} data-wrap={wrap || undefined}>
+    <fieldset className={styles.group} data-wrap={wrap || undefined} data-stacked={stacked || undefined} disabled={disabled}>
       <legend className={styles.legend}>{label}</legend>
       {options.map((option) => (
         <Button key={option.value} variant="secondary" advance={advance} onClick={() => onSelect(option.value)}>

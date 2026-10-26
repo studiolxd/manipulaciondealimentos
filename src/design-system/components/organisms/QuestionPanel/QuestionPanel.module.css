@@ -1,0 +1,22 @@
+.group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  padding: 0;
+  margin-block-end: var(--slxd-question-panel-gap);
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-question-panel-answer-gap);
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  margin-block-start: var(--slxd-question-panel-gap);
+}

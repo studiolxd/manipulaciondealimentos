@@ -14,7 +14,7 @@ export function WhoIsFoodHandlerConclusionScene() {
       ready={sceneReady}
       character={{ source: image('davidSeated'), alt: conclusion.davidAlt, bottom: 220, left: 160, height: 640 }}
       speech={{ speaker: 'David', blocks: conclusion.speech, tail: 'left', top: 160, left: 940, width: 900 }}
-      action={{ label: conclusion.next, onClick: () => goTo('coming-soon') }}
+      action={{ label: conclusion.next, onClick: () => goTo('cameras-intro') }}
       hud
     />
   )

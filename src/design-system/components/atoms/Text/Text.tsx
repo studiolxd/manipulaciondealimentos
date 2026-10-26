@@ -4,7 +4,8 @@ import styles from './Text.module.css'
 interface TextProps {
   as?: 'p' | 'span' | 'strong'
   /** `system`: messages outside the stage, in real pixels. */
-  size?: 'body' | 'body-sm' | 'system'
+  /** `small`: dense prose that has to fit in a panel, e.g. a poster. */
+  size?: 'body' | 'body-sm' | 'small' | 'system'
   weight?: 'regular' | 'bold'
   /** `default` inherits the colour of its container. */
   tone?: 'default' | 'inverse' | 'positive' | 'negative'

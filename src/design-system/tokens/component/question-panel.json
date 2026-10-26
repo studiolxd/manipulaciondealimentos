@@ -1,0 +1,12 @@
+{
+  "question-panel": {
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.md}"
+    },
+    "answer-gap": {
+      "$type": "dimension",
+      "$value": "{space.xs}"
+    }
+  }
+}

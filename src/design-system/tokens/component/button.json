@@ -135,8 +135,55 @@
         "$value": "{color.action.secondary.text}"
       }
     },
+    "option": {
+      "$description": "An item written as a sentence that is picked or dragged (HotspotMatch).",
+      "background": {
+        "$type": "color",
+        "$value": "{color.surface.default}"
+      },
+      "pressed-background": {
+        "$type": "color",
+        "$value": "{color.action.primary.background}"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.text.default}"
+      },
+      "done-background": {
+        "$type": "color",
+        "$value": "{color.action.positive.background}"
+      },
+      "done-text": {
+        "$type": "color",
+        "$value": "{color.action.positive.text}"
+      },
+      "padding-inline": {
+        "$type": "dimension",
+        "$value": "{space.sm}"
+      },
+      "font-family": {
+        "$type": "fontFamily",
+        "$value": "{font.family.body}"
+      },
+      "font-size": {
+        "$type": "dimension",
+        "$value": "{font.size.small}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.bold}"
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{font.line-height.snug}"
+      }
+    },
     "icon": {
       "$description": "Square icon-only button (IconButton), with the radius of every button.",
+      "compact-size": {
+        "$type": "dimension",
+        "$value": "{size.target.compact}"
+      },
       "size": {
         "$type": "dimension",
         "$value": "{size.target.min}"

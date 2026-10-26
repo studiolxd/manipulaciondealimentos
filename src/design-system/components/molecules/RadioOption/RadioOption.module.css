@@ -1,0 +1,39 @@
+.option {
+  display: flex;
+  gap: var(--slxd-radio-option-gap);
+  align-items: center;
+  padding-block: var(--slxd-radio-option-padding-block);
+  padding-inline: var(--slxd-radio-option-padding-inline);
+  border: var(--slxd-radio-option-border-width) solid var(--slxd-radio-option-border-color);
+  border-radius: var(--slxd-radio-option-radius);
+  background: var(--slxd-radio-option-background);
+  color: var(--slxd-radio-option-text);
+  cursor: pointer;
+}
+
+.option[data-checked] {
+  border-color: var(--slxd-radio-option-checked-border-color);
+}
+
+.option:has(input:focus-visible) {
+  outline: var(--slxd-stage-focus-ring-width) solid var(--slxd-stage-focus-ring-outer);
+  outline-offset: var(--slxd-stage-focus-ring-width);
+  box-shadow: 0 0 0 var(--slxd-stage-focus-ring-width) var(--slxd-stage-focus-ring-inner);
+}
+
+/* The visible radio: an ink circle that fills with mint when chosen. */
+.mark {
+  flex: none;
+  width: var(--slxd-radio-option-mark-size);
+  height: var(--slxd-radio-option-mark-size);
+  border: var(--slxd-radio-option-border-width) solid var(--slxd-radio-option-border-color);
+  border-radius: var(--slxd-radio-option-mark-radius);
+  background: var(--slxd-radio-option-background);
+}
+
+.option[data-checked] .mark {
+  --mark-ring: inset 0 0 0 var(--slxd-radio-option-mark-inset) var(--slxd-radio-option-background);
+
+  background: var(--slxd-radio-option-mark-checked);
+  box-shadow: var(--mark-ring);
+}

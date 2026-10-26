@@ -15,6 +15,10 @@
   pointer-events: auto;
 }
 
+.layer[data-backdrop='dark'] {
+  background: var(--slxd-backdrop-dark-color);
+}
+
 .layer[data-isolate] {
   z-index: var(--slxd-layer-base);
 }

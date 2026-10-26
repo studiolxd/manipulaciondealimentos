@@ -79,6 +79,52 @@
   }
 }
 
+/* No look of its own: the content (e.g. a thumbnail) is the button. */
+.button[data-variant='bare'] {
+  --button-shadow: none;
+
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  translate: none;
+  text-transform: none;
+}
+
+/* An item written as a sentence that is picked or dragged: prose, wrapping. */
+.button:is([data-variant='option'], [data-variant='option-done']) {
+  --button-background: var(--slxd-button-option-background);
+  --button-text: var(--slxd-button-option-text);
+
+  width: 100%;
+  padding-inline: var(--slxd-button-option-padding-inline);
+  font-family: var(--slxd-button-option-font-family);
+  font-size: var(--slxd-button-option-font-size);
+  font-weight: var(--slxd-button-option-font-weight);
+  line-height: var(--slxd-button-option-line-height);
+  letter-spacing: normal;
+  text-align: start;
+  text-transform: none;
+  white-space: normal;
+  touch-action: none;
+}
+
+.button[data-variant='option'][aria-pressed='true'] {
+  --button-background: var(--slxd-button-option-pressed-background);
+}
+
+/* Placed correctly: the colour of a right answer, no longer pressable. */
+.button[data-variant='option-done'] {
+  --button-background: var(--slxd-button-option-done-background);
+  --button-text: var(--slxd-button-option-done-text);
+  --button-lift: 0px;
+}
+
+.button:disabled {
+  cursor: default;
+}
+
 .button[data-concealed] {
   visibility: hidden;
 }
@@ -106,7 +152,7 @@
   --button-text: var(--slxd-button-choice-negative-text);
 }
 
-.button[data-variant='icon'] {
+.button:is([data-variant='icon'], [data-variant='icon-compact']) {
   --button-background: var(--slxd-button-icon-background);
   --button-text: var(--slxd-button-icon-text);
 
@@ -114,4 +160,10 @@
   min-height: 0;
   height: var(--slxd-button-icon-size);
   padding: var(--slxd-button-icon-padding);
+}
+
+/* Laid over a picture: smaller, still large enough to touch. */
+.button[data-variant='icon-compact'] {
+  width: var(--slxd-button-icon-compact-size);
+  height: var(--slxd-button-icon-compact-size);
 }

@@ -3,6 +3,11 @@
     "color": {
       "$type": "color",
       "$value": "{color.surface.scrim}"
+    },
+    "dark-color": {
+      "$type": "color",
+      "$value": "{color.surface.ink}",
+      "$description": "Dims the scene behind a close-up (e.g. a worker's hands, a poster)."
     }
   }
 }

@@ -76,8 +76,15 @@ Código: Tramoya (`src/tracking/xapi.ts`), configurado en `src/game/tracking.ts`
 | Respuesta | `answered` | En cada respuesta | Pregunta, respuesta, si es correcta y respuesta correcta (`true-false` en la actividad 2) |
 | Fin de actividad | `completed` | Al responder la última pregunta | Aciertos sobre el total |
 
-Ahora mismo envía estos eventos la actividad 2 («¿Quién es manipulador de alimentos?»), y las escenas visitadas
-en todo el juego.
+Ahora mismo envían estos eventos las actividades 2, 3, 4, 5 y 8, y las escenas visitadas en todo el juego:
+
+- **Actividad 2** (¿Quién es manipulador de alimentos?): una respuesta por carné (`true-false`, la respuesta del alumno).
+- **Actividades 3, 4 y 5** (Cámaras de seguridad, Detectives de la cocina, ¿A quién afecta?): una respuesta por cada
+  intento, con `response` = si ha acertado. Como se repite hasta acertar, el fin de actividad cuenta los aciertos al
+  primer intento.
+- **Actividad 8** (Revisión de uniforme e higiene): inicio y fin; el fin cuenta los elementos menos los fallos.
+
+Las actividades 6 y 7 son de lectura (vestuario y cartel) y solo registran la escena visitada.
 
 ## Pendiente
 

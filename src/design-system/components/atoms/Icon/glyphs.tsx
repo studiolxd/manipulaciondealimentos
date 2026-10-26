@@ -17,6 +17,13 @@ export const glyphs = {
       <rect className={styles.rotateDevicePhone} x="8.5" y="12" width="7" height="9.5" />
     </>
   ),
+  // A plus sign: opens a closer view (e.g. of a worker's hands).
+  zoomIn: (
+    <>
+      <path d="M12 4V20" />
+      <path d="M4 12H20" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type GlyphName = keyof typeof glyphs

@@ -43,6 +43,12 @@
         "$value": "16px"
       }
     },
+    "opacity": {
+      "$type": "number",
+      "60": {
+        "$value": 0.6
+      }
+    },
     "scale": {
       "$type": "number",
       "4": {

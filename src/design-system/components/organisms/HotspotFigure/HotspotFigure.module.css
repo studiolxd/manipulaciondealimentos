@@ -1,0 +1,42 @@
+.figure {
+  position: relative;
+  width: 100%;
+}
+
+.figure[data-done] {
+  filter: grayscale(1);
+}
+
+.base,
+.base > button {
+  width: 100%;
+  height: 100%;
+}
+
+.spot {
+  position: absolute;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.spot > button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.area {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.zoom {
+  position: absolute;
+  translate: -50% -50%;
+}

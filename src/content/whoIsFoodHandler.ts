@@ -176,7 +176,7 @@ export const whoIsFoodHandlerConclusion = {
   speech: [
     'Como has podido comprobar, no solo son manipuladores quienes cocinan. También lo son quienes reciben mercancías, las almacenan, preparan ingredientes, envasan alimentos, transportan pedidos, sirven platos o bebidas... e incluso quienes limpian utensilios y superficies que estarán en contacto con la comida.',
     'La manipulación puede darse en cualquier etapa de la cadena alimentaria. Y todos compartimos el mismo objetivo: que los alimentos lleguen al consumidor en buenas condiciones y sin suponer un peligro para su salud.',
-    'Ahora que sabes quién manipula alimentos, toca ver qué pasa cuando algo se hace mal. En este restaurante tenemos cámaras de seguridad. Vamos a revisarlas. ¿Te atreves?',
+    'Muy bien. Ya sabes quién manipula alimentos. Pero eso es solo el principio. Ven conmigo, que te enseño algo que te va a interesar.',
   ],
   next: '¡Vamos!',
 }

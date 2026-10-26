@@ -1,0 +1,12 @@
+{
+  "media-gallery": {
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.xl}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.3xl}"
+    }
+  }
+}

@@ -9,8 +9,11 @@ interface LayerProps {
   isolate?: boolean
   /** Makes the content unreachable (e.g. behind a dialog or during a fade). */
   inert?: boolean
-  /** Covers the stage with translucent white that blocks the pointer, behind a modal panel. */
-  backdrop?: boolean
+  /**
+   * Covers the stage and blocks the pointer, behind a modal panel: translucent
+   * white (`true` or `light`), or `dark` to dim the scene behind a close-up.
+   */
+  backdrop?: boolean | 'light' | 'dark'
   children: ReactNode
 }
 
@@ -21,7 +24,7 @@ export function Layer({ layer = 'base', isolate = false, inert, backdrop = false
       className={styles.layer}
       data-layer={layer}
       data-isolate={isolate || undefined}
-      data-backdrop={backdrop || undefined}
+      data-backdrop={backdrop === true ? 'light' : backdrop || undefined}
       inert={inert}
     >
       {children}

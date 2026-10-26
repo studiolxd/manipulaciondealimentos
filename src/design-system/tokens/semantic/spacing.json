@@ -62,6 +62,10 @@
       "min": {
         "$value": "max({primitive.size.112}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
         "$description": "Minimum size of anything clickable: 112 stage px, never less than 44 real px."
+      },
+      "compact": {
+        "$value": "max({primitive.size.72}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
+        "$description": "Small controls laid over a picture (e.g. a zoom button): 72 stage px, never less than 44 real px."
       }
     },
     "switch": {

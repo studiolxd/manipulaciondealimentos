@@ -20,6 +20,10 @@
       "body-sm": {
         "$value": "max({primitive.font.size.40}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))"
       },
+      "small": {
+        "$value": "max({primitive.font.size.32}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+        "$description": "Dense prose that has to fit in a panel: posters, lists of items to drag."
+      },
       "subheading": {
         "$value": "{primitive.font.size.60}"
       },

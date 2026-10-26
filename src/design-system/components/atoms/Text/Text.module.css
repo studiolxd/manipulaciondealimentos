@@ -12,6 +12,10 @@
   font-size: var(--slxd-font-size-body-sm);
 }
 
+.text[data-size='small'] {
+  font-size: var(--slxd-font-size-small);
+}
+
 .text[data-size='system'] {
   font-size: var(--slxd-font-size-system-body);
   line-height: var(--slxd-font-line-height-relaxed);

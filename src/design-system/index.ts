@@ -38,6 +38,7 @@ export { Switch } from './components/atoms/Switch/Switch'
 export { Surface } from './components/atoms/Surface/Surface'
 export { Text } from './components/atoms/Text/Text'
 export { TextInput } from './components/atoms/TextInput/TextInput'
+export { Video, type VideoHandle } from './components/atoms/Video/Video'
 
 // Molecules
 export { ActivityTitle } from './components/molecules/ActivityTitle/ActivityTitle'
@@ -46,15 +47,28 @@ export { FeedbackPanel, type Feedback } from './components/molecules/FeedbackPan
 export { IconButton } from './components/molecules/IconButton/IconButton'
 export { IdCard } from './components/molecules/IdCard/IdCard'
 export { InlineAlert } from './components/molecules/InlineAlert/InlineAlert'
+export { MediaTile } from './components/molecules/MediaTile/MediaTile'
 export { NarrationBox } from './components/molecules/NarrationBox/NarrationBox'
 export { OptionButtons, type OptionButton } from './components/molecules/OptionButtons/OptionButtons'
+export { RadioOption } from './components/molecules/RadioOption/RadioOption'
+export { TabletFrame } from './components/molecules/TabletFrame/TabletFrame'
 export { TextField } from './components/molecules/TextField/TextField'
 export { Typewriter } from './components/molecules/Typewriter/Typewriter'
 
 // Organisms
 export { ChoiceCardGroup, type ChoiceCardOption } from './components/organisms/ChoiceCardGroup/ChoiceCardGroup'
 export { Dialog } from './components/organisms/Dialog/Dialog'
+export {
+  HotspotFigure,
+  type FigureBox,
+  type FigureSpot,
+  type FigureZoom,
+} from './components/organisms/HotspotFigure/HotspotFigure'
+export { HotspotMatch, type Hotspot, type MatchItem } from './components/organisms/HotspotMatch/HotspotMatch'
 export { Hud } from './components/organisms/Hud/Hud'
+export { MediaGallery, type MediaGalleryItem } from './components/organisms/MediaGallery/MediaGallery'
+export { Poster, type PosterBlock } from './components/organisms/Poster/Poster'
+export { QuestionPanel } from './components/organisms/QuestionPanel/QuestionPanel'
 export { SpeechBubble } from './components/organisms/SpeechBubble/SpeechBubble'
 export { SwipeCard, type SwipeCardHandle, type SwipeDirection } from './components/organisms/SwipeCard/SwipeCard'
 export {

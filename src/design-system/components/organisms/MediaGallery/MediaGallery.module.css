@@ -1,0 +1,15 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--slxd-media-gallery-gap);
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: var(--slxd-media-gallery-padding);
+  list-style: none;
+}
+
+.item {
+  margin: 0;
+}

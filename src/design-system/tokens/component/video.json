@@ -1,0 +1,17 @@
+{
+  "video": {
+    "background": {
+      "$type": "color",
+      "$value": "{color.surface.backdrop}"
+    },
+    "veil": {
+      "$type": "color",
+      "$value": "{color.surface.ink}",
+      "$description": "Darkens a frozen video while a question is asked over it."
+    },
+    "veil-duration": {
+      "$type": "duration",
+      "$value": "{motion.duration.exit}"
+    }
+  }
+}

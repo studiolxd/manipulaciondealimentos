@@ -1,0 +1,29 @@
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--slxd-video-background);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Veil over the frozen frame while a question is asked over it. */
+.frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--slxd-video-veil);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: var(--slxd-video-veil-duration);
+}
+
+.frame[data-dimmed]::after {
+  opacity: 1;
+}

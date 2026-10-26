@@ -9,8 +9,8 @@ import styles from './FeedbackPanel.module.css'
 
 export interface Feedback {
   tone: 'positive' | 'negative'
-  /** Short verdict shown in bold, e.g. "¡Correcto!". */
-  title: string
+  /** Short verdict shown in bold, e.g. "¡Correcto!". Optional when the message stands alone. */
+  title?: string
   message: string
 }
 
@@ -48,8 +48,8 @@ export function FeedbackPanel({ feedback, closeLabel, onClose }: FeedbackPanelPr
       accent={feedback.tone}
       className={styles.panel}
       aria-modal="true"
-      aria-labelledby={titleId}
-      aria-describedby={messageId}
+      aria-labelledby={feedback.title ? titleId : messageId}
+      aria-describedby={feedback.title ? messageId : undefined}
       onKeyDown={(event) => {
         if (event.key === 'Escape') onClose()
       }}
@@ -57,9 +57,11 @@ export function FeedbackPanel({ feedback, closeLabel, onClose }: FeedbackPanelPr
       <div className={styles.result}>
         <Icon name={feedback.tone === 'positive' ? 'correct' : 'incorrect'} size="md" />
         <div>
-          <Text as="strong" weight="bold" id={titleId}>
-            {feedback.title}
-          </Text>
+          {feedback.title && (
+            <Text as="strong" weight="bold" id={titleId}>
+              {feedback.title}
+            </Text>
+          )}
           <Text size="body-sm" id={messageId}>
             {feedback.message}
           </Text>

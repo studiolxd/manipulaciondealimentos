@@ -1,0 +1,29 @@
+{
+  "poster": {
+    "$description": "Printed notice in two columns (Poster).",
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.md}"
+    },
+    "column-gap": {
+      "$type": "dimension",
+      "$value": "{space.3xl}"
+    },
+    "paragraph-gap": {
+      "$type": "dimension",
+      "$value": "{space.xs}"
+    },
+    "list-indent": {
+      "$type": "dimension",
+      "$value": "{space.xl}"
+    },
+    "line-height": {
+      "$type": "number",
+      "$value": "{font.line-height.normal}"
+    },
+    "marker": {
+      "$type": "color",
+      "$value": "{color.text.negative}"
+    }
+  }
+}

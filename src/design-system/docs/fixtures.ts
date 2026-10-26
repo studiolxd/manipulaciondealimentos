@@ -17,4 +17,10 @@ export const fixtures = {
   tableBackground: sample('assets/backgrounds/dining-table-top.png', 1920, 1080),
   character: sample('assets/characters/david-standing.png', 640, 960),
   idPortrait: sample('assets/cards/oscar.png', 360, 440),
+  cameraThumbnail: sample('assets/cameras/thumbnail-1.png', 480, 270),
+  cameraVideo: sample('assets/cameras/video-1.mp4', 1280, 720),
+  kitchen: sample('assets/kitchen/kitchen.png', 1600, 1000),
+  worker: sample('assets/uniform/worker2.png', 420, 1000),
+  workerWatch: sample('assets/uniform/worker2-watch-problem.png', 70, 60),
+  workerNoWatch: sample('assets/uniform/worker2-watch-corrected.png', 70, 60),
 }

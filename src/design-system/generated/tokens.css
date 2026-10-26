@@ -41,6 +41,7 @@
   --slxd-primitive-border-width-4: 4px;
   --slxd-primitive-border-width-8: 8px;
   --slxd-primitive-blur-16: 16px;
+  --slxd-primitive-opacity-60: 0.6;
   --slxd-primitive-scale-4: 0.04; /** 4 %. */
   --slxd-primitive-stroke-width-2: 2;
   --slxd-primitive-size-0: 0px;
@@ -74,6 +75,7 @@
   --slxd-primitive-font-family-system: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --slxd-primitive-font-size-18: 18px;
   --slxd-primitive-font-size-24: 24px;
+  --slxd-primitive-font-size-32: 32px;
   --slxd-primitive-font-size-40: 40px;
   --slxd-primitive-font-size-44: 44px;
   --slxd-primitive-font-size-60: 60px;
@@ -149,6 +151,7 @@
   --slxd-border-width-outline: calc(var(--slxd-primitive-screen-outline) / var(--slxd-stage-scale)); /** Ink outline: 3 real pixels at any stage scale. */
   --slxd-focus-ring-width: max(var(--slxd-primitive-size-6), calc(var(--slxd-primitive-screen-focus-ring-min) / var(--slxd-stage-scale)));
   --slxd-blur-glass: var(--slxd-primitive-blur-16); /** Background blur behind glass panels. */
+  --slxd-opacity-muted: var(--slxd-primitive-opacity-60); /** Elements that are done or no longer available. */
   --slxd-scale-stack-step: var(--slxd-primitive-scale-4); /** Each card further back in a stack is this much smaller. */
   --slxd-stroke-width-icon: var(--slxd-primitive-stroke-width-2); /** Icon stroke in grid units: it grows with the icon, rounded to whole real pixels. */
   --slxd-space-none: var(--slxd-primitive-size-0);
@@ -168,6 +171,7 @@
   --slxd-size-icon-lg: var(--slxd-primitive-size-160);
   --slxd-size-logo-splash: clamp(var(--slxd-primitive-screen-logo-min), 40vw, var(--slxd-primitive-screen-logo-max)); /** Studio LXD logo on the splash screen: 40% of the window, between the minimum and maximum. */
   --slxd-size-target-min: max(var(--slxd-primitive-size-112), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Minimum size of anything clickable: 112 stage px, never less than 44 real px. */
+  --slxd-size-target-compact: max(var(--slxd-primitive-size-72), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Small controls laid over a picture (e.g. a zoom button): 72 stage px, never less than 44 real px. */
   --slxd-size-switch-width: var(--slxd-primitive-size-160);
   --slxd-size-switch-height: var(--slxd-primitive-size-96);
   --slxd-size-switch-thumb: var(--slxd-primitive-size-64);
@@ -178,6 +182,7 @@
   --slxd-font-family-body: var(--slxd-primitive-font-family-atkinson-hyperlegible-next); /** Prose: dialogues, narration, descriptions and feedback. */
   --slxd-font-size-body: max(var(--slxd-primitive-font-size-44), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale)));
   --slxd-font-size-body-sm: max(var(--slxd-primitive-font-size-40), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale)));
+  --slxd-font-size-small: max(var(--slxd-primitive-font-size-32), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale))); /** Dense prose that has to fit in a panel: posters, lists of items to drag. */
   --slxd-font-size-subheading: var(--slxd-primitive-font-size-60);
   --slxd-font-size-heading: max(var(--slxd-primitive-font-size-72), calc(var(--slxd-primitive-screen-heading-min) / var(--slxd-stage-scale)));
   --slxd-font-size-display: max(var(--slxd-primitive-font-size-104), calc(var(--slxd-primitive-screen-title-min) / var(--slxd-stage-scale)));
@@ -198,6 +203,7 @@
   --slxd-activity-title-hold-duration: var(--slxd-motion-duration-title-hold);
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
   --slxd-backdrop-color: var(--slxd-color-surface-scrim);
+  --slxd-backdrop-dark-color: var(--slxd-color-surface-ink); /** Dims the scene behind a close-up (e.g. a worker's hands, a poster). */
   --slxd-button-min-height: var(--slxd-size-target-min);
   --slxd-button-padding-block: var(--slxd-space-xs);
   --slxd-button-padding-inline: var(--slxd-space-4xl);
@@ -227,6 +233,17 @@
   --slxd-button-secondary-min-width: var(--slxd-size-choice-min-width);
   --slxd-button-secondary-background: var(--slxd-color-action-secondary-background);
   --slxd-button-secondary-text: var(--slxd-color-action-secondary-text);
+  --slxd-button-option-background: var(--slxd-color-surface-default);
+  --slxd-button-option-pressed-background: var(--slxd-color-action-primary-background);
+  --slxd-button-option-text: var(--slxd-color-text-default);
+  --slxd-button-option-done-background: var(--slxd-color-action-positive-background);
+  --slxd-button-option-done-text: var(--slxd-color-action-positive-text);
+  --slxd-button-option-padding-inline: var(--slxd-space-sm);
+  --slxd-button-option-font-family: var(--slxd-font-family-body);
+  --slxd-button-option-font-size: var(--slxd-font-size-small);
+  --slxd-button-option-font-weight: var(--slxd-font-weight-bold);
+  --slxd-button-option-line-height: var(--slxd-font-line-height-snug);
+  --slxd-button-icon-compact-size: var(--slxd-size-target-compact);
   --slxd-button-icon-size: var(--slxd-size-target-min);
   --slxd-button-icon-padding: var(--slxd-space-2xs);
   --slxd-button-icon-background: var(--slxd-color-action-primary-background);
@@ -254,6 +271,19 @@
   --slxd-heading-overlay-stroke-width: calc(var(--slxd-border-width-outline) * 3); /** Three times the outline: the stroke is painted behind the fill, so about half of it shows. */
   --slxd-heading-overlay-shadow-offset: var(--slxd-space-2xs);
   --slxd-heading-overlay-shadow-color: var(--slxd-color-shadow-default);
+  --slxd-hotspot-match-gap: var(--slxd-space-lg);
+  --slxd-hotspot-match-padding: var(--slxd-space-lg);
+  --slxd-hotspot-match-item-gap: var(--slxd-space-xs);
+  --slxd-hotspot-match-list-width: var(--slxd-size-choice-min-width);
+  --slxd-hotspot-match-radius: var(--slxd-radius-md);
+  --slxd-hotspot-match-border-width: var(--slxd-border-width-outline);
+  --slxd-hotspot-match-border-color: var(--slxd-color-border-ink);
+  --slxd-hotspot-match-dragging-opacity: var(--slxd-opacity-muted);
+  --slxd-hotspot-match-ghost-background: var(--slxd-color-action-primary-background);
+  --slxd-hotspot-match-ghost-text: var(--slxd-color-action-primary-text);
+  --slxd-hotspot-match-ghost-padding-block: var(--slxd-space-xs);
+  --slxd-hotspot-match-ghost-padding-inline: var(--slxd-space-sm);
+  --slxd-hotspot-match-ghost-shadow-offset: var(--slxd-space-2xs);
   --slxd-hud-height: var(--slxd-size-hud-height);
   --slxd-hud-padding-inline: var(--slxd-space-xl);
   --slxd-hud-gap: var(--slxd-space-md);
@@ -285,7 +315,37 @@
   --slxd-label-size-md: var(--slxd-font-size-body);
   --slxd-label-size-lg: var(--slxd-font-size-label-lg);
   --slxd-label-inverse-text: var(--slxd-color-text-inverse);
+  --slxd-media-gallery-gap: var(--slxd-space-xl);
+  --slxd-media-gallery-padding: var(--slxd-space-3xl);
+  --slxd-media-tile-gap: var(--slxd-space-2xs);
+  --slxd-media-tile-radius: var(--slxd-radius-sm);
+  --slxd-media-tile-border-width: var(--slxd-border-width-outline);
+  --slxd-media-tile-border-color: var(--slxd-color-border-ink);
+  --slxd-media-tile-hover-border-color: var(--slxd-color-border-selected);
+  --slxd-media-tile-shadow-offset: var(--slxd-space-3xs);
+  --slxd-media-tile-done-opacity: var(--slxd-opacity-muted); /** A done tile fades a little besides turning black and white. */
   --slxd-option-buttons-gap: var(--slxd-space-xl);
+  --slxd-poster-gap: var(--slxd-space-md);
+  --slxd-poster-column-gap: var(--slxd-space-3xl);
+  --slxd-poster-paragraph-gap: var(--slxd-space-xs);
+  --slxd-poster-list-indent: var(--slxd-space-xl);
+  --slxd-poster-line-height: var(--slxd-font-line-height-normal);
+  --slxd-poster-marker: var(--slxd-color-text-negative);
+  --slxd-question-panel-gap: var(--slxd-space-md);
+  --slxd-question-panel-answer-gap: var(--slxd-space-xs);
+  --slxd-radio-option-gap: var(--slxd-space-sm);
+  --slxd-radio-option-padding-block: var(--slxd-space-xs);
+  --slxd-radio-option-padding-inline: var(--slxd-space-sm);
+  --slxd-radio-option-radius: var(--slxd-radius-md);
+  --slxd-radio-option-border-width: var(--slxd-border-width-outline);
+  --slxd-radio-option-border-color: var(--slxd-color-border-ink);
+  --slxd-radio-option-checked-border-color: var(--slxd-color-border-selected);
+  --slxd-radio-option-background: var(--slxd-color-surface-default);
+  --slxd-radio-option-text: var(--slxd-color-text-default);
+  --slxd-radio-option-mark-size: var(--slxd-space-xl);
+  --slxd-radio-option-mark-radius: var(--slxd-radius-full);
+  --slxd-radio-option-mark-inset: var(--slxd-space-2xs); /** White ring between the outline and the mint dot of a chosen answer. */
+  --slxd-radio-option-mark-checked: var(--slxd-color-action-primary-background);
   --slxd-rotate-screen-background: var(--slxd-color-surface-system);
   --slxd-rotate-screen-text: var(--slxd-color-text-default);
   --slxd-rotate-screen-gap: var(--slxd-space-xs);
@@ -382,6 +442,12 @@
   --slxd-switch-on-background: var(--slxd-color-action-primary-background);
   --slxd-switch-duration: var(--slxd-motion-duration-press);
   --slxd-switch-easing: var(--slxd-motion-easing-standard);
+  --slxd-tablet-bezel: var(--slxd-color-border-ink);
+  --slxd-tablet-bezel-width: var(--slxd-space-lg);
+  --slxd-tablet-radius: var(--slxd-radius-lg);
+  --slxd-tablet-screen-radius: var(--slxd-radius-sm);
+  --slxd-tablet-screen: var(--slxd-color-surface-inverse);
+  --slxd-tablet-shadow-offset: var(--slxd-space-2xs);
   --slxd-text-field-gap: var(--slxd-space-xs);
   --slxd-text-input-min-height: var(--slxd-size-target-min);
   --slxd-text-input-padding-inline: var(--slxd-space-md);
@@ -392,6 +458,9 @@
   --slxd-text-input-text: var(--slxd-color-text-default);
   --slxd-text-input-font-size: var(--slxd-font-size-body);
   --slxd-text-input-invalid-border-color: var(--slxd-color-feedback-negative);
+  --slxd-video-background: var(--slxd-color-surface-backdrop);
+  --slxd-video-veil: var(--slxd-color-surface-ink); /** Darkens a frozen video while a question is asked over it. */
+  --slxd-video-veil-duration: var(--slxd-motion-duration-exit);
   --slxd-shadow-raised: var(--slxd-primitive-shadow-hard);
   --slxd-surface-shadow: var(--slxd-shadow-raised);
 }

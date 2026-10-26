@@ -1,0 +1,19 @@
+.tablet {
+  --tablet-shadow: 0 var(--slxd-tablet-shadow-offset) 0 var(--slxd-tablet-bezel);
+
+  width: 100%;
+  height: 100%;
+  padding: var(--slxd-tablet-bezel-width);
+  border-radius: var(--slxd-tablet-radius);
+  background: var(--slxd-tablet-bezel);
+  box-shadow: var(--tablet-shadow);
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--slxd-tablet-screen-radius);
+  background: var(--slxd-tablet-screen);
+}

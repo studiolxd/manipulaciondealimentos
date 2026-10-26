@@ -1,0 +1,58 @@
+{
+  "radio-option": {
+    "$description": "One answer of a single choice, written as a sentence (QuestionPanel).",
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "padding-block": {
+      "$type": "dimension",
+      "$value": "{space.xs}"
+    },
+    "padding-inline": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "border-width": {
+      "$type": "dimension",
+      "$value": "{border-width.outline}"
+    },
+    "border-color": {
+      "$type": "color",
+      "$value": "{color.border.ink}"
+    },
+    "checked-border-color": {
+      "$type": "color",
+      "$value": "{color.border.selected}"
+    },
+    "background": {
+      "$type": "color",
+      "$value": "{color.surface.default}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{color.text.default}"
+    },
+    "mark-size": {
+      "$type": "dimension",
+      "$value": "{space.xl}"
+    },
+    "mark-radius": {
+      "$type": "dimension",
+      "$value": "{radius.full}"
+    },
+    "mark-inset": {
+      "$type": "dimension",
+      "$value": "{space.2xs}",
+      "$description": "White ring between the outline and the mint dot of a chosen answer."
+    },
+    "mark-checked": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    }
+  }
+}

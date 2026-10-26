@@ -12,14 +12,25 @@ interface IconButtonProps {
   concealed?: boolean
   viewTransitionName?: string
   ref?: Ref<HTMLButtonElement>
+  /** Smaller, for buttons laid over a picture. */
+  compact?: boolean
   onClick: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
 // Button + Icon.
-export function IconButton({ icon, label, opensDialog, concealed, viewTransitionName, ref, onClick }: IconButtonProps) {
+export function IconButton({
+  icon,
+  label,
+  opensDialog,
+  concealed,
+  compact = false,
+  viewTransitionName,
+  ref,
+  onClick,
+}: IconButtonProps) {
   return (
     <Button
-      variant="icon"
+      variant={compact ? 'icon-compact' : 'icon'}
       aria-label={label}
       aria-haspopup={opensDialog ? 'dialog' : undefined}
       concealed={concealed}

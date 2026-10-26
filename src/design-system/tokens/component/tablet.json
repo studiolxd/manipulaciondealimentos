@@ -1,0 +1,29 @@
+{
+  "tablet": {
+    "$description": "A tablet seen from the front (TabletFrame).",
+    "bezel": {
+      "$type": "color",
+      "$value": "{color.border.ink}"
+    },
+    "bezel-width": {
+      "$type": "dimension",
+      "$value": "{space.lg}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.lg}"
+    },
+    "screen-radius": {
+      "$type": "dimension",
+      "$value": "{radius.sm}"
+    },
+    "screen": {
+      "$type": "color",
+      "$value": "{color.surface.inverse}"
+    },
+    "shadow-offset": {
+      "$type": "dimension",
+      "$value": "{space.2xs}"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "media-tile": {
+    "$description": "Clickable thumbnail in a gallery (MediaTile).",
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.2xs}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.sm}"
+    },
+    "border-width": {
+      "$type": "dimension",
+      "$value": "{border-width.outline}"
+    },
+    "border-color": {
+      "$type": "color",
+      "$value": "{color.border.ink}"
+    },
+    "hover-border-color": {
+      "$type": "color",
+      "$value": "{color.border.selected}"
+    },
+    "shadow-offset": {
+      "$type": "dimension",
+      "$value": "{space.3xs}"
+    },
+    "done-opacity": {
+      "$type": "number",
+      "$value": "{opacity.muted}",
+      "$description": "A done tile fades a little besides turning black and white."
+    }
+  }
+}

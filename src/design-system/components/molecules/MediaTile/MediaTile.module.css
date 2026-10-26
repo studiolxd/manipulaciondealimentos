@@ -1,0 +1,35 @@
+.tile {
+  width: 100%;
+}
+
+.tile > button {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-media-tile-gap);
+  align-items: center;
+}
+
+.thumbnail {
+  --thumbnail-shadow: 0 var(--slxd-media-tile-shadow-offset) 0 var(--slxd-media-tile-border-color);
+
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: var(--slxd-media-tile-border-width) solid var(--slxd-media-tile-border-color);
+  border-radius: var(--slxd-media-tile-radius);
+  box-shadow: var(--thumbnail-shadow);
+}
+
+.tile:hover:not([data-done]) .thumbnail {
+  border-color: var(--slxd-media-tile-hover-border-color);
+}
+
+.tile[data-done] {
+  filter: grayscale(1);
+  opacity: var(--slxd-media-tile-done-opacity);
+}

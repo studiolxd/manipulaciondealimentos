@@ -31,6 +31,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-backdrop-dark-color",
+    "path": "backdrop.dark-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.94)",
+    "reference": "{color.surface.ink}",
+    "description": "Dims the scene behind a close-up (e.g. a worker's hands, a poster)."
+  },
+  {
     "name": "--slxd-button-min-height",
     "path": "button.min-height",
     "layer": "component",
@@ -321,6 +331,116 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-option-background",
+    "path": "button.option.background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.surface.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-pressed-background",
+    "path": "button.option.pressed-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#a6f0d3",
+    "reference": "{color.action.primary.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-text",
+    "path": "button.option.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.text.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-done-background",
+    "path": "button.option.done-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{color.action.positive.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-done-text",
+    "path": "button.option.done-text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.action.positive.text}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-padding-inline",
+    "path": "button.option.padding-inline",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-font-family",
+    "path": "button.option.font-family",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontFamily",
+    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+    "reference": "{font.family.body}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-font-size",
+    "path": "button.option.font-size",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "{font.size.small}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-font-weight",
+    "path": "button.option.font-weight",
+    "layer": "component",
+    "family": "typography",
+    "type": "fontWeight",
+    "value": "700",
+    "reference": "{font.weight.bold}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-line-height",
+    "path": "button.option.line-height",
+    "layer": "component",
+    "family": "typography",
+    "type": "number",
+    "value": "1.15",
+    "reference": "{font.line-height.snug}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-icon-compact-size",
+    "path": "button.icon.compact-size",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(72px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.compact}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-icon-size",
     "path": "button.icon.size",
     "layer": "component",
@@ -588,6 +708,136 @@ export const tokenDocs = [
     "type": "color",
     "value": "rgba(20, 38, 46, 0.35)",
     "reference": "{color.shadow.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-gap",
+    "path": "hotspot-match.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "40px",
+    "reference": "{space.lg}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-padding",
+    "path": "hotspot-match.padding",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "40px",
+    "reference": "{space.lg}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-item-gap",
+    "path": "hotspot-match.item-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-list-width",
+    "path": "hotspot-match.list-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "400px",
+    "reference": "{size.choice.min-width}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-radius",
+    "path": "hotspot-match.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{radius.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-border-width",
+    "path": "hotspot-match.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-border-color",
+    "path": "hotspot-match.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-dragging-opacity",
+    "path": "hotspot-match.dragging-opacity",
+    "layer": "component",
+    "family": "shape",
+    "type": "number",
+    "value": "0.6",
+    "reference": "{opacity.muted}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-ghost-background",
+    "path": "hotspot-match.ghost-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#a6f0d3",
+    "reference": "{color.action.primary.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-ghost-text",
+    "path": "hotspot-match.ghost-text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.action.primary.text}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-ghost-padding-block",
+    "path": "hotspot-match.ghost-padding-block",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-ghost-padding-inline",
+    "path": "hotspot-match.ghost-padding-inline",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hotspot-match-ghost-shadow-offset",
+    "path": "hotspot-match.ghost-shadow-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
     "description": null
   },
   {
@@ -901,6 +1151,96 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-media-gallery-gap",
+    "path": "media-gallery.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-media-gallery-padding",
+    "path": "media-gallery.padding",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "64px",
+    "reference": "{space.3xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-media-tile-gap",
+    "path": "media-tile.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-media-tile-radius",
+    "path": "media-tile.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{radius.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-media-tile-border-width",
+    "path": "media-tile.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-media-tile-border-color",
+    "path": "media-tile.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-media-tile-hover-border-color",
+    "path": "media-tile.hover-border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#1f9e74",
+    "reference": "{color.border.selected}",
+    "description": null
+  },
+  {
+    "name": "--slxd-media-tile-shadow-offset",
+    "path": "media-tile.shadow-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "4px",
+    "reference": "{space.3xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-media-tile-done-opacity",
+    "path": "media-tile.done-opacity",
+    "layer": "component",
+    "family": "shape",
+    "type": "number",
+    "value": "0.6",
+    "reference": "{opacity.muted}",
+    "description": "A done tile fades a little besides turning black and white."
+  },
+  {
     "name": "--slxd-option-buttons-gap",
     "path": "option-buttons.gap",
     "layer": "component",
@@ -908,6 +1248,216 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "48px",
     "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-gap",
+    "path": "poster.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{space.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-column-gap",
+    "path": "poster.column-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "64px",
+    "reference": "{space.3xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-paragraph-gap",
+    "path": "poster.paragraph-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-list-indent",
+    "path": "poster.list-indent",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-line-height",
+    "path": "poster.line-height",
+    "layer": "component",
+    "family": "typography",
+    "type": "number",
+    "value": "1.4",
+    "reference": "{font.line-height.normal}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-marker",
+    "path": "poster.marker",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#b91c1c",
+    "reference": "{color.text.negative}",
+    "description": null
+  },
+  {
+    "name": "--slxd-question-panel-gap",
+    "path": "question-panel.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{space.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-question-panel-answer-gap",
+    "path": "question-panel.answer-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-gap",
+    "path": "radio-option.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-padding-block",
+    "path": "radio-option.padding-block",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-padding-inline",
+    "path": "radio-option.padding-inline",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-radius",
+    "path": "radio-option.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{radius.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-border-width",
+    "path": "radio-option.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-border-color",
+    "path": "radio-option.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-checked-border-color",
+    "path": "radio-option.checked-border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#1f9e74",
+    "reference": "{color.border.selected}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-background",
+    "path": "radio-option.background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.surface.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-text",
+    "path": "radio-option.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.text.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-mark-size",
+    "path": "radio-option.mark-size",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-mark-radius",
+    "path": "radio-option.mark-radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "999px",
+    "reference": "{radius.full}",
+    "description": null
+  },
+  {
+    "name": "--slxd-radio-option-mark-inset",
+    "path": "radio-option.mark-inset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": "White ring between the outline and the mint dot of a chosen answer."
+  },
+  {
+    "name": "--slxd-radio-option-mark-checked",
+    "path": "radio-option.mark-checked",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#a6f0d3",
+    "reference": "{color.action.primary.background}",
     "description": null
   },
   {
@@ -1881,6 +2431,66 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-tablet-bezel",
+    "path": "tablet.bezel",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-tablet-bezel-width",
+    "path": "tablet.bezel-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "40px",
+    "reference": "{space.lg}",
+    "description": null
+  },
+  {
+    "name": "--slxd-tablet-radius",
+    "path": "tablet.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "40px",
+    "reference": "{radius.lg}",
+    "description": null
+  },
+  {
+    "name": "--slxd-tablet-screen-radius",
+    "path": "tablet.screen-radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{radius.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-tablet-screen",
+    "path": "tablet.screen",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.surface.inverse}",
+    "description": null
+  },
+  {
+    "name": "--slxd-tablet-shadow-offset",
+    "path": "tablet.shadow-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
     "name": "--slxd-text-field-gap",
     "path": "text-field.gap",
     "layer": "component",
@@ -1978,6 +2588,36 @@ export const tokenDocs = [
     "type": "color",
     "value": "#b91c1c",
     "reference": "{color.feedback.negative}",
+    "description": null
+  },
+  {
+    "name": "--slxd-video-background",
+    "path": "video.background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#000000",
+    "reference": "{color.surface.backdrop}",
+    "description": null
+  },
+  {
+    "name": "--slxd-video-veil",
+    "path": "video.veil",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.94)",
+    "reference": "{color.surface.ink}",
+    "description": "Darkens a frozen video while a question is asked over it."
+  },
+  {
+    "name": "--slxd-video-veil-duration",
+    "path": "video.veil-duration",
+    "layer": "component",
+    "family": "motion",
+    "type": "duration",
+    "value": "350ms",
+    "reference": "{motion.duration.exit}",
     "description": null
   },
   {
@@ -2371,6 +3011,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-opacity-60",
+    "path": "primitive.opacity.60",
+    "layer": "primitive",
+    "family": "shape",
+    "type": "number",
+    "value": "0.6",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-scale-4",
     "path": "primitive.scale.4",
     "layer": "primitive",
@@ -2697,6 +3347,16 @@ export const tokenDocs = [
     "family": "typography",
     "type": "dimension",
     "value": "24px",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-font-size-32",
+    "path": "primitive.font.size.32",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "32px",
     "reference": null,
     "description": null
   },
@@ -3451,6 +4111,16 @@ export const tokenDocs = [
     "description": "Background blur behind glass panels."
   },
   {
+    "name": "--slxd-opacity-muted",
+    "path": "opacity.muted",
+    "layer": "semantic",
+    "family": "shape",
+    "type": "number",
+    "value": "0.6",
+    "reference": "{primitive.opacity.60}",
+    "description": "Elements that are done or no longer available."
+  },
+  {
     "name": "--slxd-scale-stack-step",
     "path": "scale.stack-step",
     "layer": "semantic",
@@ -3641,6 +4311,16 @@ export const tokenDocs = [
     "description": "Minimum size of anything clickable: 112 stage px, never less than 44 real px."
   },
   {
+    "name": "--slxd-size-target-compact",
+    "path": "size.target.compact",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(72px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.size.72}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
+    "description": "Small controls laid over a picture (e.g. a zoom button): 72 stage px, never less than 44 real px."
+  },
+  {
     "name": "--slxd-size-switch-width",
     "path": "size.switch.width",
     "layer": "semantic",
@@ -3739,6 +4419,16 @@ export const tokenDocs = [
     "value": "max(40px, calc(15px / var(--slxd-stage-scale)))",
     "reference": "max({primitive.font.size.40}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
     "description": null
+  },
+  {
+    "name": "--slxd-font-size-small",
+    "path": "font.size.small",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "dimension",
+    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.32}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+    "description": "Dense prose that has to fit in a panel: posters, lists of items to drag."
   },
   {
     "name": "--slxd-font-size-subheading",
