@@ -381,13 +381,13 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-button-option-padding-inline",
-    "path": "button.option.padding-inline",
+    "name": "--slxd-button-option-min-height",
+    "path": "button.option.min-height",
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "24px",
-    "reference": "{space.sm}",
+    "value": "max(72px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.compact}",
     "description": null
   },
   {
@@ -401,13 +401,13 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-button-option-min-height",
-    "path": "button.option.min-height",
+    "name": "--slxd-button-option-padding-inline",
+    "path": "button.option.padding-inline",
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "max(72px, calc(44px / var(--slxd-stage-scale)))",
-    "reference": "{size.target.compact}",
+    "value": "16px",
+    "reference": "{space.xs}",
     "description": null
   },
   {
@@ -716,8 +716,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "40px",
-    "reference": "{space.lg}",
+    "value": "24px",
+    "reference": "{space.sm}",
     "description": null
   },
   {
@@ -746,9 +746,9 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "560px",
-    "reference": "{size.choice.list-width}",
-    "description": null
+    "value": "400px",
+    "reference": "{size.choice.min-width}",
+    "description": "Width of each of the two columns of the list."
   },
   {
     "name": "--slxd-hotspot-match-radius",
@@ -1466,8 +1466,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "32px",
-    "reference": "{space.md}",
+    "value": "24px",
+    "reference": "{space.sm}",
     "description": null
   },
   {
@@ -1479,6 +1479,16 @@ export const tokenDocs = [
     "value": "16px",
     "reference": "{space.xs}",
     "description": null
+  },
+  {
+    "name": "--slxd-question-panel-shadow-room",
+    "path": "question-panel.shadow-room",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": "Room below the last answer, so the scroll area does not cut its outline."
   },
   {
     "name": "--slxd-radio-option-gap",
@@ -1496,8 +1506,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "16px",
-    "reference": "{space.xs}",
+    "value": "8px",
+    "reference": "{space.2xs}",
     "description": null
   },
   {
@@ -1576,8 +1586,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "48px",
-    "reference": "{space.xl}",
+    "value": "40px",
+    "reference": "{space.lg}",
     "description": null
   },
   {
@@ -1596,8 +1606,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "8px",
-    "reference": "{space.2xs}",
+    "value": "4px",
+    "reference": "{space.3xs}",
     "description": "White ring between the outline and the mint dot of a chosen answer."
   },
   {
@@ -3371,16 +3381,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-size-560",
-    "path": "primitive.size.560",
-    "layer": "primitive",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "560px",
-    "reference": null,
-    "description": null
-  },
-  {
     "name": "--slxd-primitive-screen-target-min",
     "path": "primitive.screen.target-min",
     "layer": "primitive",
@@ -4639,16 +4639,6 @@ export const tokenDocs = [
     "value": "400px",
     "reference": "{primitive.size.400}",
     "description": "Minimum width of a choice option, so options line up."
-  },
-  {
-    "name": "--slxd-size-choice-list-width",
-    "path": "size.choice.list-width",
-    "layer": "semantic",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "560px",
-    "reference": "{primitive.size.560}",
-    "description": "Width of a list of sentences to pick or drag (HotspotMatch), wide enough to fit them in two lines."
   },
   {
     "name": "--slxd-font-family-display",

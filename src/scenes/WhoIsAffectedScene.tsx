@@ -73,23 +73,29 @@ export function WhoIsAffectedScene() {
         openLabel: activity.title,
         closeLabel: activity.title,
       }}
-      character={{ source: image('davidHalfBody'), alt: activity.davidAlt, bottom: 0, left: 140, height: 900 }}
+      character={{ source: image('davidHalfBody'), alt: activity.davidAlt, bottom: 0, left: 40, height: 900 }}
       startLabel={activity.start}
       hudEnd={<Label tone="inverse">{activity.progress(index + 1, deck.length)}</Label>}
       onPlayStart={() => xapi.activityAttempted(ACTIVITY_ID, activity.title)}
     >
-      <Positioned top={160} left={820} width={1000}>
-        <SpeechBubble key={`${current.id}-${answers}`} speaker="David" blocks={[speech]} tail="left" onFinished={() => setTextShown(true)} />
+      <Positioned top={140} left={760} width={1120}>
+        <SpeechBubble
+          key={`${current.id}-${answers}`}
+          speaker="David"
+          blocks={[speech]}
+          tail="left"
+          onFinished={() => setTextShown(true)}
+        />
       </Positioned>
 
-      {!result && (
-        <Positioned bottom={200} left={1080} width={480}>
-          <OptionButtons stacked label={activity.optionsLabel} options={activity.options} onSelect={choose} />
-        </Positioned>
-      )}
-
-      {result && !right && textShown && (
-        <Positioned bottom={64} left={1080} width={480}>
+      {/* In a row under the bubble, so a long feedback never runs under them.
+          While David gives the feedback they give way to "Probar de nuevo"
+          (wrong) or "Siguiente" (right), which appear once the bubble has shown
+          all its text. */}
+      <Positioned bottom={56} right={40}>
+        {!result ? (
+          <OptionButtons label={activity.optionsLabel} options={activity.options} onSelect={choose} />
+        ) : !textShown ? null : !right ? (
           <Button
             claimFocus
             onClick={() => {
@@ -100,29 +106,23 @@ export function WhoIsAffectedScene() {
           >
             {activity.retry}
           </Button>
-        </Positioned>
-      )}
-
-      {right && textShown && (
-        <Positioned bottom={64} left={1080} width={480}>
-          {last ? (
-            <Button claimFocus advance onClick={() => goTo('who-is-affected-conclusion')}>
-              {activity.finish}
-            </Button>
-          ) : (
-            <Button
-              claimFocus
-              onClick={() => {
-                setIndex(index + 1)
-                setResult(null)
-                setTextShown(false)
-              }}
-            >
-              {activity.next}
-            </Button>
-          )}
-        </Positioned>
-      )}
+        ) : last ? (
+          <Button claimFocus advance onClick={() => goTo('who-is-affected-conclusion')}>
+            {activity.finish}
+          </Button>
+        ) : (
+          <Button
+            claimFocus
+            onClick={() => {
+              setIndex(index + 1)
+              setResult(null)
+              setTextShown(false)
+            }}
+          >
+            {activity.next}
+          </Button>
+        )}
+      </Positioned>
     </ActivityScene>
   )
 }

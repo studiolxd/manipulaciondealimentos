@@ -7,7 +7,7 @@
     },
     "padding-block": {
       "$type": "dimension",
-      "$value": "{space.xs}"
+      "$value": "{space.2xs}"
     },
     "padding-inline": {
       "$type": "dimension",
@@ -39,7 +39,7 @@
     },
     "mark-size": {
       "$type": "dimension",
-      "$value": "{space.xl}"
+      "$value": "{space.lg}"
     },
     "mark-radius": {
       "$type": "dimension",
@@ -47,7 +47,7 @@
     },
     "mark-inset": {
       "$type": "dimension",
-      "$value": "{space.2xs}",
+      "$value": "{space.3xs}",
       "$description": "White ring between the outline and the mint dot of a chosen answer."
     },
     "mark-checked": {

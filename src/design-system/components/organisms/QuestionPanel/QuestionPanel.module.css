@@ -1,4 +1,13 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
 .group {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   margin: 0;
   padding: 0;
   border: 0;
@@ -9,14 +18,19 @@
   margin-block-end: var(--slxd-question-panel-gap);
 }
 
+/* Scroll inside the panel when the answers do not fit. */
 .answers {
   display: flex;
   flex-direction: column;
   gap: var(--slxd-question-panel-answer-gap);
+  min-height: 0;
+  overflow-y: auto;
+  padding-block-end: var(--slxd-question-panel-shadow-room);
 }
 
 .check {
   display: flex;
+  flex: none;
   justify-content: center;
   margin-block-start: var(--slxd-question-panel-gap);
 }

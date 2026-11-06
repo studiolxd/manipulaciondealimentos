@@ -77,7 +77,7 @@ export function KitchenDetectivesScene() {
       }}
       onPlayStart={() => xapi.activityAttempted(ACTIVITY_ID, activity.title)}
     >
-      <Positioned top={150} left={80} width={1760} height={860}>
+      <Positioned top={130} left={40} width={1840} height={930}>
         <TabletFrame>
           <HotspotMatch
             listLabel={activity.listLabel}

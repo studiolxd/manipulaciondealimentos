@@ -157,17 +157,17 @@
         "$type": "color",
         "$value": "{color.action.positive.text}"
       },
-      "padding-inline": {
+      "min-height": {
         "$type": "dimension",
-        "$value": "{space.sm}"
+        "$value": "{size.target.compact}"
       },
       "padding-block": {
         "$type": "dimension",
         "$value": "{space.2xs}"
       },
-      "min-height": {
+      "padding-inline": {
         "$type": "dimension",
-        "$value": "{size.target.compact}"
+        "$value": "{space.xs}"
       },
       "font-family": {
         "$type": "fontFamily",

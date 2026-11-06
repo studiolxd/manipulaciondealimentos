@@ -92,10 +92,6 @@
       "min-width": {
         "$value": "{primitive.size.400}",
         "$description": "Minimum width of a choice option, so options line up."
-      },
-      "list-width": {
-        "$value": "{primitive.size.560}",
-        "$description": "Width of a list of sentences to pick or drag (HotspotMatch), wide enough to fit them in two lines."
       }
     }
   }

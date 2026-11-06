@@ -17,14 +17,17 @@ interface QuestionPanelProps {
 
 // Surface + RadioOptions + Button: a question with its answers one under the
 // other. The player chooses one and checks it; the button appears once there
-// is a choice.
+// is a choice. It never grows taller than its container: if the answers do
+// not fit, they scroll and the button stays in view.
 export function QuestionPanel({ name, question, answers, checkLabel, onAnswer }: QuestionPanelProps) {
   const [choice, setChoice] = useState<number | null>(null)
   return (
-    <Surface tone="opaque" padding="lg">
+    <Surface tone="opaque" padding="md" className={styles.panel}>
       <fieldset className={styles.group}>
         <legend className={styles.legend}>
-          <Text weight="bold">{question}</Text>
+          <Text size="body-sm" weight="bold">
+            {question}
+          </Text>
         </legend>
         <div className={styles.answers}>
           {answers.map((answer, index) => (
