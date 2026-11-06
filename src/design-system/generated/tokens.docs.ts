@@ -86,7 +86,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Gasoek One', system-ui, sans-serif",
+    "value": "'Momo Trust Display', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -96,7 +96,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
     "reference": "{font.size.body}",
     "description": null
   },
@@ -246,7 +246,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "64px",
+    "value": "58px",
     "reference": "{font.size.label-lg}",
     "description": null
   },
@@ -391,12 +391,32 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-option-padding-block",
+    "path": "button.option.padding-block",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-option-min-height",
+    "path": "button.option.min-height",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(72px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.compact}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-option-font-family",
     "path": "button.option.font-family",
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+    "value": "Poppins, system-ui, sans-serif",
     "reference": "{font.family.body}",
     "description": null
   },
@@ -406,7 +426,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
+    "value": "max(22px, calc(15px / var(--slxd-stage-scale)))",
     "reference": "{font.size.small}",
     "description": null
   },
@@ -566,7 +586,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Gasoek One', system-ui, sans-serif",
+    "value": "'Momo Trust Display', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -606,7 +626,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+    "value": "Poppins, system-ui, sans-serif",
     "reference": "{font.family.body}",
     "description": null
   },
@@ -626,7 +646,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "max(104px, calc(28px / var(--slxd-stage-scale)))",
+    "value": "max(94px, calc(28px / var(--slxd-stage-scale)))",
     "reference": "{font.size.display}",
     "description": null
   },
@@ -636,7 +656,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "max(72px, calc(22px / var(--slxd-stage-scale)))",
+    "value": "max(66px, calc(22px / var(--slxd-stage-scale)))",
     "reference": "{font.size.heading}",
     "description": null
   },
@@ -646,7 +666,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "60px",
+    "value": "54px",
     "reference": "{font.size.subheading}",
     "description": null
   },
@@ -691,26 +711,6 @@ export const tokenDocs = [
     "description": "Three times the outline: the stroke is painted behind the fill, so about half of it shows."
   },
   {
-    "name": "--slxd-heading-overlay-shadow-offset",
-    "path": "heading.overlay.shadow-offset",
-    "layer": "component",
-    "family": "spacing",
-    "type": "dimension",
-    "value": "8px",
-    "reference": "{space.2xs}",
-    "description": null
-  },
-  {
-    "name": "--slxd-heading-overlay-shadow-color",
-    "path": "heading.overlay.shadow-color",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "rgba(20, 38, 46, 0.35)",
-    "reference": "{color.shadow.default}",
-    "description": null
-  },
-  {
     "name": "--slxd-hotspot-match-gap",
     "path": "hotspot-match.gap",
     "layer": "component",
@@ -726,8 +726,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "40px",
-    "reference": "{space.lg}",
+    "value": "24px",
+    "reference": "{space.sm}",
     "description": null
   },
   {
@@ -736,8 +736,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "16px",
-    "reference": "{space.xs}",
+    "value": "8px",
+    "reference": "{space.2xs}",
     "description": null
   },
   {
@@ -746,8 +746,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "400px",
-    "reference": "{size.choice.min-width}",
+    "value": "560px",
+    "reference": "{size.choice.list-width}",
     "description": null
   },
   {
@@ -1096,7 +1096,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Gasoek One', system-ui, sans-serif",
+    "value": "'Momo Trust Display', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -1126,7 +1126,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
     "reference": "{font.size.body}",
     "description": null
   },
@@ -1136,7 +1136,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "64px",
+    "value": "58px",
     "reference": "{font.size.label-lg}",
     "description": null
   },
@@ -1286,8 +1286,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "32px",
-    "reference": "{space.md}",
+    "value": "24px",
+    "reference": "{space.sm}",
     "description": null
   },
   {
@@ -1296,8 +1296,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "64px",
-    "reference": "{space.3xl}",
+    "value": "48px",
+    "reference": "{space.xl}",
     "description": null
   },
   {
@@ -1311,33 +1311,153 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-poster-list-indent",
-    "path": "poster.list-indent",
+    "name": "--slxd-poster-radius",
+    "path": "poster.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{radius.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-radius-full",
+    "path": "poster.radius-full",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "999px",
+    "reference": "{radius.full}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-border-width",
+    "path": "poster.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-border-color",
+    "path": "poster.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-banner-padding-block",
+    "path": "poster.banner-padding-block",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-banner-padding-inline",
+    "path": "poster.banner-padding-inline",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{space.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-lead-background",
+    "path": "poster.lead-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#a6f0d3",
+    "reference": "{color.action.primary.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-tag-gap",
+    "path": "poster.tag-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-tag-padding-block",
+    "path": "poster.tag-padding-block",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-tag-padding-inline",
+    "path": "poster.tag-padding-inline",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-tag-background",
+    "path": "poster.tag-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.surface.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-step-size",
+    "path": "poster.step-size",
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
     "value": "48px",
-    "reference": "{space.xl}",
+    "reference": "{size.icon.sm}",
     "description": null
   },
   {
-    "name": "--slxd-poster-line-height",
-    "path": "poster.line-height",
-    "layer": "component",
-    "family": "typography",
-    "type": "number",
-    "value": "1.4",
-    "reference": "{font.line-height.normal}",
-    "description": null
-  },
-  {
-    "name": "--slxd-poster-marker",
-    "path": "poster.marker",
+    "name": "--slxd-poster-step-background",
+    "path": "poster.step-background",
     "layer": "component",
     "family": "color",
     "type": "color",
     "value": "#b91c1c",
-    "reference": "{color.text.negative}",
+    "reference": "{color.action.negative.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-step-text",
+    "path": "poster.step-text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.action.negative.text}",
+    "description": null
+  },
+  {
+    "name": "--slxd-poster-footer-background",
+    "path": "poster.footer-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.surface.inverse}",
     "description": null
   },
   {
@@ -1646,7 +1766,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+    "value": "Poppins, system-ui, sans-serif",
     "reference": "{font.family.body}",
     "description": null
   },
@@ -1656,7 +1776,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
     "reference": "{font.size.body}",
     "description": null
   },
@@ -1796,7 +1916,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "88px",
+    "value": "80px",
     "reference": "{font.size.stamp}",
     "description": null
   },
@@ -1846,7 +1966,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Gasoek One', system-ui, sans-serif",
+    "value": "'Momo Trust Display', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -2306,7 +2426,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Gasoek One', system-ui, sans-serif",
+    "value": "'Momo Trust Display', system-ui, sans-serif",
     "reference": "{font.family.display}",
     "description": null
   },
@@ -2316,7 +2436,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
     "reference": "{font.size.body}",
     "description": null
   },
@@ -2606,7 +2726,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
     "reference": "{font.size.body}",
     "description": null
   },
@@ -3251,6 +3371,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-size-560",
+    "path": "primitive.size.560",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "560px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-screen-target-min",
     "path": "primitive.screen.target-min",
     "layer": "primitive",
@@ -3331,24 +3461,24 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-primitive-font-family-gasoek-one",
-    "path": "primitive.font.family.gasoek-one",
+    "name": "--slxd-primitive-font-family-momo-trust-display",
+    "path": "primitive.font.family.momo-trust-display",
     "layer": "primitive",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Gasoek One', system-ui, sans-serif",
+    "value": "'Momo Trust Display', system-ui, sans-serif",
     "reference": null,
-    "description": "Heavy display sans with a single weight (400): already as bold as it gets. Latin subsets only."
+    "description": "Display sans with a single weight (400). Latin subsets only."
   },
   {
-    "name": "--slxd-primitive-font-family-atkinson-hyperlegible-next",
-    "path": "primitive.font.family.atkinson-hyperlegible-next",
+    "name": "--slxd-primitive-font-family-poppins",
+    "path": "primitive.font.family.poppins",
     "layer": "primitive",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
+    "value": "Poppins, system-ui, sans-serif",
     "reference": null,
-    "description": "Designed by the Braille Institute for maximum legibility. Variable weight 200–800."
+    "description": "Geometric sans, static weights; the project loads 400 and 700. Latin subsets only."
   },
   {
     "name": "--slxd-primitive-font-family-system",
@@ -3371,6 +3501,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-size-22",
+    "path": "primitive.font.size.22",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "22px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-font-size-24",
     "path": "primitive.font.size.24",
     "layer": "primitive",
@@ -3381,12 +3521,52 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-size-26",
+    "path": "primitive.font.size.26",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "26px",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-font-size-28",
+    "path": "primitive.font.size.28",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "28px",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-font-size-30",
+    "path": "primitive.font.size.30",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "30px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-font-size-32",
     "path": "primitive.font.size.32",
     "layer": "primitive",
     "family": "typography",
     "type": "dimension",
     "value": "32px",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-font-size-36",
+    "path": "primitive.font.size.36",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "36px",
     "reference": null,
     "description": null
   },
@@ -3411,6 +3591,26 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-size-54",
+    "path": "primitive.font.size.54",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "54px",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-font-size-58",
+    "path": "primitive.font.size.58",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "58px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-font-size-60",
     "path": "primitive.font.size.60",
     "layer": "primitive",
@@ -3431,6 +3631,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-size-66",
+    "path": "primitive.font.size.66",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "66px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-font-size-72",
     "path": "primitive.font.size.72",
     "layer": "primitive",
@@ -3441,12 +3651,32 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-size-80",
+    "path": "primitive.font.size.80",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "80px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-font-size-88",
     "path": "primitive.font.size.88",
     "layer": "primitive",
     "family": "typography",
     "type": "dimension",
     "value": "88px",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-font-size-94",
+    "path": "primitive.font.size.94",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "94px",
     "reference": null,
     "description": null
   },
@@ -4411,13 +4641,23 @@ export const tokenDocs = [
     "description": "Minimum width of a choice option, so options line up."
   },
   {
+    "name": "--slxd-size-choice-list-width",
+    "path": "size.choice.list-width",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "560px",
+    "reference": "{primitive.size.560}",
+    "description": "Width of a list of sentences to pick or drag (HotspotMatch), wide enough to fit them in two lines."
+  },
+  {
     "name": "--slxd-font-family-display",
     "path": "font.family.display",
     "layer": "semantic",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Gasoek One', system-ui, sans-serif",
-    "reference": "{primitive.font.family.gasoek-one}",
+    "value": "'Momo Trust Display', system-ui, sans-serif",
+    "reference": "{primitive.font.family.momo-trust-display}",
     "description": "Titles, headings and controls (buttons, labels, stamps)."
   },
   {
@@ -4426,8 +4666,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, sans-serif",
-    "reference": "{primitive.font.family.atkinson-hyperlegible-next}",
+    "value": "Poppins, system-ui, sans-serif",
+    "reference": "{primitive.font.family.poppins}",
     "description": "Prose: dialogues, narration, descriptions and feedback."
   },
   {
@@ -4436,8 +4676,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
-    "reference": "max({primitive.font.size.44}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.32}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
     "description": null
   },
   {
@@ -4446,8 +4686,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "max(40px, calc(15px / var(--slxd-stage-scale)))",
-    "reference": "max({primitive.font.size.40}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+    "value": "max(28px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.28}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
     "description": null
   },
   {
@@ -4456,8 +4696,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
-    "reference": "max({primitive.font.size.32}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+    "value": "max(22px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.22}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
     "description": "Dense prose that has to fit in a panel: posters, lists of items to drag."
   },
   {
@@ -4466,8 +4706,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "60px",
-    "reference": "{primitive.font.size.60}",
+    "value": "54px",
+    "reference": "{primitive.font.size.54}",
     "description": null
   },
   {
@@ -4476,8 +4716,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "max(72px, calc(22px / var(--slxd-stage-scale)))",
-    "reference": "max({primitive.font.size.72}, calc({primitive.screen.heading-min} / var(--slxd-stage-scale)))",
+    "value": "max(66px, calc(22px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.66}, calc({primitive.screen.heading-min} / var(--slxd-stage-scale)))",
     "description": null
   },
   {
@@ -4486,8 +4726,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "max(104px, calc(28px / var(--slxd-stage-scale)))",
-    "reference": "max({primitive.font.size.104}, calc({primitive.screen.title-min} / var(--slxd-stage-scale)))",
+    "value": "max(94px, calc(28px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.94}, calc({primitive.screen.title-min} / var(--slxd-stage-scale)))",
     "description": null
   },
   {
@@ -4496,8 +4736,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "64px",
-    "reference": "{primitive.font.size.64}",
+    "value": "58px",
+    "reference": "{primitive.font.size.58}",
     "description": null
   },
   {
@@ -4506,8 +4746,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "typography",
     "type": "dimension",
-    "value": "88px",
-    "reference": "{primitive.font.size.88}",
+    "value": "80px",
+    "reference": "{primitive.font.size.80}",
     "description": null
   },
   {
@@ -4558,7 +4798,7 @@ export const tokenDocs = [
     "type": "fontWeight",
     "value": "400",
     "reference": "{primitive.font.weight.400}",
-    "description": "Display family: labels. Gasoek One has a single weight, 400."
+    "description": "Display family: labels. Momo Trust Display has a single weight, 400."
   },
   {
     "name": "--slxd-font-weight-display-strong",
@@ -4568,7 +4808,7 @@ export const tokenDocs = [
     "type": "fontWeight",
     "value": "400",
     "reference": "{primitive.font.weight.400}",
-    "description": "Display family: titles and headings. Gasoek One has a single weight, 400."
+    "description": "Display family: titles and headings. Momo Trust Display has a single weight, 400."
   },
   {
     "name": "--slxd-font-weight-control",
@@ -4578,7 +4818,7 @@ export const tokenDocs = [
     "type": "fontWeight",
     "value": "400",
     "reference": "{primitive.font.weight.400}",
-    "description": "Display family: button text, uppercase and spaced."
+    "description": "Display family: button text, spaced."
   },
   {
     "name": "--slxd-font-line-height-tight",

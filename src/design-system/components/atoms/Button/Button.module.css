@@ -19,7 +19,7 @@
   font-size: var(--slxd-button-font-size);
   font-weight: var(--slxd-button-font-weight);
   letter-spacing: var(--slxd-button-letter-spacing);
-  text-transform: uppercase;
+  text-transform: none;
   white-space: nowrap;
   box-shadow: var(--button-shadow);
   translate: 0 calc(var(--slxd-button-lift-rest) - var(--button-lift));
@@ -98,6 +98,8 @@
   --button-text: var(--slxd-button-option-text);
 
   width: 100%;
+  min-height: var(--slxd-button-option-min-height);
+  padding-block: var(--slxd-button-option-padding-block);
   padding-inline: var(--slxd-button-option-padding-inline);
   font-family: var(--slxd-button-option-font-family);
   font-size: var(--slxd-button-option-font-size);

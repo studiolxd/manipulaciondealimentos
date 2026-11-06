@@ -7,15 +7,15 @@
     },
     "padding": {
       "$type": "dimension",
-      "$value": "{space.lg}"
+      "$value": "{space.sm}"
     },
     "item-gap": {
       "$type": "dimension",
-      "$value": "{space.xs}"
+      "$value": "{space.2xs}"
     },
     "list-width": {
       "$type": "dimension",
-      "$value": "{size.choice.min-width}"
+      "$value": "{size.choice.list-width}"
     },
     "radius": {
       "$type": "dimension",

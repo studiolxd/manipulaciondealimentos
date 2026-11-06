@@ -3,11 +3,11 @@
     "family": {
       "$type": "fontFamily",
       "display": {
-        "$value": "{primitive.font.family.gasoek-one}",
+        "$value": "{primitive.font.family.momo-trust-display}",
         "$description": "Titles, headings and controls (buttons, labels, stamps)."
       },
       "body": {
-        "$value": "{primitive.font.family.atkinson-hyperlegible-next}",
+        "$value": "{primitive.font.family.poppins}",
         "$description": "Prose: dialogues, narration, descriptions and feedback."
       }
     },
@@ -15,29 +15,29 @@
       "$type": "dimension",
       "$description": "Text sizes in stage pixels, with a floor in real pixels so text stays readable on small screens.",
       "body": {
-        "$value": "max({primitive.font.size.44}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))"
+        "$value": "max({primitive.font.size.32}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))"
       },
       "body-sm": {
-        "$value": "max({primitive.font.size.40}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))"
+        "$value": "max({primitive.font.size.28}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))"
       },
       "small": {
-        "$value": "max({primitive.font.size.32}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+        "$value": "max({primitive.font.size.22}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
         "$description": "Dense prose that has to fit in a panel: posters, lists of items to drag."
       },
       "subheading": {
-        "$value": "{primitive.font.size.60}"
+        "$value": "{primitive.font.size.54}"
       },
       "heading": {
-        "$value": "max({primitive.font.size.72}, calc({primitive.screen.heading-min} / var(--slxd-stage-scale)))"
+        "$value": "max({primitive.font.size.66}, calc({primitive.screen.heading-min} / var(--slxd-stage-scale)))"
       },
       "display": {
-        "$value": "max({primitive.font.size.104}, calc({primitive.screen.title-min} / var(--slxd-stage-scale)))"
+        "$value": "max({primitive.font.size.94}, calc({primitive.screen.title-min} / var(--slxd-stage-scale)))"
       },
       "label-lg": {
-        "$value": "{primitive.font.size.64}"
+        "$value": "{primitive.font.size.58}"
       },
       "stamp": {
-        "$value": "{primitive.font.size.88}"
+        "$value": "{primitive.font.size.80}"
       },
       "system-heading": {
         "$value": "{primitive.font.size.24}",
@@ -58,15 +58,15 @@
       },
       "display": {
         "$value": "{primitive.font.weight.400}",
-        "$description": "Display family: labels. Gasoek One has a single weight, 400."
+        "$description": "Display family: labels. Momo Trust Display has a single weight, 400."
       },
       "display-strong": {
         "$value": "{primitive.font.weight.400}",
-        "$description": "Display family: titles and headings. Gasoek One has a single weight, 400."
+        "$description": "Display family: titles and headings. Momo Trust Display has a single weight, 400."
       },
       "control": {
         "$value": "{primitive.font.weight.400}",
-        "$description": "Display family: button text, uppercase and spaced."
+        "$description": "Display family: button text, spaced."
       }
     },
     "line-height": {

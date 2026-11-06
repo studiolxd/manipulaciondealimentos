@@ -6,9 +6,12 @@
 
 // Self-hosted Google Fonts (see tokens/primitive/typography.json).
 // Only the Latin subsets: the Korean files would bloat the SCORM package.
-import '@fontsource/gasoek-one/latin.css'
-import '@fontsource/gasoek-one/latin-ext.css'
-import '@fontsource-variable/atkinson-hyperlegible-next'
+import '@fontsource/momo-trust-display/latin.css'
+import '@fontsource/momo-trust-display/latin-ext.css'
+import '@fontsource/poppins/latin-400.css'
+import '@fontsource/poppins/latin-ext-400.css'
+import '@fontsource/poppins/latin-700.css'
+import '@fontsource/poppins/latin-ext-700.css'
 import './generated/tokens.css'
 import './styles/base.css'
 
@@ -68,7 +71,7 @@ export {
 export { HotspotMatch, type Hotspot, type MatchItem } from './components/organisms/HotspotMatch/HotspotMatch'
 export { Hud } from './components/organisms/Hud/Hud'
 export { MediaGallery, type MediaGalleryItem } from './components/organisms/MediaGallery/MediaGallery'
-export { Poster, type PosterBlock } from './components/organisms/Poster/Poster'
+export { Poster } from './components/organisms/Poster/Poster'
 export { QuestionPanel } from './components/organisms/QuestionPanel/QuestionPanel'
 export { SpeechBubble } from './components/organisms/SpeechBubble/SpeechBubble'
 export { SwipeCard, type SwipeCardHandle, type SwipeDirection } from './components/organisms/SwipeCard/SwipeCard'

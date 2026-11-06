@@ -4,22 +4,21 @@
       "family": {
         "$type": "fontFamily",
         "$description": "Google Fonts, self-hosted with Fontsource (bundled in the SCORM package, no request to Google).",
-        "gasoek-one": {
+        "momo-trust-display": {
           "$value": [
-            "Gasoek One",
+            "Momo Trust Display",
             "system-ui",
             "sans-serif"
           ],
-          "$description": "Heavy display sans with a single weight (400): already as bold as it gets. Latin subsets only."
+          "$description": "Display sans with a single weight (400). Latin subsets only."
         },
-        "atkinson-hyperlegible-next": {
+        "poppins": {
           "$value": [
-            "Atkinson Hyperlegible Next Variable",
-            "Atkinson Hyperlegible Next",
+            "Poppins",
             "system-ui",
             "sans-serif"
           ],
-          "$description": "Designed by the Braille Institute for maximum legibility. Variable weight 200–800."
+          "$description": "Geometric sans, static weights; the project loads 400 and 700. Latin subsets only."
         },
         "system": {
           "$value": [
@@ -35,11 +34,26 @@
         "18": {
           "$value": "18px"
         },
+        "22": {
+          "$value": "22px"
+        },
         "24": {
           "$value": "24px"
         },
+        "26": {
+          "$value": "26px"
+        },
+        "28": {
+          "$value": "28px"
+        },
+        "30": {
+          "$value": "30px"
+        },
         "32": {
           "$value": "32px"
+        },
+        "36": {
+          "$value": "36px"
         },
         "40": {
           "$value": "40px"
@@ -47,17 +61,32 @@
         "44": {
           "$value": "44px"
         },
+        "54": {
+          "$value": "54px"
+        },
+        "58": {
+          "$value": "58px"
+        },
         "60": {
           "$value": "60px"
         },
         "64": {
           "$value": "64px"
         },
+        "66": {
+          "$value": "66px"
+        },
         "72": {
           "$value": "72px"
         },
+        "80": {
+          "$value": "80px"
+        },
         "88": {
           "$value": "88px"
+        },
+        "94": {
+          "$value": "94px"
         },
         "104": {
           "$value": "104px"
@@ -65,7 +94,6 @@
         "$type": "dimension"
       },
       "weight": {
-        "$type": "fontWeight",
         "400": {
           "$value": 400
         },
@@ -77,7 +105,8 @@
         },
         "700": {
           "$value": 700
-        }
+        },
+        "$type": "fontWeight"
       },
       "line-height": {
         "110": {
@@ -95,10 +124,10 @@
         "$type": "number"
       },
       "letter-spacing": {
-        "$type": "dimension",
         "40": {
           "$value": "0.04em"
-        }
+        },
+        "$type": "dimension"
       }
     }
   }

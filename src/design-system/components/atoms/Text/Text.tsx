@@ -13,7 +13,7 @@ interface TextProps {
   children: ReactNode
 }
 
-// Prose, in the body family (Atkinson Hyperlegible Next).
+// Prose, in the body family (Poppins).
 export function Text({ as: Element = 'p', size = 'body', weight = 'regular', tone = 'default', id, children }: TextProps) {
   return (
     <Element id={id} className={styles.text} data-size={size} data-weight={weight} data-tone={tone}>

@@ -32,6 +32,7 @@ export const whoIsAffected = {
   ] satisfies { value: Affected; label: string }[],
   progress: (current: number, total: number) => `Consecuencia ${current} de ${total}`,
   next: 'Siguiente',
+  retry: 'Probar de nuevo',
   finish: 'Terminar',
   consequences: [
     { id: 'ill', text: 'Un cliente enferma después de consumir un alimento contaminado.', affected: 'consumer' },

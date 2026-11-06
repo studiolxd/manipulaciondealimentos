@@ -11,7 +11,9 @@ const ACTIVITY_ID = 'who-is-affected'
 // Scenes 21 and 22 (activity 5): David, standing in front of the player, reads
 // a consequence at a time; the player says who it affects with one of three
 // buttons. David gives the feedback in the same bubble; a wrong answer is
-// tried again, and "Siguiente" appears only once it is right.
+// tried again. While David gives the feedback the three buttons give way to
+// "Probar de nuevo" (wrong) or "Siguiente" (right), which appear when the
+// bubble has shown all its text; the three buttons come back with the next try.
 export function WhoIsAffectedScene() {
   const { sceneReady, goTo } = useGame()
   // Shuffled once per game load.
@@ -20,6 +22,8 @@ export function WhoIsAffectedScene() {
   const [result, setResult] = useState<{ choice: Affected; correct: boolean } | null>(null)
   // Each answer gets a new bubble, so it is typed again.
   const [answers, setAnswers] = useState(0)
+  // Whether the bubble has shown all its text, typed out or skipped with a click.
+  const [textShown, setTextShown] = useState(false)
   const tried = useRef(new Set<string>())
   const firstTryRight = useRef(0)
 
@@ -44,15 +48,16 @@ export function WhoIsAffectedScene() {
     if (correct && last) xapi.activityCompleted(ACTIVITY_ID, activity.title, firstTryRight.current, deck.length)
     setResult({ choice, correct })
     setAnswers((n) => n + 1)
+    setTextShown(false)
   }
 
-  // David reads the consequence; after an answer, its feedback, keeping the
-  // consequence in view while it is still to be answered right.
+  // David reads the consequence; after an answer, its feedback. The consequence
+  // is read again when the player tries again.
   const speech = !result
     ? current.text
     : result.correct
       ? activity.correct[current.affected]
-      : `${activity.incorrect[result.choice]}\n\n«${current.text}»`
+      : activity.incorrect[result.choice]
 
   return (
     <ActivityScene
@@ -74,14 +79,31 @@ export function WhoIsAffectedScene() {
       onPlayStart={() => xapi.activityAttempted(ACTIVITY_ID, activity.title)}
     >
       <Positioned top={160} left={820} width={1000}>
-        <SpeechBubble key={`${current.id}-${answers}`} speaker="David" blocks={[speech]} tail="left" />
+        <SpeechBubble key={`${current.id}-${answers}`} speaker="David" blocks={[speech]} tail="left" onFinished={() => setTextShown(true)} />
       </Positioned>
 
-      <Positioned bottom={200} left={1080} width={480}>
-        <OptionButtons stacked disabled={right} label={activity.optionsLabel} options={activity.options} onSelect={choose} />
-      </Positioned>
+      {!result && (
+        <Positioned bottom={200} left={1080} width={480}>
+          <OptionButtons stacked label={activity.optionsLabel} options={activity.options} onSelect={choose} />
+        </Positioned>
+      )}
 
-      {right && (
+      {result && !right && textShown && (
+        <Positioned bottom={64} left={1080} width={480}>
+          <Button
+            claimFocus
+            onClick={() => {
+              setResult(null)
+              setTextShown(false)
+              setAnswers((n) => n + 1)
+            }}
+          >
+            {activity.retry}
+          </Button>
+        </Positioned>
+      )}
+
+      {right && textShown && (
         <Positioned bottom={64} left={1080} width={480}>
           {last ? (
             <Button claimFocus advance onClick={() => goTo('who-is-affected-conclusion')}>
@@ -93,6 +115,7 @@ export function WhoIsAffectedScene() {
               onClick={() => {
                 setIndex(index + 1)
                 setResult(null)
+                setTextShown(false)
               }}
             >
               {activity.next}

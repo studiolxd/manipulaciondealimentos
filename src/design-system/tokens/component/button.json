@@ -161,6 +161,14 @@
         "$type": "dimension",
         "$value": "{space.sm}"
       },
+      "padding-block": {
+        "$type": "dimension",
+        "$value": "{space.2xs}"
+      },
+      "min-height": {
+        "$type": "dimension",
+        "$value": "{size.target.compact}"
+      },
       "font-family": {
         "$type": "fontFamily",
         "$value": "{font.family.body}"

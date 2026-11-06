@@ -45,11 +45,10 @@ export const uniformCheck = {
   statementLabel: 'Enunciado de la actividad',
   openStatement: 'Ver el enunciado',
   closeStatement: 'Cerrar el enunciado',
-  zoomHands: (worker: string, side: 'left' | 'right') =>
-    `Ver de cerca las manos (${side === 'left' ? 'izquierda' : 'derecha'}) · ${worker}`,
+  zoomHands: (worker: string) => `Ver de cerca las manos · ${worker}`,
   handsLabel: (worker: string) => `Manos · ${worker}`,
-  /** Centre of the zoom buttons on the worker picture, over each hand. */
-  zoomAt: { left: { x: 75, y: 650 }, right: { x: 345, y: 650 } },
+  /** Centre of the zoom button on the worker picture, at its right side. */
+  zoomAt: { x: 345, y: 650 },
   back: 'Volver',
   wrong: 'Ese elemento no supone un problema para la seguridad alimentaria.',
   feedbackContinue: 'Continuar',

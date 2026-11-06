@@ -1,5 +1,4 @@
 import type { GenderedText } from '@studiolxd/tramoya'
-import type { PosterBlock } from '../design-system'
 
 // Scenes 24 to 27 of the "Guion" sheet: the changing room (activity 6), the
 // health poster (activity 7) and David's conclusion.
@@ -40,43 +39,24 @@ export const healthPoster = {
   heading: 'Cartel del vestuario: la salud del manipulador',
   backgroundAlt,
   title: 'La salud del manipulador',
-  blocks: [
-    { type: 'text', text: 'El estado de salud del manipulador puede influir directamente en la seguridad de los alimentos.', strong: true },
-    {
-      type: 'text',
-      text: 'Algunas enfermedades e infecciones pueden transmitirse a través de los alimentos, especialmente cuando se presentan síntomas como:',
-    },
-    {
-      type: 'list',
-      items: [
-        'Diarrea.',
-        'Vómitos.',
-        'Fiebre.',
-        'Dolor de garganta acompañado de fiebre.',
-        'Infecciones en la piel.',
-        'Secreciones abundantes de nariz, ojos u oídos.',
-        'Otros síntomas que puedan indicar una enfermedad infecciosa.',
-      ],
-    },
-    {
-      type: 'text',
-      text: 'Si presentas alguno de estos síntomas, debes informar inmediatamente a la persona responsable del establecimiento. Será necesario valorar si puedes continuar trabajando, si debes realizar temporalmente otras tareas o si debes dejar de manipular alimentos hasta que el riesgo haya desaparecido.',
-      strong: true,
-    },
-    {
-      type: 'text',
-      text: 'No debes ocultar los síntomas ni tomar la decisión por tu cuenta. Tampoco debes pensar que seguir trabajando enfermo demuestra compromiso. Lo responsable es comunicar la situación y evitar poner en riesgo a los consumidores y al resto del equipo.',
-    },
-    {
-      type: 'text',
-      text: 'Además, una persona puede continuar siendo portadora de determinados microorganismos después de que los síntomas hayan desaparecido. Por ello, la reincorporación a las tareas de manipulación debe realizarse siguiendo las indicaciones establecidas por la empresa y, cuando corresponda, por los profesionales sanitarios.',
-    },
-    {
-      type: 'text',
-      text: 'La seguridad alimentaria comienza con hábitos personales adecuados y con la responsabilidad de reconocer cuándo nuestro estado puede afectar a los alimentos.',
-      strong: true,
-    },
-  ] satisfies PosterBlock[],
+  lead: 'Si estás enfermo, puedes contaminar los alimentos.',
+  listTitle: 'Avisa si tienes',
+  items: [
+    'Diarrea',
+    'Vómitos',
+    'Fiebre',
+    'Dolor de garganta con fiebre',
+    'Infecciones en la piel',
+    'Secreciones de nariz, ojos u oídos',
+    'Otros síntomas de infección',
+  ],
+  stepsTitle: 'Qué hacer',
+  steps: [
+    'Informa de inmediato a tu responsable.',
+    'No lo ocultes ni decidas por tu cuenta.',
+    'Vuelve a manipular alimentos solo cuando te lo indiquen.',
+  ],
+  footer: 'Comunicarlo a tiempo protege a los clientes y a tu equipo.',
   /** The button appears after this long, so the poster is read first. */
   readMs: 7000,
   next: 'Continuar',

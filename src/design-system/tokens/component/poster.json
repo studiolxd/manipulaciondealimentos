@@ -1,29 +1,77 @@
 {
   "poster": {
-    "$description": "Printed notice in two columns (Poster).",
+    "$description": "Printed notice to be glanced at: banner, tags, numbered steps and closing line (Poster).",
     "gap": {
       "$type": "dimension",
-      "$value": "{space.md}"
+      "$value": "{space.sm}"
     },
     "column-gap": {
       "$type": "dimension",
-      "$value": "{space.3xl}"
+      "$value": "{space.xl}"
     },
     "paragraph-gap": {
       "$type": "dimension",
       "$value": "{space.xs}"
     },
-    "list-indent": {
+    "radius": {
       "$type": "dimension",
-      "$value": "{space.xl}"
+      "$value": "{radius.md}"
     },
-    "line-height": {
-      "$type": "number",
-      "$value": "{font.line-height.normal}"
+    "radius-full": {
+      "$type": "dimension",
+      "$value": "{radius.full}"
     },
-    "marker": {
+    "border-width": {
+      "$type": "dimension",
+      "$value": "{border-width.outline}"
+    },
+    "border-color": {
       "$type": "color",
-      "$value": "{color.text.negative}"
+      "$value": "{color.border.ink}"
+    },
+    "banner-padding-block": {
+      "$type": "dimension",
+      "$value": "{space.xs}"
+    },
+    "banner-padding-inline": {
+      "$type": "dimension",
+      "$value": "{space.md}"
+    },
+    "lead-background": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    },
+    "tag-gap": {
+      "$type": "dimension",
+      "$value": "{space.xs}"
+    },
+    "tag-padding-block": {
+      "$type": "dimension",
+      "$value": "{space.2xs}"
+    },
+    "tag-padding-inline": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "tag-background": {
+      "$type": "color",
+      "$value": "{color.surface.default}"
+    },
+    "step-size": {
+      "$type": "dimension",
+      "$value": "{size.icon.sm}"
+    },
+    "step-background": {
+      "$type": "color",
+      "$value": "{color.action.negative.background}"
+    },
+    "step-text": {
+      "$type": "color",
+      "$value": "{color.action.negative.text}"
+    },
+    "footer-background": {
+      "$type": "color",
+      "$value": "{color.surface.inverse}"
     }
   }
 }

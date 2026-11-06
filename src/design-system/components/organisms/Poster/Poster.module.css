@@ -6,22 +6,80 @@
   height: 100%;
 }
 
+.lead {
+  padding-block: var(--slxd-poster-banner-padding-block);
+  padding-inline: var(--slxd-poster-banner-padding-inline);
+  border-radius: var(--slxd-poster-radius);
+  background: var(--slxd-poster-lead-background);
+  text-align: center;
+}
+
 .columns {
-  column-count: 2;
-  column-gap: var(--slxd-poster-column-gap);
-  line-height: var(--slxd-poster-line-height);
+  display: grid;
+  flex: 1;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--slxd-poster-column-gap);
+  min-height: 0;
 }
 
-.columns > * {
-  margin-block-end: var(--slxd-poster-paragraph-gap);
-  break-inside: avoid;
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-poster-paragraph-gap);
 }
 
-.list {
-  margin-block-start: 0;
-  padding-inline-start: var(--slxd-poster-list-indent);
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--slxd-poster-tag-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.item::marker {
-  color: var(--slxd-poster-marker);
+.tag {
+  padding-block: var(--slxd-poster-tag-padding-block);
+  padding-inline: var(--slxd-poster-tag-padding-inline);
+  border: var(--slxd-poster-border-width) solid var(--slxd-poster-border-color);
+  border-radius: var(--slxd-poster-radius-full);
+  background: var(--slxd-poster-tag-background);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-poster-paragraph-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.step {
+  display: flex;
+  gap: var(--slxd-poster-paragraph-gap);
+  align-items: center;
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step);
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: var(--slxd-poster-step-size);
+  height: var(--slxd-poster-step-size);
+  border-radius: var(--slxd-poster-radius-full);
+  background: var(--slxd-poster-step-background);
+  color: var(--slxd-poster-step-text);
+  font-family: var(--slxd-font-family-display);
+  font-size: var(--slxd-font-size-body-sm);
+}
+
+.footer {
+  padding-block: var(--slxd-poster-banner-padding-block);
+  padding-inline: var(--slxd-poster-banner-padding-inline);
+  border-radius: var(--slxd-poster-radius);
+  background: var(--slxd-poster-footer-background);
+  text-align: center;
 }

@@ -4,7 +4,7 @@
   font-weight: var(--slxd-heading-font-weight);
   line-height: var(--slxd-heading-line-height);
   letter-spacing: var(--slxd-heading-letter-spacing);
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .heading[data-align='center'] {
@@ -36,7 +36,6 @@
   color: var(--slxd-heading-overlay-text);
   -webkit-text-stroke: var(--slxd-heading-overlay-stroke-width) var(--slxd-heading-overlay-stroke-color);
   paint-order: stroke fill;
-  filter: drop-shadow(0 var(--slxd-heading-overlay-shadow-offset) 0 var(--slxd-heading-overlay-shadow-color));
 }
 
 .hidden {

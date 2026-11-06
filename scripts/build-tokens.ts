@@ -165,7 +165,7 @@ if (errors.length > 0) {
 }
 
 const dictionary = new StyleDictionary({
-  source: [join(tokensDir, '**/*.json')],
+  source: [join(tokensDir, '**/*.json').replaceAll('\\', '/')],
   log: { verbosity: 'default' },
   hooks: {
     formats: {

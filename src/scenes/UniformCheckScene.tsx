@@ -85,10 +85,7 @@ export function UniformCheckScene() {
               image={image(worker.image)}
               label={worker.label}
               spots={spots(worker, worker.elements, fixed)}
-              zooms={[
-                { id: 'left', label: activity.zoomHands(worker.label, 'left'), ...activity.zoomAt.left },
-                { id: 'right', label: activity.zoomHands(worker.label, 'right'), ...activity.zoomAt.right },
-              ]}
+              zooms={[{ id: 'hands', label: activity.zoomHands(worker.label), ...activity.zoomAt }]}
               done={isDone(worker)}
               onSpot={(id) => correct(worker, worker.elements, id)}
               onMiss={miss}

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import styles from './Icon.module.css'
 
-// Vector icons, drawn on a 24-unit grid with the straight cuts of Gasoek One:
+// Vector icons, drawn on a 24-unit grid in the style of Momo Trust Display:
 // one colour, a 2-unit stroke rounded to whole pixels, square ends, mitred
 // joins and square corners. Curves are allowed, but they end cut straight;
 // arrowheads are solid triangles (class `fill`). 2-unit margin.

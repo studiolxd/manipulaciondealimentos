@@ -4,8 +4,8 @@ import styles from './SoundGallery.module.css'
 
 const uses: Record<SoundName, { use: string; source: string }> = {
   click: { use: 'Al pulsar cualquier botón', source: 'mouseclick1 · UI Audio (Kenney)' },
-  correct: { use: 'Al aparecer un feedback de acierto', source: 'glass_004 · Interface Sounds (Kenney)' },
-  incorrect: { use: 'Al aparecer un feedback de error', source: 'error_008 · Interface Sounds (Kenney)' },
+  correct: { use: 'Al aparecer un feedback de acierto', source: 'Arpegio ascendente rápido, sintetizado' },
+  incorrect: { use: 'Al aparecer un feedback de error', source: 'Dos notas descendentes, sintetizadas' },
 }
 
 // Documentation: every interface sound, with what it is for and a button to hear it.

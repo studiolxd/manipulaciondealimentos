@@ -25,7 +25,15 @@ export function HealthPosterScene() {
     >
       <Layer backdrop="dark">
         <Positioned top={150} center="x" width={1640} height={760}>
-          <Poster title={content.title} blocks={content.blocks} />
+          <Poster
+            title={content.title}
+            lead={content.lead}
+            listTitle={content.listTitle}
+            items={content.items}
+            stepsTitle={content.stepsTitle}
+            steps={content.steps}
+            footer={content.footer}
+          />
         </Positioned>
       </Layer>
       <Layer layer="over-hud">
