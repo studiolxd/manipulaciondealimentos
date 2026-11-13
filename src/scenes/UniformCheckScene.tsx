@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { feedback } from '../content/feedback'
 import { image } from '../content/images'
 import { uniformCheck as activity, type UniformElement, type Worker } from '../content/uniformCheck'
@@ -36,7 +36,8 @@ function spots(worker: Worker, elements: UniformElement[], fixed: ReadonlySet<st
 // presses everything that must be corrected; each element then shows its
 // corrected layer. The nails are checked in a close-up of the hands, opened
 // with the + over them. A worker with everything corrected turns black and
-// white; with all four, "Finalizar" appears.
+// white; with all four corrected, closing the last feedback goes on to the
+// conclusion.
 export function UniformCheckScene() {
   const { sceneReady, goTo } = useGame()
   const [fixed, setFixed] = useState<ReadonlySet<string>>(new Set())
@@ -47,6 +48,10 @@ export function UniformCheckScene() {
   const total = activity.workers.reduce((sum, w) => sum + w.elements.length + w.handElements.length, 0)
   const isDone = (worker: Worker) => [...worker.elements, ...worker.handElements].every((e) => fixed.has(key(worker, e)))
   const allDone = activity.workers.every(isDone)
+
+  useEffect(() => {
+    if (allDone && shown === null) goTo('uniform-conclusion')
+  }, [allDone, shown, goTo])
 
   function correct(worker: Worker, elements: UniformElement[], spotId: string) {
     const element = elements.find((e) => spotId.startsWith(`${e.id}:`))
@@ -94,13 +99,6 @@ export function UniformCheckScene() {
           </Positioned>
         ))}
 
-        {allDone && (
-          <Positioned bottom={24} center="x">
-            <Button claimFocus advance onClick={() => goTo('uniform-conclusion')}>
-              {activity.finish}
-            </Button>
-          </Positioned>
-        )}
       </Layer>
 
       {zoom && (

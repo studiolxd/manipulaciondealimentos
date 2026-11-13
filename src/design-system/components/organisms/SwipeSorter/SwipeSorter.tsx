@@ -46,19 +46,22 @@ interface SwipeSorterProps {
   done?: ReactNode
   ref?: Ref<SwipeSorterHandle>
   onAnswer: (direction: SwipeDirection) => void
+  /** Called when the feedback of an answer is closed. */
+  onFeedbackClosed?: () => void
 }
 
 // SwipeCard stack + YES / NO Buttons + FeedbackPanel: binary sorting activity that
 // fills the stage below the HUD. Answers by dragging, with the arrow keys or
 // with a single tap on the side buttons (WCAG 2.5.7). After each answer the
 // feedback opens over a backdrop and the next card waits until it is closed.
-export function SwipeSorter({ item, upcoming = [], feedback, labels, done, ref, onAnswer }: SwipeSorterProps) {
+export function SwipeSorter({ item, upcoming = [], feedback, labels, done, ref, onAnswer, onFeedbackClosed }: SwipeSorterProps) {
   const cardRef = useRef<SwipeCardHandle>(null)
   const [feedbackOpen, setFeedbackOpen] = useState(false)
   useImperativeHandle(ref, () => ({ focus: () => cardRef.current?.focus() }))
 
   function closeFeedback() {
     setFeedbackOpen(false)
+    onFeedbackClosed?.()
     // Once the card is usable again; with no cards left, the done content claims the focus.
     requestAnimationFrame(() => cardRef.current?.focus())
   }

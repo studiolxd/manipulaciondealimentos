@@ -12,20 +12,22 @@ interface PositionedProps {
   height?: number
   /** Centres the box on that axis; the matching offsets are ignored. */
   center?: 'x' | 'y' | 'both'
+  /** Centres the box horizontally on this stage x (e.g. under another element); ignores `left` and `right`. */
+  centerAt?: number
   layer?: StageLayer
   children: ReactNode
 }
 
 // Places its content on the stage. Scenes compose their layout with it
 // instead of writing CSS.
-export function Positioned({ top, right, bottom, left, width, height, center, layer = 'base', children }: PositionedProps) {
-  const centerX = center === 'x' || center === 'both'
+export function Positioned({ top, right, bottom, left, width, height, center, centerAt, layer = 'base', children }: PositionedProps) {
+  const centerX = center === 'x' || center === 'both' || centerAt !== undefined
   const centerY = center === 'y' || center === 'both'
   const style: CSSProperties = {
     top: centerY ? '50%' : top,
     right: centerX ? undefined : right,
     bottom: centerY ? undefined : bottom,
-    left: centerX ? '50%' : left,
+    left: centerAt !== undefined ? centerAt : centerX ? '50%' : left,
     width,
     height,
     translate: `${centerX ? '-50%' : '0'} ${centerY ? '-50%' : '0'}`,

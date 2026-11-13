@@ -50,6 +50,7 @@ export function SpeechBubble({
         <Typewriter
           key={index}
           text={blocks[index]}
+          size="body-sm"
           voice={voice?.[index]}
           complete={skipRequested}
           onDone={markTyped}

@@ -691,26 +691,6 @@ export const tokenDocs = [
     "description": null
   },
   {
-    "name": "--slxd-heading-overlay-stroke-color",
-    "path": "heading.overlay.stroke-color",
-    "layer": "component",
-    "family": "color",
-    "type": "color",
-    "value": "#14262e",
-    "reference": "{color.border.ink}",
-    "description": null
-  },
-  {
-    "name": "--slxd-heading-overlay-stroke-width",
-    "path": "heading.overlay.stroke-width",
-    "layer": "component",
-    "family": "shape",
-    "type": "dimension",
-    "value": "calc(calc(3px / var(--slxd-stage-scale)) * 3)",
-    "reference": "calc({border-width.outline} * 3)",
-    "description": "Three times the outline: the stroke is painted behind the fill, so about half of it shows."
-  },
-  {
     "name": "--slxd-hotspot-match-gap",
     "path": "hotspot-match.gap",
     "layer": "component",
@@ -746,9 +726,9 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "400px",
-    "reference": "{size.choice.min-width}",
-    "description": "Width of each of the two columns of the list."
+    "value": "560px",
+    "reference": "{size.choice.list-width}",
+    "description": "Width of the list, one item above the other."
   },
   {
     "name": "--slxd-hotspot-match-radius",
@@ -3381,6 +3361,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-size-560",
+    "path": "primitive.size.560",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "560px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-screen-target-min",
     "path": "primitive.screen.target-min",
     "layer": "primitive",
@@ -4639,6 +4629,16 @@ export const tokenDocs = [
     "value": "400px",
     "reference": "{primitive.size.400}",
     "description": "Minimum width of a choice option, so options line up."
+  },
+  {
+    "name": "--slxd-size-choice-list-width",
+    "path": "size.choice.list-width",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "560px",
+    "reference": "{primitive.size.560}",
+    "description": "Width of a list of choices stacked one above the other."
   },
   {
     "name": "--slxd-font-family-display",

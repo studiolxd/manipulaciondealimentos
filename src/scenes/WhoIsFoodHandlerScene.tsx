@@ -4,7 +4,6 @@ import { image } from '../content/images'
 import { whoIsFoodHandler as activity, type PersonCard } from '../content/whoIsFoodHandler'
 import {
   ActivityScene,
-  Button,
   IdCard,
   Label,
   SwipeSorter,
@@ -115,12 +114,9 @@ export function WhoIsFoodHandlerScene() {
           noButton: activity.noButton,
           continue: activity.feedbackContinue,
         }}
-        done={
-          <Button claimFocus advance onClick={() => goTo('who-is-food-handler-conclusion')}>
-            {activity.next}
-          </Button>
-        }
         onAnswer={(direction) => current && answer(current, direction)}
+        // Closing the feedback of the last card goes straight on to the conclusion.
+        onFeedbackClosed={() => !current && goTo('who-is-food-handler-conclusion')}
       />
     </ActivityScene>
   )

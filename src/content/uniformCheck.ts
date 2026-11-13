@@ -52,7 +52,6 @@ export const uniformCheck = {
   back: 'Volver',
   wrong: 'Ese elemento no supone un problema para la seguridad alimentaria.',
   feedbackContinue: 'Continuar',
-  finish: 'Finalizar',
   workers: [
     {
       id: 'worker1',

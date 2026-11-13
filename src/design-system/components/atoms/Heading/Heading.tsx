@@ -6,7 +6,7 @@ interface HeadingProps {
   /** `display`: activity titles. `heading`: scene headings. `subheading`: names, in the prose family. `system`: messages outside the stage. */
   variant?: 'display' | 'heading' | 'subheading' | 'system'
   align?: 'start' | 'center'
-  /** Straight over the scene, without a panel: light text with an ink outline. */
+  /** Straight over the scene, without a panel: light text, no outline. */
   overlay?: boolean
   /** Only for screen readers. */
   visuallyHidden?: boolean

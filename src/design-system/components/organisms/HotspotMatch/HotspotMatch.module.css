@@ -8,7 +8,7 @@
   padding: var(--slxd-hotspot-match-padding);
 }
 
-/* Two columns, so every item fits next to the picture without scrolling.
+/* One column, an item above the other, next to the picture.
    The scroll is only a safeguard for very large text; the padding keeps the
    buttons' lift and shadow from being cut. */
 .list {
@@ -17,7 +17,7 @@
   border: 0;
   display: grid;
   flex: none;
-  grid-template-columns: repeat(2, var(--slxd-hotspot-match-list-width));
+  grid-template-columns: var(--slxd-hotspot-match-list-width);
   gap: var(--slxd-hotspot-match-item-gap);
   align-content: center;
   max-height: 100%;

@@ -19,9 +19,11 @@ export const camerasIntro = {
 
 export interface CameraQuestion {
   question: string
-  /** The right answer first; they are shuffled on screen, except Sí / No. */
+  /** The right answer first; they are shuffled on screen, except Sí / No, which keep `order`. */
   answers: string[]
   shuffle: boolean
+  /** Order to show the answers in when they are not shuffled; indices into `answers`. */
+  order?: number[]
   /** Which kind of question it is, for its feedback. */
   kind: 'risk' | 'why' | 'consequence'
 }
@@ -37,6 +39,8 @@ const risk = (isRisk: boolean): CameraQuestion => ({
   question: '¿Supone un riesgo para la seguridad alimentaria?',
   answers: isRisk ? ['Sí', 'No'] : ['No', 'Sí'],
   shuffle: false,
+  // Sí is always the top option.
+  order: isRisk ? [0, 1] : [1, 0],
   kind: 'risk',
 })
 

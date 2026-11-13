@@ -23,7 +23,7 @@ export const whoIsFoodHandler = {
   title: '¿Quién es manipulador de alimentos?',
   statement: [
     'No todos los manipuladores de alimentos son cocineros. En esta actividad vas a conocer a distintas personas y sus puestos de trabajo. Lee con atención su carnet: su nombre, su oficio y lo que hace en su día a día. Tu misión es decidir si su trabajo implica manipular alimentos:',
-    '👉 Desliza la tarjeta a la derecha si crees que SÍ es manipulador de alimentos.\n👈 Desliza la tarjeta a la izquierda si crees que NO lo es.\n¡Adelante, detective!',
+    'Desliza la tarjeta a la derecha si crees que SÍ es manipulador de alimentos.\nDesliza la tarjeta a la izquierda si crees que NO lo es.\n¡Adelante, detective!',
   ],
   statementLabel: 'Enunciado de la actividad',
   openStatement: 'Ver el enunciado',
@@ -43,7 +43,6 @@ export const whoIsFoodHandler = {
   correct: '¡Correcto!',
   incorrect: '¡Incorrecto!',
   feedbackContinue: 'Continuar',
-  next: 'Continuar',
   cards: [
     {
       id: 'oscar',

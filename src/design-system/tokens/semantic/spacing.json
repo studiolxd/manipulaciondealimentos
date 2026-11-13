@@ -92,6 +92,10 @@
       "min-width": {
         "$value": "{primitive.size.400}",
         "$description": "Minimum width of a choice option, so options line up."
+      },
+      "list-width": {
+        "$value": "{primitive.size.560}",
+        "$description": "Width of a list of choices stacked one above the other."
       }
     }
   }

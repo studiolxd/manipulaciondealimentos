@@ -44,7 +44,7 @@ interface Shown {
 function openVideo(item: CameraVideo, index: number): View {
   const orders = item.questions.map((q) => {
     const indices = q.answers.map((_, i) => i)
-    return q.shuffle ? shuffle(indices) : indices
+    return q.shuffle ? shuffle(indices) : (q.order ?? indices)
   })
   return { kind: 'video', index, step: 'watching', question: 0, orders }
 }

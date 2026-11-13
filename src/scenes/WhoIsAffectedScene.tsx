@@ -88,13 +88,13 @@ export function WhoIsAffectedScene() {
         />
       </Positioned>
 
-      {/* In a row under the bubble, so a long feedback never runs under them.
+      {/* One above the other under the bubble, so a long feedback never runs under them.
           While David gives the feedback they give way to "Probar de nuevo"
           (wrong) or "Siguiente" (right), which appear once the bubble has shown
           all its text. */}
-      <Positioned bottom={56} right={40}>
+      <Positioned bottom={56} centerAt={1320}>
         {!result ? (
-          <OptionButtons label={activity.optionsLabel} options={activity.options} onSelect={choose} />
+          <OptionButtons stacked label={activity.optionsLabel} options={activity.options} onSelect={choose} />
         ) : !textShown ? null : !right ? (
           <Button
             claimFocus

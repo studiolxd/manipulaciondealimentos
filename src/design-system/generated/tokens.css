@@ -62,6 +62,7 @@
   --slxd-primitive-size-160: 160px;
   --slxd-primitive-size-200: 200px;
   --slxd-primitive-size-400: 400px;
+  --slxd-primitive-size-560: 560px;
   --slxd-primitive-screen-target-min: 44px; /** Comfortable touch target (WCAG 2.5.5). */
   --slxd-primitive-screen-text-min: 15px;
   --slxd-primitive-screen-heading-min: 22px;
@@ -188,6 +189,7 @@
   --slxd-size-avatar: var(--slxd-primitive-size-200); /** Round portrait on ID cards. */
   --slxd-size-hud-height: var(--slxd-primitive-size-120);
   --slxd-size-choice-min-width: var(--slxd-primitive-size-400); /** Minimum width of a choice option, so options line up. */
+  --slxd-size-choice-list-width: var(--slxd-primitive-size-560); /** Width of a list of choices stacked one above the other. */
   --slxd-font-family-display: var(--slxd-primitive-font-family-momo-trust-display); /** Titles, headings and controls (buttons, labels, stamps). */
   --slxd-font-family-body: var(--slxd-primitive-font-family-poppins); /** Prose: dialogues, narration, descriptions and feedback. */
   --slxd-font-size-body: max(var(--slxd-primitive-font-size-32), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale)));
@@ -279,12 +281,10 @@
   --slxd-heading-size-subheading: var(--slxd-font-size-subheading);
   --slxd-heading-size-system: var(--slxd-font-size-system-heading);
   --slxd-heading-overlay-text: var(--slxd-color-text-inverse);
-  --slxd-heading-overlay-stroke-color: var(--slxd-color-border-ink);
-  --slxd-heading-overlay-stroke-width: calc(var(--slxd-border-width-outline) * 3); /** Three times the outline: the stroke is painted behind the fill, so about half of it shows. */
   --slxd-hotspot-match-gap: var(--slxd-space-sm);
   --slxd-hotspot-match-padding: var(--slxd-space-sm);
   --slxd-hotspot-match-item-gap: var(--slxd-space-2xs);
-  --slxd-hotspot-match-list-width: var(--slxd-size-choice-min-width); /** Width of each of the two columns of the list. */
+  --slxd-hotspot-match-list-width: var(--slxd-size-choice-list-width); /** Width of the list, one item above the other. */
   --slxd-hotspot-match-radius: var(--slxd-radius-md);
   --slxd-hotspot-match-border-width: var(--slxd-border-width-outline);
   --slxd-hotspot-match-border-color: var(--slxd-color-border-ink);
