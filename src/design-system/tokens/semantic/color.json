@@ -86,8 +86,8 @@
       },
       "primary": {
         "background": {
-          "$value": "{primitive.color.mint.300}",
-          "$description": "Mint: a cool accent that never blends with the warm scenes."
+          "$value": "{primitive.color.sage.300}",
+          "$description": "Sage green: a soft accent that stands out from the warm scenes."
         },
         "text": {
           "$value": "{primitive.color.petrol.900}"

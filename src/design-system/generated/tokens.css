@@ -12,6 +12,7 @@
   --slxd-primitive-color-petrol-alpha-72: rgba(20, 38, 46, 0.72);
   --slxd-primitive-color-petrol-alpha-94: rgba(20, 38, 46, 0.94);
   --slxd-primitive-color-sand-300: #d6cdb8;
+  --slxd-primitive-color-sage-300: #bcd8a8; /** Sage green: buttons. */
   --slxd-primitive-color-mint-300: #a6f0d3; /** Mint: buttons and accent screens. */
   --slxd-primitive-color-mint-600: #1f9e74;
   --slxd-primitive-color-mint-800: #0f5c45;
@@ -124,7 +125,7 @@
   --slxd-color-border-selected: var(--slxd-primitive-color-mint-600);
   --slxd-color-action-secondary-background: var(--slxd-primitive-color-white); /** White button: options that act straight away. */
   --slxd-color-action-secondary-text: var(--slxd-primitive-color-petrol-900);
-  --slxd-color-action-primary-background: var(--slxd-primitive-color-mint-300); /** Mint: a cool accent that never blends with the warm scenes. */
+  --slxd-color-action-primary-background: var(--slxd-primitive-color-sage-300); /** Sage green: a soft accent that stands out from the warm scenes. */
   --slxd-color-action-primary-text: var(--slxd-primitive-color-petrol-900);
   --slxd-color-action-positive-background: var(--slxd-primitive-color-green-700);
   --slxd-color-action-positive-text: var(--slxd-primitive-color-white);
@@ -182,6 +183,7 @@
   --slxd-size-icon-lg: var(--slxd-primitive-size-160);
   --slxd-size-logo-splash: clamp(var(--slxd-primitive-screen-logo-min), 40vw, var(--slxd-primitive-screen-logo-max)); /** Studio LXD logo on the splash screen: 40% of the window, between the minimum and maximum. */
   --slxd-size-target-min: max(var(--slxd-primitive-size-112), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Minimum size of anything clickable: 112 stage px, never less than 44 real px. */
+  --slxd-size-target-button: max(var(--slxd-primitive-size-96), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Height of a button: 96 stage px, never less than 44 real px. */
   --slxd-size-target-compact: max(var(--slxd-primitive-size-72), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Small controls laid over a picture (e.g. a zoom button): 72 stage px, never less than 44 real px. */
   --slxd-size-switch-width: var(--slxd-primitive-size-160);
   --slxd-size-switch-height: var(--slxd-primitive-size-96);
@@ -216,12 +218,12 @@
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
   --slxd-backdrop-color: var(--slxd-color-surface-scrim);
   --slxd-backdrop-dark-color: var(--slxd-color-surface-ink); /** Dims the scene behind a close-up (e.g. a worker's hands, a poster). */
-  --slxd-button-min-height: var(--slxd-size-target-min);
+  --slxd-button-min-height: var(--slxd-size-target-button);
   --slxd-button-padding-block: var(--slxd-space-xs);
-  --slxd-button-padding-inline: var(--slxd-space-4xl);
+  --slxd-button-padding-inline: var(--slxd-space-2xl);
   --slxd-button-radius: var(--slxd-radius-md); /** The same as text inputs. */
   --slxd-button-font-family: var(--slxd-font-family-display);
-  --slxd-button-font-size: var(--slxd-font-size-body);
+  --slxd-button-font-size: var(--slxd-font-size-body-sm);
   --slxd-button-font-weight: var(--slxd-font-weight-control);
   --slxd-button-letter-spacing: var(--slxd-font-letter-spacing-caps);
   --slxd-button-outline-width: var(--slxd-border-width-outline);

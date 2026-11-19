@@ -2,7 +2,7 @@
   "button": {
     "min-height": {
       "$type": "dimension",
-      "$value": "{size.target.min}"
+      "$value": "{size.target.button}"
     },
     "padding-block": {
       "$type": "dimension",
@@ -10,7 +10,7 @@
     },
     "padding-inline": {
       "$type": "dimension",
-      "$value": "{space.4xl}"
+      "$value": "{space.2xl}"
     },
     "radius": {
       "$type": "dimension",
@@ -23,7 +23,7 @@
     },
     "font-size": {
       "$type": "dimension",
-      "$value": "{font.size.body}"
+      "$value": "{font.size.body-sm}"
     },
     "font-weight": {
       "$type": "fontWeight",

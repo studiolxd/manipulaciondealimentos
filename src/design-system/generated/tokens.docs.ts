@@ -46,8 +46,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "max(112px, calc(44px / var(--slxd-stage-scale)))",
-    "reference": "{size.target.min}",
+    "value": "max(96px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.button}",
     "description": null
   },
   {
@@ -66,8 +66,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "72px",
-    "reference": "{space.4xl}",
+    "value": "56px",
+    "reference": "{space.2xl}",
     "description": null
   },
   {
@@ -96,8 +96,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
-    "reference": "{font.size.body}",
+    "value": "max(28px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "{font.size.body-sm}",
     "description": null
   },
   {
@@ -216,7 +216,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#bcd8a8",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -346,7 +346,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#bcd8a8",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -486,7 +486,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#bcd8a8",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -776,7 +776,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#bcd8a8",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -1356,7 +1356,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#bcd8a8",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -1596,7 +1596,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#bcd8a8",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -2546,7 +2546,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
+    "value": "#bcd8a8",
     "reference": "{color.action.primary.background}",
     "description": null
   },
@@ -2849,6 +2849,16 @@ export const tokenDocs = [
     "value": "#d6cdb8",
     "reference": null,
     "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-sage-300",
+    "path": "primitive.color.sage.300",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#bcd8a8",
+    "reference": null,
+    "description": "Sage green: buttons."
   },
   {
     "name": "--slxd-primitive-color-mint-300",
@@ -3976,9 +3986,9 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "color",
     "type": "color",
-    "value": "#a6f0d3",
-    "reference": "{primitive.color.mint.300}",
-    "description": "Mint: a cool accent that never blends with the warm scenes."
+    "value": "#bcd8a8",
+    "reference": "{primitive.color.sage.300}",
+    "description": "Sage green: a soft accent that stands out from the warm scenes."
   },
   {
     "name": "--slxd-color-action-primary-text",
@@ -4559,6 +4569,16 @@ export const tokenDocs = [
     "value": "max(112px, calc(44px / var(--slxd-stage-scale)))",
     "reference": "max({primitive.size.112}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
     "description": "Minimum size of anything clickable: 112 stage px, never less than 44 real px."
+  },
+  {
+    "name": "--slxd-size-target-button",
+    "path": "size.target.button",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(96px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.size.96}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
+    "description": "Height of a button: 96 stage px, never less than 44 real px."
   },
   {
     "name": "--slxd-size-target-compact",

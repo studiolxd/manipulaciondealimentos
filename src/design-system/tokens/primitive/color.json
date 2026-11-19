@@ -42,6 +42,12 @@
           "$value": "#d6cdb8"
         }
       },
+      "sage": {
+        "300": {
+          "$value": "#bcd8a8",
+          "$description": "Sage green: buttons."
+        }
+      },
       "mint": {
         "300": {
           "$value": "#a6f0d3",
