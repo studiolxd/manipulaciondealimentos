@@ -46,6 +46,14 @@
       "system-body": {
         "$value": "{primitive.font.size.18}",
         "$description": "Messages outside the stage, in real pixels."
+      },
+      "panel-title": {
+        "$value": "max({primitive.font.size.54}, calc({primitive.screen.heading-min} / var(--slxd-stage-scale)))",
+        "$description": "Title of a small panel, e.g. the settings."
+      },
+      "choice": {
+        "$value": "max({primitive.font.size.44}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+        "$description": "YES / NO answers placed over a scene."
       }
     },
     "weight": {
@@ -89,6 +97,14 @@
       "caps": {
         "$value": "{primitive.font.letter-spacing.40}",
         "$description": "Tracking of the display family: titles, buttons and labels."
+      },
+      "tight": {
+        "$value": "{primitive.font.letter-spacing.20}",
+        "$description": "A little less tracking than caps, for larger titles."
+      },
+      "close": {
+        "$value": "{primitive.font.letter-spacing.neg-20}",
+        "$description": "Pulls a letter closer to the next one, for pairs that look too far apart (e.g. the A of \"Ajustes\")."
       }
     }
   }

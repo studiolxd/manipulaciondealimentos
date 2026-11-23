@@ -11,6 +11,25 @@
   text-align: center;
 }
 
+/* The welcome title: the display size, held to two balanced lines. */
+.heading[data-variant='title'] {
+  max-inline-size: 11em;
+  margin-inline: auto;
+  font-size: var(--slxd-heading-size-display);
+  line-height: var(--slxd-heading-title-line-height);
+  text-wrap: balance;
+}
+
+.heading[data-variant='panel'] {
+  font-size: var(--slxd-heading-size-panel);
+  letter-spacing: var(--slxd-heading-panel-letter-spacing);
+}
+
+/* The A of "Ajustes" sits too far from the J: its tracking is tightened. */
+.heading[data-variant='panel']::first-letter {
+  letter-spacing: var(--slxd-heading-panel-first-letter-spacing);
+}
+
 .heading[data-variant='display'] {
   font-size: var(--slxd-heading-size-display);
 }
@@ -34,6 +53,11 @@
 
 .heading[data-overlay] {
   color: var(--slxd-heading-overlay-text);
+}
+
+/* After the overlay rule: the welcome title has its own colour. */
+.heading[data-variant='title'] {
+  color: var(--slxd-heading-title-text);
 }
 
 .hidden {

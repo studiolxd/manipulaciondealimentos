@@ -18,6 +18,10 @@
       "accent": {
         "$value": "{primitive.color.mint.800}",
         "$description": "Dark mint, legible on light surfaces (e.g. accent icons)."
+      },
+      "title": {
+        "$value": "{primitive.color.sage.600}",
+        "$description": "Title of the welcome screen, over the facade."
       }
     },
     "surface": {
@@ -107,6 +111,25 @@
         },
         "text": {
           "$value": "{primitive.color.white}"
+        }
+      },
+      "choice": {
+        "$description": "YES / NO answers over a scene: greyer than the right / wrong feedback colours.",
+        "positive": {
+          "background": {
+            "$value": "{primitive.color.moss.600}"
+          },
+          "text": {
+            "$value": "{primitive.color.white}"
+          }
+        },
+        "negative": {
+          "background": {
+            "$value": "{primitive.color.rose.700}"
+          },
+          "text": {
+            "$value": "{primitive.color.white}"
+          }
         }
       }
     },

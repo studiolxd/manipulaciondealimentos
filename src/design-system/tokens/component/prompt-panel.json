@@ -1,0 +1,9 @@
+{
+  "prompt-panel": {
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.lg}",
+      "$description": "Between the prompt and the controls under it."
+    }
+  }
+}

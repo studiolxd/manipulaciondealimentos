@@ -3,8 +3,8 @@ import styles from './Heading.module.css'
 
 interface HeadingProps {
   level: 1 | 2 | 3
-  /** `display`: activity titles. `heading`: scene headings. `subheading`: names, in the prose family. `system`: messages outside the stage. */
-  variant?: 'display' | 'heading' | 'subheading' | 'system'
+  /** `title`: the welcome screen, in sage green. `display`: activity titles. `heading`: scene headings. `subheading`: names, in the prose family. `system`: messages outside the stage. */
+  variant?: 'title' | 'panel' | 'display' | 'heading' | 'subheading' | 'system'
   align?: 'start' | 'center'
   /** Straight over the scene, without a panel: light text, no outline. */
   overlay?: boolean

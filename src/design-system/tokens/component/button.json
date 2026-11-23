@@ -89,11 +89,11 @@
       "$description": "Large YES / NO answers placed over a scene.",
       "padding-inline": {
         "$type": "dimension",
-        "$value": "{space.lg}"
+        "$value": "{space.md}"
       },
       "font-size": {
         "$type": "dimension",
-        "$value": "{font.size.label-lg}"
+        "$value": "{font.size.choice}"
       },
       "font-weight": {
         "$type": "fontWeight",
@@ -102,22 +102,30 @@
       "positive": {
         "background": {
           "$type": "color",
-          "$value": "{color.action.positive.background}"
+          "$value": "{color.action.choice.positive.background}"
         },
         "text": {
           "$type": "color",
-          "$value": "{color.action.positive.text}"
+          "$value": "{color.action.choice.positive.text}"
         }
       },
       "negative": {
         "background": {
           "$type": "color",
-          "$value": "{color.action.negative.background}"
+          "$value": "{color.action.choice.negative.background}"
         },
         "text": {
           "$type": "color",
-          "$value": "{color.action.negative.text}"
+          "$value": "{color.action.choice.negative.text}"
         }
+      },
+      "min-height": {
+        "$type": "dimension",
+        "$value": "{size.target.compact}"
+      },
+      "min-width": {
+        "$type": "dimension",
+        "$value": "{size.choice.button-width}"
       }
     },
     "secondary": {

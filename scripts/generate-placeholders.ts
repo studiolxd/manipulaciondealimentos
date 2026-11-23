@@ -27,6 +27,7 @@ const placeholders: Record<AssetId | RasterIconName, Placeholder> = {
   diningTableBackground: { shape: 'rect', color: '#b9cbd9', label: 'Fondo · Mesa con David (POV)' },
   diningTableTopBackground: { shape: 'rect', color: '#c7b8a3', label: 'Fondo · Mesa vista desde arriba' },
   davidStanding: { shape: 'rounded', color: '#4f7a5a', label: 'David · De pie' },
+  davidDiningRoom: { shape: 'rounded', color: '#4f7a5a', label: 'David · Medio cuerpo, salón comedor' },
   davidSeated: { shape: 'rounded', color: '#4f7a5a', label: 'David · Sentado' },
   cardOscar: { shape: 'rounded', color: '#8fa9c9', label: 'Óscar' },
   cardLaura: { shape: 'rounded', color: '#c98fb4', label: 'Laura' },

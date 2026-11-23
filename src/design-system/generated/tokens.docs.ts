@@ -236,8 +236,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "40px",
-    "reference": "{space.lg}",
+    "value": "32px",
+    "reference": "{space.md}",
     "description": null
   },
   {
@@ -246,8 +246,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "58px",
-    "reference": "{font.size.label-lg}",
+    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "{font.size.choice}",
     "description": null
   },
   {
@@ -266,8 +266,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#15803d",
-    "reference": "{color.action.positive.background}",
+    "value": "#4f7d5c",
+    "reference": "{color.action.choice.positive.background}",
     "description": null
   },
   {
@@ -277,7 +277,7 @@ export const tokenDocs = [
     "family": "color",
     "type": "color",
     "value": "#ffffff",
-    "reference": "{color.action.positive.text}",
+    "reference": "{color.action.choice.positive.text}",
     "description": null
   },
   {
@@ -286,8 +286,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "color",
     "type": "color",
-    "value": "#b91c1c",
-    "reference": "{color.action.negative.background}",
+    "value": "#9b4b4b",
+    "reference": "{color.action.choice.negative.background}",
     "description": null
   },
   {
@@ -297,7 +297,27 @@ export const tokenDocs = [
     "family": "color",
     "type": "color",
     "value": "#ffffff",
-    "reference": "{color.action.negative.text}",
+    "reference": "{color.action.choice.negative.text}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-choice-min-height",
+    "path": "button.choice.min-height",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(72px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.compact}",
+    "description": null
+  },
+  {
+    "name": "--slxd-button-choice-min-width",
+    "path": "button.choice.min-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "160px",
+    "reference": "{size.choice.button-width}",
     "description": null
   },
   {
@@ -681,6 +701,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-heading-size-panel",
+    "path": "heading.size.panel",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(54px, calc(22px / var(--slxd-stage-scale)))",
+    "reference": "{font.size.panel-title}",
+    "description": null
+  },
+  {
     "name": "--slxd-heading-overlay-text",
     "path": "heading.overlay.text",
     "layer": "component",
@@ -688,6 +718,46 @@ export const tokenDocs = [
     "type": "color",
     "value": "#ffffff",
     "reference": "{color.text.inverse}",
+    "description": null
+  },
+  {
+    "name": "--slxd-heading-title-text",
+    "path": "heading.title.text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#638156",
+    "reference": "{color.text.title}",
+    "description": null
+  },
+  {
+    "name": "--slxd-heading-title-line-height",
+    "path": "heading.title.line-height",
+    "layer": "component",
+    "family": "typography",
+    "type": "number",
+    "value": "1.1",
+    "reference": "{font.line-height.tight}",
+    "description": null
+  },
+  {
+    "name": "--slxd-heading-panel-letter-spacing",
+    "path": "heading.panel.letter-spacing",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.02em",
+    "reference": "{font.letter-spacing.tight}",
+    "description": null
+  },
+  {
+    "name": "--slxd-heading-panel-first-letter-spacing",
+    "path": "heading.panel.first-letter-spacing",
+    "layer": "component",
+    "family": "typography",
+    "type": "dimension",
+    "value": "-0.02em",
+    "reference": "{font.letter-spacing.close}",
     "description": null
   },
   {
@@ -1026,7 +1096,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "200px",
+    "value": "240px",
     "reference": "{size.avatar}",
     "description": null
   },
@@ -1439,6 +1509,16 @@ export const tokenDocs = [
     "value": "#14262e",
     "reference": "{color.surface.inverse}",
     "description": null
+  },
+  {
+    "name": "--slxd-prompt-panel-gap",
+    "path": "prompt-panel.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "40px",
+    "reference": "{space.lg}",
+    "description": "Between the prompt and the controls under it."
   },
   {
     "name": "--slxd-question-panel-gap",
@@ -2396,8 +2476,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "max(112px, calc(44px / var(--slxd-stage-scale)))",
-    "reference": "{size.target.min}",
+    "value": "max(72px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.compact}",
     "description": null
   },
   {
@@ -2416,8 +2496,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "fontFamily",
-    "value": "'Momo Trust Display', system-ui, sans-serif",
-    "reference": "{font.family.display}",
+    "value": "Poppins, system-ui, sans-serif",
+    "reference": "{font.family.body}",
     "description": null
   },
   {
@@ -2426,8 +2506,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "typography",
     "type": "dimension",
-    "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
-    "reference": "{font.size.body}",
+    "value": "max(28px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "{font.size.body-sm}",
     "description": null
   },
   {
@@ -2437,17 +2517,7 @@ export const tokenDocs = [
     "family": "typography",
     "type": "fontWeight",
     "value": "400",
-    "reference": "{font.weight.control}",
-    "description": null
-  },
-  {
-    "name": "--slxd-switch-letter-spacing",
-    "path": "switch.letter-spacing",
-    "layer": "component",
-    "family": "typography",
-    "type": "dimension",
-    "value": "0.04em",
-    "reference": "{font.letter-spacing.caps}",
+    "reference": "{font.weight.regular}",
     "description": null
   },
   {
@@ -2456,7 +2526,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "160px",
+    "value": "112px",
     "reference": "{size.switch.width}",
     "description": null
   },
@@ -2466,7 +2536,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "96px",
+    "value": "64px",
     "reference": "{size.switch.height}",
     "description": null
   },
@@ -2476,7 +2546,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "64px",
+    "value": "40px",
     "reference": "{size.switch.thumb}",
     "description": null
   },
@@ -2568,6 +2638,16 @@ export const tokenDocs = [
     "type": "cubicBezier",
     "value": "cubic-bezier(0.42, 0, 0.58, 1)",
     "reference": "{motion.easing.standard}",
+    "description": null
+  },
+  {
+    "name": "--slxd-switch-line-height",
+    "path": "switch.line-height",
+    "layer": "component",
+    "family": "typography",
+    "type": "number",
+    "value": "1.1",
+    "reference": "{font.line-height.tight}",
     "description": null
   },
   {
@@ -2861,6 +2941,16 @@ export const tokenDocs = [
     "description": "Sage green: buttons."
   },
   {
+    "name": "--slxd-primitive-color-sage-600",
+    "path": "primitive.color.sage.600",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#638156",
+    "reference": null,
+    "description": "Sage green three steps darker than 300: the title of the welcome screen."
+  },
+  {
     "name": "--slxd-primitive-color-mint-300",
     "path": "primitive.color.mint.300",
     "layer": "primitive",
@@ -2919,6 +3009,26 @@ export const tokenDocs = [
     "value": "rgba(0, 0, 0, 0)",
     "reference": null,
     "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-moss-600",
+    "path": "primitive.color.moss.600",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#4f7d5c",
+    "reference": null,
+    "description": "Greyish green: the YES answer."
+  },
+  {
+    "name": "--slxd-primitive-color-rose-700",
+    "path": "primitive.color.rose.700",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#9b4b4b",
+    "reference": null,
+    "description": "Greyish red: the NO answer."
   },
   {
     "name": "--slxd-primitive-z-index-0",
@@ -3361,6 +3471,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-size-240",
+    "path": "primitive.size.240",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "240px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-size-400",
     "path": "primitive.size.400",
     "layer": "primitive",
@@ -3771,12 +3891,32 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-font-letter-spacing-20",
+    "path": "primitive.font.letter-spacing.20",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.02em",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-font-letter-spacing-40",
     "path": "primitive.font.letter-spacing.40",
     "layer": "primitive",
     "family": "typography",
     "type": "dimension",
     "value": "0.04em",
+    "reference": null,
+    "description": null
+  },
+  {
+    "name": "--slxd-primitive-font-letter-spacing-neg-20",
+    "path": "primitive.font.letter-spacing.neg-20",
+    "layer": "primitive",
+    "family": "typography",
+    "type": "dimension",
+    "value": "-0.02em",
     "reference": null,
     "description": null
   },
@@ -3829,6 +3969,16 @@ export const tokenDocs = [
     "value": "#0f5c45",
     "reference": "{primitive.color.mint.800}",
     "description": "Dark mint, legible on light surfaces (e.g. accent icons)."
+  },
+  {
+    "name": "--slxd-color-text-title",
+    "path": "color.text.title",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#638156",
+    "reference": "{primitive.color.sage.600}",
+    "description": "Title of the welcome screen, over the facade."
   },
   {
     "name": "--slxd-color-surface-default",
@@ -4033,6 +4183,46 @@ export const tokenDocs = [
   {
     "name": "--slxd-color-action-negative-text",
     "path": "color.action.negative.text",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-choice-positive-background",
+    "path": "color.action.choice.positive.background",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#4f7d5c",
+    "reference": "{primitive.color.moss.600}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-choice-positive-text",
+    "path": "color.action.choice.positive.text",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-choice-negative-background",
+    "path": "color.action.choice.negative.background",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#9b4b4b",
+    "reference": "{primitive.color.rose.700}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-choice-negative-text",
+    "path": "color.action.choice.negative.text",
     "layer": "semantic",
     "family": "color",
     "type": "color",
@@ -4596,8 +4786,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "spacing",
     "type": "dimension",
-    "value": "160px",
-    "reference": "{primitive.size.160}",
+    "value": "112px",
+    "reference": "{primitive.size.112}",
     "description": null
   },
   {
@@ -4606,8 +4796,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "spacing",
     "type": "dimension",
-    "value": "96px",
-    "reference": "{primitive.size.96}",
+    "value": "64px",
+    "reference": "{primitive.size.64}",
     "description": null
   },
   {
@@ -4616,8 +4806,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "spacing",
     "type": "dimension",
-    "value": "64px",
-    "reference": "{primitive.size.64}",
+    "value": "40px",
+    "reference": "{primitive.size.40}",
     "description": null
   },
   {
@@ -4626,8 +4816,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "spacing",
     "type": "dimension",
-    "value": "200px",
-    "reference": "{primitive.size.200}",
+    "value": "240px",
+    "reference": "{primitive.size.240}",
     "description": "Round portrait on ID cards."
   },
   {
@@ -4659,6 +4849,16 @@ export const tokenDocs = [
     "value": "560px",
     "reference": "{primitive.size.560}",
     "description": "Width of a list of choices stacked one above the other."
+  },
+  {
+    "name": "--slxd-size-choice-button-width",
+    "path": "size.choice.button-width",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "160px",
+    "reference": "{primitive.size.160}",
+    "description": "Width of the YES / NO buttons, so both are the same size."
   },
   {
     "name": "--slxd-font-family-display",
@@ -4781,6 +4981,26 @@ export const tokenDocs = [
     "description": "Messages outside the stage, in real pixels."
   },
   {
+    "name": "--slxd-font-size-panel-title",
+    "path": "font.size.panel-title",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "dimension",
+    "value": "max(54px, calc(22px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.54}, calc({primitive.screen.heading-min} / var(--slxd-stage-scale)))",
+    "description": "Title of a small panel, e.g. the settings."
+  },
+  {
+    "name": "--slxd-font-size-choice",
+    "path": "font.size.choice",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "dimension",
+    "value": "max(44px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.44}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+    "description": "YES / NO answers placed over a scene."
+  },
+  {
     "name": "--slxd-font-weight-regular",
     "path": "font.weight.regular",
     "layer": "semantic",
@@ -4879,5 +5099,25 @@ export const tokenDocs = [
     "value": "0.04em",
     "reference": "{primitive.font.letter-spacing.40}",
     "description": "Tracking of the display family: titles, buttons and labels."
+  },
+  {
+    "name": "--slxd-font-letter-spacing-tight",
+    "path": "font.letter-spacing.tight",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "dimension",
+    "value": "0.02em",
+    "reference": "{primitive.font.letter-spacing.20}",
+    "description": "A little less tracking than caps, for larger titles."
+  },
+  {
+    "name": "--slxd-font-letter-spacing-close",
+    "path": "font.letter-spacing.close",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "dimension",
+    "value": "-0.02em",
+    "reference": "{primitive.font.letter-spacing.neg-20}",
+    "description": "Pulls a letter closer to the next one, for pairs that look too far apart (e.g. the A of \"Ajustes\")."
   }
 ] as const

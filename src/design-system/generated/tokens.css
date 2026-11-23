@@ -13,12 +13,15 @@
   --slxd-primitive-color-petrol-alpha-94: rgba(20, 38, 46, 0.94);
   --slxd-primitive-color-sand-300: #d6cdb8;
   --slxd-primitive-color-sage-300: #bcd8a8; /** Sage green: buttons. */
+  --slxd-primitive-color-sage-600: #638156; /** Sage green three steps darker than 300: the title of the welcome screen. */
   --slxd-primitive-color-mint-300: #a6f0d3; /** Mint: buttons and accent screens. */
   --slxd-primitive-color-mint-600: #1f9e74;
   --slxd-primitive-color-mint-800: #0f5c45;
   --slxd-primitive-color-green-700: #15803d;
   --slxd-primitive-color-red-700: #b91c1c;
   --slxd-primitive-color-transparent: rgba(0, 0, 0, 0);
+  --slxd-primitive-color-moss-600: #4f7d5c; /** Greyish green: the YES answer. */
+  --slxd-primitive-color-rose-700: #9b4b4b; /** Greyish red: the NO answer. */
   --slxd-primitive-z-index-0: 0;
   --slxd-primitive-z-index-1: 1;
   --slxd-primitive-z-index-2: 2;
@@ -62,6 +65,7 @@
   --slxd-primitive-size-120: 120px;
   --slxd-primitive-size-160: 160px;
   --slxd-primitive-size-200: 200px;
+  --slxd-primitive-size-240: 240px;
   --slxd-primitive-size-400: 400px;
   --slxd-primitive-size-560: 560px;
   --slxd-primitive-screen-target-min: 44px; /** Comfortable touch target (WCAG 2.5.5). */
@@ -103,13 +107,16 @@
   --slxd-primitive-font-line-height-115: 1.15;
   --slxd-primitive-font-line-height-140: 1.4;
   --slxd-primitive-font-line-height-150: 1.5;
+  --slxd-primitive-font-letter-spacing-20: 0.02em;
   --slxd-primitive-font-letter-spacing-40: 0.04em;
+  --slxd-primitive-font-letter-spacing-neg-20: -0.02em;
   --slxd-primitive-shadow-hard: 0px 4px 0px 0px var(--slxd-primitive-color-petrol-900); /** Short, hard shadow in the ink of the outlines: the interface looks stuck on top of the scene. */
   --slxd-color-text-default: var(--slxd-primitive-color-petrol-900);
   --slxd-color-text-inverse: var(--slxd-primitive-color-white); /** Text on ink panels and over the scene. */
   --slxd-color-text-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-text-negative: var(--slxd-primitive-color-red-700);
   --slxd-color-text-accent: var(--slxd-primitive-color-mint-800); /** Dark mint, legible on light surfaces (e.g. accent icons). */
+  --slxd-color-text-title: var(--slxd-primitive-color-sage-600); /** Title of the welcome screen, over the facade. */
   --slxd-color-surface-default: var(--slxd-primitive-color-white); /** Light panels: bubbles, dialogs, feedback, options. */
   --slxd-color-surface-ink: var(--slxd-primitive-color-petrol-alpha-94); /** Dark panels: the narrator. */
   --slxd-color-surface-glass: var(--slxd-primitive-color-petrol-alpha-72); /** HUD band over the scene, with background blur. */
@@ -131,6 +138,10 @@
   --slxd-color-action-positive-text: var(--slxd-primitive-color-white);
   --slxd-color-action-negative-background: var(--slxd-primitive-color-red-700);
   --slxd-color-action-negative-text: var(--slxd-primitive-color-white);
+  --slxd-color-action-choice-positive-background: var(--slxd-primitive-color-moss-600);
+  --slxd-color-action-choice-positive-text: var(--slxd-primitive-color-white);
+  --slxd-color-action-choice-negative-background: var(--slxd-primitive-color-rose-700);
+  --slxd-color-action-choice-negative-text: var(--slxd-primitive-color-white);
   --slxd-color-feedback-positive: var(--slxd-primitive-color-green-700);
   --slxd-color-feedback-negative: var(--slxd-primitive-color-red-700);
   --slxd-color-focus-inner: var(--slxd-primitive-color-white); /** Inner ring of the keyboard focus. */
@@ -185,13 +196,14 @@
   --slxd-size-target-min: max(var(--slxd-primitive-size-112), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Minimum size of anything clickable: 112 stage px, never less than 44 real px. */
   --slxd-size-target-button: max(var(--slxd-primitive-size-96), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Height of a button: 96 stage px, never less than 44 real px. */
   --slxd-size-target-compact: max(var(--slxd-primitive-size-72), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Small controls laid over a picture (e.g. a zoom button): 72 stage px, never less than 44 real px. */
-  --slxd-size-switch-width: var(--slxd-primitive-size-160);
-  --slxd-size-switch-height: var(--slxd-primitive-size-96);
-  --slxd-size-switch-thumb: var(--slxd-primitive-size-64);
-  --slxd-size-avatar: var(--slxd-primitive-size-200); /** Round portrait on ID cards. */
+  --slxd-size-switch-width: var(--slxd-primitive-size-112);
+  --slxd-size-switch-height: var(--slxd-primitive-size-64);
+  --slxd-size-switch-thumb: var(--slxd-primitive-size-40);
+  --slxd-size-avatar: var(--slxd-primitive-size-240); /** Round portrait on ID cards. */
   --slxd-size-hud-height: var(--slxd-primitive-size-120);
   --slxd-size-choice-min-width: var(--slxd-primitive-size-400); /** Minimum width of a choice option, so options line up. */
   --slxd-size-choice-list-width: var(--slxd-primitive-size-560); /** Width of a list of choices stacked one above the other. */
+  --slxd-size-choice-button-width: var(--slxd-primitive-size-160); /** Width of the YES / NO buttons, so both are the same size. */
   --slxd-font-family-display: var(--slxd-primitive-font-family-momo-trust-display); /** Titles, headings and controls (buttons, labels, stamps). */
   --slxd-font-family-body: var(--slxd-primitive-font-family-poppins); /** Prose: dialogues, narration, descriptions and feedback. */
   --slxd-font-size-body: max(var(--slxd-primitive-font-size-32), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale)));
@@ -204,6 +216,8 @@
   --slxd-font-size-stamp: var(--slxd-primitive-font-size-80);
   --slxd-font-size-system-heading: var(--slxd-primitive-font-size-24); /** Messages outside the stage, in real pixels. */
   --slxd-font-size-system-body: var(--slxd-primitive-font-size-18); /** Messages outside the stage, in real pixels. */
+  --slxd-font-size-panel-title: max(var(--slxd-primitive-font-size-54), calc(var(--slxd-primitive-screen-heading-min) / var(--slxd-stage-scale))); /** Title of a small panel, e.g. the settings. */
+  --slxd-font-size-choice: max(var(--slxd-primitive-font-size-44), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale))); /** YES / NO answers placed over a scene. */
   --slxd-font-weight-regular: var(--slxd-primitive-font-weight-400);
   --slxd-font-weight-bold: var(--slxd-primitive-font-weight-700);
   --slxd-font-weight-display: var(--slxd-primitive-font-weight-400); /** Display family: labels. Momo Trust Display has a single weight, 400. */
@@ -214,6 +228,8 @@
   --slxd-font-line-height-normal: var(--slxd-primitive-font-line-height-140);
   --slxd-font-line-height-relaxed: var(--slxd-primitive-font-line-height-150);
   --slxd-font-letter-spacing-caps: var(--slxd-primitive-font-letter-spacing-40); /** Tracking of the display family: titles, buttons and labels. */
+  --slxd-font-letter-spacing-tight: var(--slxd-primitive-font-letter-spacing-20); /** A little less tracking than caps, for larger titles. */
+  --slxd-font-letter-spacing-close: var(--slxd-primitive-font-letter-spacing-neg-20); /** Pulls a letter closer to the next one, for pairs that look too far apart (e.g. the A of "Ajustes"). */
   --slxd-activity-title-hold-duration: var(--slxd-motion-duration-title-hold);
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
   --slxd-backdrop-color: var(--slxd-color-surface-scrim);
@@ -237,13 +253,15 @@
   --slxd-button-lift-easing: var(--slxd-motion-easing-standard);
   --slxd-button-primary-background: var(--slxd-color-action-primary-background);
   --slxd-button-primary-text: var(--slxd-color-action-primary-text);
-  --slxd-button-choice-padding-inline: var(--slxd-space-lg);
-  --slxd-button-choice-font-size: var(--slxd-font-size-label-lg);
+  --slxd-button-choice-padding-inline: var(--slxd-space-md);
+  --slxd-button-choice-font-size: var(--slxd-font-size-choice);
   --slxd-button-choice-font-weight: var(--slxd-font-weight-display-strong);
-  --slxd-button-choice-positive-background: var(--slxd-color-action-positive-background);
-  --slxd-button-choice-positive-text: var(--slxd-color-action-positive-text);
-  --slxd-button-choice-negative-background: var(--slxd-color-action-negative-background);
-  --slxd-button-choice-negative-text: var(--slxd-color-action-negative-text);
+  --slxd-button-choice-positive-background: var(--slxd-color-action-choice-positive-background);
+  --slxd-button-choice-positive-text: var(--slxd-color-action-choice-positive-text);
+  --slxd-button-choice-negative-background: var(--slxd-color-action-choice-negative-background);
+  --slxd-button-choice-negative-text: var(--slxd-color-action-choice-negative-text);
+  --slxd-button-choice-min-height: var(--slxd-size-target-compact);
+  --slxd-button-choice-min-width: var(--slxd-size-choice-button-width);
   --slxd-button-secondary-min-width: var(--slxd-size-choice-min-width);
   --slxd-button-secondary-background: var(--slxd-color-action-secondary-background);
   --slxd-button-secondary-text: var(--slxd-color-action-secondary-text);
@@ -282,7 +300,12 @@
   --slxd-heading-size-heading: var(--slxd-font-size-heading);
   --slxd-heading-size-subheading: var(--slxd-font-size-subheading);
   --slxd-heading-size-system: var(--slxd-font-size-system-heading);
+  --slxd-heading-size-panel: var(--slxd-font-size-panel-title);
   --slxd-heading-overlay-text: var(--slxd-color-text-inverse);
+  --slxd-heading-title-text: var(--slxd-color-text-title);
+  --slxd-heading-title-line-height: var(--slxd-font-line-height-tight);
+  --slxd-heading-panel-letter-spacing: var(--slxd-font-letter-spacing-tight);
+  --slxd-heading-panel-first-letter-spacing: var(--slxd-font-letter-spacing-close);
   --slxd-hotspot-match-gap: var(--slxd-space-sm);
   --slxd-hotspot-match-padding: var(--slxd-space-sm);
   --slxd-hotspot-match-item-gap: var(--slxd-space-2xs);
@@ -358,6 +381,7 @@
   --slxd-poster-step-background: var(--slxd-color-action-negative-background);
   --slxd-poster-step-text: var(--slxd-color-action-negative-text);
   --slxd-poster-footer-background: var(--slxd-color-surface-inverse);
+  --slxd-prompt-panel-gap: var(--slxd-space-lg); /** Between the prompt and the controls under it. */
   --slxd-question-panel-gap: var(--slxd-space-sm);
   --slxd-question-panel-answer-gap: var(--slxd-space-xs);
   --slxd-question-panel-shadow-room: var(--slxd-space-2xs); /** Room below the last answer, so the scroll area does not cut its outline. */
@@ -452,12 +476,11 @@
   --slxd-swipe-sorter-stack-duration: var(--slxd-motion-duration-exit);
   --slxd-swipe-sorter-stack-easing: var(--slxd-motion-easing-enter);
   --slxd-switch-gap: var(--slxd-space-xl);
-  --slxd-switch-min-height: var(--slxd-size-target-min);
+  --slxd-switch-min-height: var(--slxd-size-target-compact);
   --slxd-switch-text: var(--slxd-color-text-default);
-  --slxd-switch-font-family: var(--slxd-font-family-display);
-  --slxd-switch-font-size: var(--slxd-font-size-body);
-  --slxd-switch-font-weight: var(--slxd-font-weight-control);
-  --slxd-switch-letter-spacing: var(--slxd-font-letter-spacing-caps);
+  --slxd-switch-font-family: var(--slxd-font-family-body);
+  --slxd-switch-font-size: var(--slxd-font-size-body-sm);
+  --slxd-switch-font-weight: var(--slxd-font-weight-regular);
   --slxd-switch-track-width: var(--slxd-size-switch-width);
   --slxd-switch-track-height: var(--slxd-size-switch-height);
   --slxd-switch-thumb-size: var(--slxd-size-switch-thumb);
@@ -470,6 +493,7 @@
   --slxd-switch-on-background: var(--slxd-color-action-primary-background);
   --slxd-switch-duration: var(--slxd-motion-duration-press);
   --slxd-switch-easing: var(--slxd-motion-easing-standard);
+  --slxd-switch-line-height: var(--slxd-font-line-height-tight);
   --slxd-tablet-bezel: var(--slxd-color-border-ink);
   --slxd-tablet-bezel-width: var(--slxd-space-lg);
   --slxd-tablet-radius: var(--slxd-radius-lg);

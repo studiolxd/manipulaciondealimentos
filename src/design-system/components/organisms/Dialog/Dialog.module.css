@@ -14,3 +14,10 @@
   right: var(--slxd-dialog-close-inset);
   bottom: var(--slxd-dialog-close-inset);
 }
+
+/* The close button in the top right corner. */
+.cornerClose {
+  position: absolute;
+  top: var(--slxd-dialog-close-inset);
+  right: var(--slxd-dialog-close-inset);
+}

@@ -12,8 +12,8 @@
   font-family: var(--slxd-switch-font-family);
   font-size: var(--slxd-switch-font-size);
   font-weight: var(--slxd-switch-font-weight);
-  letter-spacing: var(--slxd-switch-letter-spacing);
-  text-transform: uppercase;
+  line-height: var(--slxd-switch-line-height);
+  text-transform: none;
   cursor: pointer;
 }
 

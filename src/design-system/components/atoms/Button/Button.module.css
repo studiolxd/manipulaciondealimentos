@@ -139,6 +139,8 @@
 }
 
 .button[data-variant^='choice'] {
+  min-height: var(--slxd-button-choice-min-height);
+  min-width: var(--slxd-button-choice-min-width);
   padding-inline: var(--slxd-button-choice-padding-inline);
   font-size: var(--slxd-button-choice-font-size);
   font-weight: var(--slxd-button-choice-font-weight);

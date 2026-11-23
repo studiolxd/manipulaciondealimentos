@@ -17,8 +17,8 @@ export function WelcomeScene() {
   return (
     <SceneFrame
       heading={welcome.heading}
-      visibleHeadingTop={360}
-      headingVariant="display"
+      visibleHeadingTop={165}
+      headingVariant="title"
       background={image('facadeBackground')}
       backgroundAlt=""
       focusHeading={sceneReady}
@@ -41,8 +41,8 @@ export function WelcomeScene() {
       {settingsOpen && (
         <Layer layer="dialog" backdrop>
           <Positioned center="both" width={900}>
-            <Dialog label={ui.settings.title} closeLabel={ui.settings.close} onClose={() => setSettingsOpen(false)}>
-              <Heading level={2}>{ui.settings.title}</Heading>
+            <Dialog label={ui.settings.title} closeLabel={ui.settings.close} closeInCorner onClose={() => setSettingsOpen(false)}>
+              <Heading level={2} variant="panel">{ui.settings.title}</Heading>
               <Switch label={ui.settings.voice} checked={settings.voice} onChange={(on) => setSetting('voice', on)} />
               <Switch
                 label={ui.settings.effects}

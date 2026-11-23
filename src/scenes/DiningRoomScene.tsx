@@ -13,7 +13,7 @@ export function DiningRoomScene() {
       background={image('diningRoomBackground')}
       backgroundAlt={diningRoom.backgroundAlt}
       ready={sceneReady}
-      character={{ source: image('davidStanding'), alt: diningRoom.davidAlt, bottom: 0, left: 120, height: 900 }}
+      character={{ source: image('davidDiningRoom'), alt: diningRoom.davidAlt, bottom: 0, left: 120, height: 900 }}
       speech={{
         speaker: 'David',
         blocks: diningRoom.speech(playerName).map(text),

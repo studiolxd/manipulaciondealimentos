@@ -8,6 +8,8 @@ interface DialogProps {
   label: string
   closeLabel: string
   viewTransitionName?: string
+  /** Small close button in the top right corner instead of the bottom right one. */
+  closeInCorner?: boolean
   onClose: () => void
   children: ReactNode
 }
@@ -15,7 +17,7 @@ interface DialogProps {
 // Surface + IconButton: modal panel inside the stage. It is opened without
 // showModal(), which would move it to the top layer, outside the stage
 // scaling; the caller makes the rest of the scene inert while it is open.
-export function Dialog({ label, closeLabel, viewTransitionName, onClose, children }: DialogProps) {
+export function Dialog({ label, closeLabel, viewTransitionName, closeInCorner = false, onClose, children }: DialogProps) {
   const closeRef = useRef<HTMLButtonElement>(null)
 
   useAutoFocus(closeRef)
@@ -34,8 +36,8 @@ export function Dialog({ label, closeLabel, viewTransitionName, onClose, childre
       }}
     >
       <div className={styles.body}>{children}</div>
-      <div className={styles.close}>
-        <IconButton ref={closeRef} icon="close" label={closeLabel} onClick={onClose} />
+      <div className={closeInCorner ? styles.cornerClose : styles.close}>
+        <IconButton ref={closeRef} icon="close" label={closeLabel} compact={closeInCorner} onClick={onClose} />
       </div>
     </Surface>
   )

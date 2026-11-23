@@ -27,14 +27,14 @@
         }
       },
       "petrol-alpha": {
-        "94": {
-          "$value": "rgba(20, 38, 46, 0.94)"
+        "35": {
+          "$value": "rgba(20, 38, 46, 0.35)"
         },
         "72": {
           "$value": "rgba(20, 38, 46, 0.72)"
         },
-        "35": {
-          "$value": "rgba(20, 38, 46, 0.35)"
+        "94": {
+          "$value": "rgba(20, 38, 46, 0.94)"
         }
       },
       "sand": {
@@ -46,6 +46,10 @@
         "300": {
           "$value": "#bcd8a8",
           "$description": "Sage green: buttons."
+        },
+        "600": {
+          "$value": "#638156",
+          "$description": "Sage green three steps darker than 300: the title of the welcome screen."
         }
       },
       "mint": {
@@ -72,6 +76,18 @@
       },
       "transparent": {
         "$value": "rgba(0, 0, 0, 0)"
+      },
+      "moss": {
+        "600": {
+          "$value": "#4f7d5c",
+          "$description": "Greyish green: the YES answer."
+        }
+      },
+      "rose": {
+        "700": {
+          "$value": "#9b4b4b",
+          "$description": "Greyish red: the NO answer."
+        }
       }
     }
   }

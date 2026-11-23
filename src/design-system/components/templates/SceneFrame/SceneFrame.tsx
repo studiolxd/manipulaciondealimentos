@@ -10,8 +10,8 @@ interface SceneFrameProps {
   heading: string
   /** Shows the heading on screen at this distance from the top; otherwise only screen readers get it. */
   visibleHeadingTop?: number
-  /** `display` for title screens; scene headings otherwise. */
-  headingVariant?: 'heading' | 'display'
+  /** `title` for the welcome screen, `display` for other title screens; scene headings otherwise. */
+  headingVariant?: 'heading' | 'display' | 'title'
   background: ImageSource
   /** Empty for purely decorative backgrounds. */
   backgroundAlt: string

@@ -124,10 +124,16 @@
         "$type": "number"
       },
       "letter-spacing": {
+        "20": {
+          "$value": "0.02em"
+        },
         "40": {
           "$value": "0.04em"
         },
-        "$type": "dimension"
+        "$type": "dimension",
+        "neg-20": {
+          "$value": "-0.02em"
+        }
       }
     }
   }

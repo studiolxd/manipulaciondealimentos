@@ -15,7 +15,7 @@ export const welcome = {
 // Before the script, only outside an LMS (inside one the name comes from it).
 export const nameForm = {
   heading: '¿Cómo te llamas?',
-  label: 'Tu nombre',
+  label: '¿Cómo te llamas?',
   missingName: 'Escribe tu nombre para continuar.',
   next: 'Continuar',
 }
@@ -23,7 +23,7 @@ export const nameForm = {
 // Before the script: how the player wants to be addressed.
 export const addressForm = {
   heading: (name: string | null) =>
-    name ? `¡Hola, ${name}! ¿Cómo quieres que nos dirijamos a ti?` : '¿Cómo quieres que nos dirijamos a ti?',
+    name ? `Hola ${name}, ¿cómo quieres que nos dirijamos a ti?` : '¿Cómo quieres que nos dirijamos a ti?',
   legend: 'Forma de tratamiento',
   options: [
     { gender: 'male', label: 'Masculino' },

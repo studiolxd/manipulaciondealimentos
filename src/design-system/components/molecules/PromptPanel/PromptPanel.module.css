@@ -1,0 +1,10 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-prompt-panel-gap);
+  align-items: center;
+}
+
+.prompt {
+  text-align: center;
+}

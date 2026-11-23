@@ -43,6 +43,10 @@
       "system": {
         "$type": "dimension",
         "$value": "{font.size.system-heading}"
+      },
+      "panel": {
+        "$type": "dimension",
+        "$value": "{font.size.panel-title}"
       }
     },
     "overlay": {
@@ -50,6 +54,26 @@
       "text": {
         "$type": "color",
         "$value": "{color.text.inverse}"
+      }
+    },
+    "title": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.text.title}"
+      },
+      "line-height": {
+        "$type": "number",
+        "$value": "{font.line-height.tight}"
+      }
+    },
+    "panel": {
+      "letter-spacing": {
+        "$type": "dimension",
+        "$value": "{font.letter-spacing.tight}"
+      },
+      "first-letter-spacing": {
+        "$type": "dimension",
+        "$value": "{font.letter-spacing.close}"
       }
     }
   }

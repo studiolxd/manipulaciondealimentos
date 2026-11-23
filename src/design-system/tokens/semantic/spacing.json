@@ -74,17 +74,17 @@
     },
     "switch": {
       "width": {
-        "$value": "{primitive.size.160}"
+        "$value": "{primitive.size.112}"
       },
       "height": {
-        "$value": "{primitive.size.96}"
+        "$value": "{primitive.size.64}"
       },
       "thumb": {
-        "$value": "{primitive.size.64}"
+        "$value": "{primitive.size.40}"
       }
     },
     "avatar": {
-      "$value": "{primitive.size.200}",
+      "$value": "{primitive.size.240}",
       "$description": "Round portrait on ID cards."
     },
     "hud": {
@@ -100,6 +100,10 @@
       "list-width": {
         "$value": "{primitive.size.560}",
         "$description": "Width of a list of choices stacked one above the other."
+      },
+      "button-width": {
+        "$value": "{primitive.size.160}",
+        "$description": "Width of the YES / NO buttons, so both are the same size."
       }
     }
   }

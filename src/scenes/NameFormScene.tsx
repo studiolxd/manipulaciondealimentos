@@ -3,15 +3,18 @@ import { image } from '../content/images'
 import { nameForm } from '../content/scenes'
 import { Button, InlineAlert, Positioned, SceneFrame, Surface, TextField } from '../design-system'
 import { useGame } from '../game/game'
+import { AddressFormScene } from './AddressFormScene'
 
 const ERROR_ID = 'name-error'
 const MAX_LENGTH = 40
 
-// First screen outside an LMS: the player types their name.
+// First screen outside an LMS: the player types their name; the form of address
+// (AddressFormScene) takes over right after it, with no fade in between.
 export function NameFormScene() {
-  const { sceneReady, playerName, setPlayerName, goTo } = useGame()
+  const { sceneReady, playerName, setPlayerName } = useGame()
   const [name, setName] = useState(playerName ?? '')
   const [showError, setShowError] = useState(false)
+  const [named, setNamed] = useState(false)
 
   function next() {
     const trimmed = name.trim()
@@ -20,14 +23,16 @@ export function NameFormScene() {
       return
     }
     setPlayerName(trimmed)
-    goTo('address-form')
+    setNamed(true)
   }
+
+  // The form of address follows on the same background, without a fade between the two.
+  if (named) return <AddressFormScene />
 
   return (
     <SceneFrame
       heading={nameForm.heading}
-      visibleHeadingTop={200}
-      background={image('addressFormBackground')}
+      background={image('facadeBackground')}
       backgroundAlt=""
       focusHeading={sceneReady}
     >
