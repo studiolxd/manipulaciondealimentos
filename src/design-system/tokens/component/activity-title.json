@@ -7,6 +7,15 @@
     "easing": {
       "$type": "cubicBezier",
       "$value": "{motion.easing.exit}"
+    },
+    "shadow-offset": {
+      "$type": "dimension",
+      "$value": "{space.2xs}",
+      "$description": "A hard shadow under the letters, only on the activity titles."
+    },
+    "shadow-color": {
+      "$type": "color",
+      "$value": "{color.shadow.default}"
     }
   }
 }

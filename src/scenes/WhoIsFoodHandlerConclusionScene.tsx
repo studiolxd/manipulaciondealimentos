@@ -12,8 +12,7 @@ export function WhoIsFoodHandlerConclusionScene() {
       background={image('diningTableBackground')}
       backgroundAlt={conclusion.backgroundAlt}
       ready={sceneReady}
-      character={{ source: image('davidSeated'), alt: conclusion.davidAlt, bottom: 220, left: 160, height: 640 }}
-      speech={{ speaker: 'David', blocks: conclusion.speech, tail: 'left', top: 160, left: 940, width: 900 }}
+      speech={{ speaker: 'David', blocks: conclusion.speech, tail: 'right', top: 100, left: 40, width: 640 }}
       action={{ label: conclusion.next, onClick: () => goTo('cameras-intro') }}
       hud
     />

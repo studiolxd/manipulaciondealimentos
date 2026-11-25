@@ -21,6 +21,26 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-activity-title-shadow-offset",
+    "path": "activity-title.shadow-offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": "A hard shadow under the letters, only on the activity titles."
+  },
+  {
+    "name": "--slxd-activity-title-shadow-color",
+    "path": "activity-title.shadow-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.35)",
+    "reference": "{color.shadow.default}",
+    "description": null
+  },
+  {
     "name": "--slxd-backdrop-color",
     "path": "backdrop.color",
     "layer": "component",
@@ -896,7 +916,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "120px",
+    "value": "88px",
     "reference": "{size.hud.height}",
     "description": null
   },
@@ -1076,8 +1096,8 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "32px",
-    "reference": "{space.md}",
+    "value": "24px",
+    "reference": "{space.sm}",
     "description": null
   },
   {
@@ -3421,6 +3441,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-primitive-size-88",
+    "path": "primitive.size.88",
+    "layer": "primitive",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "88px",
+    "reference": null,
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-size-96",
     "path": "primitive.size.96",
     "layer": "primitive",
@@ -4826,8 +4856,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "spacing",
     "type": "dimension",
-    "value": "120px",
-    "reference": "{primitive.size.120}",
+    "value": "88px",
+    "reference": "{primitive.size.88}",
     "description": null
   },
   {

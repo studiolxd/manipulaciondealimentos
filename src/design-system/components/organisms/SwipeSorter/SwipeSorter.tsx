@@ -70,7 +70,7 @@ export function SwipeSorter({ item, upcoming = [], feedback, labels, done, ref, 
     <>
       {item && (
         <Layer inert={feedbackOpen}>
-          <Positioned top={200} left={620} width={680} height={760}>
+          <Positioned top={230} left={650} width={620} height={700}>
             {/* The stack: the next cards behind, deepest first, each a little higher and smaller.
                 While the feedback is open the whole stack waits one place back, and moves
                 forward when it closes, so the move is seen. */}

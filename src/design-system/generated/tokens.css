@@ -60,6 +60,7 @@
   --slxd-primitive-size-56: 56px;
   --slxd-primitive-size-64: 64px;
   --slxd-primitive-size-72: 72px;
+  --slxd-primitive-size-88: 88px;
   --slxd-primitive-size-96: 96px;
   --slxd-primitive-size-112: 112px;
   --slxd-primitive-size-120: 120px;
@@ -200,7 +201,7 @@
   --slxd-size-switch-height: var(--slxd-primitive-size-64);
   --slxd-size-switch-thumb: var(--slxd-primitive-size-40);
   --slxd-size-avatar: var(--slxd-primitive-size-240); /** Round portrait on ID cards. */
-  --slxd-size-hud-height: var(--slxd-primitive-size-120);
+  --slxd-size-hud-height: var(--slxd-primitive-size-88);
   --slxd-size-choice-min-width: var(--slxd-primitive-size-400); /** Minimum width of a choice option, so options line up. */
   --slxd-size-choice-list-width: var(--slxd-primitive-size-560); /** Width of a list of choices stacked one above the other. */
   --slxd-size-choice-button-width: var(--slxd-primitive-size-160); /** Width of the YES / NO buttons, so both are the same size. */
@@ -232,6 +233,8 @@
   --slxd-font-letter-spacing-close: var(--slxd-primitive-font-letter-spacing-neg-20); /** Pulls a letter closer to the next one, for pairs that look too far apart (e.g. the A of "Ajustes"). */
   --slxd-activity-title-hold-duration: var(--slxd-motion-duration-title-hold);
   --slxd-activity-title-easing: var(--slxd-motion-easing-exit);
+  --slxd-activity-title-shadow-offset: var(--slxd-space-2xs); /** A hard shadow under the letters, only on the activity titles. */
+  --slxd-activity-title-shadow-color: var(--slxd-color-shadow-default);
   --slxd-backdrop-color: var(--slxd-color-surface-scrim);
   --slxd-backdrop-dark-color: var(--slxd-color-surface-ink); /** Dims the scene behind a close-up (e.g. a worker's hands, a poster). */
   --slxd-button-min-height: var(--slxd-size-target-button);
@@ -337,7 +340,7 @@
   --slxd-icon-color-negative: var(--slxd-color-feedback-negative);
   --slxd-icon-loop-duration: var(--slxd-motion-duration-icon-loop);
   --slxd-icon-loop-easing: var(--slxd-motion-easing-standard);
-  --slxd-id-card-gap: var(--slxd-space-md);
+  --slxd-id-card-gap: var(--slxd-space-sm);
   --slxd-id-card-text-gap: var(--slxd-space-2xs);
   --slxd-id-card-avatar-size: var(--slxd-size-avatar);
   --slxd-id-card-avatar-radius: var(--slxd-radius-full);

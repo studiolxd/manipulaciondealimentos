@@ -104,6 +104,7 @@ export function ActivityScene({
                 icon="statement"
                 label={statement.openLabel}
                 opensDialog
+                compact
                 // While open, the icon has become the dialog.
                 concealed={statementOpen}
                 viewTransitionName={STATEMENT_TRANSITION}

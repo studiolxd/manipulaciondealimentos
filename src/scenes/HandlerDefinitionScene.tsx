@@ -12,8 +12,7 @@ export function HandlerDefinitionScene() {
       background={image('diningTableBackground')}
       backgroundAlt={handlerDefinition.backgroundAlt}
       ready={sceneReady}
-      character={{ source: image('davidSeated'), alt: handlerDefinition.davidAlt, bottom: 220, left: 160, height: 640 }}
-      speech={{ speaker: 'David', blocks: handlerDefinition.speech.map(text), tail: 'left', top: 160, left: 940, width: 900 }}
+      speech={{ speaker: 'David', blocks: handlerDefinition.speech.map(text), tail: 'right', top: 100, left: 40, width: 640 }}
       action={{ label: handlerDefinition.next, onClick: () => goTo('who-is-food-handler') }}
     />
   )

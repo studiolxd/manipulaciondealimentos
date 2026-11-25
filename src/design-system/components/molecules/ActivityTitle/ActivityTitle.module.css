@@ -1,6 +1,7 @@
 .title {
   width: max-content;
   max-width: 1600px;
+  filter: drop-shadow(0 var(--slxd-activity-title-shadow-offset) 0 var(--slxd-activity-title-shadow-color));
   animation: hold-then-fade var(--slxd-activity-title-hold-duration) var(--slxd-activity-title-easing) forwards;
 }
 

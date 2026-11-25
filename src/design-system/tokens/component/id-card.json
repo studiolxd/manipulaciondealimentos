@@ -2,7 +2,7 @@
   "id-card": {
     "gap": {
       "$type": "dimension",
-      "$value": "{space.md}"
+      "$value": "{space.sm}"
     },
     "text-gap": {
       "$type": "dimension",

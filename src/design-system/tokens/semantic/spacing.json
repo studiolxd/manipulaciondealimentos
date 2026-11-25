@@ -89,7 +89,7 @@
     },
     "hud": {
       "height": {
-        "$value": "{primitive.size.120}"
+        "$value": "{primitive.size.88}"
       }
     },
     "choice": {
