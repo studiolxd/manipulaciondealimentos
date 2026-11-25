@@ -41,6 +41,7 @@ const placeholders: Record<AssetId | RasterIconName, Placeholder> = {
   cardSergio: { shape: 'rounded', color: '#9aa3b5', label: 'Sergio' },
   cardElena: { shape: 'rounded', color: '#c9c28f', label: 'Elena' },
   receptionBackground: { shape: 'rect', color: '#d8c3a5', label: 'Fondo · Recepción (tablet en el mostrador)' },
+  tabletFrameImage: { shape: 'rect', color: '#2b2523', label: 'Tablet · Marco sobre el fondo' },
   counterTopBackground: { shape: 'rect', color: '#a87b51', label: 'Fondo · Mostrador de madera desde arriba' },
   lockerRoomBackground: { shape: 'rect', color: '#b8c4cc', label: 'Fondo · Vestuario' },
   davidHalfBody: { shape: 'rounded', color: '#4f7a5a', label: 'David · De pie, medio cuerpo' },

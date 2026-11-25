@@ -156,7 +156,7 @@
   --button-text: var(--slxd-button-choice-negative-text);
 }
 
-.button:is([data-variant='icon'], [data-variant='icon-compact']) {
+.button:is([data-variant='icon'], [data-variant='icon-compact'], [data-variant='icon-hud']) {
   --button-background: var(--slxd-button-icon-background);
   --button-text: var(--slxd-button-icon-text);
 
@@ -170,4 +170,10 @@
 .button[data-variant='icon-compact'] {
   width: var(--slxd-button-icon-compact-size);
   height: var(--slxd-button-icon-compact-size);
+}
+
+/* In the HUD band: as thin as the band allows. */
+.button[data-variant='icon-hud'] {
+  width: var(--slxd-button-icon-hud-size);
+  height: var(--slxd-button-icon-hud-size);
 }

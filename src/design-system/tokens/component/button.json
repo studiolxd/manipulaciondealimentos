@@ -200,6 +200,10 @@
         "$type": "dimension",
         "$value": "{size.target.compact}"
       },
+      "hud-size": {
+        "$type": "dimension",
+        "$value": "{size.target.hud}"
+      },
       "size": {
         "$type": "dimension",
         "$value": "{size.target.min}"

@@ -8,6 +8,7 @@ import type { VideoId } from '../content/videos'
 import {
   ActivityScene,
   FeedbackPanel,
+  Image,
   Layer,
   MediaGallery,
   OptionButtons,
@@ -119,9 +120,16 @@ export function SecurityCamerasScene() {
   return (
     <ActivityScene
       heading={activity.heading}
-      background={image('counterTopBackground')}
+      background={image('receptionBackground')}
       backgroundAlt={activity.backgroundAlt}
       ready={sceneReady}
+      statementBox={{ top: 120, left: 40, width: 680, tail: 'right' }}
+      // The tablet is on screen from the title on; the gallery and the videos go over it.
+      underlay={
+        <Positioned top={0} left={0} width={1920} height={1080}>
+          <Image source={image('tabletFrameImage')} alt="" fit="cover" />
+        </Positioned>
+      }
       title={activity.title}
       statement={{
         speaker: 'David',
@@ -132,7 +140,7 @@ export function SecurityCamerasScene() {
       }}
       onPlayStart={() => xapi.activityAttempted(ACTIVITY_ID, activity.title)}
     >
-      <Positioned top={150} left={160} width={1600} height={880}>
+      <Positioned top={100} left={160} width={1600} height={880}>
         <TabletFrame>
           {view.kind === 'gallery' && (
             <MediaGallery

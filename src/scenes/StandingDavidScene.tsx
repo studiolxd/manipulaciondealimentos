@@ -23,11 +23,18 @@ interface StandingDavidSceneProps {
 // the player on. Used by the reception and changing-room scenes.
 export function StandingDavidScene({ content, background, side, next }: StandingDavidSceneProps) {
   const { sceneReady, goTo, text } = useGame()
-  const character =
-    side === 'right'
+  // The reception art already has David in it: no cut-out over it, and the bubble goes in the free space on the left.
+  const inBackground = background === 'receptionBackground'
+  const character = inBackground
+    ? undefined
+    : side === 'right'
       ? { source: image('davidHalfBody'), alt: content.davidAlt, bottom: 0, right: 140, height: 900 }
       : { source: image('davidHalfBody'), alt: content.davidAlt, bottom: 0, left: 140, height: 900 }
-  const speechBox = side === 'right' ? { top: 160, left: 120, width: 980 } : { top: 160, left: 820, width: 980 }
+  const speechBox = inBackground
+    ? { top: 120, left: 40, width: 680 }
+    : side === 'right'
+      ? { top: 160, left: 120, width: 980 }
+      : { top: 160, left: 820, width: 980 }
   return (
     <DialogueScene
       heading={content.heading}
@@ -35,9 +42,8 @@ export function StandingDavidScene({ content, background, side, next }: Standing
       backgroundAlt={content.backgroundAlt}
       ready={sceneReady}
       character={character}
-      speech={{ speaker: 'David', blocks: content.speech.map(text), tail: side, ...speechBox }}
+      speech={{ speaker: 'David', blocks: content.speech.map(text), tail: inBackground ? 'right' : side, ...speechBox }}
       action={{ label: content.next, onClick: () => goTo(next) }}
-      hud
     />
   )
 }

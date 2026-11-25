@@ -501,6 +501,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-icon-hud-size",
+    "path": "button.icon.hud-size",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(48px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "{size.target.hud}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-icon-size",
     "path": "button.icon.size",
     "layer": "component",
@@ -916,7 +926,7 @@ export const tokenDocs = [
     "layer": "component",
     "family": "spacing",
     "type": "dimension",
-    "value": "88px",
+    "value": "64px",
     "reference": "{size.hud.height}",
     "description": null
   },
@@ -1198,6 +1208,16 @@ export const tokenDocs = [
     "type": "dimension",
     "value": "max(32px, calc(15px / var(--slxd-stage-scale)))",
     "reference": "{font.size.body}",
+    "description": null
+  },
+  {
+    "name": "--slxd-label-size-hud",
+    "path": "label.size.hud",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(26px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "{font.size.hud}",
     "description": null
   },
   {
@@ -4801,6 +4821,16 @@ export const tokenDocs = [
     "description": "Height of a button: 96 stage px, never less than 44 real px."
   },
   {
+    "name": "--slxd-size-target-hud",
+    "path": "size.target.hud",
+    "layer": "semantic",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "max(48px, calc(44px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.size.48}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
+    "description": "Controls in the HUD band: 48 stage px, never less than 44 real px."
+  },
+  {
     "name": "--slxd-size-target-compact",
     "path": "size.target.compact",
     "layer": "semantic",
@@ -4856,8 +4886,8 @@ export const tokenDocs = [
     "layer": "semantic",
     "family": "spacing",
     "type": "dimension",
-    "value": "88px",
-    "reference": "{primitive.size.88}",
+    "value": "64px",
+    "reference": "{primitive.size.64}",
     "description": null
   },
   {
@@ -4969,6 +4999,16 @@ export const tokenDocs = [
     "value": "max(94px, calc(28px / var(--slxd-stage-scale)))",
     "reference": "max({primitive.font.size.94}, calc({primitive.screen.title-min} / var(--slxd-stage-scale)))",
     "description": null
+  },
+  {
+    "name": "--slxd-font-size-hud",
+    "path": "font.size.hud",
+    "layer": "semantic",
+    "family": "typography",
+    "type": "dimension",
+    "value": "max(26px, calc(15px / var(--slxd-stage-scale)))",
+    "reference": "max({primitive.font.size.26}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+    "description": "Text in the HUD band."
   },
   {
     "name": "--slxd-font-size-label-lg",

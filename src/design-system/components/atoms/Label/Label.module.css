@@ -9,6 +9,10 @@
   font-size: var(--slxd-label-size-md);
 }
 
+.label[data-size='hud'] {
+  font-size: var(--slxd-label-size-hud);
+}
+
 .label[data-size='lg'] {
   font-size: var(--slxd-label-size-lg);
 }

@@ -33,6 +33,10 @@
       "display": {
         "$value": "max({primitive.font.size.94}, calc({primitive.screen.title-min} / var(--slxd-stage-scale)))"
       },
+      "hud": {
+        "$value": "max({primitive.font.size.26}, calc({primitive.screen.text-min} / var(--slxd-stage-scale)))",
+        "$description": "Text in the HUD band."
+      },
       "label-lg": {
         "$value": "{primitive.font.size.58}"
       },

@@ -20,6 +20,7 @@ interface ButtonProps {
     | 'choice-negative'
     | 'icon'
     | 'icon-compact'
+    | 'icon-hud'
     | 'bare'
     | 'option'
     | 'option-done'

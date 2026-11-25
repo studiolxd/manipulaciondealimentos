@@ -14,7 +14,6 @@ export function WhoIsFoodHandlerConclusionScene() {
       ready={sceneReady}
       speech={{ speaker: 'David', blocks: conclusion.speech, tail: 'right', top: 100, left: 40, width: 640 }}
       action={{ label: conclusion.next, onClick: () => goTo('cameras-intro') }}
-      hud
     />
   )
 }

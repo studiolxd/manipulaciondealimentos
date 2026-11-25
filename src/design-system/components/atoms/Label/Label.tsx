@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import styles from './Label.module.css'
 
 interface LabelProps {
-  size?: 'md' | 'lg'
+  size?: 'hud' | 'md' | 'lg'
   /** `inverse` over dark backgrounds such as the HUD. */
   tone?: 'default' | 'inverse'
   children: ReactNode

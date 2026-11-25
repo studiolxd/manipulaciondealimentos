@@ -33,6 +33,7 @@ export const assets = {
   cardElena: { path: 'assets/cards/elena.png', width: 800, height: 800 },
   // Scenes 7 to 27: reception, counter, changing room and David standing.
   receptionBackground: { path: 'assets/backgrounds/reception.png', width: 1920, height: 1080 },
+  tabletFrameImage: { path: 'assets/backgrounds/tablet-frame.png', width: 1920, height: 1080 },
   counterTopBackground: { path: 'assets/backgrounds/counter-top.png', width: 1920, height: 1080 },
   lockerRoomBackground: { path: 'assets/backgrounds/locker-room.png', width: 1920, height: 1080 },
   davidHalfBody: { path: 'assets/characters/david-half-body.png', width: 720, height: 900 },

@@ -196,12 +196,13 @@
   --slxd-size-logo-splash: clamp(var(--slxd-primitive-screen-logo-min), 40vw, var(--slxd-primitive-screen-logo-max)); /** Studio LXD logo on the splash screen: 40% of the window, between the minimum and maximum. */
   --slxd-size-target-min: max(var(--slxd-primitive-size-112), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Minimum size of anything clickable: 112 stage px, never less than 44 real px. */
   --slxd-size-target-button: max(var(--slxd-primitive-size-96), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Height of a button: 96 stage px, never less than 44 real px. */
+  --slxd-size-target-hud: max(var(--slxd-primitive-size-48), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Controls in the HUD band: 48 stage px, never less than 44 real px. */
   --slxd-size-target-compact: max(var(--slxd-primitive-size-72), calc(var(--slxd-primitive-screen-target-min) / var(--slxd-stage-scale))); /** Small controls laid over a picture (e.g. a zoom button): 72 stage px, never less than 44 real px. */
   --slxd-size-switch-width: var(--slxd-primitive-size-112);
   --slxd-size-switch-height: var(--slxd-primitive-size-64);
   --slxd-size-switch-thumb: var(--slxd-primitive-size-40);
   --slxd-size-avatar: var(--slxd-primitive-size-240); /** Round portrait on ID cards. */
-  --slxd-size-hud-height: var(--slxd-primitive-size-88);
+  --slxd-size-hud-height: var(--slxd-primitive-size-64);
   --slxd-size-choice-min-width: var(--slxd-primitive-size-400); /** Minimum width of a choice option, so options line up. */
   --slxd-size-choice-list-width: var(--slxd-primitive-size-560); /** Width of a list of choices stacked one above the other. */
   --slxd-size-choice-button-width: var(--slxd-primitive-size-160); /** Width of the YES / NO buttons, so both are the same size. */
@@ -213,6 +214,7 @@
   --slxd-font-size-subheading: var(--slxd-primitive-font-size-54);
   --slxd-font-size-heading: max(var(--slxd-primitive-font-size-66), calc(var(--slxd-primitive-screen-heading-min) / var(--slxd-stage-scale)));
   --slxd-font-size-display: max(var(--slxd-primitive-font-size-94), calc(var(--slxd-primitive-screen-title-min) / var(--slxd-stage-scale)));
+  --slxd-font-size-hud: max(var(--slxd-primitive-font-size-26), calc(var(--slxd-primitive-screen-text-min) / var(--slxd-stage-scale))); /** Text in the HUD band. */
   --slxd-font-size-label-lg: var(--slxd-primitive-font-size-58);
   --slxd-font-size-stamp: var(--slxd-primitive-font-size-80);
   --slxd-font-size-system-heading: var(--slxd-primitive-font-size-24); /** Messages outside the stage, in real pixels. */
@@ -281,6 +283,7 @@
   --slxd-button-option-font-weight: var(--slxd-font-weight-bold);
   --slxd-button-option-line-height: var(--slxd-font-line-height-snug);
   --slxd-button-icon-compact-size: var(--slxd-size-target-compact);
+  --slxd-button-icon-hud-size: var(--slxd-size-target-hud);
   --slxd-button-icon-size: var(--slxd-size-target-min);
   --slxd-button-icon-padding: var(--slxd-space-2xs);
   --slxd-button-icon-background: var(--slxd-color-action-primary-background);
@@ -351,6 +354,7 @@
   --slxd-label-font-weight: var(--slxd-font-weight-display);
   --slxd-label-letter-spacing: var(--slxd-font-letter-spacing-caps);
   --slxd-label-size-md: var(--slxd-font-size-body);
+  --slxd-label-size-hud: var(--slxd-font-size-hud);
   --slxd-label-size-lg: var(--slxd-font-size-label-lg);
   --slxd-label-inverse-text: var(--slxd-color-text-inverse);
   --slxd-media-gallery-gap: var(--slxd-space-xl);

@@ -73,17 +73,17 @@ export function WhoIsAffectedScene() {
         openLabel: activity.title,
         closeLabel: activity.title,
       }}
-      character={{ source: image('davidHalfBody'), alt: activity.davidAlt, bottom: 0, left: 40, height: 900 }}
+      statementBox={{ top: 120, left: 40, width: 680, tail: 'right' }}
       startLabel={activity.start}
-      hudEnd={<Label tone="inverse">{activity.progress(index + 1, deck.length)}</Label>}
+      hudEnd={<Label size="hud" tone="inverse">{activity.progress(index + 1, deck.length)}</Label>}
       onPlayStart={() => xapi.activityAttempted(ACTIVITY_ID, activity.title)}
     >
-      <Positioned top={140} left={760} width={1120}>
+      <Positioned top={120} left={40} width={680}>
         <SpeechBubble
           key={`${current.id}-${answers}`}
           speaker="David"
           blocks={[speech]}
-          tail="left"
+          tail="right"
           onFinished={() => setTextShown(true)}
         />
       </Positioned>
@@ -92,7 +92,7 @@ export function WhoIsAffectedScene() {
           While David gives the feedback they give way to "Probar de nuevo"
           (wrong) or "Siguiente" (right), which appear once the bubble has shown
           all its text. */}
-      <Positioned bottom={56} centerAt={1320}>
+      <Positioned bottom={56} centerAt={380}>
         {!result ? (
           <OptionButtons stacked label={activity.optionsLabel} options={activity.options} onSelect={choose} />
         ) : !textShown ? null : !right ? (

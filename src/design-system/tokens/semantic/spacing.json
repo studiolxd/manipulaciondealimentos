@@ -67,6 +67,10 @@
         "$value": "max({primitive.size.96}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
         "$description": "Height of a button: 96 stage px, never less than 44 real px."
       },
+      "hud": {
+        "$value": "max({primitive.size.48}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
+        "$description": "Controls in the HUD band: 48 stage px, never less than 44 real px."
+      },
       "compact": {
         "$value": "max({primitive.size.72}, calc({primitive.screen.target-min} / var(--slxd-stage-scale)))",
         "$description": "Small controls laid over a picture (e.g. a zoom button): 72 stage px, never less than 44 real px."
@@ -89,7 +93,7 @@
     },
     "hud": {
       "height": {
-        "$value": "{primitive.size.88}"
+        "$value": "{primitive.size.64}"
       }
     },
     "choice": {

@@ -14,6 +14,8 @@ interface IconButtonProps {
   ref?: Ref<HTMLButtonElement>
   /** Smaller, for buttons laid over a picture. */
   compact?: boolean
+  /** Smallest, for the HUD band. */
+  hud?: boolean
   onClick: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
@@ -24,13 +26,14 @@ export function IconButton({
   opensDialog,
   concealed,
   compact = false,
+  hud = false,
   viewTransitionName,
   ref,
   onClick,
 }: IconButtonProps) {
   return (
     <Button
-      variant={compact ? 'icon-compact' : 'icon'}
+      variant={hud ? 'icon-hud' : compact ? 'icon-compact' : 'icon'}
       aria-label={label}
       aria-haspopup={opensDialog ? 'dialog' : undefined}
       concealed={concealed}

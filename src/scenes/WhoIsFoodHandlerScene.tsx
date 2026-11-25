@@ -84,7 +84,7 @@ export function WhoIsFoodHandlerScene() {
         closeLabel: activity.closeStatement,
       }}
       hudEnd={
-        <Label tone="inverse">{activity.progress(Math.min(answers.length + 1, deck.length), deck.length)}</Label>
+        <Label size="hud" tone="inverse">{activity.progress(Math.min(answers.length + 1, deck.length), deck.length)}</Label>
       }
       onPlayStart={() => {
         xapi.activityAttempted(ACTIVITY_ID, activity.title)

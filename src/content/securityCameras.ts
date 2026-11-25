@@ -47,7 +47,7 @@ const risk = (isRisk: boolean): CameraQuestion => ({
 // Scenes 8 to 16 (activity 3)
 export const securityCameras = {
   heading: 'Cámaras de seguridad: del manipulador al consumidor',
-  backgroundAlt: 'El mostrador de madera de la recepción visto desde arriba, con la tablet encima.',
+  backgroundAlt: 'La recepción del restaurante: David, apoyado en el mostrador, señala la tablet.',
   title: 'Cámaras de seguridad: del manipulador al consumidor',
   statement: [
     (g) =>

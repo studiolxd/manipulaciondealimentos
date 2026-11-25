@@ -17,6 +17,10 @@
         "$type": "dimension",
         "$value": "{font.size.body}"
       },
+      "hud": {
+        "$type": "dimension",
+        "$value": "{font.size.hud}"
+      },
       "lg": {
         "$type": "dimension",
         "$value": "{font.size.label-lg}"
