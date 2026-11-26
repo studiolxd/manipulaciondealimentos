@@ -1,0 +1,32 @@
+/* The whole stage, so a gesture is followed wherever the pointer goes. */
+.sim {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+  user-select: none;
+}
+
+.sim button {
+  width: 100%;
+  height: 100%;
+}
+
+.piece {
+  position: absolute;
+  border-radius: var(--slxd-wound-care-radius);
+}
+
+.piece[data-dragging] {
+  z-index: var(--slxd-layer-over-hud);
+  pointer-events: none;
+}
+
+/* What the piece has become: a wet cotton pad, a cut dressing, a dressing on the wound. */
+.piece[data-state] {
+  outline: var(--slxd-wound-care-border-width) solid var(--slxd-wound-care-state-color);
+  outline-offset: var(--slxd-wound-care-offset);
+}
+
+.hands {
+  position: absolute;
+}

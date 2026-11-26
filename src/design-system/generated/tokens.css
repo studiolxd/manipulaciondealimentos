@@ -19,6 +19,7 @@
   --slxd-primitive-color-mint-800: #0f5c45;
   --slxd-primitive-color-green-700: #15803d;
   --slxd-primitive-color-red-700: #b91c1c;
+  --slxd-primitive-color-ember-600: #c2410c; /** Orange red: the button that closes a window. */
   --slxd-primitive-color-transparent: rgba(0, 0, 0, 0);
   --slxd-primitive-color-moss-600: #4f7d5c; /** Greyish green: the YES answer. */
   --slxd-primitive-color-rose-700: #9b4b4b; /** Greyish red: the NO answer. */
@@ -135,6 +136,8 @@
   --slxd-color-action-secondary-text: var(--slxd-primitive-color-petrol-900);
   --slxd-color-action-primary-background: var(--slxd-primitive-color-sage-300); /** Sage green: a soft accent that stands out from the warm scenes. */
   --slxd-color-action-primary-text: var(--slxd-primitive-color-petrol-900);
+  --slxd-color-action-close-background: var(--slxd-primitive-color-ember-600);
+  --slxd-color-action-close-text: var(--slxd-primitive-color-white);
   --slxd-color-action-positive-background: var(--slxd-primitive-color-green-700);
   --slxd-color-action-positive-text: var(--slxd-primitive-color-white);
   --slxd-color-action-negative-background: var(--slxd-primitive-color-red-700);
@@ -283,6 +286,7 @@
   --slxd-button-option-font-weight: var(--slxd-font-weight-bold);
   --slxd-button-option-line-height: var(--slxd-font-line-height-snug);
   --slxd-button-icon-compact-size: var(--slxd-size-target-compact);
+  --slxd-button-icon-close-background: var(--slxd-color-action-close-background);
   --slxd-button-icon-hud-size: var(--slxd-size-target-hud);
   --slxd-button-icon-size: var(--slxd-size-target-min);
   --slxd-button-icon-padding: var(--slxd-space-2xs);
@@ -296,6 +300,20 @@
   --slxd-dialog-action-space: var(--slxd-space-4xl); /** Room at the bottom for the close button. */
   --slxd-feedback-panel-gap: var(--slxd-space-md);
   --slxd-feedback-panel-action-gap: var(--slxd-space-lg); /** Between the message and the button that closes the panel. */
+  --slxd-hand-washing-gap: var(--slxd-space-sm);
+  --slxd-hand-washing-item-gap: var(--slxd-space-xs);
+  --slxd-hand-washing-radius: var(--slxd-radius-md);
+  --slxd-hand-washing-radius-full: var(--slxd-radius-full);
+  --slxd-hand-washing-border-width: var(--slxd-border-width-outline);
+  --slxd-hand-washing-border-color: var(--slxd-color-border-ink);
+  --slxd-hand-washing-zone-background: var(--slxd-color-surface-glass);
+  --slxd-hand-washing-meter-height: var(--slxd-space-sm);
+  --slxd-hand-washing-meter-background: var(--slxd-color-surface-default);
+  --slxd-hand-washing-meter-fill: var(--slxd-color-feedback-positive);
+  --slxd-hand-washing-current-background: var(--slxd-color-action-primary-background);
+  --slxd-hand-washing-done-text: var(--slxd-color-text-positive);
+  --slxd-hand-washing-droplet-size: var(--slxd-space-xl);
+  --slxd-hand-washing-droplet-background: var(--slxd-color-action-primary-background);
   --slxd-heading-font-family: var(--slxd-font-family-display);
   --slxd-heading-font-weight: var(--slxd-font-weight-display-strong);
   --slxd-heading-letter-spacing: var(--slxd-font-letter-spacing-caps);
@@ -369,6 +387,17 @@
   --slxd-menu-list-column-gap: var(--slxd-space-xl);
   --slxd-menu-list-padding-block: var(--slxd-space-2xs);
   --slxd-menu-list-current: var(--slxd-color-text-accent);
+  --slxd-notebook-page-background: var(--slxd-color-surface-default);
+  --slxd-notebook-line-color: var(--slxd-color-border-subtle);
+  --slxd-notebook-cover-background: var(--slxd-color-surface-ink);
+  --slxd-notebook-cover-padding: var(--slxd-space-sm);
+  --slxd-notebook-page-padding: var(--slxd-space-xl);
+  --slxd-notebook-gap: var(--slxd-space-sm);
+  --slxd-notebook-item-gap: var(--slxd-space-2xs);
+  --slxd-notebook-radius: var(--slxd-radius-md);
+  --slxd-notebook-border-width: var(--slxd-border-width-outline);
+  --slxd-notebook-border-color: var(--slxd-color-border-ink);
+  --slxd-notebook-spine-width: var(--slxd-border-width-strong);
   --slxd-option-buttons-gap: var(--slxd-space-xl);
   --slxd-poster-gap: var(--slxd-space-sm);
   --slxd-poster-column-gap: var(--slxd-space-xl);
@@ -520,6 +549,11 @@
   --slxd-video-background: var(--slxd-color-surface-backdrop);
   --slxd-video-veil: var(--slxd-color-surface-ink); /** Darkens a frozen video while a question is asked over it. */
   --slxd-video-veil-duration: var(--slxd-motion-duration-exit);
+  --slxd-wound-care-radius: var(--slxd-radius-md);
+  --slxd-wound-care-border-width: var(--slxd-border-width-outline);
+  --slxd-wound-care-border-color: var(--slxd-color-border-ink);
+  --slxd-wound-care-state-color: var(--slxd-color-feedback-positive);
+  --slxd-wound-care-offset: var(--slxd-space-2xs);
   --slxd-shadow-raised: var(--slxd-primitive-shadow-hard);
   --slxd-surface-shadow: var(--slxd-shadow-raised);
 }

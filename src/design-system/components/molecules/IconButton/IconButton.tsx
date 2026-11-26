@@ -16,6 +16,8 @@ interface IconButtonProps {
   compact?: boolean
   /** Smallest, for the HUD band. */
   hud?: boolean
+  /** Closes a window: red and compact. */
+  close?: boolean
   onClick: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
@@ -27,13 +29,14 @@ export function IconButton({
   concealed,
   compact = false,
   hud = false,
+  close = false,
   viewTransitionName,
   ref,
   onClick,
 }: IconButtonProps) {
   return (
     <Button
-      variant={hud ? 'icon-hud' : compact ? 'icon-compact' : 'icon'}
+      variant={close ? 'icon-close' : hud ? 'icon-hud' : compact ? 'icon-compact' : 'icon'}
       aria-label={label}
       aria-haspopup={opensDialog ? 'dialog' : undefined}
       concealed={concealed}

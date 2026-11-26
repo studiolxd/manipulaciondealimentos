@@ -37,7 +37,7 @@ export function Dialog({ label, closeLabel, viewTransitionName, closeInCorner = 
     >
       <div className={styles.body}>{children}</div>
       <div className={closeInCorner ? styles.cornerClose : styles.close}>
-        <IconButton ref={closeRef} icon="close" label={closeLabel} compact={closeInCorner} onClick={onClose} />
+        <IconButton ref={closeRef} icon="close" label={closeLabel} close onClick={onClose} />
       </div>
     </Surface>
   )

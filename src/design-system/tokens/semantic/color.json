@@ -97,6 +97,14 @@
           "$value": "{primitive.color.petrol.900}"
         }
       },
+      "close": {
+        "background": {
+          "$value": "{primitive.color.ember.600}"
+        },
+        "text": {
+          "$value": "{primitive.color.white}"
+        }
+      },
       "positive": {
         "background": {
           "$value": "{primitive.color.green.700}"

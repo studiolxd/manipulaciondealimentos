@@ -74,6 +74,12 @@
           "$value": "#b91c1c"
         }
       },
+      "ember": {
+        "600": {
+          "$value": "#c2410c",
+          "$description": "Orange red: the button that closes a window."
+        }
+      },
       "transparent": {
         "$value": "rgba(0, 0, 0, 0)"
       },

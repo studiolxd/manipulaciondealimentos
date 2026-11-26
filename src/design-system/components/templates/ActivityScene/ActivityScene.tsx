@@ -44,7 +44,7 @@ interface ActivitySceneProps {
     height: number;
   };
   /** Extra layer over the background, on screen from the title to the end (e.g. the tablet the activity is played on). */
-  underlay?: ReactNode;
+  underlay?: ReactNode | ((phase: Phase) => ReactNode);
   /** Where the statement bubble goes when the scene already shows someone (e.g. in the background art); it replaces the one set by `character`. */
   statementBox?: {
     top: number;
@@ -63,7 +63,7 @@ interface ActivitySceneProps {
   children: ReactNode;
 }
 
-type Phase = "title" | "statement" | "play";
+export type Phase = "title" | "statement" | "play";
 
 const STATEMENT_TRANSITION = "activity-statement";
 
@@ -125,7 +125,7 @@ export function ActivityScene({
         </Positioned>
       )}
 
-      {underlay}
+      {typeof underlay === "function" ? underlay(phase) : underlay}
 
       {phase === "play" && <Layer inert={statementOpen}>{children}</Layer>}
 

@@ -156,7 +156,7 @@
   --button-text: var(--slxd-button-choice-negative-text);
 }
 
-.button:is([data-variant='icon'], [data-variant='icon-compact'], [data-variant='icon-hud']) {
+.button:is([data-variant='icon'], [data-variant='icon-compact'], [data-variant='icon-hud'], [data-variant='icon-close']) {
   --button-background: var(--slxd-button-icon-background);
   --button-text: var(--slxd-button-icon-text);
 
@@ -167,9 +167,14 @@
 }
 
 /* Laid over a picture: smaller, still large enough to touch. */
-.button[data-variant='icon-compact'] {
+.button:is([data-variant='icon-compact'], [data-variant='icon-close']) {
   width: var(--slxd-button-icon-compact-size);
   height: var(--slxd-button-icon-compact-size);
+}
+
+/* Closes a window: red, as small as the compact ones. */
+.button[data-variant='icon-close'] {
+  --button-background: var(--slxd-button-icon-close-background);
 }
 
 /* In the HUD band: as thin as the band allows. */

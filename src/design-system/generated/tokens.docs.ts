@@ -501,6 +501,16 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-button-icon-close-background",
+    "path": "button.icon.close-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#c2410c",
+    "reference": "{color.action.close.background}",
+    "description": null
+  },
+  {
     "name": "--slxd-button-icon-hud-size",
     "path": "button.icon.hud-size",
     "layer": "component",
@@ -629,6 +639,146 @@ export const tokenDocs = [
     "value": "40px",
     "reference": "{space.lg}",
     "description": "Between the message and the button that closes the panel."
+  },
+  {
+    "name": "--slxd-hand-washing-gap",
+    "path": "hand-washing.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-item-gap",
+    "path": "hand-washing.item-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "16px",
+    "reference": "{space.xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-radius",
+    "path": "hand-washing.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{radius.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-radius-full",
+    "path": "hand-washing.radius-full",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "999px",
+    "reference": "{radius.full}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-border-width",
+    "path": "hand-washing.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-border-color",
+    "path": "hand-washing.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-zone-background",
+    "path": "hand-washing.zone-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.72)",
+    "reference": "{color.surface.glass}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-meter-height",
+    "path": "hand-washing.meter-height",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-meter-background",
+    "path": "hand-washing.meter-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.surface.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-meter-fill",
+    "path": "hand-washing.meter-fill",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{color.feedback.positive}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-current-background",
+    "path": "hand-washing.current-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#bcd8a8",
+    "reference": "{color.action.primary.background}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-done-text",
+    "path": "hand-washing.done-text",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{color.text.positive}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-droplet-size",
+    "path": "hand-washing.droplet-size",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-hand-washing-droplet-background",
+    "path": "hand-washing.droplet-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#bcd8a8",
+    "reference": "{color.action.primary.background}",
+    "description": null
   },
   {
     "name": "--slxd-heading-font-family",
@@ -1358,6 +1508,116 @@ export const tokenDocs = [
     "type": "color",
     "value": "#0f5c45",
     "reference": "{color.text.accent}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-page-background",
+    "path": "notebook.page-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{color.surface.default}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-line-color",
+    "path": "notebook.line-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#d6cdb8",
+    "reference": "{color.border.subtle}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-cover-background",
+    "path": "notebook.cover-background",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "rgba(20, 38, 46, 0.94)",
+    "reference": "{color.surface.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-cover-padding",
+    "path": "notebook.cover-padding",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-page-padding",
+    "path": "notebook.page-padding",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "48px",
+    "reference": "{space.xl}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-gap",
+    "path": "notebook.gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "24px",
+    "reference": "{space.sm}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-item-gap",
+    "path": "notebook.item-gap",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-radius",
+    "path": "notebook.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{radius.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-border-width",
+    "path": "notebook.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-border-color",
+    "path": "notebook.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-notebook-spine-width",
+    "path": "notebook.spine-width",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{border-width.strong}",
     "description": null
   },
   {
@@ -2881,6 +3141,56 @@ export const tokenDocs = [
     "description": null
   },
   {
+    "name": "--slxd-wound-care-radius",
+    "path": "wound-care.radius",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "32px",
+    "reference": "{radius.md}",
+    "description": null
+  },
+  {
+    "name": "--slxd-wound-care-border-width",
+    "path": "wound-care.border-width",
+    "layer": "component",
+    "family": "shape",
+    "type": "dimension",
+    "value": "calc(3px / var(--slxd-stage-scale))",
+    "reference": "{border-width.outline}",
+    "description": null
+  },
+  {
+    "name": "--slxd-wound-care-border-color",
+    "path": "wound-care.border-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#14262e",
+    "reference": "{color.border.ink}",
+    "description": null
+  },
+  {
+    "name": "--slxd-wound-care-state-color",
+    "path": "wound-care.state-color",
+    "layer": "component",
+    "family": "color",
+    "type": "color",
+    "value": "#15803d",
+    "reference": "{color.feedback.positive}",
+    "description": null
+  },
+  {
+    "name": "--slxd-wound-care-offset",
+    "path": "wound-care.offset",
+    "layer": "component",
+    "family": "spacing",
+    "type": "dimension",
+    "value": "8px",
+    "reference": "{space.2xs}",
+    "description": null
+  },
+  {
     "name": "--slxd-primitive-color-white",
     "path": "primitive.color.white",
     "layer": "primitive",
@@ -3039,6 +3349,16 @@ export const tokenDocs = [
     "value": "#b91c1c",
     "reference": null,
     "description": null
+  },
+  {
+    "name": "--slxd-primitive-color-ember-600",
+    "path": "primitive.color.ember.600",
+    "layer": "primitive",
+    "family": "color",
+    "type": "color",
+    "value": "#c2410c",
+    "reference": null,
+    "description": "Orange red: the button that closes a window."
   },
   {
     "name": "--slxd-primitive-color-transparent",
@@ -4198,6 +4518,26 @@ export const tokenDocs = [
     "type": "color",
     "value": "#14262e",
     "reference": "{primitive.color.petrol.900}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-close-background",
+    "path": "color.action.close.background",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#c2410c",
+    "reference": "{primitive.color.ember.600}",
+    "description": null
+  },
+  {
+    "name": "--slxd-color-action-close-text",
+    "path": "color.action.close.text",
+    "layer": "semantic",
+    "family": "color",
+    "type": "color",
+    "value": "#ffffff",
+    "reference": "{primitive.color.white}",
     "description": null
   },
   {

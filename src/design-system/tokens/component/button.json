@@ -200,6 +200,10 @@
         "$type": "dimension",
         "$value": "{size.target.compact}"
       },
+      "close-background": {
+        "$type": "color",
+        "$value": "{color.action.close.background}"
+      },
       "hud-size": {
         "$type": "dimension",
         "$value": "{size.target.hud}"

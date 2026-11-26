@@ -70,6 +70,9 @@ export {
   type FigureZoom,
 } from './components/organisms/HotspotFigure/HotspotFigure'
 export { HotspotMatch, type Hotspot, type MatchItem } from './components/organisms/HotspotMatch/HotspotMatch'
+export { HandWashing, type HandWashingLabels } from './components/organisms/HandWashing/HandWashing'
+export { WoundCare, type WoundCareLabels } from './components/organisms/WoundCare/WoundCare'
+export { Notebook, type NotebookBlock } from './components/organisms/Notebook/Notebook'
 export { Hud } from './components/organisms/Hud/Hud'
 export { MediaGallery, type MediaGalleryItem } from './components/organisms/MediaGallery/MediaGallery'
 export { Poster } from './components/organisms/Poster/Poster'

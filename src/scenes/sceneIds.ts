@@ -21,6 +21,19 @@ export type SceneId =
   | 'locker-room-conclusion' // 27
   | 'uniform-check' // 28 to 33
   | 'uniform-conclusion' // 34
+  | 'hand-washing' // 35 and 36
+  | 'hand-washing-conclusion' // 37
+  | 'should-you-wash' // 38 and 39
+  | 'should-you-wash-conclusion' // 40
+  | 'first-aid-intro' // 41
+  | 'first-aid-note' // 42
+  | 'first-aid-conclusion' // 43
+  | 'wound-care' // 44 to 46
+  | 'wound-care-conclusion' // 47
+  | 'contamination-intro' // 48
+  | 'notebook-page-1' // 49
+  | 'notebook-page-2' // 50
+  | 'notebook-conclusion' // 51
   | 'coming-soon'
 
 /**
@@ -50,5 +63,18 @@ export const sceneProgressWeight: Record<SceneId, number> = {
   'locker-room-conclusion': 1,
   'uniform-check': 6,
   'uniform-conclusion': 1,
+  'hand-washing': 2,
+  'hand-washing-conclusion': 1,
+  'should-you-wash': 2,
+  'should-you-wash-conclusion': 1,
+  'first-aid-intro': 1,
+  'first-aid-note': 1,
+  'first-aid-conclusion': 1,
+  'wound-care': 3,
+  'wound-care-conclusion': 1,
+  'contamination-intro': 1,
+  'notebook-page-1': 1,
+  'notebook-page-2': 1,
+  'notebook-conclusion': 1,
   'coming-soon': 0,
 }

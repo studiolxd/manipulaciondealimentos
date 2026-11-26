@@ -1,0 +1,45 @@
+.notebook {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: var(--slxd-notebook-cover-padding);
+  border: var(--slxd-notebook-border-width) solid var(--slxd-notebook-border-color);
+  border-radius: var(--slxd-notebook-radius);
+  background-color: var(--slxd-notebook-cover-background);
+}
+
+/* Squared paper. */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-notebook-gap);
+  min-height: 0;
+  overflow: auto;
+  padding: var(--slxd-notebook-page-padding);
+  background-color: var(--slxd-notebook-page-background);
+  background-image:
+    linear-gradient(var(--slxd-notebook-line-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--slxd-notebook-line-color) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.page:first-child {
+  border-top-left-radius: var(--slxd-notebook-radius);
+  border-bottom-left-radius: var(--slxd-notebook-radius);
+  border-right: var(--slxd-notebook-spine-width) solid var(--slxd-notebook-border-color);
+}
+
+.page:last-child {
+  border-top-right-radius: var(--slxd-notebook-radius);
+  border-bottom-right-radius: var(--slxd-notebook-radius);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-notebook-item-gap);
+  margin: 0;
+  padding-inline-start: var(--slxd-notebook-page-padding);
+}

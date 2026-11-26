@@ -1,0 +1,49 @@
+{
+  "notebook": {
+    "$description": "Open notebook with squared pages, two pages side by side (Notebook).",
+    "page-background": {
+      "$type": "color",
+      "$value": "{color.surface.default}"
+    },
+    "line-color": {
+      "$type": "color",
+      "$value": "{color.border.subtle}"
+    },
+    "cover-background": {
+      "$type": "color",
+      "$value": "{color.surface.ink}"
+    },
+    "cover-padding": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "page-padding": {
+      "$type": "dimension",
+      "$value": "{space.xl}"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "item-gap": {
+      "$type": "dimension",
+      "$value": "{space.2xs}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "border-width": {
+      "$type": "dimension",
+      "$value": "{border-width.outline}"
+    },
+    "border-color": {
+      "$type": "color",
+      "$value": "{color.border.ink}"
+    },
+    "spine-width": {
+      "$type": "dimension",
+      "$value": "{border-width.strong}"
+    }
+  }
+}

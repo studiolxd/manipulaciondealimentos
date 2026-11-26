@@ -1,0 +1,61 @@
+{
+  "hand-washing": {
+    "$description": "Hand-washing simulation: the hands, the tap, the soap, the towel and the checklist (HandWashing).",
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "item-gap": {
+      "$type": "dimension",
+      "$value": "{space.xs}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "radius-full": {
+      "$type": "dimension",
+      "$value": "{radius.full}"
+    },
+    "border-width": {
+      "$type": "dimension",
+      "$value": "{border-width.outline}"
+    },
+    "border-color": {
+      "$type": "color",
+      "$value": "{color.border.ink}"
+    },
+    "zone-background": {
+      "$type": "color",
+      "$value": "{color.surface.glass}"
+    },
+    "meter-height": {
+      "$type": "dimension",
+      "$value": "{space.sm}"
+    },
+    "meter-background": {
+      "$type": "color",
+      "$value": "{color.surface.default}"
+    },
+    "meter-fill": {
+      "$type": "color",
+      "$value": "{color.feedback.positive}"
+    },
+    "current-background": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    },
+    "done-text": {
+      "$type": "color",
+      "$value": "{color.text.positive}"
+    },
+    "droplet-size": {
+      "$type": "dimension",
+      "$value": "{space.xl}"
+    },
+    "droplet-background": {
+      "$type": "color",
+      "$value": "{color.action.primary.background}"
+    }
+  }
+}

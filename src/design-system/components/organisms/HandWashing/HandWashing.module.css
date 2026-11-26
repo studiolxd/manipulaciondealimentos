@@ -1,0 +1,155 @@
+/* The whole stage, so a gesture is followed wherever the pointer goes. */
+.sim {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+  user-select: none;
+}
+
+.sim button {
+  width: 100%;
+  height: 100%;
+}
+
+.hands {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--slxd-hand-washing-radius);
+}
+
+/* The water covering the hands while they are held under the tap. */
+.water {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--slxd-hand-washing-zone-background);
+  pointer-events: none;
+}
+
+/* Where to press, drawn over the art so it is found even before the final art is in. */
+.zone {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: var(--slxd-hand-washing-border-width) dashed var(--slxd-hand-washing-border-color);
+  border-radius: var(--slxd-hand-washing-radius);
+  background: var(--slxd-hand-washing-zone-background);
+}
+
+.zone:not([data-target]) {
+  border-color: transparent;
+  background: transparent;
+}
+
+.object {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--slxd-hand-washing-radius);
+}
+
+.object[data-target] {
+  outline: var(--slxd-hand-washing-border-width) dashed var(--slxd-hand-washing-border-color);
+  outline-offset: var(--slxd-hand-washing-item-gap);
+}
+
+.droplet {
+  position: absolute;
+  z-index: var(--slxd-layer-over-hud);
+  width: var(--slxd-hand-washing-droplet-size);
+  height: var(--slxd-hand-washing-droplet-size);
+  translate: -50% -50%;
+}
+
+.droplet[data-dragging] {
+  pointer-events: none;
+}
+
+.dropletShape {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: var(--slxd-hand-washing-border-width) solid var(--slxd-hand-washing-border-color);
+  border-radius: var(--slxd-hand-washing-radius-full);
+  background: var(--slxd-hand-washing-droplet-background);
+}
+
+.hint {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-hand-washing-gap);
+}
+
+.status {
+  display: block;
+}
+
+.meter {
+  height: var(--slxd-hand-washing-meter-height);
+  overflow: hidden;
+  border: var(--slxd-hand-washing-border-width) solid var(--slxd-hand-washing-border-color);
+  border-radius: var(--slxd-hand-washing-radius-full);
+  background: var(--slxd-hand-washing-meter-background);
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  background: var(--slxd-hand-washing-meter-fill);
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-hand-washing-gap);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--slxd-hand-washing-item-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  gap: var(--slxd-hand-washing-item-gap);
+  align-items: flex-start;
+  padding: var(--slxd-hand-washing-item-gap);
+  border-radius: var(--slxd-hand-washing-radius);
+}
+
+.step[data-state='current'] {
+  background: var(--slxd-hand-washing-current-background);
+}
+
+.step[data-state='done'] {
+  color: var(--slxd-hand-washing-done-text);
+  text-decoration: line-through;
+}
+
+.marker {
+  display: grid;
+  flex: none;
+  place-items: center;
+  min-width: var(--slxd-size-icon-sm);
+  font-family: var(--slxd-font-family-display);
+  font-size: var(--slxd-font-size-body-sm);
+}
+
+.zones {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.zones > li[data-done] {
+  color: var(--slxd-hand-washing-done-text);
+}

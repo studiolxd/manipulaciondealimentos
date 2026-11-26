@@ -21,6 +21,7 @@ interface ButtonProps {
     | 'icon'
     | 'icon-compact'
     | 'icon-hud'
+    | 'icon-close'
     | 'bare'
     | 'option'
     | 'option-done'

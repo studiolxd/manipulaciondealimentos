@@ -140,8 +140,9 @@ export function SecurityCamerasScene() {
       }}
       onPlayStart={() => xapi.activityAttempted(ACTIVITY_ID, activity.title)}
     >
-      <Positioned top={100} left={160} width={1600} height={880}>
-        <TabletFrame>
+      {/* On the screen of the tablet drawn in the image. */}
+      <Positioned top={80} left={183} width={1558} height={918}>
+        <TabletFrame bare>
           {view.kind === 'gallery' && (
             <MediaGallery
               label={activity.galleryLabel}
